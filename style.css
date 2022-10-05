@@ -1,10 +1,10 @@
 body {
-	background:linear-gradient(180deg, #222222, #0f0e0f);
+	background:linear-gradient(180deg, #121212, #0f0e0f);
 	color:#cfcfcf;
 	font-size:1.05em;
 	width:92%;
 	margin-left:4%;
-	margin-right:3%;
+	margin-right:4%;
 }
 
 a:link, a, a:visited {
@@ -15,6 +15,13 @@ a:link, a, a:visited {
 a:hover, a:active {
 	color:#ffefef;
 	text-decoration:underline;
+}
+
+header, main, footer {
+	border:1px solid #777777;
+	padding:8px;
+	padding-top:12px;
+	padding-bottom:12px;
 }
 
 h1 {
@@ -49,5 +56,10 @@ footer ul li {
 	padding-top:8px;
 	padding-bottom:8px;
 	font-size:1.01em;
+	width:100%;
+}
+
+footer ul li a {
+	width:100%;
 }
 
