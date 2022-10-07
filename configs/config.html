@@ -3,11 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-06 Thu 01:31 -->
+<!-- 2022-10-07 Fri 04:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
 <meta name="author" content="Tanner Babcock" />
+<meta name="description" content="My Doom Emacs config. Features Org mode, mixed pitch, keybindings, and dashboard." />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -194,6 +195,9 @@
   .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+<link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
 </head>
 <body>
 <div id="content" class="content">
@@ -202,31 +206,45 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3aeeec5">Lexical Binding</a></li>
-<li><a href="#org5855ce5">Basic Info</a></li>
-<li><a href="#org04c5c5b">Preferences</a></li>
-<li><a href="#org0330850">Appearance</a></li>
-<li><a href="#orgde26300">Modeline</a></li>
+<li><a href="#org952c2a5">Lexical Binding</a></li>
+<li><a href="#org0ce7d1e">Basic Info</a></li>
+<li><a href="#org55b5736">Preferences</a></li>
+<li><a href="#org3d7e524">Appearance</a></li>
+<li><a href="#orgd8ba173">Modeline</a></li>
 </ul>
 </li>
-<li><a href="#org5f7f71e">Packages</a>
+<li><a href="#org97c36c9">Packages</a>
 <ul>
-<li><a href="#org30511fc">Org Mode</a></li>
-<li><a href="#org989b52f">Treemacs</a></li>
-<li><a href="#org952ca3e">Doom Themes</a></li>
+<li><a href="#orga162adb">Org Mode</a></li>
+<li><a href="#org0509808">Treemacs</a></li>
+<li><a href="#orgaf90535">Doom Themes</a></li>
 </ul>
 </li>
-<li><a href="#orge78371e">Keybindings</a>
+<li><a href="#org7ebcc7f">Keybindings</a>
 <ul>
-<li><a href="#org41b3f34">Dashboard</a></li>
-<li><a href="#orga731885">General</a></li>
+<li><a href="#orgccfb6d1">Dashboard</a></li>
+<li><a href="#orgd6cb003">General</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3aeeec5" class="outline-3">
-<h3 id="org3aeeec5">Lexical Binding</h3>
-<div class="outline-text-3" id="text-org3aeeec5">
+<header>
+    <center>
+    <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
+        <ul>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+            <li><a href="https://www.twitch.tv/babkock" target="_blank">Twitch</a></li>
+        </ul>
+    </center>
+</header>
+
+<div id="outline-container-org952c2a5" class="outline-3">
+<h3 id="org952c2a5">Lexical Binding</h3>
+<div class="outline-text-3" id="text-org952c2a5">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -238,9 +256,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org5855ce5" class="outline-3">
-<h3 id="org5855ce5">Basic Info</h3>
-<div class="outline-text-3" id="text-org5855ce5">
+<div id="outline-container-org0ce7d1e" class="outline-3">
+<h3 id="org0ce7d1e">Basic Info</h3>
+<div class="outline-text-3" id="text-org0ce7d1e">
 <p>
 Here, I set my name and email address.
 </p>
@@ -253,9 +271,9 @@ Here, I set my name and email address.
 </div>
 </div>
 
-<div id="outline-container-org04c5c5b" class="outline-3">
-<h3 id="org04c5c5b">Preferences</h3>
-<div class="outline-text-3" id="text-org04c5c5b">
+<div id="outline-container-org55b5736" class="outline-3">
+<h3 id="org55b5736">Preferences</h3>
+<div class="outline-text-3" id="text-org55b5736">
 <p>
 Fix the garbage collector, enable zoom in and zoom out keybindings.
 </p>
@@ -275,9 +293,9 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
 </div>
 </div>
 
-<div id="outline-container-org0330850" class="outline-3">
-<h3 id="org0330850">Appearance</h3>
-<div class="outline-text-3" id="text-org0330850">
+<div id="outline-container-org3d7e524" class="outline-3">
+<h3 id="org3d7e524">Appearance</h3>
+<div class="outline-text-3" id="text-org3d7e524">
 <p>
 Now the fun stuff, where I set the fonts, theme, and colors.
 </p>
@@ -313,9 +331,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-orgde26300" class="outline-3">
-<h3 id="orgde26300">Modeline</h3>
-<div class="outline-text-3" id="text-orgde26300">
+<div id="outline-container-orgd8ba173" class="outline-3">
+<h3 id="orgd8ba173">Modeline</h3>
+<div class="outline-text-3" id="text-orgd8ba173">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> modeline
     <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-modeline-buffer-file-name-style</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">auto</span>
@@ -335,13 +353,13 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-org5f7f71e" class="outline-2">
-<h2 id="org5f7f71e">Packages</h2>
-<div class="outline-text-2" id="text-org5f7f71e">
+<div id="outline-container-org97c36c9" class="outline-2">
+<h2 id="org97c36c9">Packages</h2>
+<div class="outline-text-2" id="text-org97c36c9">
 </div>
-<div id="outline-container-org30511fc" class="outline-3">
-<h3 id="org30511fc">Org Mode</h3>
-<div class="outline-text-3" id="text-org30511fc">
+<div id="outline-container-orga162adb" class="outline-3">
+<h3 id="orga162adb">Org Mode</h3>
+<div class="outline-text-3" id="text-orga162adb">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> org
     <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">require</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">org-bullets</span><span style="color: #E27E8D;">)</span>
@@ -376,9 +394,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-org989b52f" class="outline-3">
-<h3 id="org989b52f">Treemacs</h3>
-<div class="outline-text-3" id="text-org989b52f">
+<div id="outline-container-org0509808" class="outline-3">
+<h3 id="org0509808">Treemacs</h3>
+<div class="outline-text-3" id="text-org0509808">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> treemacs
     <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-themes-treemacs-theme</span> <span style="color: #539AFC;">"doom-colors"</span><span style="color: #E27E8D;">)</span>
@@ -388,9 +406,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-org952ca3e" class="outline-3">
-<h3 id="org952ca3e">Doom Themes</h3>
-<div class="outline-text-3" id="text-org952ca3e">
+<div id="outline-container-orgaf90535" class="outline-3">
+<h3 id="orgaf90535">Doom Themes</h3>
+<div class="outline-text-3" id="text-orgaf90535">
 <p>
 Just a couple more things to make our lives easier.
 </p>
@@ -411,9 +429,9 @@ Just a couple more things to make our lives easier.
 </div>
 </div>
 
-<div id="outline-container-orge78371e" class="outline-2">
-<h2 id="orge78371e">Keybindings</h2>
-<div class="outline-text-2" id="text-orge78371e">
+<div id="outline-container-org7ebcc7f" class="outline-2">
+<h2 id="org7ebcc7f">Keybindings</h2>
+<div class="outline-text-2" id="text-org7ebcc7f">
 <p>
 This first bit lets us navigate between windows easier.
 </p>
@@ -431,9 +449,9 @@ This first bit lets us navigate between windows easier.
 </div>
 </div>
 
-<div id="outline-container-org41b3f34" class="outline-3">
-<h3 id="org41b3f34">Dashboard</h3>
-<div class="outline-text-3" id="text-org41b3f34">
+<div id="outline-container-orgccfb6d1" class="outline-3">
+<h3 id="orgccfb6d1">Dashboard</h3>
+<div class="outline-text-3" id="text-orgccfb6d1">
 <p>
 This part is the shortcuts for our Doom Dashboard. These keybindings only work in Dashboard mode.
 </p>
@@ -672,9 +690,9 @@ This part removes other elements of the Dashboard.
 </div>
 </div>
 
-<div id="outline-container-orga731885" class="outline-3">
-<h3 id="orga731885">General</h3>
-<div class="outline-text-3" id="text-orga731885">
+<div id="outline-container-orgd6cb003" class="outline-3">
+<h3 id="orgd6cb003">General</h3>
+<div class="outline-text-3" id="text-orgd6cb003">
 <p>
 These are general keybindings, which are available in all modes.
 </p>
@@ -761,14 +779,17 @@ These are general keybindings, which are available in all modes.
 <span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC u</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
     <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Delete Buffer"</span> <span style="color: #539AFC;">"u"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-delete-buffer</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC n</span>
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
+    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Org Export to HTML"</span> <span style="color: #539AFC;">"p"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">org-html-export-to-html</span><span style="color: #5EC4FF;">)</span>
 </pre>
 </div>
 
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &bull; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &bull;
-    <a href="https://tannerbabcock.com/home">Website</a> &bull; <a href="https://gitlab.com/Babkock/">GitLab</a></p>
+    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp; <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a></p>
     </center>
 </footer>
 </div>
@@ -777,7 +798,7 @@ These are general keybindings, which are available in all modes.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-06 Thu 01:31</p>
+<p class="date">Created: 2022-10-07 Fri 04:28</p>
 </div>
 </body>
 </html>

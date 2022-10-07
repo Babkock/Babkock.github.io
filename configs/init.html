@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-10-07 Fri 04:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doom Emacs</title>
+<meta name="author" content="Tanner Babcock" />
+<meta name="description" content="My Doom Emacs config initialization file." />
+<meta name="keywords" content="tanner babcock, github, emacs, doom emacs, org mode, linux, gnu linux, art, music, experimental, noise" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+<link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Doom Emacs</h1>
+<p>
+This is the other, secondary Doom Emacs config file <code>init.org</code>, which tangles to <code>init.el</code>. <a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/doom.d/config.org">This is the primary one, config.org.</a>
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3fb2965">Lexical Binding</a></li>
+<li><a href="#org818e20b">Packages</a></li>
+<li><a href="#org2c0fe88">Preferences</a>
+<ul>
+<li><a href="#org5a18540">Frame Title</a></li>
+<li><a href="#org093b19e">Fallback Buffer Name</a></li>
+<li><a href="#org4509f63">Doom Dashboard</a></li>
+<li><a href="#orgfaaeea1">Modeline</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<header>
+    <center>
+    <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
+        <ul>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+            <li><a href="https://www.twitch.tv/babkock" target="_blank">Twitch</a></li>
+        </ul>
+    </center>
+</header>
+
+<div id="outline-container-org3fb2965" class="outline-2">
+<h2 id="org3fb2965">Lexical Binding</h2>
+<div class="outline-text-2" id="text-org3fb2965">
+<p>
+Gotta have this at the beginning of the config file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #41505E; font-style: italic;">;;; </span><span style="color: #41505E; font-style: italic;">init.el -*- lexical-binding: t; -*-</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org818e20b" class="outline-2">
+<h2 id="org818e20b">Packages</h2>
+<div class="outline-text-2" id="text-org818e20b">
+<p>
+This is my list of enabled and installed packages. I try to have a small and minimal Emacs environment, so I&rsquo;ve disabled some common modules.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">doom!</span> <span style="color: #5EC4FF;">:input</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">bidi              ; (tfel ot) thgir etirw uoy gnipleh</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">chinese</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">japanese</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">layout            ; auie,ctsrnm is the superior home row</span>
+
+       <span style="color: #5EC4FF;">:completion</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">company           ; the ultimate code completion backend</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">helm              ; the *other* search engine for love and life</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ido               ; the other *other* search engine...</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ivy               ; a search engine for love and life</span>
+       <span style="color: #E27E8D;">(</span>vertico +icons<span style="color: #E27E8D;">)</span>           <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">the search engine of the future</span>
+
+       <span style="color: #5EC4FF;">:ui</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">deft              ; notational velocity for Emacs</span>
+       doom              <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">what makes DOOM look the way it does</span>
+       doom-dashboard    <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">a nifty splash screen for Emacs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">doom-quit         ; DOOM quit-message prompts when you quit Emacs</span>
+       <span style="color: #E27E8D;">(</span>emoji +unicode<span style="color: #E27E8D;">)</span>  <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">&#128578;</span>
+       hl-todo           <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">highlight </span><span style="color: #EBBF83; font-weight: bold; font-style: italic;">TODO</span><span style="color: #41505E; font-style: italic;">/</span><span style="color: #D95468; font-weight: bold; font-style: italic;">FIXME</span><span style="color: #41505E; font-style: italic;">/</span><span style="color: #8BD49C; font-weight: bold; font-style: italic;">NOTE</span><span style="color: #41505E; font-style: italic;">/</span><span style="color: #707b86; font-weight: bold; font-style: italic;">DEPRECATED</span><span style="color: #41505E; font-style: italic;">/</span><span style="color: #E27E8D; font-weight: bold; font-style: italic;">HACK</span><span style="color: #41505E; font-style: italic;">/</span><span style="color: #5EC4FF; font-weight: bold; font-style: italic;">REVIEW</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">hydra</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">indent-guides     ; highlighted indent columns</span>
+       ligatures         <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">ligatures and symbols to make your code pretty again</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">minimap           ; show a map of the code on the side</span>
+       modeline          <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">snazzy, Atom-inspired modeline, plus API</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">nav-flash         ; blink cursor line after big motions</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">neotree           ; a project drawer, like NERDTree for vim</span>
+       ophints           <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">highlight the region an operation acts on</span>
+       <span style="color: #E27E8D;">(</span>popup +defaults<span style="color: #E27E8D;">)</span>   <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">tame sudden yet inevitable temporary windows</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">tabs              ; a tab bar for Emacs</span>
+       treemacs          <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">a project drawer, like neotree but cooler</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">unicode           ; extended unicode support for various languages</span>
+       vc-gutter         <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">vcs diff in the fringe</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">vi-tilde-fringe   ; fringe tildes to mark beyond EOB</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">window-select     ; visually switch windows</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">workspaces        ; tab emulation, persistence &amp; separate workspaces</span>
+       zen                 <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">distraction-free coding or writing</span>
+
+       <span style="color: #5EC4FF;">:editor</span>
+       <span style="color: #E27E8D;">(</span>evil +everywhere<span style="color: #E27E8D;">)</span><span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">come to the dark side, we have cookies</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">file-templates    ; auto-snippets for empty files</span>
+       fold              <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">(nigh) universal code folding</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(format +onsave)  ; automated prettiness</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">god               ; run Emacs commands without modifier keys</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">lispy             ; vim for lisp, for people who don't like vim</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">multiple-cursors  ; editing in many places at once</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">objed             ; text object editing for the innocent</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">parinfer          ; turn lisp into python, sort of</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">rotate-text       ; cycle region at point between text candidates</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">snippets          ; my elves. They type so I don't have to</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">word-wrap         ; soft wrapping with language-aware indent</span>
+
+       <span style="color: #5EC4FF;">:emacs</span>
+       <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">dired</span> +icons +ranger<span style="color: #E27E8D;">)</span>    <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">making dired pretty [functional]</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">electric          ; smarter, keyword-based electric-indent</span>
+       <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">ibuffer</span> +icons<span style="color: #E27E8D;">)</span>    <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">interactive buffer management</span>
+       undo              <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">persistent, smarter undo for your inevitable mistakes</span>
+       vc                <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">version-control and Emacs, sitting in a tree</span>
+
+       <span style="color: #5EC4FF;">:term</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">eshell            ; the elisp shell that works everywhere</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">shell             ; simple shell REPL for Emacs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">term              ; basic terminal emulator for Emacs</span>
+       vterm             <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">the best terminal emulation in Emacs</span>
+
+       <span style="color: #5EC4FF;">:checkers</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">syntax              ; tasing you for every semicolon you forget</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(spell +flyspell) ; tasing you for misspelling mispelling</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">grammar           ; tasing grammar mistake every you make</span>
+
+       <span style="color: #5EC4FF;">:tools</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ansible</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">biblio            ; Writes a PhD for you (citation needed)</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">debugger          ; </span><span style="color: #D95468; font-weight: bold; font-style: italic;">FIXME</span><span style="color: #41505E; font-style: italic;"> stepping through code, to help you add bugs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">direnv</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">docker</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">editorconfig      ; let someone else argue about tabs vs spaces</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ein               ; tame Jupyter notebooks with emacs</span>
+       <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">eval</span> +overlay<span style="color: #E27E8D;">)</span>     <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">run code, run (also, repls)</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">gist              ; interacting with github gists</span>
+       lookup              <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">navigate your code and its documentation</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">lsp               ; M-x vscode</span>
+       magit             <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">a git porcelain for Emacs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">make              ; run make tasks from Emacs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">pass              ; password manager for nerds</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">pdf               ; pdf enhancements</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">prodigy           ; </span><span style="color: #D95468; font-weight: bold; font-style: italic;">FIXME</span><span style="color: #41505E; font-style: italic;"> managing external services &amp; code builders</span>
+       rgb               <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">creating color strings</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">taskrunner        ; taskrunner for all your projects</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">terraform         ; infrastructure as code</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">tmux              ; an API for interacting with tmux</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">upload            ; map local to remote projects via ssh/ftp</span>
+
+       <span style="color: #5EC4FF;">:os</span>
+       <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF;">:if</span> <span style="color: #718CA1;">IS-MAC</span> macos<span style="color: #E27E8D;">)</span>  <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">improve compatibility with macOS</span>
+       tty               <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">improve the terminal Emacs experience</span>
+
+       <span style="color: #5EC4FF;">:lang</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">agda              ; types of types of types of types...</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">beancount         ; mind the GAAP</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(cc +lsp)         ; C &gt; C++ == 1</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">clojure           ; java with a lisp</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">common-lisp       ; if you've seen one lisp, you've seen them all</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">coq               ; proofs-as-programs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">crystal           ; ruby at the speed of c</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">csharp            ; unity, .NET, and mono shenanigans</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">data              ; config/data formats</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(dart +flutter)   ; paint ui and not much else</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">dhall</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">elixir            ; erlang done right</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">elm               ; care for a cup of TEA?</span>
+       emacs-lisp        <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">drown in parentheses</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">erlang            ; an elegant language for a more civilized age</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ess               ; emacs speaks statistics</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">factor</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">faust             ; dsp, but you get to keep your soul</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">fortran           ; in FORTRAN, GOD is REAL (unless declared INTEGER)</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">fsharp            ; ML stands for Microsoft's Language</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">fstar             ; (dependent) types and (monadic) effects and Z3</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">gdscript          ; the language you waited for</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(go +lsp)         ; the hipster dialect</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(graphql +lsp)    ; Give queries a REST</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(haskell +lsp)    ; a language that's lazier than I am</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">hy                ; readability of scheme w/ speed of python</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">idris             ; a language you can depend on</span>
+       json                <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">At least it ain't XML</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(java +lsp)       ; the poster child for carpal tunnel syndrome</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">javascript        ; all(hope(abandon(ye(who(enter(here))))))</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">julia             ; a better, faster MATLAB</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">kotlin            ; a better, slicker Java(Script)</span>
+       latex <span style="color: #E27E8D;">(</span>+cdlatex +fold<span style="color: #E27E8D;">)</span>             <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">writing papers in Emacs has never been so fun</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">lean              ; for folks with too much to prove</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ledger            ; be audit you can be</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">lua               ; one-based indices? one-based indices</span>
+       markdown            <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">writing docs for people to ignore</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">nim               ; python + lisp at the speed of c</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">nix               ; I hereby declare "nix geht mehr!"</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">ocaml             ; an objective camel</span>
+       <span style="color: #E27E8D;">(</span>org +pretty +dragandrop +roam2<span style="color: #E27E8D;">)</span>                 <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">organize your plain life in plain text</span>
+       php                 <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">perl's insecure younger brother</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">plantuml          ; diagrams for confusing people more</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">purescript        ; javascript, but functional</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">python            ; beautiful is better than ugly</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">qt                ; the '</span><span style="color: #E27E8D; font-style: italic;">cutest</span><span style="color: #41505E; font-style: italic;">' gui framework ever</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">racket            ; a DSL for DSLs</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">raku              ; the artist formerly known as perl6</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">rest              ; Emacs as a REST client</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">rst               ; ReST in peace</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? '</span><span style="color: #E27E8D; font-style: italic;">love</span><span style="color: #41505E; font-style: italic;">' : '</span><span style="color: #E27E8D; font-style: italic;">life</span><span style="color: #41505E; font-style: italic;">'}"}</span>
+       rust              <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">Fe2O3.unwrap().unwrap().unwrap().unwrap()</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">scala             ; java, but good</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(scheme +guile)   ; a fully conniving family of lisps</span>
+       sh                <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">she sells {ba,z,fi}sh shells on the C xor</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">sml</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">solidity          ; do you need a blockchain? No.</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">swift             ; who asked for emoji variables?</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">terra             ; Earth and Moon in alignment for performance.</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">web               ; the tubes</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">yaml              ; JSON, but readable</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">zig               ; C, but simpler</span>
+
+       <span style="color: #5EC4FF;">:email</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(mu4e +org +gmail)</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">notmuch</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(wanderlust +gmail)</span>
+
+       <span style="color: #5EC4FF;">:app</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">calendar</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">emms</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">everywhere        ; *leave* Emacs!? You must be joking</span>
+       irc                 <span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">how neckbeards socialize</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">(rss +org)          ; emacs as an RSS reader</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">twitter           ; twitter client https://twitter.com/vnought</span>
+
+       <span style="color: #5EC4FF;">:config</span>
+       <span style="color: #41505E; font-style: italic;">;;</span><span style="color: #41505E; font-style: italic;">literate</span>
+       <span style="color: #E27E8D;">(</span>default +bindings +smartparens<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2c0fe88" class="outline-2">
+<h2 id="org2c0fe88">Preferences</h2>
+<div class="outline-text-2" id="text-org2c0fe88">
+<p>
+I don&rsquo;t know why, but these next snippets of code must be in this file, (<code>init.el</code>) and not <code>config.el</code>.
+</p>
+</div>
+
+<div id="outline-container-org5a18540" class="outline-3">
+<h3 id="org5a18540">Frame Title</h3>
+<div class="outline-text-3" id="text-org5a18540">
+<p>
+Conditionally set the title of the frame (or X window) with project name and buffer name (file name).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">frame-title-format</span>
+    <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #539AFC;">""</span>
+        <span style="color: #8BD49C;">(</span><span style="color: #5EC4FF;">:eval</span>
+            <span style="color: #B62D65;">(</span><span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">s-contains-p</span> <span style="color: #718CA1;">org-roam-directory</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">or</span> <span style="color: #718CA1;">buffer-file-name</span> <span style="color: #539AFC;">""</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+                <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">replace-regexp-in-string</span>
+                    <span style="color: #539AFC;">".*/[0-9]*-?"</span> <span style="color: #539AFC;">"&#9776; "</span>
+                    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">subst-char-in-string</span> ?_ ?  <span style="color: #718CA1;">buffer-file-name</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+                <span style="color: #539AFC;">"&#9658; %b"</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span>
+        <span style="color: #8BD49C;">(</span><span style="color: #5EC4FF;">:eval</span>
+            <span style="color: #B62D65;">(</span><span style="color: #5EC4FF; font-style: italic;">let</span> <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">(</span>project-name <span style="color: #8BD49C;">(</span><span style="color: #718CA1;">projectile-project-name</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+                <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">unless</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">string=</span> <span style="color: #539AFC;">"-"</span> project-name<span style="color: #E27E8D;">)</span>
+                <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">format</span> <span style="color: #8BD49C;">(</span><span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">buffer-modified-p</span><span style="color: #B62D65;">)</span>  <span style="color: #539AFC;">" &#9673; %s"</span> <span style="color: #539AFC;">" &#9679; %s"</span><span style="color: #8BD49C;">)</span> project-name<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org093b19e" class="outline-3">
+<h3 id="org093b19e">Fallback Buffer Name</h3>
+<div class="outline-text-3" id="text-org093b19e">
+<p>
+The default buffer name.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-fallback-buffer-name</span> <span style="color: #539AFC;">"&#9658; Doom"</span>
+    doom-dashboard-name <span style="color: #539AFC;">"&#9658; Doom"</span><span style="color: #5EC4FF;">)</span>
+
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq-default</span> <span style="color: #718CA1;">x-stretch-cursor</span> t<span style="color: #5EC4FF;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4509f63" class="outline-3">
+<h3 id="org4509f63">Doom Dashboard</h3>
+<div class="outline-text-3" id="text-org4509f63">
+<p>
+Show a custom image on the splash screen, and hide cursor and mode line.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">fancy-splash-image</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">concat</span> <span style="color: #718CA1;">doom-private-dir</span> <span style="color: #539AFC;">"splash.png"</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">add-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">+doom-dashboard-mode-hook</span> <span style="color: #E27E8D;">(</span><span style="color: #718CA1;">hide-mode-line-mode</span> <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #E27E8D;">)</span> <span style="color: #E27E8D;">(</span><span style="color: #718CA1;">hl-line-mode</span> <span style="color: #E27E8D; font-weight: bold;">-1</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">add-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">after-init-hook</span> <span style="color: #5EC4FF;">#'</span><span style="color: #718CA1;">doom-modeline-mode</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">+doom-dashboard-mode-hook</span> <span style="color: #718CA1;">evil-normal-state-cursor</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">list</span> nil<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfaaeea1" class="outline-3">
+<h3 id="orgfaaeea1">Modeline</h3>
+<div class="outline-text-3" id="text-orgfaaeea1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">inhibit-compacting-font-caches</span> t<span style="color: #5EC4FF;">)</span>
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">find-file-visit-truename</span> t<span style="color: #5EC4FF;">)</span>
+<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">(setq doom-modeline-buffer-file-name-style 'auto</span>
+<span style="color: #41505E; font-style: italic;">;;      </span><span style="color: #41505E; font-style: italic;">doom-modeline-icon t</span>
+<span style="color: #41505E; font-style: italic;">;;      </span><span style="color: #41505E; font-style: italic;">doom-modeline-persp-icon t)</span>
+
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-modeline-buffer-file-name-style</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">auto</span>
+      <span style="color: #718CA1;">doom-modeline-icon</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">display-graphic-p</span><span style="color: #E27E8D;">)</span>
+      <span style="color: #718CA1;">doom-modeline-major-mode-icon</span> t
+      <span style="color: #718CA1;">doom-modeline-major-mode-color-icon</span> t
+      <span style="color: #718CA1;">doom-modeline-persp-icon</span> t
+      <span style="color: #718CA1;">doom-modeline-unicode-fallback</span> nil<span style="color: #5EC4FF;">)</span>
+
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">add-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">org-mode-hook</span> <span style="color: #5EC4FF;">#'</span><span style="color: #718CA1;">mixed-pitch-mode</span><span style="color: #5EC4FF;">)</span>
+</pre>
+</div>
+
+<footer>
+    <center>
+    <p>Copyright &copy; 2022 Tanner Babcock.</p>
+    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp; <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    </center>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Tanner Babcock</p>
+<p class="date">Created: 2022-10-07 Fri 04:37</p>
+</div>
+</body>
+</html>
