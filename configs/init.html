@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-07 Fri 04:37 -->
+<!-- 2022-10-07 Fri 04:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -207,27 +207,8 @@
 This is the other, secondary Doom Emacs config file <code>init.org</code>, which tangles to <code>init.el</code>. <a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/doom.d/config.org">This is the primary one, config.org.</a>
 </p>
 
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org3fb2965">Lexical Binding</a></li>
-<li><a href="#org818e20b">Packages</a></li>
-<li><a href="#org2c0fe88">Preferences</a>
-<ul>
-<li><a href="#org5a18540">Frame Title</a></li>
-<li><a href="#org093b19e">Fallback Buffer Name</a></li>
-<li><a href="#org4509f63">Doom Dashboard</a></li>
-<li><a href="#orgfaaeea1">Modeline</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
 <header>
     <center>
-    <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
         <ul>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
@@ -239,9 +220,27 @@ This is the other, secondary Doom Emacs config file <code>init.org</code>, which
     </center>
 </header>
 
-<div id="outline-container-org3fb2965" class="outline-2">
-<h2 id="org3fb2965">Lexical Binding</h2>
-<div class="outline-text-2" id="text-org3fb2965">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga140a50">Lexical Binding</a></li>
+<li><a href="#org239cdad">Packages</a></li>
+<li><a href="#org4223f4b">Preferences</a>
+<ul>
+<li><a href="#orge27ccc8">Frame Title</a></li>
+<li><a href="#orgdcea8fb">Fallback Buffer Name</a></li>
+<li><a href="#orgba8e326">Doom Dashboard</a></li>
+<li><a href="#org15ea7a9">Modeline</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga140a50" class="outline-2">
+<h2 id="orga140a50">Lexical Binding</h2>
+<div class="outline-text-2" id="text-orga140a50">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -253,9 +252,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org818e20b" class="outline-2">
-<h2 id="org818e20b">Packages</h2>
-<div class="outline-text-2" id="text-org818e20b">
+<div id="outline-container-org239cdad" class="outline-2">
+<h2 id="org239cdad">Packages</h2>
+<div class="outline-text-2" id="text-org239cdad">
 <p>
 This is my list of enabled and installed packages. I try to have a small and minimal Emacs environment, so I&rsquo;ve disabled some common modules.
 </p>
@@ -443,17 +442,17 @@ This is my list of enabled and installed packages. I try to have a small and min
 </div>
 </div>
 
-<div id="outline-container-org2c0fe88" class="outline-2">
-<h2 id="org2c0fe88">Preferences</h2>
-<div class="outline-text-2" id="text-org2c0fe88">
+<div id="outline-container-org4223f4b" class="outline-2">
+<h2 id="org4223f4b">Preferences</h2>
+<div class="outline-text-2" id="text-org4223f4b">
 <p>
 I don&rsquo;t know why, but these next snippets of code must be in this file, (<code>init.el</code>) and not <code>config.el</code>.
 </p>
 </div>
 
-<div id="outline-container-org5a18540" class="outline-3">
-<h3 id="org5a18540">Frame Title</h3>
-<div class="outline-text-3" id="text-org5a18540">
+<div id="outline-container-orge27ccc8" class="outline-3">
+<h3 id="orge27ccc8">Frame Title</h3>
+<div class="outline-text-3" id="text-orge27ccc8">
 <p>
 Conditionally set the title of the frame (or X window) with project name and buffer name (file name).
 </p>
@@ -476,9 +475,9 @@ Conditionally set the title of the frame (or X window) with project name and buf
 </div>
 </div>
 
-<div id="outline-container-org093b19e" class="outline-3">
-<h3 id="org093b19e">Fallback Buffer Name</h3>
-<div class="outline-text-3" id="text-org093b19e">
+<div id="outline-container-orgdcea8fb" class="outline-3">
+<h3 id="orgdcea8fb">Fallback Buffer Name</h3>
+<div class="outline-text-3" id="text-orgdcea8fb">
 <p>
 The default buffer name.
 </p>
@@ -493,9 +492,9 @@ The default buffer name.
 </div>
 </div>
 
-<div id="outline-container-org4509f63" class="outline-3">
-<h3 id="org4509f63">Doom Dashboard</h3>
-<div class="outline-text-3" id="text-org4509f63">
+<div id="outline-container-orgba8e326" class="outline-3">
+<h3 id="orgba8e326">Doom Dashboard</h3>
+<div class="outline-text-3" id="text-orgba8e326">
 <p>
 Show a custom image on the splash screen, and hide cursor and mode line.
 </p>
@@ -511,9 +510,9 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 </div>
 
-<div id="outline-container-orgfaaeea1" class="outline-3">
-<h3 id="orgfaaeea1">Modeline</h3>
-<div class="outline-text-3" id="text-orgfaaeea1">
+<div id="outline-container-org15ea7a9" class="outline-3">
+<h3 id="org15ea7a9">Modeline</h3>
+<div class="outline-text-3" id="text-org15ea7a9">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">inhibit-compacting-font-caches</span> t<span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">find-file-visit-truename</span> t<span style="color: #5EC4FF;">)</span>
@@ -545,7 +544,7 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-07 Fri 04:37</p>
+<p class="date">Created: 2022-10-07 Fri 04:46</p>
 </div>
 </body>
 </html>

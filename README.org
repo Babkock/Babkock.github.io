@@ -1,0 +1,6 @@
+#+TITLE: Babkock.github.io
+#+AUTHOR: Tanner Babcock
+#+EMAIL: babkock@protonmail.com
+#+LANGUAGE: en
+
+This is the repository for my [[https://babkock.github.io][GitHub Pages site.]]
