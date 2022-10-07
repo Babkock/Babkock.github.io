@@ -45,6 +45,25 @@ table thead tr th, table tbody tr td {
     border:1px solid #000;
     padding-left:8px;
 }
+header center {
+    padding-bottom:12px !important;
+}
+header center ul {
+    padding-left:0px !important;
+    width:100% !important;
+    display:inline-block !important;
+}
+header center ul li {
+    list-style-type:none !important;
+    width:16% !important;
+    float:left !important;
+}
+header center ul li a {
+    width:100% !important;
+    height:39px !important;
+    min-height:39px !important;
+    display:block !important;
+}
 
 #postamble { display:none !important; }
 
