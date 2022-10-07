@@ -1,0 +1,71 @@
+#+TITLE: Tanner Babcock GitHub Pages
+#+AUTHOR: Tanner Babcock
+#+EMAIL: babkock@protonmail.com
+#+STARTUP: showeverything
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: The GitHub Pages website for Tanner Babcock. Here is where you'll find my Emacs and other configs.
+#+KEYWORDS: emacs, doom emacs, github, gitlab, tanner babcock, linux, gnu linux, void linux, arch linux, org
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+#+HTML_HEAD_EXTRA: <link rel="icon" href="/images/favicon.png" />
+#+HTML_HEAD_EXTRA: <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+#+HTML_HEAD_EXTRA: <link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+#+LANGUAGE: en
+
+#+BEGIN_EXPORT html
+<header>
+    <center>
+    <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
+        <ul>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+            <li><a href="https://www.twitch.tv/babkock" target="_blank">Twitch</a></li>
+        </ul>
+    </center>
+</header>
+#+END_EXPORT
+
+#+TOC: headlines 2
+
+* About
+
+I am a self-taught programmer and computer scientist. I work in the languages of C, C++, JavaScript, PHP, Python, and Rust, and I use Void Linux as a daily driver. I am also fluent in Java, HTML/CSS, MySQL, and Bash shell.
+I'm also an artist, YouTuber, and Twitch streamer, and I manage a small record label.
+
+You can see my [[https://tannerbabcock.com/homework/index][web development homework]] live on my website.
+
+** My Configs
+
+- [[https://babkock.github.io/configs/config.html][Doom Emacs config.org]]
+- [[https://babkock.github.io/configs/init.html][Doom Emacs init.org]]
+- [[https://babkock.github.io/configs/qutebrowser.html][Qutebrowser]]
+
+** My Music
+
+- [[https://open.spotify.com/artist/3qysccskvwTB7ozJ0ojOTP][Erases Eraser]]
+- [[https://open.spotify.com/artist/6x2K3JghRnqnFdg07SkrN3][Tantrum Throwers]]
+- [[https://open.spotify.com/artist/6id1ZGp3lQNo11vRjEXGlo][Culture Chester]]
+- [[https://recordsrecordings.bandcamp.com][Records Recordings]]
+
+** Courses
+
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv101][Intro to HTML and CSS]]
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv205][Advanced CSS]]
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv221][Intro to JavaScript]]
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv321][Advanced JavaScript]]
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv341][Intro to PHP]]
+- [[https://gitlab.com/tbhomework/python][Python]]
+- [[https://gitlab.com/tbhomework/cis164][Advanced C++]]
+- [[https://gitlab.com/tbhomework/cis152][Data Structures]]
+
+#+BEGIN_EXPORT html
+<footer>
+    <center>
+    <p>Copyright &copy; 2022 Tanner Babcock.</p>
+    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp; <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    </center>
+</footer>
+#+END_EXPORT
