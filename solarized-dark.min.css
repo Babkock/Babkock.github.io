@@ -32,10 +32,10 @@ table thead tr th, table tbody tr td {
 }
 #text-table-of-contents ul li, #text-table-of-contents li {
     list-style-type:none !important;
+	padding-top:6px;
+	padding-bottom:6px;
 }
 #text-table-of-contents ul li a, #text-table-of-contents li a {
-	padding-top:6px;
-	padding-bottom:7px;
     font-size:1.17em !important;
 }
 #table-of-contents {
@@ -68,5 +68,6 @@ header center ul li a {
 #postamble { display:none !important; }
 
 #footer {
+	padding-top:7px;
     font-size:1.12em !important;
 }
