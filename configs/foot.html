@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-08 Sat 17:12 -->
+<!-- 2022-10-08 Sat 17:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tanner Babcock GitHub Pages</title>
+<title>Foot</title>
 <meta name="author" content="Tanner Babcock" />
-<meta name="description" content="The GitHub Pages website for Tanner Babcock. Here is where you'll find my Emacs and other configs." />
-<meta name="keywords" content="emacs, doom emacs, github, gitlab, tanner babcock, linux, gnu linux, void linux, arch linux, org" />
+<meta name="description" content="My Foot config. Features colors, fonts, and preferences." />
+<meta name="keywords" content="tanner babcock, tanner, babcock, emacs, github, foot, doom emacs, org mode, linux, gnu linux, void linux, art, experimental, noise" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -202,17 +202,20 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Tanner Babcock GitHub Pages</h1>
+<h1 class="title">Foot</h1>
+<p>
+This is the configuration for the Foot terminal.
+</p>
+
 <header>
     <center>
-    <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
         <ul>
             <li><a href="https://babkock.github.io">Home</a></li>
-            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://tannerbabcock.com/home" target="_blank">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
             <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
-            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+            <li><a href="https://www.youtube.com/user/Babk0ck" target="_blank">YouTube</a></li>
         </ul>
     </center>
 </header>
@@ -221,82 +224,102 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org320b9f0">About</a>
-<ul>
-<li><a href="#orgefb5b62">My Configs</a></li>
-<li><a href="#org7042c6b">My Music</a></li>
-<li><a href="#orgdd6dbdf">Courses</a></li>
-</ul>
-</li>
+<li><a href="#org56f6a3b">Font</a></li>
+<li><a href="#orga99561e">Preferences</a></li>
+<li><a href="#orgc17b7b7">Appearance</a></li>
+<li><a href="#orgad5839c">Colors</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org320b9f0" class="outline-2">
-<h2 id="org320b9f0">About</h2>
-<div class="outline-text-2" id="text-org320b9f0">
+<div id="outline-container-org56f6a3b" class="outline-2">
+<h2 id="org56f6a3b">Font</h2>
+<div class="outline-text-2" id="text-org56f6a3b">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #E27E8D; font-weight: bold;">19</span>:antialias=true
+<span style="color: #718CA1;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #E27E8D; font-weight: bold;">19</span>:antialias=true
+<span style="color: #718CA1;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #E27E8D; font-weight: bold;">19</span>:antialias=true
+<span style="color: #718CA1;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #E27E8D; font-weight: bold;">19</span>:antialias=true
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga99561e" class="outline-2">
+<h2 id="orga99561e">Preferences</h2>
+<div class="outline-text-2" id="text-orga99561e">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">dpi-aware</span>=yes
+<span style="color: #718CA1;">pad</span>=9x9 center
+<span style="color: #718CA1;">vertical-letter-offset</span>=-4px
+<span style="color: #718CA1;">line-height</span>=25px
+<span style="color: #718CA1;">letter-spacing</span>=-1px
+<span style="color: #718CA1;">bold-text-in-bright</span>=palette-based
+<span style="color: #718CA1;">resize-delay-ms</span>=<span style="color: #E27E8D; font-weight: bold;">90</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc17b7b7" class="outline-2">
+<h2 id="orgc17b7b7">Appearance</h2>
+<div class="outline-text-2" id="text-orgc17b7b7">
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">cursor</span>]
+<span style="color: #718CA1;">style</span>=beam
+<span style="color: #718CA1;">blink</span>=yes
+
+[<span style="color: #EBBF83;">colors</span>]
+<span style="color: #718CA1;">background</span>=<span style="color: #E27E8D; font-weight: bold;">171002</span>
+<span style="color: #718CA1;">foreground</span>=edc9b9
+<span style="color: #718CA1;">alpha</span>=<span style="color: #E27E8D; font-weight: bold;">0.6</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad5839c" class="outline-2">
+<h2 id="orgad5839c">Colors</h2>
+<div class="outline-text-2" id="text-orgad5839c">
 <p>
-I am a self-taught programmer and computer scientist. I work in the languages of C, C++, JavaScript, PHP, Python, and Rust, and I use Void Linux as a daily driver. I am also fluent in Java, HTML/CSS, MySQL, and Bash shell.
-I&rsquo;m also an artist, YouTuber, and Twitch streamer, and I manage a small record label.
+This is where you edit the actual color scheme.
 </p>
 
-<p>
-You can see my <a href="https://tannerbabcock.com/homework/index">web development homework</a> live on my website.
-</p>
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">regular0</span>=<span style="color: #E27E8D; font-weight: bold;">000000</span>
+<span style="color: #718CA1;">bright0</span>=<span style="color: #E27E8D; font-weight: bold;">121212</span>
+<span style="color: #718CA1;">regular1</span>=cd5349
+<span style="color: #718CA1;">bright1</span>=dd6359
+<span style="color: #718CA1;">regular2</span>=539f58
+<span style="color: #718CA1;">bright2</span>=63b268
+<span style="color: #718CA1;">regular3</span>=ddb474
+<span style="color: #718CA1;">bright3</span>=eec484
+<span style="color: #718CA1;">regular4</span>=4b8ac0
+<span style="color: #718CA1;">bright4</span>=5b9ad1
+<span style="color: #718CA1;">regular5</span>=d98771
+<span style="color: #718CA1;">bright5</span>=e99781
+<span style="color: #718CA1;">regular6</span>=<span style="color: #E27E8D; font-weight: bold;">489390</span>
+<span style="color: #718CA1;">bright6</span>=58a4a1
+<span style="color: #718CA1;">regular7</span>=edc9b9
+<span style="color: #718CA1;">bright7</span>=fdd9c9
+</pre>
 </div>
-
-<div id="outline-container-orgefb5b62" class="outline-3">
-<h3 id="orgefb5b62">My Configs</h3>
-<div class="outline-text-3" id="text-orgefb5b62">
-<ul class="org-ul">
-<li><a href="https://babkock.github.io/configs/config.html">Doom Emacs config.org</a></li>
-<li><a href="https://babkock.github.io/configs/init.html">Doom Emacs init.org</a></li>
-<li><a href="https://babkock.github.io/configs/foot.html">Foot</a></li>
-<li><a href="https://babkock.github.io/configs/qutebrowser.html">Qutebrowser</a></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org7042c6b" class="outline-3">
-<h3 id="org7042c6b">My Music</h3>
-<div class="outline-text-3" id="text-org7042c6b">
-<ul class="org-ul">
-<li><a href="https://open.spotify.com/artist/3qysccskvwTB7ozJ0ojOTP">Erases Eraser</a></li>
-<li><a href="https://open.spotify.com/artist/6x2K3JghRnqnFdg07SkrN3">Tantrum Throwers</a></li>
-<li><a href="https://open.spotify.com/artist/6id1ZGp3lQNo11vRjEXGlo">Culture Chester</a></li>
-<li><a href="https://recordsrecordings.bandcamp.com">Records Recordings</a></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgdd6dbdf" class="outline-3">
-<h3 id="orgdd6dbdf">Courses</h3>
-<div class="outline-text-3" id="text-orgdd6dbdf">
-<ul class="org-ul">
-<li><a href="https://gitlab.com/tbhomework/homework/-/tree/master/wdv101">Intro to HTML and CSS</a></li>
-<li><a href="https://gitlab.com/tbhomework/homework/-/tree/master/wdv205">Advanced CSS</a></li>
-<li><a href="https://gitlab.com/tbhomework/homework/-/tree/master/wdv221">Intro to JavaScript</a></li>
-<li><a href="https://gitlab.com/tbhomework/homework/-/tree/master/wdv321">Advanced JavaScript</a></li>
-<li><a href="https://gitlab.com/tbhomework/homework/-/tree/master/wdv341">Intro to PHP</a></li>
-<li><a href="https://gitlab.com/tbhomework/python">Python</a></li>
-<li><a href="https://gitlab.com/tbhomework/cis164">Advanced C++</a></li>
-<li><a href="https://gitlab.com/tbhomework/cis152">Data Structures</a></li>
-</ul>
 
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
     <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
-    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp; <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    <a href="https://tannerbabcock.com/home" target="_blank">Website</a> &nbsp;&bull;&nbsp;
+    <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.twitch.tv/babkock">Twitch</a></p>
     </center>
 </footer>
 </div>
 </div>
 </div>
-</div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-08 Sat 17:12</p>
+<p class="date">Created: 2022-10-08 Sat 17:11</p>
 </div>
 </body>
 </html>

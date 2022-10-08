@@ -40,6 +40,7 @@ You can see my [[https://tannerbabcock.com/homework/index][web development homew
 
 - [[https://babkock.github.io/configs/config.html][Doom Emacs config.org]]
 - [[https://babkock.github.io/configs/init.html][Doom Emacs init.org]]
+- [[https://babkock.github.io/configs/foot.html][Foot]]
 - [[https://babkock.github.io/configs/qutebrowser.html][Qutebrowser]]
 
 ** My Music
