@@ -16,12 +16,12 @@
     <center>
     <p>Welcome to my home for my Org documents, literate configuration files, and other information about me. This website was written in Org mode and powered by Emacs.</p>
         <ul>
+            <li><a href="https://babkock.github.io">Home</a></li>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
             <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
             <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
-            <li><a href="https://www.twitch.tv/babkock" target="_blank">Twitch</a></li>
         </ul>
     </center>
 </header>
