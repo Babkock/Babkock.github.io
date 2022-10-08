@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-07 Fri 04:58 -->
+<!-- 2022-10-08 Sat 04:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -206,12 +206,12 @@
 <header>
     <center>
         <ul>
+            <li><a href="https://babkock.github.io">Home</a></li>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
             <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
             <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
-            <li><a href="https://www.twitch.tv/babkock" target="_blank">Twitch</a></li>
         </ul>
     </center>
 </header>
@@ -220,31 +220,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgde9059d">Lexical Binding</a></li>
-<li><a href="#org6db0665">Basic Info</a></li>
-<li><a href="#org526cdfb">Preferences</a></li>
-<li><a href="#org6ac8804">Appearance</a></li>
-<li><a href="#orge0272b4">Modeline</a></li>
+<li><a href="#org35842db">Lexical Binding</a></li>
+<li><a href="#orgad82e4c">Basic Info</a></li>
+<li><a href="#org45caf06">Preferences</a></li>
+<li><a href="#org7b37b7c">Appearance</a></li>
+<li><a href="#orgffccd18">Modeline</a></li>
 </ul>
 </li>
-<li><a href="#org17f00bf">Packages</a>
+<li><a href="#orgdba891b">Packages</a>
 <ul>
-<li><a href="#orgfbddeb6">Org Mode</a></li>
-<li><a href="#orgaf074b5">Treemacs</a></li>
-<li><a href="#org76fd82c">Doom Themes</a></li>
+<li><a href="#orgf1bd133">Org Mode</a></li>
+<li><a href="#org3feb2e0">Treemacs</a></li>
+<li><a href="#org23c8e3f">Doom Themes</a></li>
 </ul>
 </li>
-<li><a href="#org89ce9cb">Keybindings</a>
+<li><a href="#orgfcbbacd">Keybindings</a>
 <ul>
-<li><a href="#orgf853b5e">Dashboard</a></li>
-<li><a href="#orgaaaa202">General</a></li>
+<li><a href="#orgb70a684">Dashboard</a></li>
+<li><a href="#org1dafbad">General</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgde9059d" class="outline-3">
-<h3 id="orgde9059d">Lexical Binding</h3>
-<div class="outline-text-3" id="text-orgde9059d">
+<div id="outline-container-org35842db" class="outline-3">
+<h3 id="org35842db">Lexical Binding</h3>
+<div class="outline-text-3" id="text-org35842db">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -256,9 +256,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org6db0665" class="outline-3">
-<h3 id="org6db0665">Basic Info</h3>
-<div class="outline-text-3" id="text-org6db0665">
+<div id="outline-container-orgad82e4c" class="outline-3">
+<h3 id="orgad82e4c">Basic Info</h3>
+<div class="outline-text-3" id="text-orgad82e4c">
 <p>
 Here, I set my name and email address.
 </p>
@@ -271,9 +271,9 @@ Here, I set my name and email address.
 </div>
 </div>
 
-<div id="outline-container-org526cdfb" class="outline-3">
-<h3 id="org526cdfb">Preferences</h3>
-<div class="outline-text-3" id="text-org526cdfb">
+<div id="outline-container-org45caf06" class="outline-3">
+<h3 id="org45caf06">Preferences</h3>
+<div class="outline-text-3" id="text-org45caf06">
 <p>
 Fix the garbage collector, enable zoom in and zoom out keybindings.
 </p>
@@ -293,9 +293,9 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
 </div>
 </div>
 
-<div id="outline-container-org6ac8804" class="outline-3">
-<h3 id="org6ac8804">Appearance</h3>
-<div class="outline-text-3" id="text-org6ac8804">
+<div id="outline-container-org7b37b7c" class="outline-3">
+<h3 id="org7b37b7c">Appearance</h3>
+<div class="outline-text-3" id="text-org7b37b7c">
 <p>
 Now the fun stuff, where I set the fonts, theme, and colors.
 </p>
@@ -311,8 +311,8 @@ Now the fun stuff, where I set the fonts, theme, and colors.
       <span style="color: #718CA1;">doom-variable-pitch-font</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">font-spec</span> <span style="color: #5EC4FF;">:family</span> <span style="color: #539AFC;">"NotoSerif Nerd Font"</span> <span style="color: #5EC4FF;">:size</span> <span style="color: #E27E8D; font-weight: bold;">18</span> <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.1</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">set-frame-font</span> <span style="color: #539AFC;">"Space Mono Nerd Font 18"</span> nil t<span style="color: #5EC4FF;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> ls-lisp-format-time-list <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span><span style="color: #E27E8D;">)</span>
-      ls-lisp-use-localized-time-format t
+<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">ls-lisp-format-time-list</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span><span style="color: #E27E8D;">)</span>
+      <span style="color: #718CA1;">ls-lisp-use-localized-time-format</span> t
       display-time-format <span style="color: #539AFC;">"%I:%M"</span>
       display-time-default-load-average nil<span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">display-line-numbers-type</span> t<span style="color: #5EC4FF;">)</span>
@@ -331,9 +331,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-orge0272b4" class="outline-3">
-<h3 id="orge0272b4">Modeline</h3>
-<div class="outline-text-3" id="text-orge0272b4">
+<div id="outline-container-orgffccd18" class="outline-3">
+<h3 id="orgffccd18">Modeline</h3>
+<div class="outline-text-3" id="text-orgffccd18">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> modeline
     <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-modeline-buffer-file-name-style</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">auto</span>
@@ -353,13 +353,13 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-org17f00bf" class="outline-2">
-<h2 id="org17f00bf">Packages</h2>
-<div class="outline-text-2" id="text-org17f00bf">
+<div id="outline-container-orgdba891b" class="outline-2">
+<h2 id="orgdba891b">Packages</h2>
+<div class="outline-text-2" id="text-orgdba891b">
 </div>
-<div id="outline-container-orgfbddeb6" class="outline-3">
-<h3 id="orgfbddeb6">Org Mode</h3>
-<div class="outline-text-3" id="text-orgfbddeb6">
+<div id="outline-container-orgf1bd133" class="outline-3">
+<h3 id="orgf1bd133">Org Mode</h3>
+<div class="outline-text-3" id="text-orgf1bd133">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> org
     <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">require</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">org-bullets</span><span style="color: #E27E8D;">)</span>
@@ -394,9 +394,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-orgaf074b5" class="outline-3">
-<h3 id="orgaf074b5">Treemacs</h3>
-<div class="outline-text-3" id="text-orgaf074b5">
+<div id="outline-container-org3feb2e0" class="outline-3">
+<h3 id="org3feb2e0">Treemacs</h3>
+<div class="outline-text-3" id="text-org3feb2e0">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> treemacs
     <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-themes-treemacs-theme</span> <span style="color: #539AFC;">"doom-colors"</span><span style="color: #E27E8D;">)</span>
@@ -406,9 +406,9 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-org76fd82c" class="outline-3">
-<h3 id="org76fd82c">Doom Themes</h3>
-<div class="outline-text-3" id="text-org76fd82c">
+<div id="outline-container-org23c8e3f" class="outline-3">
+<h3 id="org23c8e3f">Doom Themes</h3>
+<div class="outline-text-3" id="text-org23c8e3f">
 <p>
 Just a couple more things to make our lives easier.
 </p>
@@ -429,9 +429,9 @@ Just a couple more things to make our lives easier.
 </div>
 </div>
 
-<div id="outline-container-org89ce9cb" class="outline-2">
-<h2 id="org89ce9cb">Keybindings</h2>
-<div class="outline-text-2" id="text-org89ce9cb">
+<div id="outline-container-orgfcbbacd" class="outline-2">
+<h2 id="orgfcbbacd">Keybindings</h2>
+<div class="outline-text-2" id="text-orgfcbbacd">
 <p>
 This first bit lets us navigate between windows easier.
 </p>
@@ -449,9 +449,9 @@ This first bit lets us navigate between windows easier.
 </div>
 </div>
 
-<div id="outline-container-orgf853b5e" class="outline-3">
-<h3 id="orgf853b5e">Dashboard</h3>
-<div class="outline-text-3" id="text-orgf853b5e">
+<div id="outline-container-orgb70a684" class="outline-3">
+<h3 id="orgb70a684">Dashboard</h3>
+<div class="outline-text-3" id="text-orgb70a684">
 <p>
 This part is the shortcuts for our Doom Dashboard. These keybindings only work in Dashboard mode.
 </p>
@@ -690,9 +690,9 @@ This part removes other elements of the Dashboard.
 </div>
 </div>
 
-<div id="outline-container-orgaaaa202" class="outline-3">
-<h3 id="orgaaaa202">General</h3>
-<div class="outline-text-3" id="text-orgaaaa202">
+<div id="outline-container-org1dafbad" class="outline-3">
+<h3 id="org1dafbad">General</h3>
+<div class="outline-text-3" id="text-org1dafbad">
 <p>
 These are general keybindings, which are available in all modes.
 </p>
@@ -803,7 +803,7 @@ These are general keybindings, which are available in all modes.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-07 Fri 04:58</p>
+<p class="date">Created: 2022-10-08 Sat 04:55</p>
 </div>
 </body>
 </html>
