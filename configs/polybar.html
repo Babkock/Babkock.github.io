@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-10-09 Sun 15:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Polybar</title>
+<meta name="author" content="Tanner Babcock" />
+<meta name="description" content="My Polybar configuration. Features bars for multiple monitors." />
+<meta name="keywords" content="tanner babcock, emacs, github, doom emacs, org mode, linux, gitlab, gnu linux, void linux, experimental, noise" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+<link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Polybar</h1>
+<p>
+This literate configuration is available online on my <a href="https://babkock.github.io/configs/polybar.html">GitHub Pages</a>.
+</p>
+
+<header>
+    <center>
+        <ul>
+            <li><a href="https://babkock.github.io">Home</a></li>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://youtube.com/user/Babk0ck" target="_blank">YouTube</a></li>
+        </ul>
+    </center>
+</header>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1de474b">Laptop Bar</a>
+<ul>
+<li><a href="#org2b1ed54">Setup</a></li>
+<li><a href="#org0db9d7f">Appearance</a></li>
+</ul>
+</li>
+<li><a href="#org463bc24">Monitor Bar</a>
+<ul>
+<li><a href="#org842cac2">Setup</a></li>
+<li><a href="#orgb313f67">Appearance</a></li>
+</ul>
+</li>
+<li><a href="#orgdf43552">Modules</a>
+<ul>
+<li><a href="#org98fdbed">HDD</a></li>
+<li><a href="#orgd7ac643">Title</a></li>
+<li><a href="#orgf7adba7">Network</a></li>
+<li><a href="#org64e2a30">Bspwm</a></li>
+<li><a href="#orgdb8b0ce">MPD</a></li>
+<li><a href="#orgce2ef4b">Pulseaudio</a></li>
+<li><a href="#org7f619ba">CPU</a></li>
+<li><a href="#orgb595d09">Memory</a></li>
+<li><a href="#org618ef5a">Battery</a></li>
+<li><a href="#org93a7253">Date</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1de474b" class="outline-2">
+<h2 id="org1de474b">Laptop Bar</h2>
+<div class="outline-text-2" id="text-org1de474b">
+<p>
+This is my laptop&rsquo;s Polybar. It is the primary status bar, and started by default
+by the window manager.
+</p>
+</div>
+
+<div id="outline-container-org2b1ed54" class="outline-3">
+<h3 id="org2b1ed54">Setup</h3>
+<div class="outline-text-3" id="text-org2b1ed54">
+<p>
+This first block registers the bar &ldquo;laptop&rdquo; with Polybar, and assigns it to the display <code>eDP1</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">;    ____        __      __
+;   / __ \____  / /_  __/ /_  ____ ______
+;  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+; / ____/ /_/ / / /_/ / /_/ / /_/ / /
+;/_/    \____/_/\__, /_.___/\__,_/_/
+;              /____/
+
+[<span style="color: #EBBF83;">bar/laptop</span>]
+<span style="color: #718CA1;">bottom</span> = true
+<span style="color: #718CA1;">width</span> = 100%
+<span style="color: #718CA1;">height</span> = <span style="color: #E27E8D; font-weight: bold;">33</span>
+<span style="color: #718CA1;">radius</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+<span style="color: #718CA1;">fixed-center</span> = false
+<span style="color: #718CA1;">enable-ipc</span> = true
+
+<span style="color: #718CA1;">monitor</span> = eDP1
+<span style="color: #718CA1;">monitor-exact</span> = true
+<span style="color: #718CA1;">monitor-strict</span> = true
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0db9d7f" class="outline-3">
+<h3 id="org0db9d7f">Appearance</h3>
+<div class="outline-text-3" id="text-org0db9d7f">
+<p>
+Here are some general appearance settings, like colors, padding, and font.
+Remember, in the hex colors for Polybar&rsquo;s config, the first two digits are
+for the alpha channel. Like this: <code>#aarrggbb</code> . So a color beginning with
+&ldquo;#ff&rdquo; would render with 100% opacity. Hex colors with only 6 digits will be
+rendered fully opaque, and the colors will be interpreted like <code>#rrggbb</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">background</span> = ${xrdb:polybar.color0}
+<span style="color: #718CA1;">foreground</span> = ${xrdb:polybar.color1}
+<span style="color: #718CA1;">line-size</span> = <span style="color: #E27E8D; font-weight: bold;">3</span>
+<span style="color: #718CA1;">line-color</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">f00</span>
+<span style="color: #718CA1;">padding-left</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+<span style="color: #718CA1;">padding-right</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+
+<span style="color: #718CA1;">font-0</span> = SpaceMono Nerd Font:size=<span style="color: #E27E8D; font-weight: bold;">16</span>:antialias=true
+</pre>
+</div>
+
+<p>
+Here we define the modules on the left and right sides of the laptop&rsquo;s
+Polybar. Some system tray properties are also set. Modules appear
+in the order they are listed on these next two lines. Notice the expressions that look like
+<code>${xrdb:polybar.colorx}</code>, these will retrieve color strings from <b>Xresources,</b>
+so ricing is a little easier.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">modules-left</span> = bspwm
+<span style="color: #718CA1;">modules-right</span> = mpd pulse memory cpu battery date
+
+<span style="color: #718CA1;">tray-position</span> = right
+<span style="color: #718CA1;">tray-padding</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+<span style="color: #718CA1;">tray-maxsize</span> = <span style="color: #E27E8D; font-weight: bold;">33</span>
+<span style="color: #718CA1;">tray-background</span> = ${xrdb:polybar.color2}
+
+<span style="color: #718CA1;">wm-restack</span> = bspwm
+
+<span style="color: #718CA1;">scroll-up</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">bspwm.next</span>
+<span style="color: #718CA1;">scroll-down</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">bspwm.prev</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org463bc24" class="outline-2">
+<h2 id="org463bc24">Monitor Bar</h2>
+<div class="outline-text-2" id="text-org463bc24">
+<p>
+The monitor&rsquo;s Polybar has three modules the laptop&rsquo;s (my primary) bar doesn&rsquo;t:
+The network module, the window title, and the HDD module.
+</p>
+</div>
+
+<div id="outline-container-org842cac2" class="outline-3">
+<h3 id="org842cac2">Setup</h3>
+<div class="outline-text-3" id="text-org842cac2">
+<p>
+This block registers the monitor&rsquo;s Polybar and assigns it to the display <code>HDMI2</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">bar/monitor</span>]
+<span style="color: #718CA1;">bottom</span> = true
+<span style="color: #718CA1;">width</span> = 100%
+<span style="color: #718CA1;">height</span> = <span style="color: #E27E8D; font-weight: bold;">32</span>
+<span style="color: #718CA1;">radius</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+<span style="color: #718CA1;">fixed-center</span> = false
+<span style="color: #718CA1;">enable-ipc</span> = true
+
+<span style="color: #718CA1;">monitor</span> = HDMI2
+<span style="color: #718CA1;">monitor-exact</span> = true
+<span style="color: #718CA1;">monitor-strict</span> = true
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb313f67" class="outline-3">
+<h3 id="orgb313f67">Appearance</h3>
+<div class="outline-text-3" id="text-orgb313f67">
+<p>
+The font size should be a little bigger for the monitor&rsquo;s bar.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">background</span> = ${xrdb:polybar.color0}
+<span style="color: #718CA1;">foreground</span> = ${xrdb:polybar.color1}
+
+<span style="color: #718CA1;">tray-position</span> = right
+<span style="color: #718CA1;">tray-padding</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+<span style="color: #718CA1;">tray-maxsize</span> = <span style="color: #E27E8D; font-weight: bold;">40</span>
+
+<span style="color: #718CA1;">font-0</span> = SpaceMono Nerd Font:size=<span style="color: #E27E8D; font-weight: bold;">16</span>:antialias=true
+
+<span style="color: #718CA1;">line-size</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+<span style="color: #718CA1;">line-color</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">f00</span>
+<span style="color: #718CA1;">border-size</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+<span style="color: #718CA1;">padding-left</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+<span style="color: #718CA1;">padding-right</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
+</pre>
+</div>
+
+<p>
+Here are the modules.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #718CA1;">scroll-up</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">bspwm.next</span>
+<span style="color: #718CA1;">scroll-down</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">bspwm.prev</span>
+
+<span style="color: #718CA1;">modules-left</span> = bspwm
+<span style="color: #718CA1;">modules-right</span> = title hdd network battery date
+
+<span style="color: #718CA1;">wm-restack</span> = bspwm
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdf43552" class="outline-2">
+<h2 id="orgdf43552">Modules</h2>
+<div class="outline-text-2" id="text-orgdf43552">
+</div>
+<div id="outline-container-org98fdbed" class="outline-3">
+<h3 id="org98fdbed">HDD</h3>
+<div class="outline-text-3" id="text-org98fdbed">
+<p>
+Show remaining disk space.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/hdd</span>]
+<span style="color: #718CA1;">type</span> = internal/fs
+
+<span style="color: #718CA1;">mount-0</span> = /
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">fixed-values</span> = true
+<span style="color: #718CA1;">spacing</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+
+<span style="color: #718CA1;">format-mounted</span> = &lt;label-mounted&gt;
+<span style="color: #718CA1;">label-mounted</span> = <span style="color: #539AFC;">" &#61600; %free% "</span>
+<span style="color: #718CA1;">format-mounted-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffee7369</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-mounted-underline = ${xrdb:polybar.color4}</span>
+<span style="color: #718CA1;">format-mounted-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">6acd5349</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd7ac643" class="outline-3">
+<h3 id="orgd7ac643">Title</h3>
+<div class="outline-text-3" id="text-orgd7ac643">
+<p>
+Shows the title of the currently focused window.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/title</span>]
+<span style="color: #718CA1;">type</span> = internal/xwindow
+<span style="color: #718CA1;">format</span> = &lt;label&gt;
+<span style="color: #718CA1;">format-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efedc4c4</span>
+<span style="color: #718CA1;">format-padding</span> = <span style="color: #E27E8D; font-weight: bold;">3</span>
+
+<span style="color: #718CA1;">label</span> = %title%
+<span style="color: #718CA1;">label-maxlen</span> = <span style="color: #E27E8D; font-weight: bold;">58</span>
+
+<span style="color: #718CA1;">label-empty</span> = bspwm
+<span style="color: #718CA1;">label-empty-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">bfddb4b4</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7adba7" class="outline-3">
+<h3 id="orgf7adba7">Network</h3>
+<div class="outline-text-3" id="text-orgf7adba7">
+<p>
+Shows upload and download traffic. Uncomment those lines to have underlines.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/network</span>]
+<span style="color: #718CA1;">type</span> = internal/network
+<span style="color: #718CA1;">interface</span> = wlp0s20f3
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">1.0</span>
+
+<span style="color: #718CA1;">format</span> = &lt;ramp-signal&gt; &lt;label-connected&gt;
+<span style="color: #718CA1;">format-connected</span> = &lt;ramp-signal&gt; &lt;label-connected&gt;
+<span style="color: #718CA1;">format-disconnected</span> = <span style="color: #539AFC;">"not connected"</span>
+<span style="color: #718CA1;">format-disconnected-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ccedc2c2</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-disconnected-underline = ${xrdb:polybar.color14}</span>
+
+<span style="color: #718CA1;">label-connected</span> = <span style="color: #539AFC;">"%downspeed:5% &#61539; %upspeed:5% &#61538; "</span>
+<span style="color: #718CA1;">label-connected-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef83d288</span>
+<span style="color: #718CA1;">format-connected-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef83d288</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-connected-underline = ${xrdb:polybar.color13}</span>
+<span style="color: #718CA1;">format-connected-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">7a539f58</span>
+
+<span style="color: #718CA1;">ramp-signal-0</span> = <span style="color: #539AFC;">" &#61931;"</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org64e2a30" class="outline-3">
+<h3 id="org64e2a30">Bspwm</h3>
+<div class="outline-text-3" id="text-org64e2a30">
+<p>
+The Bspwm workspace listing, including focused colors, occupied colors, and
+empty colors. The roman numerals in the icon strings are taken from <code>bspwmrc</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/bspwm</span>]
+<span style="color: #718CA1;">type</span> = internal/bspwm
+
+<span style="color: #718CA1;">ws-icon-0</span> = <span style="color: #539AFC;">"I;&#61728;"</span>
+<span style="color: #718CA1;">ws-icon-1</span> = <span style="color: #539AFC;">"II;&#64158;"</span>
+<span style="color: #718CA1;">ws-icon-2</span> = <span style="color: #539AFC;">"III;&#61441;"</span>
+<span style="color: #718CA1;">ws-icon-4</span> = <span style="color: #539AFC;">"V;&#61928;"</span>
+<span style="color: #718CA1;">ws-icon-5</span> = <span style="color: #539AFC;">"VI;&#61448;"</span>
+<span style="color: #718CA1;">ws-icon-3</span> = <span style="color: #539AFC;">"IV;&#61729;"</span>
+<span style="color: #718CA1;">ws-icon-6</span> = <span style="color: #539AFC;">"VII;&#61729;"</span>
+<span style="color: #718CA1;">ws-icon-7</span> = <span style="color: #539AFC;">"VIII;&#61557;"</span>
+<span style="color: #718CA1;">ws-icon-8</span> = <span style="color: #539AFC;">"IX;&#61442;"</span>
+
+<span style="color: #718CA1;">label-focused</span> = %icon%
+
+<span style="color: #718CA1;">label-focused-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">9acd5349</span>
+<span style="color: #718CA1;">label-focused-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffefcdcd</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">label-focused-underline = ${xrdb:polybar.color6}</span>
+<span style="color: #718CA1;">label-focused-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">label-occupied</span> = %icon%
+<span style="color: #718CA1;">label-occupied-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">label-occupied-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef5b9ad1</span>
+<span style="color: #718CA1;">label-occupied-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">9a4b8ac0</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">label-occupied-underline = ${xrdb:polybar.color8}</span>
+
+<span style="color: #718CA1;">label-urgent</span> = %icon%!
+<span style="color: #718CA1;">label-urgent-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffff0000</span>
+<span style="color: #718CA1;">label-urgent-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">label-empty</span> = %icon%
+<span style="color: #718CA1;">label-empty-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">7addb474</span>
+<span style="color: #718CA1;">label-empty-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efeec484</span>
+<span style="color: #718CA1;">label-empty-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">scroll-up</span> = bspwm-desknext
+<span style="color: #718CA1;">scroll-down</span> = bspwm-deskprev
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdb8b0ce" class="outline-3">
+<h3 id="orgdb8b0ce">MPD</h3>
+<div class="outline-text-3" id="text-orgdb8b0ce">
+<p>
+MPD music player.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/mpd</span>]
+<span style="color: #718CA1;">type</span> = internal/mpd
+<span style="color: #718CA1;">format-online</span> = &lt;label-song&gt; &lt;icon-prev&gt; &lt;toggle&gt; &lt;icon-next&gt;
+<span style="color: #718CA1;">format-online-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efedc1c1</span>
+
+<span style="color: #718CA1;">host</span> = 127.0.0.2
+<span style="color: #718CA1;">port</span> = <span style="color: #E27E8D; font-weight: bold;">6600</span>
+
+<span style="color: #718CA1;">label-active-font</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+
+<span style="color: #718CA1;">icon-play</span> = &#61515;
+<span style="color: #718CA1;">icon-pause</span> = &#61516;
+<span style="color: #718CA1;">icon-stop</span> = +
+<span style="color: #718CA1;">icon-prev</span> = &#61514;
+<span style="color: #718CA1;">icon-next</span> = &#61518;
+
+<span style="color: #718CA1;">label-song-maxlen</span> = <span style="color: #E27E8D; font-weight: bold;">56</span>
+<span style="color: #718CA1;">label-song-ellipsis</span> = true
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgce2ef4b" class="outline-3">
+<h3 id="orgce2ef4b">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgce2ef4b">
+<p>
+Pulseaudio volume.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/pulse</span>]
+<span style="color: #718CA1;">type</span> = internal/pulseaudio
+
+<span style="color: #718CA1;">sink</span> = alsa_output.pci-0000_00_1f.3.analog-stereo
+
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+
+<span style="color: #718CA1;">format-volume</span> = &lt;ramp-volume&gt; &lt;label-volume&gt;
+<span style="color: #718CA1;">format-muted</span> = <span style="color: #539AFC;">"&lt;label-muted&gt; "</span>
+
+<span style="color: #718CA1;">label-muted</span> = <span style="color: #539AFC;">" &#64126; %percentage%%"</span>
+<span style="color: #718CA1;">label-muted-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffeec484</span>
+
+<span style="color: #718CA1;">ramp-volume-0</span> = <span style="color: #539AFC;">" &#64126;"</span>
+<span style="color: #718CA1;">ramp-volume-0-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efdd6359</span>
+<span style="color: #718CA1;">ramp-volume-1</span> = <span style="color: #539AFC;">" &#64127;"</span>
+<span style="color: #718CA1;">ramp-volume-2</span> = <span style="color: #539AFC;">" &#64125;"</span>
+<span style="color: #718CA1;">spacing</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
+
+<span style="color: #718CA1;">label-volume</span> = <span style="color: #539AFC;">"%percentage%% "</span>
+
+<span style="color: #718CA1;">format-volume-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffeec484</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-volume-underline = ${xrdb:polybar.color4}</span>
+<span style="color: #718CA1;">format-volume-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">7addb474</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-muted-underline = ${xrdb:polybar.color4}</span>
+
+<span style="color: #718CA1;">click-right</span> = pavucontrol
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f619ba" class="outline-3">
+<h3 id="org7f619ba">CPU</h3>
+<div class="outline-text-3" id="text-org7f619ba">
+<p>
+Average CPU percentage.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/cpu</span>]
+<span style="color: #718CA1;">type</span> = internal/cpu
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">format-prefix</span> = <span style="color: #539AFC;">"&#57912; "</span>
+<span style="color: #718CA1;">format-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efdd6359</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-underline = ${xrdb:polybar.color14}</span>
+<span style="color: #718CA1;">format-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">6acd5349</span>
+<span style="color: #718CA1;">format-prefix-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ffdd6359</span>
+<span style="color: #718CA1;">format-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">label</span> = %percentage:2%%
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb595d09" class="outline-3">
+<h3 id="orgb595d09">Memory</h3>
+<div class="outline-text-3" id="text-orgb595d09">
+<p>
+Percentage of RAM in use.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/memory</span>]
+<span style="color: #718CA1;">type</span> = internal/memory
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">format-prefix</span> = <span style="color: #539AFC;">"&#57958; "</span>
+<span style="color: #718CA1;">format-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+<span style="color: #718CA1;">format-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef63b268</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-underline = ${xrdb:polybar.color16}</span>
+<span style="color: #718CA1;">format-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">6a539f58</span>
+<span style="color: #718CA1;">format-prefix-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ff63b268</span>
+<span style="color: #718CA1;">label</span> = %percentage_used%%
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org618ef5a" class="outline-3">
+<h3 id="org618ef5a">Battery</h3>
+<div class="outline-text-3" id="text-org618ef5a">
+<p>
+Notice the animations, and the red and yellow colors, to draw attention to
+low battery levels.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/battery</span>]
+<span style="color: #718CA1;">type</span> = internal/battery
+<span style="color: #718CA1;">battery</span> = BAT0
+<span style="color: #718CA1;">adapter</span> = AC0
+<span style="color: #718CA1;">full-at</span> = <span style="color: #E27E8D; font-weight: bold;">98</span>
+
+<span style="color: #718CA1;">format-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #718CA1;">format-charging-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #718CA1;">format-charging-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">7ad98771</span>
+
+<span style="color: #718CA1;">format-charging</span> = &lt;animation-charging&gt; &lt;label-charging&gt; 
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-charging-underline = ${xrdb:polybar.color8}</span>
+<span style="color: #718CA1;">format-charging-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">format-discharging-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efedc5c5</span>
+<span style="color: #718CA1;">format-discharging-prefix-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #718CA1;">format-discharging</span> = &lt;ramp-capacity&gt; &lt;label-discharging&gt;
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-discharging-underline = ${xrdb:polybar.color8}</span>
+<span style="color: #718CA1;">format-discharging-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">7ad98771</span>
+
+<span style="color: #718CA1;">format-discharging-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">format-full-prefix</span> = <span style="color: #539AFC;">"&#57914; "</span>
+<span style="color: #718CA1;">format-full-prefix-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #718CA1;">format-full-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-full-underline = ${xrdb:polybar.color8}</span>
+<span style="color: #718CA1;">format-full-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">00000000</span>
+
+<span style="color: #718CA1;">format-full-padding</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">ramp-capacity-4</span> = <span style="color: #539AFC;">"&#62016;"</span>
+<span style="color: #718CA1;">ramp-capacity-3</span> = <span style="color: #539AFC;">"&#62017;"</span>
+<span style="color: #718CA1;">ramp-capacity-2</span> = <span style="color: #539AFC;">"&#62018;"</span>
+<span style="color: #718CA1;">ramp-capacity-1</span> = <span style="color: #539AFC;">"&#62019;"</span>
+<span style="color: #718CA1;">ramp-capacity-0</span> = <span style="color: #539AFC;">"&#62020;"</span>
+<span style="color: #718CA1;">ramp-capacity-1-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efeec484</span>
+<span style="color: #718CA1;">ramp-capacity-0-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efdd6359</span>
+<span style="color: #718CA1;">ramp-capacity-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+
+<span style="color: #718CA1;">animation-charging-0</span> = <span style="color: #539AFC;">"&#62020;"</span>
+<span style="color: #718CA1;">animation-charging-1</span> = <span style="color: #539AFC;">"&#62019;"</span>
+<span style="color: #718CA1;">animation-charging-2</span> = <span style="color: #539AFC;">"&#62018;"</span>
+<span style="color: #718CA1;">animation-charging-3</span> = <span style="color: #539AFC;">"&#62017;"</span>
+<span style="color: #718CA1;">animation-charging-4</span> = <span style="color: #539AFC;">"&#62016;"</span>
+<span style="color: #718CA1;">animation-charging-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">efe99781</span>
+<span style="color: #718CA1;">animation-charging-framerate</span> = <span style="color: #E27E8D; font-weight: bold;">400</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93a7253" class="outline-3">
+<h3 id="org93a7253">Date</h3>
+<div class="outline-text-3" id="text-org93a7253">
+<p>
+Tried and true date module.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #EBBF83;">module/date</span>]
+<span style="color: #718CA1;">type</span> = internal/date
+<span style="color: #718CA1;">interval</span> = <span style="color: #E27E8D; font-weight: bold;">1</span>
+
+<span style="color: #718CA1;">format-prefix</span> = <span style="color: #539AFC;">" "</span>
+
+<span style="color: #718CA1;">date</span> = <span style="color: #539AFC;">"&#61555; %a %b %d"</span>
+
+<span style="color: #718CA1;">time</span> = <span style="color: #539AFC;">"&#61463; %I:%M:%S"</span>
+
+<span style="color: #718CA1;">format-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef78c4c1</span>
+<span style="color: #718CA1;">format-prefix-foreground</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">ef78c4c1</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">format-underline = ${xrdb:polybar.color18}</span>
+<span style="color: #718CA1;">format-background</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">6b489390</span>
+
+<span style="color: #718CA1;">label</span> = %date% %time%
+</pre>
+</div>
+
+<footer>
+    <center>
+    <p>Copyright &copy; 2022 Tanner Babcock.</p>
+    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
+    <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    </center>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Tanner Babcock</p>
+<p class="date">Created: 2022-10-09 Sun 15:36</p>
+</div>
+</body>
+</html>

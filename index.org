@@ -31,42 +31,48 @@
 
 * About
 
-I am a self-taught programmer and computer scientist. I work in the languages of C, C++, JavaScript, PHP, Python, and Rust, and I use Void Linux as a daily driver. I am also fluent in Java, HTML/CSS, MySQL, and Bash shell.
-I'm also an artist, YouTuber, and Twitch streamer, and I manage a small record label.
+I am a self-taught programmer and computer scientist. I work in the languages of C, C++, JavaScript, PHP, Python, and Rust, and I use Void Linux as a daily driver. I am also fluent in Java, HTML/CSS, MySQL, and Bash shell. I maintain [[https://tannerbabcock.com/home][my own website.]]
+I'm also an artist, YouTuber, and Twitch streamer, and I manage a small record label. This repository has all of my social media links, links to my music projects, and links to my Dotfiles.
 
 You can see my [[https://tannerbabcock.com/homework/index][web development homework]] live on my website.
 
+This is my personal GitHub Pages website. I use it to host my literate configuration files. Please feel free to contribute pull requests or issues on [[https://github.com/Babkock/Babkock.github.io][this repository on GitHub]], as the source code for this website is open source and licensed under the MIT License. These Org documents are viewable on my [[https://gitlab.com/Babkock/Dotfiles][Dotfiles repository]].
+
 ** My Configs
 
-- [[https://babkock.github.io/configs/config.html][Doom Emacs config.org]]
+- [[https://babkock.github.io/configs/doom.html][Doom Emacs config.org]]
 - [[https://babkock.github.io/configs/init.html][Doom Emacs init.org]]
+- [[https://babkock.github.io/configs/fetch.html][Dotfiles Fetch]]
 - [[https://babkock.github.io/configs/foot.html][Foot]]
+- [[https://babkock.github.io/configs/polybar.html][Polybar]]
 - [[https://babkock.github.io/configs/qutebrowser.html][Qutebrowser]]
 
 ** My Music
 
-- [[https://open.spotify.com/artist/3qysccskvwTB7ozJ0ojOTP][Erases Eraser]]
-- [[https://open.spotify.com/artist/6x2K3JghRnqnFdg07SkrN3][Tantrum Throwers]]
-- [[https://open.spotify.com/artist/6id1ZGp3lQNo11vRjEXGlo][Culture Chester]]
+- [[https://open.spotify.com/artist/3qysccskvwTB7ozJ0ojOTP][Erases Eraser]] - ([[https://eraseseraser.bandcamp.com/][Bandcamp]])
+- [[https://open.spotify.com/artist/6x2K3JghRnqnFdg07SkrN3][Tantrum Throwers]] - ([[https://tantrumthrowers.bandcamp.com/][Bandcamp]])
+- [[https://open.spotify.com/artist/6id1ZGp3lQNo11vRjEXGlo][Culture Chester]] - ([[https://culturechester.bandcamp.com/][Bandcamp]])
 - [[https://recordsrecordings.bandcamp.com][Records Recordings]]
 
 ** Courses
 
-- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv101][Intro to HTML and CSS]]
-- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv205][Advanced CSS]]
-- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv221][Intro to JavaScript]]
-- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv321][Advanced JavaScript]]
-- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv341][Intro to PHP]]
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv101][Intro to HTML and CSS]] - ([[https://tannerbabcock.com/homework/index?c=wdv101][live]])
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv205][Advanced CSS]] - ([[https://tannerbabcock.com/homework/index?c=wdv205][live]])
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv221][Intro to JavaScript]] - ([[https://tannerbabcock.com/homework/index?c=wdv221][live]])
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv321][Advanced JavaScript]] - ([[https://tannerbabcock.com/homework/index?c=wdv321][live]]) ([[https://tannerbabcock.com/homework/wdv321/recipes/home.html][Final Project]])
+- [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv341][Intro to PHP]] - ([[https://tannerbabcock.com/homework/index?c=wdv341][live]]) ([[https://tannerbabcock.com/homework/wdv341/wax/index][Final Project]])
 - [[https://gitlab.com/tbhomework/python][Python]]
-- [[https://gitlab.com/tbhomework/cis164][Advanced C++]]
+- [[https://gitlab.com/tbhomework/cis164][Advanced C++]] - ([[https://github.com/naertz/CasualMockSkirmish][Group Project]])
 - [[https://gitlab.com/tbhomework/cis152][Data Structures]]
 
 #+BEGIN_EXPORT html
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
-    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp; <a href="https://gitlab.com/Babkock/">GitLab</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
+    <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.twitch.tv/babkock">Twitch</a></p>
     </center>
 </footer>
 #+END_EXPORT
