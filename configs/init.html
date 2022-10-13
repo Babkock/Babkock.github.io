@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-09 Sun 15:55 -->
+<!-- 2022-10-13 Thu 15:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -199,6 +199,7 @@
 <link rel="icon" href="/images/favicon.png" />
 <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
 <link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+<meta name="google-site-verification" content="2WoaNPwHxji9bjk8HmxLdspgd5cx93KCRp-Bo1gjV0o" />
 </head>
 <body>
 <div id="content" class="content">
@@ -224,23 +225,23 @@ This is the other, secondary Doom Emacs config file <code>init.org</code>, which
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org4a94448">Lexical Binding</a></li>
-<li><a href="#org81a5939">Packages</a></li>
-<li><a href="#orgf9c87ba">Preferences</a>
+<li><a href="#orgbfcb7f2">Lexical Binding</a></li>
+<li><a href="#orgb346560">Packages</a></li>
+<li><a href="#orgf982a44">Preferences</a>
 <ul>
-<li><a href="#org0694b3d">Frame Title</a></li>
-<li><a href="#orgd094d93">Fallback Buffer Name</a></li>
-<li><a href="#orgb65890b">Doom Dashboard</a></li>
-<li><a href="#org937b13f">Modeline</a></li>
+<li><a href="#org26687a5">Frame Title</a></li>
+<li><a href="#org4522c25">Fallback Buffer Name</a></li>
+<li><a href="#orgfd09943">Doom Dashboard</a></li>
+<li><a href="#orga342fb1">Modeline</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4a94448" class="outline-2">
-<h2 id="org4a94448">Lexical Binding</h2>
-<div class="outline-text-2" id="text-org4a94448">
+<div id="outline-container-orgbfcb7f2" class="outline-2">
+<h2 id="orgbfcb7f2">Lexical Binding</h2>
+<div class="outline-text-2" id="text-orgbfcb7f2">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -252,9 +253,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org81a5939" class="outline-2">
-<h2 id="org81a5939">Packages</h2>
-<div class="outline-text-2" id="text-org81a5939">
+<div id="outline-container-orgb346560" class="outline-2">
+<h2 id="orgb346560">Packages</h2>
+<div class="outline-text-2" id="text-orgb346560">
 <p>
 This is my list of enabled and installed packages. I try to have a small and minimal Emacs environment, so I&rsquo;ve disabled some common modules.
 </p>
@@ -442,17 +443,17 @@ This is my list of enabled and installed packages. I try to have a small and min
 </div>
 </div>
 
-<div id="outline-container-orgf9c87ba" class="outline-2">
-<h2 id="orgf9c87ba">Preferences</h2>
-<div class="outline-text-2" id="text-orgf9c87ba">
+<div id="outline-container-orgf982a44" class="outline-2">
+<h2 id="orgf982a44">Preferences</h2>
+<div class="outline-text-2" id="text-orgf982a44">
 <p>
 I don&rsquo;t know why, but these next snippets of code must be in this file, (<code>init.el</code>) and not <code>config.el</code>.
 </p>
 </div>
 
-<div id="outline-container-org0694b3d" class="outline-3">
-<h3 id="org0694b3d">Frame Title</h3>
-<div class="outline-text-3" id="text-org0694b3d">
+<div id="outline-container-org26687a5" class="outline-3">
+<h3 id="org26687a5">Frame Title</h3>
+<div class="outline-text-3" id="text-org26687a5">
 <p>
 Conditionally set the title of the frame (or X window) with project name and buffer name (file name).
 </p>
@@ -475,9 +476,9 @@ Conditionally set the title of the frame (or X window) with project name and buf
 </div>
 </div>
 
-<div id="outline-container-orgd094d93" class="outline-3">
-<h3 id="orgd094d93">Fallback Buffer Name</h3>
-<div class="outline-text-3" id="text-orgd094d93">
+<div id="outline-container-org4522c25" class="outline-3">
+<h3 id="org4522c25">Fallback Buffer Name</h3>
+<div class="outline-text-3" id="text-org4522c25">
 <p>
 The default buffer name.
 </p>
@@ -492,15 +493,29 @@ The default buffer name.
 </div>
 </div>
 
-<div id="outline-container-orgb65890b" class="outline-3">
-<h3 id="orgb65890b">Doom Dashboard</h3>
-<div class="outline-text-3" id="text-orgb65890b">
+<div id="outline-container-orgfd09943" class="outline-3">
+<h3 id="orgfd09943">Doom Dashboard</h3>
+<div class="outline-text-3" id="text-orgfd09943">
 <p>
 Show a custom image on the splash screen, and hide cursor and mode line.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">fancy-splash-image</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">concat</span> <span style="color: #718CA1;">doom-private-dir</span> <span style="color: #539AFC;">"splash.png"</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">let</span> <span style="color: #E27E8D;">(</span><span style="color: #8BD49C;">(</span>alternatives <span style="color: #5EC4FF;">'</span><span style="color: #B62D65;">(</span><span style="color: #539AFC;">"doomEmacsGruvbox.png"</span>
+                      <span style="color: #539AFC;">"bluee.png"</span>
+                      <span style="color: #539AFC;">"purplee.png"</span>
+                      <span style="color: #539AFC;">"emacs.png"</span>
+                      <span style="color: #539AFC;">"doomEmacsTokyoNight.png"</span>
+                      <span style="color: #539AFC;">"doomWithShadow.png"</span>
+                      <span style="color: #539AFC;">"doomEmacsDoomOne.png"</span>
+                      <span style="color: #539AFC;">"doomEmacsGray.png"</span>
+                      <span style="color: #539AFC;">"doomEmacsBright.png"</span>
+                      <span style="color: #539AFC;">"doomie.png"</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
+    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">fancy-splash-image</span>
+        <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">concat</span> <span style="color: #718CA1;">doom-private-dir</span> <span style="color: #539AFC;">"splash/"</span>
+            <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">nth</span> <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">random</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">length</span> alternatives<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span> alternatives<span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+
+<span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">(setq fancy-splash-image (concat doom-private-dir "splash.png"))</span>
 
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">add-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">+doom-dashboard-mode-hook</span> <span style="color: #E27E8D;">(</span><span style="color: #718CA1;">hide-mode-line-mode</span> <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #E27E8D;">)</span> <span style="color: #E27E8D;">(</span><span style="color: #718CA1;">hl-line-mode</span> <span style="color: #E27E8D; font-weight: bold;">-1</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">add-hook!</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">after-init-hook</span> <span style="color: #5EC4FF;">#'</span><span style="color: #718CA1;">doom-modeline-mode</span><span style="color: #5EC4FF;">)</span>
@@ -510,9 +525,9 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 </div>
 
-<div id="outline-container-org937b13f" class="outline-3">
-<h3 id="org937b13f">Modeline</h3>
-<div class="outline-text-3" id="text-org937b13f">
+<div id="outline-container-orga342fb1" class="outline-3">
+<h3 id="orga342fb1">Modeline</h3>
+<div class="outline-text-3" id="text-orga342fb1">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">inhibit-compacting-font-caches</span> t<span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">find-file-visit-truename</span> t<span style="color: #5EC4FF;">)</span>
@@ -545,7 +560,7 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-09 Sun 15:55</p>
+<p class="date">Created: 2022-10-13 Thu 15:25</p>
 </div>
 </body>
 </html>
