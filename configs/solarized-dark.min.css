@@ -38,6 +38,9 @@ table thead tr th, table tbody tr td {
 #text-table-of-contents ul li a, #text-table-of-contents li a {
     font-size:1.17em !important;
 }
+pre span {
+	font-family:monospace;
+}
 #table-of-contents {
     float:right;
     width:20% !important;
