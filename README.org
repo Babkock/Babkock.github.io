@@ -9,6 +9,7 @@
 #+HTML_HEAD_EXTRA: <link rel="icon" href="/images/favicon.png" />
 #+HTML_HEAD_EXTRA: <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
 #+HTML_HEAD_EXTRA: <link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+#+HTML_HEAD_EXTRA: <meta name="google-site-verification" content="2WoaNPwHxji9bjk8HmxLdspgd5cx93KCRp-Bo1gjV0o" />
 #+LANGUAGE: en
 
 #+BEGIN_EXPORT html
@@ -46,6 +47,7 @@ This is my personal GitHub Pages website. I use it to host my literate configura
 - [[https://babkock.github.io/configs/foot.html][Foot]]
 - [[https://babkock.github.io/configs/polybar.html][Polybar]]
 - [[https://babkock.github.io/configs/qutebrowser.html][Qutebrowser]]
+- [[https://babkock.github.io/configs/zsh.html][Zshrc]]
 
 ** My Music
 
