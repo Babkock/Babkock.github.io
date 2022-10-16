@@ -56,5 +56,11 @@
         <lastmod>2022-10-10</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
-    </url>
+	</url>
+	<url>
+		<loc>https://babkock.github.io/configs/zsh.html</loc>
+		<lastmod>2022-10-15</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.7</priority>
+	</url>
 </urlset>
