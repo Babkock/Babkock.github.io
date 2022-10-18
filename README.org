@@ -3,9 +3,15 @@
 #+EMAIL: babkock@protonmail.com
 #+STARTUP: showeverything
 #+OPTIONS: toc:nil num:nil
-#+DESCRIPTION: The GitHub Pages website for Tanner Babcock. Here is where you'll find my Emacs and other configs.
+#+DESCRIPTION: The GitHub Pages website for computer scientist and artist Tanner Babcock. Here is where you'll find my Emacs and other configs.
 #+KEYWORDS: emacs, doom emacs, github, gitlab, tanner babcock, linux, gnu linux, void linux, arch linux, org
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+#+HTML_HEAD_EXTRA: <meta property="og:image" content="/images/ogimage.png" />
+#+HTML_HEAD_EXTRA: <meta property="og:image:width" content="660" />
+#+HTML_HEAD_EXTRA: <meta property="og:image:height" content="461" />
+#+HTML_HEAD_EXTRA: <meta property="og:title" content="Tanner Babcock GitHub Pages" />
+#+HTML_HEAD_EXTRA: <meta property="og:description" content="The GitHub Pages website for computer scientist and artist Tanner Babcock. Here is where you'll find my Emacs and other configs." />
+#+HTML_HEAD_EXTRA: <meta property="og:locale" content="en_US" />
 #+HTML_HEAD_EXTRA: <link rel="icon" href="/images/favicon.png" />
 #+HTML_HEAD_EXTRA: <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
 #+HTML_HEAD_EXTRA: <link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
@@ -20,7 +26,7 @@
             <li><a href="https://babkock.github.io">Home</a></li>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
-            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
             <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
         </ul>
@@ -31,6 +37,8 @@
 #+TOC: headlines 2
 
 * About
+
+[[https://babkock.github.io/images/splash.jpg]]
 
 I am a self-taught programmer and computer scientist. I work in the languages of C, C++, JavaScript, PHP, Python, and Rust, and I use Void Linux as a daily driver. I am also fluent in Java, HTML/CSS, MySQL, and Bash shell. I maintain [[https://tannerbabcock.com/home][my own website.]]
 I'm also an artist, YouTuber, and Twitch streamer, and I manage a small record label. This repository has all of my social media links, links to my music projects, and links to my Dotfiles.
@@ -71,7 +79,7 @@ This is my personal GitHub Pages website. I use it to host my literate configura
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
     <a href="https://www.twitch.tv/babkock">Twitch</a></p>
