@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-15 Sat 15:02 -->
+<!-- 2022-10-18 Tue 19:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zsh</title>
@@ -225,37 +225,41 @@ Welcome to my Zshrc. This configuration relies on <a href="https://ohmyz.sh/">Oh
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org820770e">Theme</a></li>
-<li><a href="#org5b4d903">Preferences</a></li>
-<li><a href="#org17968b3">Conditional Aliases</a>
+<li><a href="#org10f3af2">Theme</a></li>
+<li><a href="#org8a462c5">Preferences</a></li>
+<li><a href="#orgefa1d46">Conditional Aliases</a>
 <ul>
-<li><a href="#org7ed3f5d">SSH</a></li>
-<li><a href="#org79c333b">Terminal</a></li>
+<li><a href="#org367b0b0">SSH</a></li>
+<li><a href="#org38e7769">Terminal</a>
+<ul>
+<li><a href="#orgccd631f">Graphical Terminal Aliases</a></li>
+<li><a href="#org3b7c834">TTY Aliases</a></li>
 </ul>
 </li>
-<li><a href="#org149e667">Functions</a>
-<ul>
-<li><a href="#org7387a91">picp</a></li>
-<li><a href="#orgecf1e6c">pf</a></li>
-<li><a href="#org1e6f6b0">t</a></li>
-<li><a href="#org5b13c45">y</a></li>
-<li><a href="#org3abc5b6">scr</a></li>
-<li><a href="#orgc3f5bc6">xs</a></li>
-<li><a href="#org87baaa1">Backup Website</a></li>
-<li><a href="#orgfe13c17">Timer</a></li>
 </ul>
 </li>
-<li><a href="#orgd4a8047">Aliases</a></li>
+<li><a href="#orge597f15">Functions</a>
+<ul>
+<li><a href="#org20b56f4">picp</a></li>
+<li><a href="#org0587d6d">pf</a></li>
+<li><a href="#org1007ca9">t</a></li>
+<li><a href="#org1c38582">y</a></li>
+<li><a href="#orga7a4b83">scr</a></li>
+<li><a href="#orgf325c79">xs</a></li>
+<li><a href="#orga6ea2a4">Backup Website</a></li>
+<li><a href="#org641d245">Timer</a></li>
+</ul>
+</li>
+<li><a href="#org729ec5d">Aliases</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org820770e" class="outline-2">
-<h2 id="org820770e">Theme</h2>
-<div class="outline-text-2" id="text-org820770e">
+<div id="outline-container-org10f3af2" class="outline-2">
+<h2 id="org10f3af2">Theme</h2>
+<div class="outline-text-2" id="text-org10f3af2">
 <p>
-This first block of code sets the <code>$PATH</code> environment variable, and sources my
-<code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
+This first block of code sets the <code>$PATH</code> environment variable, and sources my <code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
 that&rsquo;s what those other variables are for.
 </p>
 
@@ -286,10 +290,8 @@ that&rsquo;s what those other variables are for.
 </div>
 
 <p>
-Determine if the shell is being started in a terminal, either <b>st</b> or <b>urxvt</b>.
-If the shell is being started in a real tty, or over ssh, load the separate
-zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babkock.zsh-theme">babkock</a>&rdquo; instead of &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babkockicon.zsh-theme">babkockicon</a>&rdquo;, so we don&rsquo;t see ugly squares
-in place of the icons.
+Determine if the shell is being started in a terminal, either <b>st</b> or <b>urxvt</b>. If the shell is being started in a real tty, or over ssh, load the separate
+zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babkock.zsh-theme">babkock</a>&rdquo; instead of &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babkockicon.zsh-theme">babkockicon</a>&rdquo;, so we don&rsquo;t see ugly squares in place of the icons.
 </p>
 
 <div class="org-src-container">
@@ -313,9 +315,9 @@ in place of the icons.
 </div>
 </div>
 
-<div id="outline-container-org5b4d903" class="outline-2">
-<h2 id="org5b4d903">Preferences</h2>
-<div class="outline-text-2" id="text-org5b4d903">
+<div id="outline-container-org8a462c5" class="outline-2">
+<h2 id="org8a462c5">Preferences</h2>
+<div class="outline-text-2" id="text-org8a462c5">
 <p>
 Set some preferences. The first line here is responsible for making sure the Shift + TAB combination moves the selection backwards,
 like regular TAB moves forward.
@@ -363,19 +365,18 @@ zstyle :omz:plugins:ssh-agent identities gitlab_rsa github_rsa alpine_rsa tbcom_
 </div>
 </div>
 
-<div id="outline-container-org17968b3" class="outline-2">
-<h2 id="org17968b3">Conditional Aliases</h2>
-<div class="outline-text-2" id="text-org17968b3">
+<div id="outline-container-orgefa1d46" class="outline-2">
+<h2 id="orgefa1d46">Conditional Aliases</h2>
+<div class="outline-text-2" id="text-orgefa1d46">
 <p>
-Determine if the shell is being loaded locally, or over SSH, and set aliases
-accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
+Determine if the shell is being loaded locally, or over SSH, and set aliases accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
 with too many colors or icons. The shell should behave and feel differently.
 </p>
 </div>
 
-<div id="outline-container-org7ed3f5d" class="outline-3">
-<h3 id="org7ed3f5d">SSH</h3>
-<div class="outline-text-3" id="text-org7ed3f5d">
+<div id="outline-container-org367b0b0" class="outline-3">
+<h3 id="org367b0b0">SSH</h3>
+<div class="outline-text-3" id="text-org367b0b0">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">Preferred editor for local and remote sessions</span>
 <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> -n $<span style="color: #718CA1;">SSH_CONNECTION</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
@@ -400,17 +401,61 @@ with too many colors or icons. The shell should behave and feel differently.
 </div>
 </div>
 
-<div id="outline-container-org79c333b" class="outline-3">
-<h3 id="org79c333b">Terminal</h3>
-<div class="outline-text-3" id="text-org79c333b">
+<div id="outline-container-org38e7769" class="outline-3">
+<h3 id="org38e7769">Terminal</h3>
+<div class="outline-text-3" id="text-org38e7769">
 <p>
-Here is where I check if the Zsh shell is being loaded in a
-graphical terminal, or an actual tty. If I change my terminal away from
-<b>st</b>, then I will have to modify this part. Nerd Font icons do not render
-in the tty, so we should use the standard versions of fancy programs in
+Here is where I check if the Zsh shell is being loaded in a graphical terminal, or an actual tty. If I change my terminal away from
+<b>st</b>, then I will have to modify this part. Nerd Font icons do not render in the tty, so we should use the standard versions of fancy programs in
 that context.
 </p>
+</div>
 
+<div id="outline-container-orgccd631f" class="outline-4">
+<h4 id="orgccd631f">Graphical Terminal Aliases</h4>
+<div class="outline-text-4" id="text-orgccd631f">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Alias</td>
+<td class="org-left">Command</td>
+<td class="org-left">What It Does</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ls</code></td>
+<td class="org-left"><code>lsd --config-file</code>\&ldquo;$HOME/.config/lsd/config.yml\&rdquo;=</td>
+<td class="org-left">Run regular LS</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>l</code></td>
+<td class="org-left">Same as above</td>
+<td class="org-left">Run regular LS</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lsla</code></td>
+<td class="org-left"><code>lsd --config-file</code>\&ldquo;$HOME/.config/lsd/config.yml\&rdquo;=</td>
+<td class="org-left">Run LS long listing</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org3b7c834" class="outline-4">
+<h4 id="org3b7c834">TTY Aliases</h4>
+<div class="outline-text-4" id="text-org3b7c834">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span> -v TERM <span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
     <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> $<span style="color: #8BD49C;">{</span><span style="color: #718CA1;">TERM</span><span style="color: #8BD49C;">}</span> = <span style="color: #539AFC;">"st-256color"</span> || $<span style="color: #8BD49C;">{</span><span style="color: #718CA1;">TERM</span><span style="color: #8BD49C;">}</span> = <span style="color: #539AFC;">"rxvt-unicode"</span> || $<span style="color: #8BD49C;">{</span><span style="color: #718CA1;">TERM</span><span style="color: #8BD49C;">}</span> = <span style="color: #539AFC;">"xterm-256color"</span> || $<span style="color: #8BD49C;">{</span><span style="color: #718CA1;">TERM</span><span style="color: #8BD49C;">}</span> = <span style="color: #539AFC;">"foot"</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
@@ -494,14 +539,15 @@ that context.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org149e667" class="outline-2">
-<h2 id="org149e667">Functions</h2>
-<div class="outline-text-2" id="text-org149e667">
 </div>
-<div id="outline-container-org7387a91" class="outline-3">
-<h3 id="org7387a91">picp</h3>
-<div class="outline-text-3" id="text-org7387a91">
+
+<div id="outline-container-orge597f15" class="outline-2">
+<h2 id="orge597f15">Functions</h2>
+<div class="outline-text-2" id="text-orge597f15">
+</div>
+<div id="outline-container-org20b56f4" class="outline-3">
+<h3 id="org20b56f4">picp</h3>
+<div class="outline-text-3" id="text-org20b56f4">
 <p>
 I used to use this function to send files to my Raspberry Pi.
 </p>
@@ -521,9 +567,9 @@ I used to use this function to send files to my Raspberry Pi.
 </div>
 </div>
 
-<div id="outline-container-orgecf1e6c" class="outline-3">
-<h3 id="orgecf1e6c">pf</h3>
-<div class="outline-text-3" id="text-orgecf1e6c">
+<div id="outline-container-org0587d6d" class="outline-3">
+<h3 id="org0587d6d">pf</h3>
+<div class="outline-text-3" id="text-org0587d6d">
 <p>
 This function searches the list of running processes provided with <code>ps</code>
 and returns a match.
@@ -543,9 +589,9 @@ and returns a match.
 </div>
 </div>
 
-<div id="outline-container-org1e6f6b0" class="outline-3">
-<h3 id="org1e6f6b0">t</h3>
-<div class="outline-text-3" id="text-org1e6f6b0">
+<div id="outline-container-org1007ca9" class="outline-3">
+<h3 id="org1007ca9">t</h3>
+<div class="outline-text-3" id="text-org1007ca9">
 <p>
 This function, when given no arguments, simply starts the <code>tremc</code> Transmission
 client. If it is given a single argument, it is assumed it is a torrent file:
@@ -582,9 +628,9 @@ download speed in kB/s.
 </div>
 </div>
 
-<div id="outline-container-org5b13c45" class="outline-3">
-<h3 id="org5b13c45">y</h3>
-<div class="outline-text-3" id="text-org5b13c45">
+<div id="outline-container-org1c38582" class="outline-3">
+<h3 id="org1c38582">y</h3>
+<div class="outline-text-3" id="text-org1c38582">
 <p>
 Open a file with <b>mupdf</b>.
 </p>
@@ -603,9 +649,9 @@ Open a file with <b>mupdf</b>.
 </div>
 </div>
 
-<div id="outline-container-org3abc5b6" class="outline-3">
-<h3 id="org3abc5b6">scr</h3>
-<div class="outline-text-3" id="text-org3abc5b6">
+<div id="outline-container-orga7a4b83" class="outline-3">
+<h3 id="orga7a4b83">scr</h3>
+<div class="outline-text-3" id="text-orga7a4b83">
 <p>
 Take a screenshot with the given name.
 </p>
@@ -625,9 +671,9 @@ Take a screenshot with the given name.
 </div>
 </div>
 
-<div id="outline-container-orgc3f5bc6" class="outline-3">
-<h3 id="orgc3f5bc6">xs</h3>
-<div class="outline-text-3" id="text-orgc3f5bc6">
+<div id="outline-container-orgf325c79" class="outline-3">
+<h3 id="orgf325c79">xs</h3>
+<div class="outline-text-3" id="text-orgf325c79">
 <p>
 Compile a project with <code>xbps-src</code> from within the build directory. This is
 useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
@@ -645,9 +691,9 @@ build script. It requires the package name (therefore, part of the current direc
 </div>
 </div>
 
-<div id="outline-container-org87baaa1" class="outline-3">
-<h3 id="org87baaa1">Backup Website</h3>
-<div class="outline-text-3" id="text-org87baaa1">
+<div id="outline-container-orga6ea2a4" class="outline-3">
+<h3 id="orga6ea2a4">Backup Website</h3>
+<div class="outline-text-3" id="text-orga6ea2a4">
 <p>
 This shell function backs up my website. It takes one argument, the output directory to store the backup in.
 </p>
@@ -658,7 +704,7 @@ This shell function backs up my website. It takes one argument, the output direc
         printf <span style="color: #539AFC;">"Please specify directory to store backup in\n"</span> &gt; /dev/stderr
         <span style="color: #5EC4FF;">false</span>
     <span style="color: #5EC4FF; font-style: italic;">else</span>
-        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> redacted@redacted:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
+        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> tababcock@162.210.97.218:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
         <span style="color: #5EC4FF;">true</span>
     <span style="color: #5EC4FF; font-style: italic;">fi</span>
 <span style="color: #5EC4FF;">}</span>
@@ -667,9 +713,9 @@ This shell function backs up my website. It takes one argument, the output direc
 </div>
 </div>
 
-<div id="outline-container-orgfe13c17" class="outline-3">
-<h3 id="orgfe13c17">Timer</h3>
-<div class="outline-text-3" id="text-orgfe13c17">
+<div id="outline-container-org641d245" class="outline-3">
+<h3 id="org641d245">Timer</h3>
+<div class="outline-text-3" id="text-org641d245">
 <p>
 These two functions are special functions, they are executed before and after each command. I use these to keep a timer of each command,
 so my shell tells you how long your command took.
@@ -694,9 +740,9 @@ so my shell tells you how long your command took.
 </div>
 </div>
 
-<div id="outline-container-orgd4a8047" class="outline-2">
-<h2 id="orgd4a8047">Aliases</h2>
-<div class="outline-text-2" id="text-orgd4a8047">
+<div id="outline-container-org729ec5d" class="outline-2">
+<h2 id="org729ec5d">Aliases</h2>
+<div class="outline-text-2" id="text-org729ec5d">
 <p>
 This is my collection of aliases. Each letter of the alphabet should have its own command, to make the overall way of life easier.
 This was apparent before, but I use a number of tools written in Rust that serve as faster and better-looking versions of standard
@@ -749,7 +795,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">p</span>=<span style="color: #539AFC;">"gotop"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">q</span>=<span style="color: #539AFC;">"feh"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">qw</span>=<span style="color: #539AFC;">"sxiv ."</span>
-<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh redacted@redacted -p 2222"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh tababcock@162.210.97.218 -p 2222"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">tr</span>=<span style="color: #539AFC;">"transmission-remote"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">k</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;">"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">kc</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;"> clean"</span>
@@ -781,7 +827,7 @@ gpgconf --launch gpg-agent
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-15 Sat 15:02</p>
+<p class="date">Created: 2022-10-18 Tue 19:45</p>
 </div>
 </body>
 </html>
