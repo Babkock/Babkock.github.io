@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-09 Sun 15:36 -->
+<!-- 2022-10-18 Tue 20:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Polybar</title>
 <meta name="author" content="Tanner Babcock" />
-<meta name="description" content="My Polybar configuration. Features bars for multiple monitors." />
+<meta name="description" content="Polybar configuration on Tanner Babcock GitHub Pages. Features bars for multiple monitors." />
 <meta name="keywords" content="tanner babcock, emacs, github, doom emacs, org mode, linux, gitlab, gnu linux, void linux, experimental, noise" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -196,6 +196,12 @@
   .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<meta property="og:image" content="/images/ogimage.png" />
+<meta property="og:image:width" content="660" />
+<meta property="og:image:height" content="461" />
+<meta property="og:title" content="Polybar" />
+<meta property="og:description" content="Polybar configuration on Tanner Babcock GitHub Pages. Features bars for multiple monitors." />
+<meta property="og:locale" content="en_US" />
 <link rel="icon" href="/images/favicon.png" />
 <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
 <link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
@@ -204,7 +210,7 @@
 <div id="content" class="content">
 <h1 class="title">Polybar</h1>
 <p>
-This literate configuration is available online on my <a href="https://babkock.github.io/configs/polybar.html">GitHub Pages</a>.
+This literate configuration is available online on my <a href="https://babkock.github.io/configs/polybar.html">GitHub Pages</a>. Please, if you appreciate my work, consider <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&amp;no_recurring=0&amp;item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&amp;currency_code=USD">making a donation</a>.
 </p>
 
 <header>
@@ -213,7 +219,7 @@ This literate configuration is available online on my <a href="https://babkock.g
             <li><a href="https://babkock.github.io">Home</a></li>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
-            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
             <li><a href="https://youtube.com/user/Babk0ck" target="_blank">YouTube</a></li>
         </ul>
@@ -224,48 +230,47 @@ This literate configuration is available online on my <a href="https://babkock.g
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1de474b">Laptop Bar</a>
+<li><a href="#org57a773f">Laptop Bar</a>
 <ul>
-<li><a href="#org2b1ed54">Setup</a></li>
-<li><a href="#org0db9d7f">Appearance</a></li>
+<li><a href="#orgdf69f13">Setup</a></li>
+<li><a href="#org99c734a">Appearance</a></li>
 </ul>
 </li>
-<li><a href="#org463bc24">Monitor Bar</a>
+<li><a href="#orgac97f8b">Monitor Bar</a>
 <ul>
-<li><a href="#org842cac2">Setup</a></li>
-<li><a href="#orgb313f67">Appearance</a></li>
+<li><a href="#org5ef7625">Setup</a></li>
+<li><a href="#orgda127c6">Appearance</a></li>
 </ul>
 </li>
-<li><a href="#orgdf43552">Modules</a>
+<li><a href="#org20d8f4a">Modules</a>
 <ul>
-<li><a href="#org98fdbed">HDD</a></li>
-<li><a href="#orgd7ac643">Title</a></li>
-<li><a href="#orgf7adba7">Network</a></li>
-<li><a href="#org64e2a30">Bspwm</a></li>
-<li><a href="#orgdb8b0ce">MPD</a></li>
-<li><a href="#orgce2ef4b">Pulseaudio</a></li>
-<li><a href="#org7f619ba">CPU</a></li>
-<li><a href="#orgb595d09">Memory</a></li>
-<li><a href="#org618ef5a">Battery</a></li>
-<li><a href="#org93a7253">Date</a></li>
+<li><a href="#org0c91f2b">HDD</a></li>
+<li><a href="#org0d793eb">Title</a></li>
+<li><a href="#org03c4f79">Network</a></li>
+<li><a href="#org7f10286">Bspwm</a></li>
+<li><a href="#orgb6b82df">MPD</a></li>
+<li><a href="#orgcf611c7">Pulseaudio</a></li>
+<li><a href="#orgb644176">CPU</a></li>
+<li><a href="#orgc419e57">Memory</a></li>
+<li><a href="#orgddb0b7f">Battery</a></li>
+<li><a href="#orgb402a53">Date</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1de474b" class="outline-2">
-<h2 id="org1de474b">Laptop Bar</h2>
-<div class="outline-text-2" id="text-org1de474b">
+<div id="outline-container-org57a773f" class="outline-2">
+<h2 id="org57a773f">Laptop Bar</h2>
+<div class="outline-text-2" id="text-org57a773f">
 <p>
-This is my laptop&rsquo;s Polybar. It is the primary status bar, and started by default
-by the window manager.
+This is my laptop&rsquo;s Polybar. It is the primary status bar, and started by default by the window manager.
 </p>
 </div>
 
-<div id="outline-container-org2b1ed54" class="outline-3">
-<h3 id="org2b1ed54">Setup</h3>
-<div class="outline-text-3" id="text-org2b1ed54">
+<div id="outline-container-orgdf69f13" class="outline-3">
+<h3 id="orgdf69f13">Setup</h3>
+<div class="outline-text-3" id="text-orgdf69f13">
 <p>
 This first block registers the bar &ldquo;laptop&rdquo; with Polybar, and assigns it to the display <code>eDP1</code>.
 </p>
@@ -294,14 +299,12 @@ This first block registers the bar &ldquo;laptop&rdquo; with Polybar, and assign
 </div>
 </div>
 
-<div id="outline-container-org0db9d7f" class="outline-3">
-<h3 id="org0db9d7f">Appearance</h3>
-<div class="outline-text-3" id="text-org0db9d7f">
+<div id="outline-container-org99c734a" class="outline-3">
+<h3 id="org99c734a">Appearance</h3>
+<div class="outline-text-3" id="text-org99c734a">
 <p>
-Here are some general appearance settings, like colors, padding, and font.
-Remember, in the hex colors for Polybar&rsquo;s config, the first two digits are
-for the alpha channel. Like this: <code>#aarrggbb</code> . So a color beginning with
-&ldquo;#ff&rdquo; would render with 100% opacity. Hex colors with only 6 digits will be
+Here are some general appearance settings, like colors, padding, and font. Remember, in the hex colors for Polybar&rsquo;s config, the first two digits are
+for the alpha channel. Like this: <code>#aarrggbb</code> . So a color beginning with &ldquo;#ff&rdquo; would render with 100% opacity. Hex colors with only 6 digits will be
 rendered fully opaque, and the colors will be interpreted like <code>#rrggbb</code>.
 </p>
 
@@ -318,11 +321,9 @@ rendered fully opaque, and the colors will be interpreted like <code>#rrggbb</co
 </div>
 
 <p>
-Here we define the modules on the left and right sides of the laptop&rsquo;s
-Polybar. Some system tray properties are also set. Modules appear
+Here we define the modules on the left and right sides of the laptop&rsquo;s Polybar. Some system tray properties are also set. Modules appear
 in the order they are listed on these next two lines. Notice the expressions that look like
-<code>${xrdb:polybar.colorx}</code>, these will retrieve color strings from <b>Xresources,</b>
-so ricing is a little easier.
+<code>${xrdb:polybar.colorx}</code>, these will retrieve color strings from <b>Xresources,</b> so ricing is a little easier.
 </p>
 
 <div class="org-src-container">
@@ -344,18 +345,18 @@ so ricing is a little easier.
 </div>
 </div>
 
-<div id="outline-container-org463bc24" class="outline-2">
-<h2 id="org463bc24">Monitor Bar</h2>
-<div class="outline-text-2" id="text-org463bc24">
+<div id="outline-container-orgac97f8b" class="outline-2">
+<h2 id="orgac97f8b">Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgac97f8b">
 <p>
 The monitor&rsquo;s Polybar has three modules the laptop&rsquo;s (my primary) bar doesn&rsquo;t:
 The network module, the window title, and the HDD module.
 </p>
 </div>
 
-<div id="outline-container-org842cac2" class="outline-3">
-<h3 id="org842cac2">Setup</h3>
-<div class="outline-text-3" id="text-org842cac2">
+<div id="outline-container-org5ef7625" class="outline-3">
+<h3 id="org5ef7625">Setup</h3>
+<div class="outline-text-3" id="text-org5ef7625">
 <p>
 This block registers the monitor&rsquo;s Polybar and assigns it to the display <code>HDMI2</code>.
 </p>
@@ -377,9 +378,9 @@ This block registers the monitor&rsquo;s Polybar and assigns it to the display <
 </div>
 </div>
 
-<div id="outline-container-orgb313f67" class="outline-3">
-<h3 id="orgb313f67">Appearance</h3>
-<div class="outline-text-3" id="text-orgb313f67">
+<div id="outline-container-orgda127c6" class="outline-3">
+<h3 id="orgda127c6">Appearance</h3>
+<div class="outline-text-3" id="text-orgda127c6">
 <p>
 The font size should be a little bigger for the monitor&rsquo;s bar.
 </p>
@@ -420,13 +421,13 @@ Here are the modules.
 </div>
 </div>
 
-<div id="outline-container-orgdf43552" class="outline-2">
-<h2 id="orgdf43552">Modules</h2>
-<div class="outline-text-2" id="text-orgdf43552">
+<div id="outline-container-org20d8f4a" class="outline-2">
+<h2 id="org20d8f4a">Modules</h2>
+<div class="outline-text-2" id="text-org20d8f4a">
 </div>
-<div id="outline-container-org98fdbed" class="outline-3">
-<h3 id="org98fdbed">HDD</h3>
-<div class="outline-text-3" id="text-org98fdbed">
+<div id="outline-container-org0c91f2b" class="outline-3">
+<h3 id="org0c91f2b">HDD</h3>
+<div class="outline-text-3" id="text-org0c91f2b">
 <p>
 Show remaining disk space.
 </p>
@@ -450,9 +451,9 @@ Show remaining disk space.
 </div>
 </div>
 
-<div id="outline-container-orgd7ac643" class="outline-3">
-<h3 id="orgd7ac643">Title</h3>
-<div class="outline-text-3" id="text-orgd7ac643">
+<div id="outline-container-org0d793eb" class="outline-3">
+<h3 id="org0d793eb">Title</h3>
+<div class="outline-text-3" id="text-org0d793eb">
 <p>
 Shows the title of the currently focused window.
 </p>
@@ -474,9 +475,9 @@ Shows the title of the currently focused window.
 </div>
 </div>
 
-<div id="outline-container-orgf7adba7" class="outline-3">
-<h3 id="orgf7adba7">Network</h3>
-<div class="outline-text-3" id="text-orgf7adba7">
+<div id="outline-container-org03c4f79" class="outline-3">
+<h3 id="org03c4f79">Network</h3>
+<div class="outline-text-3" id="text-org03c4f79">
 <p>
 Shows upload and download traffic. Uncomment those lines to have underlines.
 </p>
@@ -505,9 +506,9 @@ Shows upload and download traffic. Uncomment those lines to have underlines.
 </div>
 </div>
 
-<div id="outline-container-org64e2a30" class="outline-3">
-<h3 id="org64e2a30">Bspwm</h3>
-<div class="outline-text-3" id="text-org64e2a30">
+<div id="outline-container-org7f10286" class="outline-3">
+<h3 id="org7f10286">Bspwm</h3>
+<div class="outline-text-3" id="text-org7f10286">
 <p>
 The Bspwm workspace listing, including focused colors, occupied colors, and
 empty colors. The roman numerals in the icon strings are taken from <code>bspwmrc</code>.
@@ -556,9 +557,9 @@ empty colors. The roman numerals in the icon strings are taken from <code>bspwmr
 </div>
 </div>
 
-<div id="outline-container-orgdb8b0ce" class="outline-3">
-<h3 id="orgdb8b0ce">MPD</h3>
-<div class="outline-text-3" id="text-orgdb8b0ce">
+<div id="outline-container-orgb6b82df" class="outline-3">
+<h3 id="orgb6b82df">MPD</h3>
+<div class="outline-text-3" id="text-orgb6b82df">
 <p>
 MPD music player.
 </p>
@@ -587,9 +588,9 @@ MPD music player.
 </div>
 </div>
 
-<div id="outline-container-orgce2ef4b" class="outline-3">
-<h3 id="orgce2ef4b">Pulseaudio</h3>
-<div class="outline-text-3" id="text-orgce2ef4b">
+<div id="outline-container-orgcf611c7" class="outline-3">
+<h3 id="orgcf611c7">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgcf611c7">
 <p>
 Pulseaudio volume.
 </p>
@@ -627,9 +628,9 @@ Pulseaudio volume.
 </div>
 </div>
 
-<div id="outline-container-org7f619ba" class="outline-3">
-<h3 id="org7f619ba">CPU</h3>
-<div class="outline-text-3" id="text-org7f619ba">
+<div id="outline-container-orgb644176" class="outline-3">
+<h3 id="orgb644176">CPU</h3>
+<div class="outline-text-3" id="text-orgb644176">
 <p>
 Average CPU percentage.
 </p>
@@ -650,9 +651,9 @@ Average CPU percentage.
 </div>
 </div>
 
-<div id="outline-container-orgb595d09" class="outline-3">
-<h3 id="orgb595d09">Memory</h3>
-<div class="outline-text-3" id="text-orgb595d09">
+<div id="outline-container-orgc419e57" class="outline-3">
+<h3 id="orgc419e57">Memory</h3>
+<div class="outline-text-3" id="text-orgc419e57">
 <p>
 Percentage of RAM in use.
 </p>
@@ -673,9 +674,9 @@ Percentage of RAM in use.
 </div>
 </div>
 
-<div id="outline-container-org618ef5a" class="outline-3">
-<h3 id="org618ef5a">Battery</h3>
-<div class="outline-text-3" id="text-org618ef5a">
+<div id="outline-container-orgddb0b7f" class="outline-3">
+<h3 id="orgddb0b7f">Battery</h3>
+<div class="outline-text-3" id="text-orgddb0b7f">
 <p>
 Notice the animations, and the red and yellow colors, to draw attention to
 low battery levels.
@@ -733,9 +734,9 @@ low battery levels.
 </div>
 </div>
 
-<div id="outline-container-org93a7253" class="outline-3">
-<h3 id="org93a7253">Date</h3>
-<div class="outline-text-3" id="text-org93a7253">
+<div id="outline-container-orgb402a53" class="outline-3">
+<h3 id="orgb402a53">Date</h3>
+<div class="outline-text-3" id="text-orgb402a53">
 <p>
 Tried and true date module.
 </p>
@@ -763,10 +764,11 @@ Tried and true date module.
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
-    <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a></p>
     </center>
 </footer>
 </div>
@@ -775,7 +777,7 @@ Tried and true date module.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-09 Sun 15:36</p>
+<p class="date">Created: 2022-10-18 Tue 20:17</p>
 </div>
 </body>
 </html>

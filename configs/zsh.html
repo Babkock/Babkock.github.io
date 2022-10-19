@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-18 Tue 20:01 -->
+<!-- 2022-10-19 Wed 01:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zsh</title>
@@ -231,34 +231,34 @@ Welcome to my Zshrc. This configuration relies on <a href="https://ohmyz.sh/">Oh
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5798e3b">Theme</a></li>
-<li><a href="#orgbf32d50">Preferences</a></li>
-<li><a href="#orgb5f03c4">Conditional Aliases</a>
+<li><a href="#orgcc0b6b3">Theme</a></li>
+<li><a href="#orgddaaf2c">Preferences</a></li>
+<li><a href="#org13111d4">Conditional Aliases</a>
 <ul>
-<li><a href="#org47dea6a">SSH</a></li>
-<li><a href="#orgce562ff">Terminal</a></li>
+<li><a href="#org0e37788">SSH</a></li>
+<li><a href="#org4143081">Terminal</a></li>
 </ul>
 </li>
-<li><a href="#orgb83aebc">Functions</a>
+<li><a href="#org78dff30">Functions</a>
 <ul>
-<li><a href="#org90702c5">picp</a></li>
-<li><a href="#org8ec8195">pf</a></li>
-<li><a href="#orgb09a7bc">t</a></li>
-<li><a href="#orgcdbf1e0">y</a></li>
-<li><a href="#org541ce49">scr</a></li>
-<li><a href="#org335837d">xs</a></li>
-<li><a href="#org32a74e2">Backup Website</a></li>
-<li><a href="#orgc7f4f98">Timer</a></li>
+<li><a href="#org9d4e0ec">picp</a></li>
+<li><a href="#orge79ee7d">pf</a></li>
+<li><a href="#orge7bad28">t</a></li>
+<li><a href="#orge4ed87d">y</a></li>
+<li><a href="#org83f9c7e">scr</a></li>
+<li><a href="#org27bf307">xs</a></li>
+<li><a href="#orgc842222">Backup Website</a></li>
+<li><a href="#orgb792228">Timer</a></li>
 </ul>
 </li>
-<li><a href="#orgd3a6fd7">Aliases</a></li>
+<li><a href="#org64e1498">Aliases</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5798e3b" class="outline-2">
-<h2 id="org5798e3b">Theme</h2>
-<div class="outline-text-2" id="text-org5798e3b">
+<div id="outline-container-orgcc0b6b3" class="outline-2">
+<h2 id="orgcc0b6b3">Theme</h2>
+<div class="outline-text-2" id="text-orgcc0b6b3">
 <p>
 This first block of code sets the <code>$PATH</code> environment variable, and sources my <code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
 that&rsquo;s what those other variables are for.
@@ -316,9 +316,9 @@ zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babk
 </div>
 </div>
 
-<div id="outline-container-orgbf32d50" class="outline-2">
-<h2 id="orgbf32d50">Preferences</h2>
-<div class="outline-text-2" id="text-orgbf32d50">
+<div id="outline-container-orgddaaf2c" class="outline-2">
+<h2 id="orgddaaf2c">Preferences</h2>
+<div class="outline-text-2" id="text-orgddaaf2c">
 <p>
 Set some preferences. The first line here is responsible for making sure the Shift + TAB combination moves the selection backwards,
 like regular TAB moves forward.
@@ -366,18 +366,18 @@ zstyle :omz:plugins:ssh-agent identities gitlab_rsa github_rsa alpine_rsa tbcom_
 </div>
 </div>
 
-<div id="outline-container-orgb5f03c4" class="outline-2">
-<h2 id="orgb5f03c4">Conditional Aliases</h2>
-<div class="outline-text-2" id="text-orgb5f03c4">
+<div id="outline-container-org13111d4" class="outline-2">
+<h2 id="org13111d4">Conditional Aliases</h2>
+<div class="outline-text-2" id="text-org13111d4">
 <p>
 Determine if the shell is being loaded locally, or over SSH, and set aliases accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
 with too many colors or icons. The shell should behave and feel differently.
 </p>
 </div>
 
-<div id="outline-container-org47dea6a" class="outline-3">
-<h3 id="org47dea6a">SSH</h3>
-<div class="outline-text-3" id="text-org47dea6a">
+<div id="outline-container-org0e37788" class="outline-3">
+<h3 id="org0e37788">SSH</h3>
+<div class="outline-text-3" id="text-org0e37788">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">Preferred editor for local and remote sessions</span>
 <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> -n $<span style="color: #718CA1;">SSH_CONNECTION</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
@@ -402,14 +402,212 @@ with too many colors or icons. The shell should behave and feel differently.
 </div>
 </div>
 
-<div id="outline-container-orgce562ff" class="outline-3">
-<h3 id="orgce562ff">Terminal</h3>
-<div class="outline-text-3" id="text-orgce562ff">
+<div id="outline-container-org4143081" class="outline-3">
+<h3 id="org4143081">Terminal</h3>
+<div class="outline-text-3" id="text-org4143081">
 <p>
 Here is where I check if the Zsh shell is being loaded in a graphical terminal, or an actual tty. If I change my terminal away from
 <b>st</b>, then I will have to modify this part. Nerd Font icons do not render in the tty, so we should use the standard versions of fancy programs in
 that context.
 </p>
+
+<p>
+All of these <code>ls</code> commands have flags to show directories first, show human-readable file sizes, and show file symbols. All of the <code>exa</code> commands show icons and group directories first, also.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">In St, Urxvt, Xterm, Foot</th>
+<th scope="col" class="org-left">In TTY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>ls</code></td>
+<td class="org-left">Regular LSD listing</td>
+<td class="org-left">Regular LS listing</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>l</code></td>
+<td class="org-left">Regular LSD listing</td>
+<td class="org-left">Regular LS listing</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>la</code></td>
+<td class="org-left">Long listing with total directory sizes, all files</td>
+<td class="org-left">LS long listing, all files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ll</code></td>
+<td class="org-left">LSD Long listing with total sizes, all files</td>
+<td class="org-left">LS long listing, all files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lc</code></td>
+<td class="org-left">LSD Long listing with total sizes</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lct</code></td>
+<td class="org-left">LSD Long listing with total sizes and tree</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lctl</code></td>
+<td class="org-left">LSD Long listing with total sizes and tree</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lsl</code></td>
+<td class="org-left">Long listing, all files</td>
+<td class="org-left">LS long listing, all files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lsa</code></td>
+<td class="org-left">Long listing, all files</td>
+<td class="org-left">LS long listing, all files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lsla</code></td>
+<td class="org-left">Long listing with total sizes, all files</td>
+<td class="org-left">LS long listing, all files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lst</code></td>
+<td class="org-left">LSD listing with tree</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>lstl</code></td>
+<td class="org-left">LSD long listing with tree</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ltl</code></td>
+<td class="org-left">LSD long listing with total sizes and tree</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>a</code></td>
+<td class="org-left">Regular Exa listing</td>
+<td class="org-left">Same, without icons</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>al</code></td>
+<td class="org-left">Exa long listing, all files</td>
+<td class="org-left">Same, without icons</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>aa</code></td>
+<td class="org-left">Exa long listing, all files</td>
+<td class="org-left">Same, without icons</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>at</code></td>
+<td class="org-left">Exa listing with tree</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>atl</code></td>
+<td class="org-left">Exa long listing with tree</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>alt</code></td>
+<td class="org-left">Exa long listing with tree</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ac</code></td>
+<td class="org-left">Exa listing sorted by time modified</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>acl</code></td>
+<td class="org-left">Exa long listing sorted by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>aca</code></td>
+<td class="org-left">Exa long listing sorted by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>act</code></td>
+<td class="org-left">Exa listing with tree, sorted by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>atc</code></td>
+<td class="org-left">Exa listing with tree, sorted by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>aclt</code></td>
+<td class="org-left">Exa long listing with tree, by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>atlc</code></td>
+<td class="org-left">Exa long listing with tree, by time</td>
+<td class="org-left">Same</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>e</code></td>
+<td class="org-left">Opens new Emacs window</td>
+<td class="org-left">Opens Emacs in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ez</code></td>
+<td class="org-left">Edit Zshrc in new Emacs window</td>
+<td class="org-left">Edit Zshrc in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>eb</code></td>
+<td class="org-left">Edit Bspwmrc in new Emacs window</td>
+<td class="org-left">Edit Bspwmrc in Console</td>
+</tr>
+</tbody>
+</table>
 
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span> -v TERM <span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
@@ -436,7 +634,8 @@ that context.
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">ac</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first -F -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">acl</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">aca</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a -s time -r"</span>
-        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">act</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first -F --tree -L -3 -s time -r"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">act</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first -F --tree -L 3 -s time -r"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">atc</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first -F --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">aclt</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">atlc</span>=<span style="color: #539AFC;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">e</span>=<span style="color: #539AFC;">"emacsclient -c -a 'emacs'"</span>
@@ -461,6 +660,8 @@ that context.
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">lsla</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> -l -A -h --group-directories-first -F --color=auto"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">l</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> --group-directories-first -F --color=auto"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">lsl</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> -l -A -h --group-directories-first -F --color=auto"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">la</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> -l -A -h --group-directories-first -F --color=auto"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">ll</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> -l -A -h --group-directories-first -F --color=auto"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">a</span>=<span style="color: #539AFC;">"exa --group-directories-first -F"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">al</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">aa</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a"</span>
@@ -471,6 +672,7 @@ that context.
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">acl</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">aca</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">act</span>=<span style="color: #539AFC;">"exa --group-directories-first -F --tree -L 3 -s time -r"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">atc</span>=<span style="color: #539AFC;">"exa --group-directories-first -F --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">aclt</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">atlc</span>=<span style="color: #539AFC;">"exa --group-directories-first --git -F -h -l -a --tree -L 3 -s time -r"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">e</span>=<span style="color: #539AFC;">"emacsclient -c -a 'emacs' -nw"</span>
@@ -495,13 +697,13 @@ that context.
 </div>
 </div>
 
-<div id="outline-container-orgb83aebc" class="outline-2">
-<h2 id="orgb83aebc">Functions</h2>
-<div class="outline-text-2" id="text-orgb83aebc">
+<div id="outline-container-org78dff30" class="outline-2">
+<h2 id="org78dff30">Functions</h2>
+<div class="outline-text-2" id="text-org78dff30">
 </div>
-<div id="outline-container-org90702c5" class="outline-3">
-<h3 id="org90702c5">picp</h3>
-<div class="outline-text-3" id="text-org90702c5">
+<div id="outline-container-org9d4e0ec" class="outline-3">
+<h3 id="org9d4e0ec">picp</h3>
+<div class="outline-text-3" id="text-org9d4e0ec">
 <p>
 I used to use this function to send files to my Raspberry Pi.
 </p>
@@ -521,9 +723,9 @@ I used to use this function to send files to my Raspberry Pi.
 </div>
 </div>
 
-<div id="outline-container-org8ec8195" class="outline-3">
-<h3 id="org8ec8195">pf</h3>
-<div class="outline-text-3" id="text-org8ec8195">
+<div id="outline-container-orge79ee7d" class="outline-3">
+<h3 id="orge79ee7d">pf</h3>
+<div class="outline-text-3" id="text-orge79ee7d">
 <p>
 This function searches the list of running processes provided with <code>ps</code>
 and returns a match.
@@ -543,9 +745,9 @@ and returns a match.
 </div>
 </div>
 
-<div id="outline-container-orgb09a7bc" class="outline-3">
-<h3 id="orgb09a7bc">t</h3>
-<div class="outline-text-3" id="text-orgb09a7bc">
+<div id="outline-container-orge7bad28" class="outline-3">
+<h3 id="orge7bad28">t</h3>
+<div class="outline-text-3" id="text-orge7bad28">
 <p>
 This function, when given no arguments, simply starts the <code>tremc</code> Transmission client. If it is given a single argument, it is assumed it is a torrent file: it gives it to Transmission, then deletes it, and starts <code>tremc</code>.
 If it is given a second argument, it interprets that as the preferred download speed in kB/s.
@@ -579,9 +781,9 @@ If it is given a second argument, it interprets that as the preferred download s
 </div>
 </div>
 
-<div id="outline-container-orgcdbf1e0" class="outline-3">
-<h3 id="orgcdbf1e0">y</h3>
-<div class="outline-text-3" id="text-orgcdbf1e0">
+<div id="outline-container-orge4ed87d" class="outline-3">
+<h3 id="orge4ed87d">y</h3>
+<div class="outline-text-3" id="text-orge4ed87d">
 <p>
 Open a file with <b>mupdf</b>.
 </p>
@@ -600,9 +802,9 @@ Open a file with <b>mupdf</b>.
 </div>
 </div>
 
-<div id="outline-container-org541ce49" class="outline-3">
-<h3 id="org541ce49">scr</h3>
-<div class="outline-text-3" id="text-org541ce49">
+<div id="outline-container-org83f9c7e" class="outline-3">
+<h3 id="org83f9c7e">scr</h3>
+<div class="outline-text-3" id="text-org83f9c7e">
 <p>
 Take a screenshot with the given name.
 </p>
@@ -622,9 +824,9 @@ Take a screenshot with the given name.
 </div>
 </div>
 
-<div id="outline-container-org335837d" class="outline-3">
-<h3 id="org335837d">xs</h3>
-<div class="outline-text-3" id="text-org335837d">
+<div id="outline-container-org27bf307" class="outline-3">
+<h3 id="org27bf307">xs</h3>
+<div class="outline-text-3" id="text-org27bf307">
 <p>
 Compile a project with <code>xbps-src</code> from within the build directory. This is
 useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
@@ -642,9 +844,9 @@ build script. It requires the package name (therefore, part of the current direc
 </div>
 </div>
 
-<div id="outline-container-org32a74e2" class="outline-3">
-<h3 id="org32a74e2">Backup Website</h3>
-<div class="outline-text-3" id="text-org32a74e2">
+<div id="outline-container-orgc842222" class="outline-3">
+<h3 id="orgc842222">Backup Website</h3>
+<div class="outline-text-3" id="text-orgc842222">
 <p>
 This shell function backs up my website. It takes one argument, the output directory to store the backup in.
 </p>
@@ -655,7 +857,7 @@ This shell function backs up my website. It takes one argument, the output direc
         printf <span style="color: #539AFC;">"Please specify directory to store backup in\n"</span> &gt; /dev/stderr
         <span style="color: #5EC4FF;">false</span>
     <span style="color: #5EC4FF; font-style: italic;">else</span>
-        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> redacted@redacted:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
+        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> tababcock@162.210.97.218:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
         <span style="color: #5EC4FF;">true</span>
     <span style="color: #5EC4FF; font-style: italic;">fi</span>
 <span style="color: #5EC4FF;">}</span>
@@ -664,9 +866,9 @@ This shell function backs up my website. It takes one argument, the output direc
 </div>
 </div>
 
-<div id="outline-container-orgc7f4f98" class="outline-3">
-<h3 id="orgc7f4f98">Timer</h3>
-<div class="outline-text-3" id="text-orgc7f4f98">
+<div id="outline-container-orgb792228" class="outline-3">
+<h3 id="orgb792228">Timer</h3>
+<div class="outline-text-3" id="text-orgb792228">
 <p>
 These two functions are special functions, they are executed before and after each command. I use these to keep a timer of each command,
 so my shell tells you how long your command took.
@@ -691,9 +893,9 @@ so my shell tells you how long your command took.
 </div>
 </div>
 
-<div id="outline-container-orgd3a6fd7" class="outline-2">
-<h2 id="orgd3a6fd7">Aliases</h2>
-<div class="outline-text-2" id="text-orgd3a6fd7">
+<div id="outline-container-org64e1498" class="outline-2">
+<h2 id="org64e1498">Aliases</h2>
+<div class="outline-text-2" id="text-org64e1498">
 <p>
 This is my collection of aliases. Each letter of the alphabet should have its own command, to make the overall way of life easier.
 This was apparent before, but I use a number of tools written in Rust that serve as faster and better-looking versions of standard
@@ -746,7 +948,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">p</span>=<span style="color: #539AFC;">"gotop"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">q</span>=<span style="color: #539AFC;">"feh"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">qw</span>=<span style="color: #539AFC;">"sxiv ."</span>
-<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh redacted@redacted -p 2222"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh tababcock@162.210.97.218 -p 2222"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">tr</span>=<span style="color: #539AFC;">"transmission-remote"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">k</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;">"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">kc</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;"> clean"</span>
@@ -779,7 +981,7 @@ gpgconf --launch gpg-agent
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-18 Tue 20:01</p>
+<p class="date">Created: 2022-10-19 Wed 01:31</p>
 </div>
 </body>
 </html>
