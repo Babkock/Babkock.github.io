@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-19 Wed 01:31 -->
+<!-- 2022-10-21 Fri 01:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zsh</title>
@@ -231,34 +231,34 @@ Welcome to my Zshrc. This configuration relies on <a href="https://ohmyz.sh/">Oh
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcc0b6b3">Theme</a></li>
-<li><a href="#orgddaaf2c">Preferences</a></li>
-<li><a href="#org13111d4">Conditional Aliases</a>
+<li><a href="#org14795a4">Theme</a></li>
+<li><a href="#org3527625">Preferences</a></li>
+<li><a href="#org0460816">Conditional Aliases</a>
 <ul>
-<li><a href="#org0e37788">SSH</a></li>
-<li><a href="#org4143081">Terminal</a></li>
+<li><a href="#org71bb62a">SSH</a></li>
+<li><a href="#org089e7ae">Terminal</a></li>
 </ul>
 </li>
-<li><a href="#org78dff30">Functions</a>
+<li><a href="#org8618ce1">Functions</a>
 <ul>
-<li><a href="#org9d4e0ec">picp</a></li>
-<li><a href="#orge79ee7d">pf</a></li>
-<li><a href="#orge7bad28">t</a></li>
-<li><a href="#orge4ed87d">y</a></li>
-<li><a href="#org83f9c7e">scr</a></li>
-<li><a href="#org27bf307">xs</a></li>
-<li><a href="#orgc842222">Backup Website</a></li>
-<li><a href="#orgb792228">Timer</a></li>
+<li><a href="#orgb8a643b">picp</a></li>
+<li><a href="#org8b39590">pf</a></li>
+<li><a href="#orgecdf4a9">t</a></li>
+<li><a href="#orge85ca62">y</a></li>
+<li><a href="#org9bfd683">scr</a></li>
+<li><a href="#org9f50d01">xs</a></li>
+<li><a href="#org81d6cf2">Backup Website</a></li>
+<li><a href="#org315fe65">Timer</a></li>
 </ul>
 </li>
-<li><a href="#org64e1498">Aliases</a></li>
+<li><a href="#org70c2930">Aliases</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgcc0b6b3" class="outline-2">
-<h2 id="orgcc0b6b3">Theme</h2>
-<div class="outline-text-2" id="text-orgcc0b6b3">
+<div id="outline-container-org14795a4" class="outline-2">
+<h2 id="org14795a4">Theme</h2>
+<div class="outline-text-2" id="text-org14795a4">
 <p>
 This first block of code sets the <code>$PATH</code> environment variable, and sources my <code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
 that&rsquo;s what those other variables are for.
@@ -316,9 +316,9 @@ zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babk
 </div>
 </div>
 
-<div id="outline-container-orgddaaf2c" class="outline-2">
-<h2 id="orgddaaf2c">Preferences</h2>
-<div class="outline-text-2" id="text-orgddaaf2c">
+<div id="outline-container-org3527625" class="outline-2">
+<h2 id="org3527625">Preferences</h2>
+<div class="outline-text-2" id="text-org3527625">
 <p>
 Set some preferences. The first line here is responsible for making sure the Shift + TAB combination moves the selection backwards,
 like regular TAB moves forward.
@@ -366,18 +366,18 @@ zstyle :omz:plugins:ssh-agent identities gitlab_rsa github_rsa alpine_rsa tbcom_
 </div>
 </div>
 
-<div id="outline-container-org13111d4" class="outline-2">
-<h2 id="org13111d4">Conditional Aliases</h2>
-<div class="outline-text-2" id="text-org13111d4">
+<div id="outline-container-org0460816" class="outline-2">
+<h2 id="org0460816">Conditional Aliases</h2>
+<div class="outline-text-2" id="text-org0460816">
 <p>
 Determine if the shell is being loaded locally, or over SSH, and set aliases accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
 with too many colors or icons. The shell should behave and feel differently.
 </p>
 </div>
 
-<div id="outline-container-org0e37788" class="outline-3">
-<h3 id="org0e37788">SSH</h3>
-<div class="outline-text-3" id="text-org0e37788">
+<div id="outline-container-org71bb62a" class="outline-3">
+<h3 id="org71bb62a">SSH</h3>
+<div class="outline-text-3" id="text-org71bb62a">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">Preferred editor for local and remote sessions</span>
 <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> -n $<span style="color: #718CA1;">SSH_CONNECTION</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
@@ -402,9 +402,9 @@ with too many colors or icons. The shell should behave and feel differently.
 </div>
 </div>
 
-<div id="outline-container-org4143081" class="outline-3">
-<h3 id="org4143081">Terminal</h3>
-<div class="outline-text-3" id="text-org4143081">
+<div id="outline-container-org089e7ae" class="outline-3">
+<h3 id="org089e7ae">Terminal</h3>
+<div class="outline-text-3" id="text-org089e7ae">
 <p>
 Here is where I check if the Zsh shell is being loaded in a graphical terminal, or an actual tty. If I change my terminal away from
 <b>st</b>, then I will have to modify this part. Nerd Font icons do not render in the tty, so we should use the standard versions of fancy programs in
@@ -428,7 +428,7 @@ All of these <code>ls</code> commands have flags to show directories first, show
 <thead>
 <tr>
 <th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">In St, Urxvt, Xterm, Foot</th>
+<th scope="col" class="org-left">In Terminal</th>
 <th scope="col" class="org-left">In TTY</th>
 </tr>
 </thead>
@@ -597,14 +597,104 @@ All of these <code>ls</code> commands have flags to show directories first, show
 
 <tr>
 <td class="org-left"><code>ez</code></td>
-<td class="org-left">Edit Zshrc in new Emacs window</td>
-<td class="org-left">Edit Zshrc in Console</td>
+<td class="org-left">Edit zsh.org in new Emacs window</td>
+<td class="org-left">Edit zsh.org in Console</td>
 </tr>
 
 <tr>
 <td class="org-left"><code>eb</code></td>
-<td class="org-left">Edit Bspwmrc in new Emacs window</td>
-<td class="org-left">Edit Bspwmrc in Console</td>
+<td class="org-left">Edit bspwm.org in new Emacs window</td>
+<td class="org-left">Edit bspwm.org in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ep</code></td>
+<td class="org-left">Edit Polybar config in new Emacs window</td>
+<td class="org-left">Edit Polybar in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>eq</code></td>
+<td class="org-left">Edit Qutebrowser config in new Emacs window</td>
+<td class="org-left">Edit Qutebrowser in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ec</code></td>
+<td class="org-left">Edit init.org in new Emacs window</td>
+<td class="org-left">Edit init.org in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ed</code></td>
+<td class="org-left">Edit config.org in new Emacs window</td>
+<td class="org-left">Edit config.org in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ew</code></td>
+<td class="org-left">Edit Waybar config in new Emacs window</td>
+<td class="org-left">Edit Waybar in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>es</code></td>
+<td class="org-left">Edit Waybar style.org in new Emacs window</td>
+<td class="org-left">Edit style.org in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ef</code></td>
+<td class="org-left">Edit foot.org in new Emacs window</td>
+<td class="org-left">Edit foot.org in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>egp</code></td>
+<td class="org-left">Run Magit Push on repository inside Emacs</td>
+<td class="org-left">Run Magit Push in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>egs</code></td>
+<td class="org-left">Run Magit Status on repository inside Emacs</td>
+<td class="org-left">Run Magit Status in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ei</code></td>
+<td class="org-left">Run Magit Log on repository inside Emacs</td>
+<td class="org-left">Run Magit Log in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>egl</code></td>
+<td class="org-left">Run Magit Log on repository inside Emacs</td>
+<td class="org-left">Run Magit Log in Console</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>er</code></td>
+<td class="org-left">Open current directory in Ranger in Emacs</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>j</code></td>
+<td class="org-left">Open NNN file browser</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>me</code></td>
+<td class="org-left">Open webcam image in MPV in Wayland</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>mx</code></td>
+<td class="org-left">Open webcam image in MPV in X.org</td>
+<td class="org-left">N/A</td>
 </tr>
 </tbody>
 </table>
@@ -655,6 +745,7 @@ All of these <code>ls</code> commands have flags to show directories first, show
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">er</span>=<span style="color: #539AFC;">"emacsclient -c -a 'emacs' --eval \"(ranger)\" &gt; /dev/null"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">mx</span>=<span style="color: #539AFC;">"mpv av://v4l2:/dev/video0 --vo=gpu --hwdec=vaapi --untimed --profile=low-latency --no-osc"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">me</span>=<span style="color: #539AFC;">"mpv av://v4l2:/dev/video0 --vo=wlshm --untimed --profile=low-latency --no-osc"</span>
+        <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">j</span>=<span style="color: #539AFC;">"nnn -d -l 2 -H -G -U -R -D"</span>
     <span style="color: #5EC4FF; font-style: italic;">else</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #EBBF83;">ls</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> --group-directories-first -F --color=auto"</span>
         <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">lsla</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">ls</span><span style="color: #539AFC;"> -l -A -h --group-directories-first -F --color=auto"</span>
@@ -697,13 +788,13 @@ All of these <code>ls</code> commands have flags to show directories first, show
 </div>
 </div>
 
-<div id="outline-container-org78dff30" class="outline-2">
-<h2 id="org78dff30">Functions</h2>
-<div class="outline-text-2" id="text-org78dff30">
+<div id="outline-container-org8618ce1" class="outline-2">
+<h2 id="org8618ce1">Functions</h2>
+<div class="outline-text-2" id="text-org8618ce1">
 </div>
-<div id="outline-container-org9d4e0ec" class="outline-3">
-<h3 id="org9d4e0ec">picp</h3>
-<div class="outline-text-3" id="text-org9d4e0ec">
+<div id="outline-container-orgb8a643b" class="outline-3">
+<h3 id="orgb8a643b">picp</h3>
+<div class="outline-text-3" id="text-orgb8a643b">
 <p>
 I used to use this function to send files to my Raspberry Pi.
 </p>
@@ -723,9 +814,9 @@ I used to use this function to send files to my Raspberry Pi.
 </div>
 </div>
 
-<div id="outline-container-orge79ee7d" class="outline-3">
-<h3 id="orge79ee7d">pf</h3>
-<div class="outline-text-3" id="text-orge79ee7d">
+<div id="outline-container-org8b39590" class="outline-3">
+<h3 id="org8b39590">pf</h3>
+<div class="outline-text-3" id="text-org8b39590">
 <p>
 This function searches the list of running processes provided with <code>ps</code>
 and returns a match.
@@ -745,9 +836,9 @@ and returns a match.
 </div>
 </div>
 
-<div id="outline-container-orge7bad28" class="outline-3">
-<h3 id="orge7bad28">t</h3>
-<div class="outline-text-3" id="text-orge7bad28">
+<div id="outline-container-orgecdf4a9" class="outline-3">
+<h3 id="orgecdf4a9">t</h3>
+<div class="outline-text-3" id="text-orgecdf4a9">
 <p>
 This function, when given no arguments, simply starts the <code>tremc</code> Transmission client. If it is given a single argument, it is assumed it is a torrent file: it gives it to Transmission, then deletes it, and starts <code>tremc</code>.
 If it is given a second argument, it interprets that as the preferred download speed in kB/s.
@@ -781,9 +872,9 @@ If it is given a second argument, it interprets that as the preferred download s
 </div>
 </div>
 
-<div id="outline-container-orge4ed87d" class="outline-3">
-<h3 id="orge4ed87d">y</h3>
-<div class="outline-text-3" id="text-orge4ed87d">
+<div id="outline-container-orge85ca62" class="outline-3">
+<h3 id="orge85ca62">y</h3>
+<div class="outline-text-3" id="text-orge85ca62">
 <p>
 Open a file with <b>mupdf</b>.
 </p>
@@ -802,9 +893,9 @@ Open a file with <b>mupdf</b>.
 </div>
 </div>
 
-<div id="outline-container-org83f9c7e" class="outline-3">
-<h3 id="org83f9c7e">scr</h3>
-<div class="outline-text-3" id="text-org83f9c7e">
+<div id="outline-container-org9bfd683" class="outline-3">
+<h3 id="org9bfd683">scr</h3>
+<div class="outline-text-3" id="text-org9bfd683">
 <p>
 Take a screenshot with the given name.
 </p>
@@ -824,9 +915,9 @@ Take a screenshot with the given name.
 </div>
 </div>
 
-<div id="outline-container-org27bf307" class="outline-3">
-<h3 id="org27bf307">xs</h3>
-<div class="outline-text-3" id="text-org27bf307">
+<div id="outline-container-org9f50d01" class="outline-3">
+<h3 id="org9f50d01">xs</h3>
+<div class="outline-text-3" id="text-org9f50d01">
 <p>
 Compile a project with <code>xbps-src</code> from within the build directory. This is
 useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
@@ -844,9 +935,9 @@ build script. It requires the package name (therefore, part of the current direc
 </div>
 </div>
 
-<div id="outline-container-orgc842222" class="outline-3">
-<h3 id="orgc842222">Backup Website</h3>
-<div class="outline-text-3" id="text-orgc842222">
+<div id="outline-container-org81d6cf2" class="outline-3">
+<h3 id="org81d6cf2">Backup Website</h3>
+<div class="outline-text-3" id="text-org81d6cf2">
 <p>
 This shell function backs up my website. It takes one argument, the output directory to store the backup in.
 </p>
@@ -857,7 +948,7 @@ This shell function backs up my website. It takes one argument, the output direc
         printf <span style="color: #539AFC;">"Please specify directory to store backup in\n"</span> &gt; /dev/stderr
         <span style="color: #5EC4FF;">false</span>
     <span style="color: #5EC4FF; font-style: italic;">else</span>
-        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> tababcock@162.210.97.218:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
+        <span style="color: #EBBF83;">sudo</span> rsync -Pa -e <span style="color: #539AFC;">"ssh -p 2222 -i </span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ssh/tbcom_ssh"</span> redacted@redacted:/home/www/tannerbabcock.com <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span>
         <span style="color: #5EC4FF;">true</span>
     <span style="color: #5EC4FF; font-style: italic;">fi</span>
 <span style="color: #5EC4FF;">}</span>
@@ -866,9 +957,9 @@ This shell function backs up my website. It takes one argument, the output direc
 </div>
 </div>
 
-<div id="outline-container-orgb792228" class="outline-3">
-<h3 id="orgb792228">Timer</h3>
-<div class="outline-text-3" id="text-orgb792228">
+<div id="outline-container-org315fe65" class="outline-3">
+<h3 id="org315fe65">Timer</h3>
+<div class="outline-text-3" id="text-org315fe65">
 <p>
 These two functions are special functions, they are executed before and after each command. I use these to keep a timer of each command,
 so my shell tells you how long your command took.
@@ -893,15 +984,359 @@ so my shell tells you how long your command took.
 </div>
 </div>
 
-<div id="outline-container-org64e1498" class="outline-2">
-<h2 id="org64e1498">Aliases</h2>
-<div class="outline-text-2" id="text-org64e1498">
+<div id="outline-container-org70c2930" class="outline-2">
+<h2 id="org70c2930">Aliases</h2>
+<div class="outline-text-2" id="text-org70c2930">
 <p>
 This is my collection of aliases. Each letter of the alphabet should have its own command, to make the overall way of life easier.
 This was apparent before, but I use a number of tools written in Rust that serve as faster and better-looking versions of standard
 commands, like <a href="https://github.com/muesli/duf">duf</a> for <code>df</code>, <a href="https://github.com/Peltoche/lsd">lsd</a> for <code>ls</code>, and <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> for <code>grep</code>. These commands look different, but behave exactly the same as
 the GNU coreutils they&rsquo;re modeled after. These projects are worth checking out.
 </p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Arguments</th>
+<th scope="col" class="org-left">What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>b</code></td>
+<td class="org-left">Directory</td>
+<td class="org-left">Run broot on given or current directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>bb</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run neofetch with fancy bars</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>c</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run btm task manager</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ca</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Run Bat on given files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>co</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Conky</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>d</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run fd Find</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>dcr</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Decrypt given file with GNUPG</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>df</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run duf</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>e</code></td>
+<td class="org-left">File name or directory</td>
+<td class="org-left">Open given file or directory in Emacs</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>f</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run duf</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>g</code></td>
+<td class="org-left">Pattern, file name</td>
+<td class="org-left">Run Ripgrep with given pattern on file</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ga</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Add given file to staging area</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gb</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run onefetch with fancy colors</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gc</code></td>
+<td class="org-left">Branch</td>
+<td class="org-left">Check out branch on Git repository</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gd</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Run Git diff on given file</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gf</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Check out given file from HEAD, reverting changes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ggo</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Returns URL for repo&rsquo;s origin</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gh</code></td>
+<td class="org-left">Pattern, file name</td>
+<td class="org-left">Run Ripgrep with context with given pattern on file</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gl</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Git log</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gm</code></td>
+<td class="org-left">File name, file name</td>
+<td class="org-left">Move or rename file and add to staging area</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gpull</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Git Pull Origin master</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gpulm</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Git Pull Origin main</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gpush</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Git Push Origin master</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gpusm</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Git Push Origin main</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gr</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Delete file from staging area</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>grc</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Delete file from staging area</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gs</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Git show</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gso</code></td>
+<td class="org-left">URL</td>
+<td class="org-left">Set URL for repo&rsquo;s origin</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>h</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Htop</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>i</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Tig Git client</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>k</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Make</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>kc</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Make clean</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>m</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Open given file in MPV</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>mn</code></td>
+<td class="org-left">Man page</td>
+<td class="org-left">Man</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>n</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Ncmpcpp</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ncr</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Encrypt given file with GNUPG</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ne</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Ncmpcpp with artwork</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>o</code></td>
+<td class="org-left">Process name</td>
+<td class="org-left">Kill the given process</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>p</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Gotop</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>q</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Open given file in Feh</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>qw</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Open current directory in SXIV</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>r</code></td>
+<td class="org-left">Directory</td>
+<td class="org-left">Run Ranger on given or current directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>s</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Log in to my website via SSH</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ta</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Extract given Tar archive</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>td</code></td>
+<td class="org-left">Output file, files</td>
+<td class="org-left">Compress files into given output Tar archive</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>tr</code></td>
+<td class="org-left">Options</td>
+<td class="org-left">Transmission-remote</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>u</code></td>
+<td class="org-left">PID</td>
+<td class="org-left">Kill</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>v</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Open given file in Vim</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>vm</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Run Virt-Manager</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>wh</code></td>
+<td class="org-left">Command, alias, function</td>
+<td class="org-left">Which</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Start Zsh as Root</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>xx</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Reboot system immediately</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>y</code></td>
+<td class="org-left">File name</td>
+<td class="org-left">Open given file in MuPDF</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>z</code></td>
+<td class="org-left">N/A</td>
+<td class="org-left">Clear the screen</td>
+</tr>
+</tbody>
+</table>
 
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">b</span>=<span style="color: #539AFC;">"br -dpghs"</span>
@@ -918,6 +1353,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">dcr</span>=<span style="color: #539AFC;">"gpg --decrypt"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">g</span>=<span style="color: #539AFC;">"rg"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">gh</span>=<span style="color: #539AFC;">"rg --context=4"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">gb</span>=<span style="color: #539AFC;">"onefetch --no-palette -d head dependencies --text-colors 7 9 1 10 1 4"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">gs</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">git</span><span style="color: #539AFC;"> status"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">ga</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">git</span><span style="color: #539AFC;"> add"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">gf</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">git</span><span style="color: #539AFC;"> checkout HEAD --"</span>
@@ -948,7 +1384,9 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">p</span>=<span style="color: #539AFC;">"gotop"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">q</span>=<span style="color: #539AFC;">"feh"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">qw</span>=<span style="color: #539AFC;">"sxiv ."</span>
-<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh tababcock@162.210.97.218 -p 2222"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">s</span>=<span style="color: #539AFC;">"ssh redacted@redacted -p 2222"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">ta</span>=<span style="color: #539AFC;">"tar xvf"</span>
+<span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">td</span>=<span style="color: #539AFC;">"tar czf"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">tr</span>=<span style="color: #539AFC;">"transmission-remote"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">k</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;">"</span>
 <span style="color: #5EC4FF;">alias</span> <span style="color: #718CA1;">kc</span>=<span style="color: #539AFC;">"</span><span style="color: #539AFC;">make</span><span style="color: #539AFC;"> clean"</span>
@@ -962,6 +1400,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <pre class="src src-sh"><span style="color: #5EC4FF;">source</span> /home/babkock/.config/broot/launcher/bash/br
 
 <span style="color: #5EC4FF;">export</span> <span style="color: #718CA1;">GPG_TTY</span>=$<span style="color: #5EC4FF;">(</span>tty<span style="color: #5EC4FF;">)</span>
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)</span>
 gpgconf --launch gpg-agent
 <span style="color: #5EC4FF;">export</span> <span style="color: #718CA1;">EDITOR</span>=vim
 </pre>
@@ -981,7 +1420,7 @@ gpgconf --launch gpg-agent
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-19 Wed 01:31</p>
+<p class="date">Created: 2022-10-21 Fri 01:13</p>
 </div>
 </body>
 </html>
