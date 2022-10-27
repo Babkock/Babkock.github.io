@@ -3,17 +3,17 @@
 body { width:92% !important; max-width:92% !important; margin-left:4% !important; margin-right:4% !important; background:linear-gradient(0deg, #202020, #111) !important; color:#dfdfdf !important; border:1px solid black !important; } body #content { width:92% !important; min-width:92% !important; max-width:92% !important; margin-left:4% !important; margin-right:4% !important; } p { color:#efdfdf !important; }
 html { background:#000 !important; }
 .org-src-container pre { background:#221010 !important; border:1px solid #000 !important; border-radius:0px 0px 0px 0px !important; box-shadow:0 !important; }
-pre { box-shadow:0 !important; font-size:1.09em !important; }
-pre span { line-height:1.6; letter-spacing:1.04pt !important; }
+pre { box-shadow:0 !important; /* font-size:1.09em !important; */ }
+/* pre span { line-height:1.6; letter-spacing:1.04pt !important; } */
 a:link, a, a:visited {
     color:#ffc8b8;
     text-decoration:none;
-    letter-spacing:1.1pt !important;
+    letter-spacing:1.04pt !important;
 }
 a:hover, a:active {
     color:#ffdfdf;
     text-decoration:underline;
-    letter-spacing:1.1pt !important;
+    letter-spacing:1.04pt !important;
 }
 table {
     width:90% !important;
