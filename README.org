@@ -5,7 +5,7 @@
 #+OPTIONS: toc:nil num:nil
 #+DESCRIPTION: The GitHub Pages website for computer scientist and artist Tanner Babcock. Here is where you'll find my Emacs and other configs.
 #+KEYWORDS: emacs, doom emacs, github, gitlab, tanner babcock, linux, gnu linux, void linux, arch linux, org
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 #+HTML_HEAD_EXTRA: <meta property="og:image" content="/images/ogimage.png" />
 #+HTML_HEAD_EXTRA: <meta property="og:image:width" content="660" />
 #+HTML_HEAD_EXTRA: <meta property="og:image:height" content="461" />
@@ -82,7 +82,8 @@ This is my personal GitHub Pages website. I use it to host my literate configura
     <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
-    <a href="https://www.twitch.tv/babkock">Twitch</a></p>
+    <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a></p>
     </center>
 </footer>
 #+END_EXPORT

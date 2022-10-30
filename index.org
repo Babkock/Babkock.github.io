@@ -5,7 +5,7 @@
 #+OPTIONS: toc:nil num:nil
 #+DESCRIPTION: The GitHub Pages website for computer scientist and artist Tanner Babcock. Here is where you'll find my Emacs and other configs.
 #+KEYWORDS: emacs, doom emacs, github, gitlab, tanner babcock, linux, gnu linux, void linux, arch linux, org
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 #+HTML_HEAD_EXTRA: <meta property="og:image" content="/images/ogimage.png" />
 #+HTML_HEAD_EXTRA: <meta property="og:image:width" content="660" />
 #+HTML_HEAD_EXTRA: <meta property="og:image:height" content="461" />
