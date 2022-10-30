@@ -84,5 +84,11 @@ header center ul li a {
 
 #footer {
 	padding-top:7px;
-    font-size:1.12em !important;
 }
+footer center p {
+	font-size:0.8em !important;
+}
+footer center p a {
+	font-size:0.9em !important;
+}
+

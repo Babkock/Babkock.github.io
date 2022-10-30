@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-18 Tue 15:17 -->
+<!-- 2022-10-30 Sun 18:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Qutebrowser</title>
@@ -195,7 +195,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta property="og:image" content="/images/ogimage.png" />
 <meta property="og:image:width" content="660" />
 <meta property="og:image:height" content="461" />
@@ -231,38 +231,38 @@ This is my Qutebrowser config. This literate configuration is available online o
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org97ba846">The Theme</a>
+<li><a href="#orgc4e2087">The Theme</a>
 <ul>
-<li><a href="#org4c02f3a">Colors</a></li>
-<li><a href="#orga02e499">The Style</a></li>
+<li><a href="#orgb4ca8b9">Colors</a></li>
+<li><a href="#orgaee18d6">The Style</a></li>
 </ul>
 </li>
-<li><a href="#orgaf53bc6">Qutebrowser</a>
+<li><a href="#orgd860676">Qutebrowser</a>
 <ul>
-<li><a href="#org000f0d7">Preferences</a></li>
-<li><a href="#org6ccc138">Fonts</a></li>
-<li><a href="#org3f42d3a">Appearance</a></li>
-<li><a href="#org49fa233">Home page/Search engines</a></li>
-<li><a href="#orgcb17bf3">Keybindings</a></li>
+<li><a href="#orgb508c8a">Preferences</a></li>
+<li><a href="#orgf62c171">Fonts</a></li>
+<li><a href="#org6cc7195">Appearance</a></li>
+<li><a href="#org44e98a2">Home page/Search engines</a></li>
+<li><a href="#org43f41de">Keybindings</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org97ba846" class="outline-2">
-<h2 id="org97ba846">The Theme</h2>
-<div class="outline-text-2" id="text-org97ba846">
+<div id="outline-container-orgc4e2087" class="outline-2">
+<h2 id="orgc4e2087">The Theme</h2>
+<div class="outline-text-2" id="text-orgc4e2087">
 
-<div id="orgce6aa39" class="figure">
+<div id="org6822bcc" class="figure">
 <p><img src="https://babkock.github.io/images/qutebrowser.png" alt="qutebrowser.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4c02f3a" class="outline-3">
-<h3 id="org4c02f3a">Colors</h3>
-<div class="outline-text-3" id="text-org4c02f3a">
+<div id="outline-container-orgb4ca8b9" class="outline-3">
+<h3 id="orgb4ca8b9">Colors</h3>
+<div class="outline-text-3" id="text-orgb4ca8b9">
 <p>
 This was originally in a separate theme file, but I might as well include it in this one. These are the 16 colors that make up all of Qutebrowser&rsquo;s visual elements.
 </p>
@@ -299,9 +299,9 @@ This was originally in a separate theme file, but I might as well include it in 
 </div>
 </div>
 
-<div id="outline-container-orga02e499" class="outline-3">
-<h3 id="orga02e499">The Style</h3>
-<div class="outline-text-3" id="text-orga02e499">
+<div id="outline-container-orgaee18d6" class="outline-3">
+<h3 id="orgaee18d6">The Style</h3>
+<div class="outline-text-3" id="text-orgaee18d6">
 <p>
 I try to have dark backgrounds and light foregrounds. Here is the color scheme for
 the completion widget and context menu.
@@ -480,18 +480,18 @@ c.colors.webpage.<span style="color: #718CA1;">bg</span> = base00
 </div>
 </div>
 
-<div id="outline-container-orgaf53bc6" class="outline-2">
-<h2 id="orgaf53bc6">Qutebrowser</h2>
-<div class="outline-text-2" id="text-orgaf53bc6">
+<div id="outline-container-orgd860676" class="outline-2">
+<h2 id="orgd860676">Qutebrowser</h2>
+<div class="outline-text-2" id="text-orgd860676">
 <p>
 Okay, so all of the code above was just the theme for Qutebrowser. This is the actual
 configuration.
 </p>
 </div>
 
-<div id="outline-container-org000f0d7" class="outline-3">
-<h3 id="org000f0d7">Preferences</h3>
-<div class="outline-text-3" id="text-org000f0d7">
+<div id="outline-container-orgb508c8a" class="outline-3">
+<h3 id="orgb508c8a">Preferences</h3>
+<div class="outline-text-3" id="text-orgb508c8a">
 <div class="org-src-container">
 <pre class="src src-python">config.load_autoconfig()
 
@@ -512,9 +512,9 @@ c.content.<span style="color: #718CA1;">xss_auditing</span> = <span style="color
 </div>
 </div>
 
-<div id="outline-container-org6ccc138" class="outline-3">
-<h3 id="org6ccc138">Fonts</h3>
-<div class="outline-text-3" id="text-org6ccc138">
+<div id="outline-container-orgf62c171" class="outline-3">
+<h3 id="orgf62c171">Fonts</h3>
+<div class="outline-text-3" id="text-orgf62c171">
 <p>
 I have grouped all of the font settings for all interface elements together. These font sizes can be made bigger and smaller with the keybindings <code>,z</code>, <code>,x</code>, <code>,m</code>, <code>,n</code>, <code>,v</code>, and <code>,p</code>.
 </p>
@@ -545,9 +545,9 @@ c.fonts.messages.<span style="color: #718CA1;">warning</span> = <span style="col
 </div>
 </div>
 
-<div id="outline-container-org3f42d3a" class="outline-3">
-<h3 id="org3f42d3a">Appearance</h3>
-<div class="outline-text-3" id="text-org3f42d3a">
+<div id="outline-container-org6cc7195" class="outline-3">
+<h3 id="org6cc7195">Appearance</h3>
+<div class="outline-text-3" id="text-org6cc7195">
 <p>
 Here is where I set the padding for hints and tabs, and for some reason I&rsquo;d like
 to change some of the colors.
@@ -576,6 +576,7 @@ c.tabs.<span style="color: #718CA1;">padding</span> = {
     <span style="color: #539AFC;">"top"</span>: <span style="color: #E27E8D; font-weight: bold;">3</span>,
     <span style="color: #539AFC;">"bottom"</span>: <span style="color: #E27E8D; font-weight: bold;">4</span>
 }
+c.tabs.title.<span style="color: #5EC4FF;">format</span> = <span style="color: #539AFC;">"{audio}{current_title}"</span>
 c.tabs.<span style="color: #718CA1;">last_close</span> = <span style="color: #539AFC;">"close"</span>
 c.tabs.indicator.<span style="color: #718CA1;">width</span> = <span style="color: #E27E8D; font-weight: bold;">0</span>
 c.tabs.favicons.<span style="color: #718CA1;">scale</span> = <span style="color: #E27E8D; font-weight: bold;">1.0</span>
@@ -585,9 +586,9 @@ c.tabs.<span style="color: #718CA1;">show_switching_delay</span> = <span style="
 </div>
 </div>
 
-<div id="outline-container-org49fa233" class="outline-3">
-<h3 id="org49fa233">Home page/Search engines</h3>
-<div class="outline-text-3" id="text-org49fa233">
+<div id="outline-container-org44e98a2" class="outline-3">
+<h3 id="org44e98a2">Home page/Search engines</h3>
+<div class="outline-text-3" id="text-org44e98a2">
 <p>
 I have eight search engines: DuckDuckGo, Arch Wiki, Google, Google Images,
 Wikipedia, Invidious, YouTube, and GitHub.
@@ -608,15 +609,17 @@ How to handle selecting a file for upload:
 <div class="org-src-container">
 <pre class="src src-python">c.fileselect.<span style="color: #718CA1;">handler</span> = <span style="color: #539AFC;">'external'</span>
 c.fileselect.single_file.<span style="color: #718CA1;">command</span> = [<span style="color: #539AFC;">'st'</span>, <span style="color: #539AFC;">'-e'</span>, <span style="color: #539AFC;">'ranger'</span>, <span style="color: #539AFC;">'--choosefile={}'</span>]
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">c.fileselect.single_file.command = ['foot', '-e', 'nnn', '-d', '-l', '2', '-U', '-D', '-R', '-p', '{}']</span>
 c.fileselect.multiple_files.command = [<span style="color: #539AFC;">'st'</span>, <span style="color: #539AFC;">'-e'</span>, <span style="color: #539AFC;">'ranger'</span>, <span style="color: #539AFC;">'--choosefiles={}'</span>]
+<span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">c.fileselect.single_file.command = ['foot', '-e', 'nnn', '-d', '-l', '2', '-U', '-D', '-R', '-p', '{}']</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgcb17bf3" class="outline-3">
-<h3 id="orgcb17bf3">Keybindings</h3>
-<div class="outline-text-3" id="text-orgcb17bf3">
+<div id="outline-container-org43f41de" class="outline-3">
+<h3 id="org43f41de">Keybindings</h3>
+<div class="outline-text-3" id="text-org43f41de">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -885,7 +888,7 @@ config.bind(<span style="color: #539AFC;">'.'</span>, <span style="color: #539AF
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
+    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
     <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
@@ -898,7 +901,7 @@ config.bind(<span style="color: #539AFC;">'.'</span>, <span style="color: #539AF
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-18 Tue 15:17</p>
+<p class="date">Created: 2022-10-30 Sun 18:28</p>
 </div>
 </body>
 </html>

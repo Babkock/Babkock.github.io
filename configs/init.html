@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-18 Tue 15:12 -->
+<!-- 2022-10-30 Sun 18:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -195,7 +195,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta property="og:image" content="/images/ogimage.png" />
 <meta property="og:image:width" content="660" />
 <meta property="og:image:height" content="461" />
@@ -231,23 +231,23 @@ This is the other, secondary Doom Emacs config file <code>init.org</code>, which
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org67bd6c0">Lexical Binding</a></li>
-<li><a href="#org0a369e6">Packages</a></li>
-<li><a href="#org9476ce0">Preferences</a>
+<li><a href="#org94c0428">Lexical Binding</a></li>
+<li><a href="#org5723243">Packages</a></li>
+<li><a href="#org33b6eaa">Preferences</a>
 <ul>
-<li><a href="#orgd22d28a">Frame Title</a></li>
-<li><a href="#org498d057">Fallback Buffer Name</a></li>
-<li><a href="#org7723766">Doom Dashboard</a></li>
-<li><a href="#org2bafe2c">Modeline</a></li>
+<li><a href="#org68e3d30">Frame Title</a></li>
+<li><a href="#orgbd68445">Fallback Buffer Name</a></li>
+<li><a href="#org58dd5ec">Doom Dashboard</a></li>
+<li><a href="#org7d2c09e">Modeline</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org67bd6c0" class="outline-2">
-<h2 id="org67bd6c0">Lexical Binding</h2>
-<div class="outline-text-2" id="text-org67bd6c0">
+<div id="outline-container-org94c0428" class="outline-2">
+<h2 id="org94c0428">Lexical Binding</h2>
+<div class="outline-text-2" id="text-org94c0428">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -259,9 +259,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org0a369e6" class="outline-2">
-<h2 id="org0a369e6">Packages</h2>
-<div class="outline-text-2" id="text-org0a369e6">
+<div id="outline-container-org5723243" class="outline-2">
+<h2 id="org5723243">Packages</h2>
+<div class="outline-text-2" id="text-org5723243">
 <p>
 This is my list of enabled and installed packages. I try to have a small and minimal Emacs environment, so I&rsquo;ve disabled some common modules.
 </p>
@@ -449,17 +449,17 @@ This is my list of enabled and installed packages. I try to have a small and min
 </div>
 </div>
 
-<div id="outline-container-org9476ce0" class="outline-2">
-<h2 id="org9476ce0">Preferences</h2>
-<div class="outline-text-2" id="text-org9476ce0">
+<div id="outline-container-org33b6eaa" class="outline-2">
+<h2 id="org33b6eaa">Preferences</h2>
+<div class="outline-text-2" id="text-org33b6eaa">
 <p>
 I don&rsquo;t know why, but these next snippets of code must be in this file, (<code>init.el</code>) and not <code>config.el</code>.
 </p>
 </div>
 
-<div id="outline-container-orgd22d28a" class="outline-3">
-<h3 id="orgd22d28a">Frame Title</h3>
-<div class="outline-text-3" id="text-orgd22d28a">
+<div id="outline-container-org68e3d30" class="outline-3">
+<h3 id="org68e3d30">Frame Title</h3>
+<div class="outline-text-3" id="text-org68e3d30">
 <p>
 Conditionally set the title of the frame (or X window) with project name and buffer name (file name).
 </p>
@@ -482,9 +482,9 @@ Conditionally set the title of the frame (or X window) with project name and buf
 </div>
 </div>
 
-<div id="outline-container-org498d057" class="outline-3">
-<h3 id="org498d057">Fallback Buffer Name</h3>
-<div class="outline-text-3" id="text-org498d057">
+<div id="outline-container-orgbd68445" class="outline-3">
+<h3 id="orgbd68445">Fallback Buffer Name</h3>
+<div class="outline-text-3" id="text-orgbd68445">
 <p>
 The default buffer name.
 </p>
@@ -499,9 +499,9 @@ The default buffer name.
 </div>
 </div>
 
-<div id="outline-container-org7723766" class="outline-3">
-<h3 id="org7723766">Doom Dashboard</h3>
-<div class="outline-text-3" id="text-org7723766">
+<div id="outline-container-org58dd5ec" class="outline-3">
+<h3 id="org58dd5ec">Doom Dashboard</h3>
+<div class="outline-text-3" id="text-org58dd5ec">
 <p>
 Show a custom image on the splash screen, and hide cursor and mode line.
 </p>
@@ -531,9 +531,9 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 </div>
 
-<div id="outline-container-org2bafe2c" class="outline-3">
-<h3 id="org2bafe2c">Modeline</h3>
-<div class="outline-text-3" id="text-org2bafe2c">
+<div id="outline-container-org7d2c09e" class="outline-3">
+<h3 id="org7d2c09e">Modeline</h3>
+<div class="outline-text-3" id="text-org7d2c09e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">inhibit-compacting-font-caches</span> t<span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">find-file-visit-truename</span> t<span style="color: #5EC4FF;">)</span>
@@ -567,7 +567,7 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-18 Tue 15:12</p>
+<p class="date">Created: 2022-10-30 Sun 18:42</p>
 </div>
 </body>
 </html>

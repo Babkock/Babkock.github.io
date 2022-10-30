@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-18 Tue 20:17 -->
+<!-- 2022-10-30 Sun 18:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Polybar</title>
@@ -195,7 +195,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="solarized-dark.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta property="og:image" content="/images/ogimage.png" />
 <meta property="og:image:width" content="660" />
 <meta property="og:image:height" content="461" />
@@ -230,47 +230,47 @@ This literate configuration is available online on my <a href="https://babkock.g
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org57a773f">Laptop Bar</a>
+<li><a href="#org256c55b">Laptop Bar</a>
 <ul>
-<li><a href="#orgdf69f13">Setup</a></li>
-<li><a href="#org99c734a">Appearance</a></li>
+<li><a href="#org0ebfbfb">Setup</a></li>
+<li><a href="#orgf747c43">Appearance</a></li>
 </ul>
 </li>
-<li><a href="#orgac97f8b">Monitor Bar</a>
+<li><a href="#org24608dc">Monitor Bar</a>
 <ul>
-<li><a href="#org5ef7625">Setup</a></li>
-<li><a href="#orgda127c6">Appearance</a></li>
+<li><a href="#org567e7b2">Setup</a></li>
+<li><a href="#org73ec89b">Appearance</a></li>
 </ul>
 </li>
-<li><a href="#org20d8f4a">Modules</a>
+<li><a href="#orgf9f6d39">Modules</a>
 <ul>
-<li><a href="#org0c91f2b">HDD</a></li>
-<li><a href="#org0d793eb">Title</a></li>
-<li><a href="#org03c4f79">Network</a></li>
-<li><a href="#org7f10286">Bspwm</a></li>
-<li><a href="#orgb6b82df">MPD</a></li>
-<li><a href="#orgcf611c7">Pulseaudio</a></li>
-<li><a href="#orgb644176">CPU</a></li>
-<li><a href="#orgc419e57">Memory</a></li>
-<li><a href="#orgddb0b7f">Battery</a></li>
-<li><a href="#orgb402a53">Date</a></li>
+<li><a href="#orgf15e140">HDD</a></li>
+<li><a href="#org5ef1749">Title</a></li>
+<li><a href="#orgd2ac7fe">Network</a></li>
+<li><a href="#orga0a09ad">Bspwm</a></li>
+<li><a href="#orgf053d7d">MPD</a></li>
+<li><a href="#org93c8f51">Pulseaudio</a></li>
+<li><a href="#org12ba53e">CPU</a></li>
+<li><a href="#orgbbfb8b9">Memory</a></li>
+<li><a href="#orgd12257a">Battery</a></li>
+<li><a href="#org4daeb6a">Date</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org57a773f" class="outline-2">
-<h2 id="org57a773f">Laptop Bar</h2>
-<div class="outline-text-2" id="text-org57a773f">
+<div id="outline-container-org256c55b" class="outline-2">
+<h2 id="org256c55b">Laptop Bar</h2>
+<div class="outline-text-2" id="text-org256c55b">
 <p>
 This is my laptop&rsquo;s Polybar. It is the primary status bar, and started by default by the window manager.
 </p>
 </div>
 
-<div id="outline-container-orgdf69f13" class="outline-3">
-<h3 id="orgdf69f13">Setup</h3>
-<div class="outline-text-3" id="text-orgdf69f13">
+<div id="outline-container-org0ebfbfb" class="outline-3">
+<h3 id="org0ebfbfb">Setup</h3>
+<div class="outline-text-3" id="text-org0ebfbfb">
 <p>
 This first block registers the bar &ldquo;laptop&rdquo; with Polybar, and assigns it to the display <code>eDP1</code>.
 </p>
@@ -299,9 +299,9 @@ This first block registers the bar &ldquo;laptop&rdquo; with Polybar, and assign
 </div>
 </div>
 
-<div id="outline-container-org99c734a" class="outline-3">
-<h3 id="org99c734a">Appearance</h3>
-<div class="outline-text-3" id="text-org99c734a">
+<div id="outline-container-orgf747c43" class="outline-3">
+<h3 id="orgf747c43">Appearance</h3>
+<div class="outline-text-3" id="text-orgf747c43">
 <p>
 Here are some general appearance settings, like colors, padding, and font. Remember, in the hex colors for Polybar&rsquo;s config, the first two digits are
 for the alpha channel. Like this: <code>#aarrggbb</code> . So a color beginning with &ldquo;#ff&rdquo; would render with 100% opacity. Hex colors with only 6 digits will be
@@ -345,18 +345,18 @@ in the order they are listed on these next two lines. Notice the expressions tha
 </div>
 </div>
 
-<div id="outline-container-orgac97f8b" class="outline-2">
-<h2 id="orgac97f8b">Monitor Bar</h2>
-<div class="outline-text-2" id="text-orgac97f8b">
+<div id="outline-container-org24608dc" class="outline-2">
+<h2 id="org24608dc">Monitor Bar</h2>
+<div class="outline-text-2" id="text-org24608dc">
 <p>
 The monitor&rsquo;s Polybar has three modules the laptop&rsquo;s (my primary) bar doesn&rsquo;t:
 The network module, the window title, and the HDD module.
 </p>
 </div>
 
-<div id="outline-container-org5ef7625" class="outline-3">
-<h3 id="org5ef7625">Setup</h3>
-<div class="outline-text-3" id="text-org5ef7625">
+<div id="outline-container-org567e7b2" class="outline-3">
+<h3 id="org567e7b2">Setup</h3>
+<div class="outline-text-3" id="text-org567e7b2">
 <p>
 This block registers the monitor&rsquo;s Polybar and assigns it to the display <code>HDMI2</code>.
 </p>
@@ -378,9 +378,9 @@ This block registers the monitor&rsquo;s Polybar and assigns it to the display <
 </div>
 </div>
 
-<div id="outline-container-orgda127c6" class="outline-3">
-<h3 id="orgda127c6">Appearance</h3>
-<div class="outline-text-3" id="text-orgda127c6">
+<div id="outline-container-org73ec89b" class="outline-3">
+<h3 id="org73ec89b">Appearance</h3>
+<div class="outline-text-3" id="text-org73ec89b">
 <p>
 The font size should be a little bigger for the monitor&rsquo;s bar.
 </p>
@@ -393,7 +393,7 @@ The font size should be a little bigger for the monitor&rsquo;s bar.
 <span style="color: #718CA1;">tray-padding</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
 <span style="color: #718CA1;">tray-maxsize</span> = <span style="color: #E27E8D; font-weight: bold;">40</span>
 
-<span style="color: #718CA1;">font-0</span> = SpaceMono Nerd Font:size=<span style="color: #E27E8D; font-weight: bold;">16</span>:antialias=true
+<span style="color: #718CA1;">font-0</span> = SpaceMono Nerd Font:size=<span style="color: #E27E8D; font-weight: bold;">17</span>:antialias=true
 
 <span style="color: #718CA1;">line-size</span> = <span style="color: #E27E8D; font-weight: bold;">2</span>
 <span style="color: #718CA1;">line-color</span> = <span style="color: #41505E; font-style: italic;">#</span><span style="color: #41505E; font-style: italic;">f00</span>
@@ -421,13 +421,13 @@ Here are the modules.
 </div>
 </div>
 
-<div id="outline-container-org20d8f4a" class="outline-2">
-<h2 id="org20d8f4a">Modules</h2>
-<div class="outline-text-2" id="text-org20d8f4a">
+<div id="outline-container-orgf9f6d39" class="outline-2">
+<h2 id="orgf9f6d39">Modules</h2>
+<div class="outline-text-2" id="text-orgf9f6d39">
 </div>
-<div id="outline-container-org0c91f2b" class="outline-3">
-<h3 id="org0c91f2b">HDD</h3>
-<div class="outline-text-3" id="text-org0c91f2b">
+<div id="outline-container-orgf15e140" class="outline-3">
+<h3 id="orgf15e140">HDD</h3>
+<div class="outline-text-3" id="text-orgf15e140">
 <p>
 Show remaining disk space.
 </p>
@@ -451,9 +451,9 @@ Show remaining disk space.
 </div>
 </div>
 
-<div id="outline-container-org0d793eb" class="outline-3">
-<h3 id="org0d793eb">Title</h3>
-<div class="outline-text-3" id="text-org0d793eb">
+<div id="outline-container-org5ef1749" class="outline-3">
+<h3 id="org5ef1749">Title</h3>
+<div class="outline-text-3" id="text-org5ef1749">
 <p>
 Shows the title of the currently focused window.
 </p>
@@ -475,9 +475,9 @@ Shows the title of the currently focused window.
 </div>
 </div>
 
-<div id="outline-container-org03c4f79" class="outline-3">
-<h3 id="org03c4f79">Network</h3>
-<div class="outline-text-3" id="text-org03c4f79">
+<div id="outline-container-orgd2ac7fe" class="outline-3">
+<h3 id="orgd2ac7fe">Network</h3>
+<div class="outline-text-3" id="text-orgd2ac7fe">
 <p>
 Shows upload and download traffic. Uncomment those lines to have underlines.
 </p>
@@ -506,9 +506,9 @@ Shows upload and download traffic. Uncomment those lines to have underlines.
 </div>
 </div>
 
-<div id="outline-container-org7f10286" class="outline-3">
-<h3 id="org7f10286">Bspwm</h3>
-<div class="outline-text-3" id="text-org7f10286">
+<div id="outline-container-orga0a09ad" class="outline-3">
+<h3 id="orga0a09ad">Bspwm</h3>
+<div class="outline-text-3" id="text-orga0a09ad">
 <p>
 The Bspwm workspace listing, including focused colors, occupied colors, and
 empty colors. The roman numerals in the icon strings are taken from <code>bspwmrc</code>.
@@ -557,9 +557,9 @@ empty colors. The roman numerals in the icon strings are taken from <code>bspwmr
 </div>
 </div>
 
-<div id="outline-container-orgb6b82df" class="outline-3">
-<h3 id="orgb6b82df">MPD</h3>
-<div class="outline-text-3" id="text-orgb6b82df">
+<div id="outline-container-orgf053d7d" class="outline-3">
+<h3 id="orgf053d7d">MPD</h3>
+<div class="outline-text-3" id="text-orgf053d7d">
 <p>
 MPD music player.
 </p>
@@ -588,9 +588,9 @@ MPD music player.
 </div>
 </div>
 
-<div id="outline-container-orgcf611c7" class="outline-3">
-<h3 id="orgcf611c7">Pulseaudio</h3>
-<div class="outline-text-3" id="text-orgcf611c7">
+<div id="outline-container-org93c8f51" class="outline-3">
+<h3 id="org93c8f51">Pulseaudio</h3>
+<div class="outline-text-3" id="text-org93c8f51">
 <p>
 Pulseaudio volume.
 </p>
@@ -628,9 +628,9 @@ Pulseaudio volume.
 </div>
 </div>
 
-<div id="outline-container-orgb644176" class="outline-3">
-<h3 id="orgb644176">CPU</h3>
-<div class="outline-text-3" id="text-orgb644176">
+<div id="outline-container-org12ba53e" class="outline-3">
+<h3 id="org12ba53e">CPU</h3>
+<div class="outline-text-3" id="text-org12ba53e">
 <p>
 Average CPU percentage.
 </p>
@@ -651,9 +651,9 @@ Average CPU percentage.
 </div>
 </div>
 
-<div id="outline-container-orgc419e57" class="outline-3">
-<h3 id="orgc419e57">Memory</h3>
-<div class="outline-text-3" id="text-orgc419e57">
+<div id="outline-container-orgbbfb8b9" class="outline-3">
+<h3 id="orgbbfb8b9">Memory</h3>
+<div class="outline-text-3" id="text-orgbbfb8b9">
 <p>
 Percentage of RAM in use.
 </p>
@@ -674,9 +674,9 @@ Percentage of RAM in use.
 </div>
 </div>
 
-<div id="outline-container-orgddb0b7f" class="outline-3">
-<h3 id="orgddb0b7f">Battery</h3>
-<div class="outline-text-3" id="text-orgddb0b7f">
+<div id="outline-container-orgd12257a" class="outline-3">
+<h3 id="orgd12257a">Battery</h3>
+<div class="outline-text-3" id="text-orgd12257a">
 <p>
 Notice the animations, and the red and yellow colors, to draw attention to
 low battery levels.
@@ -734,9 +734,9 @@ low battery levels.
 </div>
 </div>
 
-<div id="outline-container-orgb402a53" class="outline-3">
-<h3 id="orgb402a53">Date</h3>
-<div class="outline-text-3" id="text-orgb402a53">
+<div id="outline-container-org4daeb6a" class="outline-3">
+<h3 id="org4daeb6a">Date</h3>
+<div class="outline-text-3" id="text-org4daeb6a">
 <p>
 Tried and true date module.
 </p>
@@ -777,7 +777,7 @@ Tried and true date module.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-18 Tue 20:17</p>
+<p class="date">Created: 2022-10-30 Sun 18:39</p>
 </div>
 </body>
 </html>
