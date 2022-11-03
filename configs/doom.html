@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-30 Sun 18:41 -->
+<!-- 2022-11-03 Thu 00:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -231,336 +231,336 @@ This literate configuration is available online on my <a href="https://babkock.g
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org801668a">Lexical Binding</a></li>
-<li><a href="#org797bfb0">Basic Info</a></li>
-<li><a href="#org33afcfa">Preferences</a></li>
-<li><a href="#org831633b">Appearance</a></li>
-<li><a href="#orge13474e">Modeline</a></li>
+<li><a href="#orgb35854e">Lexical Binding</a></li>
+<li><a href="#org606ff09">Basic Info</a></li>
+<li><a href="#org989b48b">Preferences</a></li>
+<li><a href="#orga36a17f">Appearance</a></li>
+<li><a href="#orga3fd5fe">Modeline</a></li>
 </ul>
 </li>
-<li><a href="#org67a9b35">Packages</a>
+<li><a href="#org225a47a">Packages</a>
 <ul>
-<li><a href="#orge2fa069">Org Mode</a></li>
-<li><a href="#orga8d2190">Treemacs</a></li>
-<li><a href="#org2e57d67">Doom Themes</a></li>
-<li><a href="#org56175d3">Dashboard</a></li>
+<li><a href="#org2445973">Org Mode</a></li>
+<li><a href="#org5125965">Treemacs</a></li>
+<li><a href="#org493e8da">Doom Themes</a></li>
+<li><a href="#org4a0b52b">Dashboard</a></li>
 </ul>
 </li>
-<li><a href="#org1798ad3">Keybindings</a>
+<li><a href="#org41e7ddd">Keybindings</a>
 <ul>
-<li><a href="#org6c4774e">Dashboard</a></li>
-<li><a href="#org7d30bdc">General</a></li>
+<li><a href="#orga579cde">Dashboard</a></li>
+<li><a href="#org6070dc4">General</a></li>
 </ul>
 </li>
-<li><a href="#org888b680">Dired</a>
+<li><a href="#orgad3cb5b">Dired</a>
 <ul>
-<li><a href="#orgf66a1b1">File Associations</a></li>
+<li><a href="#orgc03bbf9">File Associations</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="org4921535" class="figure">
+<div id="org382fb35" class="figure">
 <p><img src="https://babkock.github.io/images/emacs1.png" alt="emacs1.png" />
 </p>
 </div>
 
-<div id="outline-container-org801668a" class="outline-3">
-<h3 id="org801668a">Lexical Binding</h3>
-<div class="outline-text-3" id="text-org801668a">
+<div id="outline-container-orgb35854e" class="outline-3">
+<h3 id="orgb35854e">Lexical Binding</h3>
+<div class="outline-text-3" id="text-orgb35854e">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #41505E; font-style: italic;">;;; </span><span style="color: #41505E; font-style: italic;">$DOOMDIR/config.el -*- lexical-binding: t; -*-</span>
+<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">;;; </span><span style="color: #5B6268; font-style: italic;">$DOOMDIR/config.el -*- lexical-binding: t; -*-</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org797bfb0" class="outline-3">
-<h3 id="org797bfb0">Basic Info</h3>
-<div class="outline-text-3" id="text-org797bfb0">
+<div id="outline-container-org606ff09" class="outline-3">
+<h3 id="org606ff09">Basic Info</h3>
+<div class="outline-text-3" id="text-org606ff09">
 <p>
 Here, I set my name and email address.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">user-full-name</span> <span style="color: #539AFC;">"Tanner Babcock"</span>
-      <span style="color: #718CA1;">user-mail-address</span> <span style="color: #539AFC;">"babkock@protonmail.com"</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">user-full-name</span> <span style="color: #bcd42a;">"Tanner Babcock"</span>
+      <span style="color: #f8f8f0;">user-mail-address</span> <span style="color: #bcd42a;">"babkock@protonmail.com"</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org33afcfa" class="outline-3">
-<h3 id="org33afcfa">Preferences</h3>
-<div class="outline-text-3" id="text-org33afcfa">
+<div id="outline-container-org989b48b" class="outline-3">
+<h3 id="org989b48b">Preferences</h3>
+<div class="outline-text-3" id="text-org989b48b">
 <p>
 Fix the garbage collector, enable zoom in and zoom out keybindings.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">gc-cons-threshold</span> <span style="color: #E27E8D; font-weight: bold;">100000000</span>
-      <span style="color: #718CA1;">make-backup-files</span> nil
-      <span style="color: #718CA1;">auto-save-default</span> nil
-      <span style="color: #718CA1;">create-lockfiles</span> nil<span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">set-charset-priority</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">unicode</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">prefer-coding-system</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">utf-8-unix</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">global-set-key</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">kbd</span> <span style="color: #539AFC;">"C-&lt;wheel-up&gt;"</span><span style="color: #E27E8D;">)</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">text-scale-increase</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">global-set-key</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">kbd</span> <span style="color: #539AFC;">"C-&lt;wheel-down&gt;"</span><span style="color: #E27E8D;">)</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">text-scale-decrease</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">ranger-show-hidden</span> t<span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">gc-cons-threshold</span> <span style="color: #ff5d38; font-weight: bold;">100000000</span>
+      <span style="color: #f8f8f0;">make-backup-files</span> nil
+      <span style="color: #f8f8f0;">auto-save-default</span> nil
+      <span style="color: #f8f8f0;">create-lockfiles</span> nil<span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-charset-priority</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">unicode</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">prefer-coding-system</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">utf-8-unix</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">global-set-key</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"C-&lt;wheel-up&gt;"</span><span style="color: #c678dd;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">text-scale-increase</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">global-set-key</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"C-&lt;wheel-down&gt;"</span><span style="color: #c678dd;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">text-scale-decrease</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">ranger-show-hidden</span> t<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org831633b" class="outline-3">
-<h3 id="org831633b">Appearance</h3>
-<div class="outline-text-3" id="text-org831633b">
+<div id="outline-container-orga36a17f" class="outline-3">
+<h3 id="orga36a17f">Appearance</h3>
+<div class="outline-text-3" id="text-orga36a17f">
 <p>
 Now the fun stuff, where I set the fonts, theme, and colors.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">(setq doom-theme 'doom-tomorrow-night)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-theme</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">doom-city-lights</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">which-key-idle-delay</span> <span style="color: #E27E8D; font-weight: bold;">0.4</span>
-      <span style="color: #718CA1;">which-key-idle-secondary-delay</span> <span style="color: #E27E8D; font-weight: bold;">0.05</span>
-      <span style="color: #718CA1;">+doom-dashboard-banner-padding</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #E27E8D; font-weight: bold;">0</span> . <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">; </span><span style="color: #5B6268; font-style: italic;">(setq doom-theme 'doom-tomorrow-night)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-theme</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">doom-peacock</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">which-key-idle-delay</span> <span style="color: #ff5d38; font-weight: bold;">0.4</span>
+      <span style="color: #f8f8f0;">which-key-idle-secondary-delay</span> <span style="color: #ff5d38; font-weight: bold;">0.05</span>
+      <span style="color: #f8f8f0;">+doom-dashboard-banner-padding</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">0</span> . <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-font</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">font-spec</span> <span style="color: #5EC4FF;">:family</span> <span style="color: #539AFC;">"Space Mono Nerd Font"</span> <span style="color: #5EC4FF;">:size</span> <span style="color: #E27E8D; font-weight: bold;">18</span> <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.0</span><span style="color: #E27E8D;">)</span>
-      <span style="color: #718CA1;">doom-big-font</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">font-spec</span> <span style="color: #5EC4FF;">:family</span> <span style="color: #539AFC;">"Space Mono Nerd Font"</span> <span style="color: #5EC4FF;">:size</span> <span style="color: #E27E8D; font-weight: bold;">20</span> <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.0</span><span style="color: #E27E8D;">)</span>
-      <span style="color: #718CA1;">doom-unicode-font</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">font-spec</span> <span style="color: #5EC4FF;">:family</span> <span style="color: #539AFC;">"Space Mono Nerd Font"</span> <span style="color: #5EC4FF;">:size</span> <span style="color: #E27E8D; font-weight: bold;">18</span> <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.0</span><span style="color: #E27E8D;">)</span>
-      <span style="color: #718CA1;">doom-variable-pitch-font</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">font-spec</span> <span style="color: #5EC4FF;">:family</span> <span style="color: #539AFC;">"NotoSerif Nerd Font"</span> <span style="color: #5EC4FF;">:size</span> <span style="color: #E27E8D; font-weight: bold;">18</span> <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.1</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">set-frame-font</span> <span style="color: #539AFC;">"Space Mono Nerd Font 18"</span> nil t<span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-font</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">font-spec</span> <span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span> <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.0</span><span style="color: #c678dd;">)</span>
+      <span style="color: #f8f8f0;">doom-big-font</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">font-spec</span> <span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">20</span> <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.0</span><span style="color: #c678dd;">)</span>
+      <span style="color: #f8f8f0;">doom-unicode-font</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">font-spec</span> <span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span> <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.0</span><span style="color: #c678dd;">)</span>
+      <span style="color: #f8f8f0;">doom-variable-pitch-font</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">font-spec</span> <span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"NotoSerif Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span> <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-frame-font</span> <span style="color: #bcd42a;">"Space Mono Nerd Font 18"</span> nil t<span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> ls-lisp-format-time-list <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #539AFC;">"%m/%d/%Y %I:%M:%S"</span><span style="color: #E27E8D;">)</span>
-      ls-lisp-use-localized-time-format t
-      display-time-format <span style="color: #539AFC;">"%I:%M"</span>
-      display-time-default-load-average nil<span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">display-line-numbers-type</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">relative</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">confirm-kill-emacs</span> nil<span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq-default</span> <span style="color: #718CA1;">shell-file-name</span> <span style="color: #539AFC;">"/bin/zsh"</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> ls-lisp-format-time-list <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #bcd42a;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #bcd42a;">"%m/%d/%Y %I:%M:%S"</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> ls-lisp-use-localized-time-format t
+      display-time-format <span style="color: #bcd42a;">"%I:%M"</span>
+      display-time-default-load-average nil<span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">display-line-numbers-type</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">relative</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">confirm-kill-emacs</span> nil<span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> <span style="color: #f8f8f0;">shell-file-name</span> <span style="color: #bcd42a;">"/bin/zsh"</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">set-frame-parameter</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">selected-frame</span><span style="color: #E27E8D;">)</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">alpha</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #E27E8D; font-weight: bold;">70</span> <span style="color: #E27E8D; font-weight: bold;">70</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">add-to-list</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">default-frame-alist</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span>alpha <span style="color: #E27E8D; font-weight: bold;">70</span> <span style="color: #E27E8D; font-weight: bold;">70</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">add-hook</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">dired-mode-hook</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-dired-mode</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-frame-parameter</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">selected-frame</span><span style="color: #c678dd;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">alpha</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">70</span> <span style="color: #ff5d38; font-weight: bold;">70</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">add-to-list</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">default-frame-alist</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>alpha <span style="color: #ff5d38; font-weight: bold;">70</span> <span style="color: #ff5d38; font-weight: bold;">70</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">add-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">dired-mode-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-dired-mode</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">warning-minimum-level</span> <span style="color: #5EC4FF;">:emergency</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #718CA1;">menu-bar-mode</span> <span style="color: #E27E8D; font-weight: bold;">-1</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #718CA1;">tool-bar-mode</span> <span style="color: #E27E8D; font-weight: bold;">-1</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #718CA1;">scroll-bar-mode</span> <span style="color: #E27E8D; font-weight: bold;">-1</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">warning-minimum-level</span> <span style="color: #ff5d38;">:emergency</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #f8f8f0;">menu-bar-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #f8f8f0;">tool-bar-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #f8f8f0;">scroll-bar-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge13474e" class="outline-3">
-<h3 id="orge13474e">Modeline</h3>
-<div class="outline-text-3" id="text-orge13474e">
+<div id="outline-container-orga3fd5fe" class="outline-3">
+<h3 id="orga3fd5fe">Modeline</h3>
+<div class="outline-text-3" id="text-orga3fd5fe">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> modeline
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-modeline-buffer-file-name-style</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">auto</span>
-          <span style="color: #718CA1;">doom-modeline-icon</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">display-graphic-p</span><span style="color: #8BD49C;">)</span>
-          <span style="color: #718CA1;">doom-modeline-major-mode-icon</span> t
-          <span style="color: #718CA1;">doom-modeline-major-mode-color-icon</span> t
-          <span style="color: #718CA1;">doom-modeline-height</span> <span style="color: #E27E8D; font-weight: bold;">30</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq-default</span> <span style="color: #718CA1;">doom-modeline-major-mode-icon</span> t
-              <span style="color: #718CA1;">doom-modeline-major-mode-color-icon</span> t
-              <span style="color: #718CA1;">doom-modeline-buffer-file-name-style</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">auto</span>
-              <span style="color: #718CA1;">doom-modeline-persp-icon</span> t
-              <span style="color: #718CA1;">doom-modeline-unicode-fallback</span> nil
-              <span style="color: #718CA1;">doom-modeline-hud</span> t
-              <span style="color: #718CA1;">doom-modeline-height</span> <span style="color: #E27E8D; font-weight: bold;">30</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> modeline
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">auto</span>
+          <span style="color: #f8f8f0;">doom-modeline-icon</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">display-graphic-p</span><span style="color: #98be65;">)</span>
+          <span style="color: #f8f8f0;">doom-modeline-major-mode-icon</span> t
+          <span style="color: #f8f8f0;">doom-modeline-major-mode-color-icon</span> t
+          <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> <span style="color: #f8f8f0;">doom-modeline-major-mode-icon</span> t
+              <span style="color: #f8f8f0;">doom-modeline-major-mode-color-icon</span> t
+              <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">auto</span>
+              <span style="color: #f8f8f0;">doom-modeline-persp-icon</span> t
+              <span style="color: #f8f8f0;">doom-modeline-unicode-fallback</span> nil
+              <span style="color: #f8f8f0;">doom-modeline-hud</span> t
+              <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org67a9b35" class="outline-2">
-<h2 id="org67a9b35">Packages</h2>
-<div class="outline-text-2" id="text-org67a9b35">
+<div id="outline-container-org225a47a" class="outline-2">
+<h2 id="org225a47a">Packages</h2>
+<div class="outline-text-2" id="text-org225a47a">
 <p>
 Here is what my Doom splash screen (Dashboard) typically looks like.
 </p>
 
 
-<div id="orga8d48ec" class="figure">
+<div id="orgb0cc9fb" class="figure">
 <p><img src="https://babkock.github.io/images/emacs2.png" alt="emacs2.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge2fa069" class="outline-3">
-<h3 id="orge2fa069">Org Mode</h3>
-<div class="outline-text-3" id="text-orge2fa069">
+<div id="outline-container-org2445973" class="outline-3">
+<h3 id="org2445973">Org Mode</h3>
+<div class="outline-text-3" id="text-org2445973">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> org
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">require</span> <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">org-bullets</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">add-hook</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">org-mode-hook</span> <span style="color: #8BD49C;">(</span><span style="color: #5EC4FF; font-style: italic;">lambda</span> <span style="color: #B62D65;">()</span> <span style="color: #B62D65;">(</span><span style="color: #718CA1;">org-bullets-mode</span> <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">org-directory</span> <span style="color: #539AFC;">"~/org/"</span>
-          <span style="color: #718CA1;">org-agenda-files</span> <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"~/org/todo.org"</span> <span style="color: #539AFC;">"~/org/video.org"</span><span style="color: #8BD49C;">)</span>
-          <span style="color: #718CA1;">org-default-notes-file</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">expand-file-name</span> <span style="color: #539AFC;">"notes.org"</span> <span style="color: #718CA1;">org-directory</span><span style="color: #8BD49C;">)</span>
-          <span style="color: #718CA1;">org-superstar-headline-bullets-list</span> <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"&#9673;"</span> <span style="color: #539AFC;">"&#9679; "</span> <span style="color: #539AFC;">"&#9675; "</span> <span style="color: #539AFC;">"&#9670;"</span> <span style="color: #539AFC;">"&#9679;"</span> <span style="color: #539AFC;">"&#9675;"</span> <span style="color: #539AFC;">"&#9670;"</span><span style="color: #8BD49C;">)</span>
-          <span style="color: #718CA1;">org-superstar-item-bullet-alist</span> <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span><span style="color: #B62D65;">(</span>?+ . ?&#10148;<span style="color: #B62D65;">)</span> <span style="color: #B62D65;">(</span>?- . ?&#10022;<span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span>
-          <span style="color: #718CA1;">org-ellipsis</span> <span style="color: #539AFC;">" &#62539; "</span>
-          <span style="color: #718CA1;">org-catch-invisible-edits</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">smart</span>
-          <span style="color: #718CA1;">org-log-done</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">time</span>
-          org-journal-dir <span style="color: #539AFC;">"~/org/journal/"</span>
-          <span style="color: #718CA1;">org-hide-emphasis-markers</span> t
-          <span style="color: #718CA1;">org-support-shift-select</span> t<span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">custom-set-faces!</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-document-title <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.3</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-1 <span style="color: #5EC4FF;">:inherit</span> outline-1 <span style="color: #5EC4FF;">:weight</span> extra-bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.35</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-2 <span style="color: #5EC4FF;">:inherit</span> outline-2 <span style="color: #5EC4FF;">:weight</span> bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.15</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-3 <span style="color: #5EC4FF;">:inherit</span> outline-3 <span style="color: #5EC4FF;">:weight</span> bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.12</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-4 <span style="color: #5EC4FF;">:inherit</span> outline-4 <span style="color: #5EC4FF;">:weight</span> bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.09</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-5 <span style="color: #5EC4FF;">:inherit</span> outline-5 <span style="color: #5EC4FF;">:weight</span> bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.06</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-6 <span style="color: #5EC4FF;">:inherit</span> outline-6 <span style="color: #5EC4FF;">:weight</span> semi-bold <span style="color: #5EC4FF;">:height</span> <span style="color: #E27E8D; font-weight: bold;">1.03</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-7 <span style="color: #5EC4FF;">:inherit</span> outline-7 <span style="color: #5EC4FF;">:weight</span> semi-bold<span style="color: #8BD49C;">)</span>
-        <span style="color: #5EC4FF;">'</span><span style="color: #8BD49C;">(</span>org-level-8 <span style="color: #5EC4FF;">:inherit</span> outline-8 <span style="color: #5EC4FF;">:weight</span> semi-bold<span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> org
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">require</span> <span style="color: #ff5d38;">'</span><span style="color: #ff5d38;">org-bullets</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">add-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">org-mode-hook</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #f8f8f0;">org-bullets-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">org-directory</span> <span style="color: #bcd42a;">"~/org/"</span>
+          <span style="color: #f8f8f0;">org-agenda-files</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"~/org/todo.org"</span> <span style="color: #bcd42a;">"~/org/video.org"</span><span style="color: #98be65;">)</span>
+          <span style="color: #f8f8f0;">org-default-notes-file</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">expand-file-name</span> <span style="color: #bcd42a;">"notes.org"</span> <span style="color: #f8f8f0;">org-directory</span><span style="color: #98be65;">)</span>
+          <span style="color: #f8f8f0;">org-superstar-headline-bullets-list</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"&#9673;"</span> <span style="color: #bcd42a;">"&#9679; "</span> <span style="color: #bcd42a;">"&#9675; "</span> <span style="color: #bcd42a;">"&#9670;"</span> <span style="color: #bcd42a;">"&#9679;"</span> <span style="color: #bcd42a;">"&#9675;"</span> <span style="color: #bcd42a;">"&#9670;"</span><span style="color: #98be65;">)</span>
+          <span style="color: #f8f8f0;">org-superstar-item-bullet-alist</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>?+ . ?&#10148;<span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span>?- . ?&#10022;<span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+          <span style="color: #f8f8f0;">org-ellipsis</span> <span style="color: #bcd42a;">" &#62539; "</span>
+          <span style="color: #f8f8f0;">org-catch-invisible-edits</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">smart</span>
+          <span style="color: #f8f8f0;">org-log-done</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">time</span>
+          org-journal-dir <span style="color: #bcd42a;">"~/org/journal/"</span>
+          <span style="color: #f8f8f0;">org-hide-emphasis-markers</span> t
+          <span style="color: #f8f8f0;">org-support-shift-select</span> t<span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">custom-set-faces!</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-document-title <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.3</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-1 <span style="color: #ff5d38;">:inherit</span> outline-1 <span style="color: #ff5d38;">:weight</span> extra-bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.35</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-2 <span style="color: #ff5d38;">:inherit</span> outline-2 <span style="color: #ff5d38;">:weight</span> bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.15</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-3 <span style="color: #ff5d38;">:inherit</span> outline-3 <span style="color: #ff5d38;">:weight</span> bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.12</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-4 <span style="color: #ff5d38;">:inherit</span> outline-4 <span style="color: #ff5d38;">:weight</span> bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.09</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-5 <span style="color: #ff5d38;">:inherit</span> outline-5 <span style="color: #ff5d38;">:weight</span> bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.06</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-6 <span style="color: #ff5d38;">:inherit</span> outline-6 <span style="color: #ff5d38;">:weight</span> semi-bold <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.03</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-7 <span style="color: #ff5d38;">:inherit</span> outline-7 <span style="color: #ff5d38;">:weight</span> semi-bold<span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>org-level-8 <span style="color: #ff5d38;">:inherit</span> outline-8 <span style="color: #ff5d38;">:weight</span> semi-bold<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">font-lock-add-keywords</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">org-mode</span>
-    <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"^ *</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">(</span><span style="color: #539AFC;">[-]</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">)</span><span style="color: #539AFC;"> "</span>
-        <span style="color: #B62D65;">(</span><span style="color: #E27E8D; font-weight: bold;">0</span> <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">prog1</span> <span style="color: #E27E8D;">()</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">compose-region</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">match-beginning</span> <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #8BD49C;">)</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">match-end</span> <span style="color: #E27E8D; font-weight: bold;">1</span><span style="color: #8BD49C;">)</span> <span style="color: #539AFC;">"&#8226;"</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">font-lock-add-keywords</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">org-mode</span>
+    <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"^ *</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">(</span><span style="color: #bcd42a;">[-]</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">)</span><span style="color: #bcd42a;"> "</span>
+        <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38; font-weight: bold;">0</span> <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">prog1</span> <span style="color: #c678dd;">()</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">compose-region</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">match-beginning</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">match-end</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span> <span style="color: #bcd42a;">"&#8226;"</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga8d2190" class="outline-3">
-<h3 id="orga8d2190">Treemacs</h3>
-<div class="outline-text-3" id="text-orga8d2190">
+<div id="outline-container-org5125965" class="outline-3">
+<h3 id="org5125965">Treemacs</h3>
+<div class="outline-text-3" id="text-org5125965">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> treemacs
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-themes-treemacs-theme</span> <span style="color: #539AFC;">"doom-colors"</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-themes-treemacs-enable-variable-pitch</span> t<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> treemacs
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-themes-treemacs-theme</span> <span style="color: #bcd42a;">"doom-colors"</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-themes-treemacs-enable-variable-pitch</span> t<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2e57d67" class="outline-3">
-<h3 id="org2e57d67">Doom Themes</h3>
-<div class="outline-text-3" id="text-org2e57d67">
+<div id="outline-container-org493e8da" class="outline-3">
+<h3 id="org493e8da">Doom Themes</h3>
+<div class="outline-text-3" id="text-org493e8da">
 <p>
 Just a couple more things to make our lives easier.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">after!</span> doom-themes
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">doom-themes-enable-bold</span> t
-        <span style="color: #718CA1;">doom-themes-enable-italic</span> t<span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">doom-themes-org-config</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">doom-themes-visual-bell-config</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> doom-themes
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-themes-enable-bold</span> t
+        <span style="color: #f8f8f0;">doom-themes-enable-italic</span> t<span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">doom-themes-org-config</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">doom-themes-visual-bell-config</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">custom-set-faces!</span>
-    <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #718CA1;">font-lock-comment-face</span> <span style="color: #5EC4FF;">:slant</span> italic<span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #718CA1;">font-lock-keyword-face</span> <span style="color: #5EC4FF;">:slant</span> italic<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">custom-set-faces!</span>
+    <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">font-lock-comment-face</span> <span style="color: #ff5d38;">:slant</span> italic<span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">font-lock-keyword-face</span> <span style="color: #ff5d38;">:slant</span> italic<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org56175d3" class="outline-3">
-<h3 id="org56175d3">Dashboard</h3>
-<div class="outline-text-3" id="text-org56175d3">
+<div id="outline-container-org4a0b52b" class="outline-3">
+<h3 id="org4a0b52b">Dashboard</h3>
+<div class="outline-text-3" id="text-org4a0b52b">
 <p>
 My customized dashboard.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> config-org-file-name <span style="color: #539AFC;">"config.org"</span>
-      config-org-directory <span style="color: #539AFC;">"~/.doom.d/"</span>
-      foot-org-file-name <span style="color: #539AFC;">"foot.org"</span>
-      foot-org-directory <span style="color: #539AFC;">"~/.config/foot/"</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> config-org-file-name <span style="color: #bcd42a;">"config.org"</span>
+      config-org-directory <span style="color: #bcd42a;">"~/.doom.d/"</span>
+      foot-org-file-name <span style="color: #bcd42a;">"foot.org"</span>
+      foot-org-directory <span style="color: #bcd42a;">"~/.config/foot/"</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">defun</span> <span style="color: #33CED8;">open-config-org</span> <span style="color: #E27E8D;">()</span>
-    <span style="color: #707b86; font-style: italic;">"Open your private Config.org file."</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">interactive</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">expand-file-name</span> config-org-file-name config-org-directory<span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">defun</span> <span style="color: #bcd42a;">open-config-org</span> <span style="color: #c678dd;">()</span>
+    <span style="color: #83898d; font-style: italic;">"Open your private Config.org file."</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">expand-file-name</span> config-org-file-name config-org-directory<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">defun</span> <span style="color: #33CED8;">open-foot-org</span> <span style="color: #E27E8D;">()</span>
-    <span style="color: #707b86; font-style: italic;">"Open the Foot configuration file."</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">interactive</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">expand-file-name</span> foot-org-file-name foot-org-directory<span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">defun</span> <span style="color: #bcd42a;">open-foot-org</span> <span style="color: #c678dd;">()</span>
+    <span style="color: #83898d; font-style: italic;">"Open the Foot configuration file."</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">expand-file-name</span> foot-org-file-name foot-org-directory<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">defun</span> <span style="color: #33CED8;">open-tbcom</span> <span style="color: #E27E8D;">()</span>
-    <span style="color: #707b86; font-style: italic;">"Opens TBcom repository"</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">interactive</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">dired</span> <span style="color: #539AFC;">"~/TBcom"</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">defun</span> <span style="color: #bcd42a;">open-tbcom</span> <span style="color: #c678dd;">()</span>
+    <span style="color: #83898d; font-style: italic;">"Opens TBcom repository"</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">dired</span> <span style="color: #bcd42a;">"~/TBcom"</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq-default</span> <span style="color: #718CA1;">+doom-dashboard-menu-sections</span>
-    <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Kill All Buffers"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-octicon</span> <span style="color: #539AFC;">"alert"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-red</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> doom/kill-all-buffers<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Find File"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-faicon</span> <span style="color: #539AFC;">"search"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-yellow</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> find-file<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Open Recent File"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-faicon</span> <span style="color: #539AFC;">"clock-o"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-blue</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> consult-recent-file<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Open Project"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-octicon</span> <span style="color: #539AFC;">"repo"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-red</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> projectile-find-file<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Open TBcom"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-alltheicon</span> <span style="color: #539AFC;">"git"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-pink</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> open-tbcom<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Open Foot Config"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-fileicon</span> <span style="color: #539AFC;">"terminal"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-yellow</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> open-foot-org<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Open config.org"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-faicon</span> <span style="color: #539AFC;">"cogs"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-green</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:when</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">file-directory-p</span> <span style="color: #718CA1;">doom-private-dir</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> open-config-org<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Doom Reload"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-faicon</span> <span style="color: #539AFC;">"refresh"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-orange</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> doom/reload<span style="color: #8BD49C;">)</span>
-      <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"Change Theme"</span>
-        <span style="color: #5EC4FF;">:icon</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">all-the-icons-faicon</span> <span style="color: #539AFC;">"paint-brush"</span> <span style="color: #5EC4FF;">:face</span> <span style="color: #5EC4FF;">'</span><span style="color: #EBBF83;">all-the-icons-purple</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:face</span> <span style="color: #B62D65;">(</span><span style="color: #5EC4FF;">:inherit</span> <span style="color: #5EC4FF;">(</span>doom-dashboard-menu-title bold<span style="color: #5EC4FF;">)</span><span style="color: #B62D65;">)</span>
-        <span style="color: #5EC4FF;">:action</span> consult-theme<span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-<span style="color: #5EC4FF;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> <span style="color: #f8f8f0;">+doom-dashboard-menu-sections</span>
+    <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Kill All Buffers"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-octicon</span> <span style="color: #bcd42a;">"alert"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-red</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> doom/kill-all-buffers<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Find File"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-faicon</span> <span style="color: #bcd42a;">"search"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-yellow</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> find-file<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Open Recent File"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-faicon</span> <span style="color: #bcd42a;">"clock-o"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-blue</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> consult-recent-file<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Open Project"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-octicon</span> <span style="color: #bcd42a;">"repo"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-red</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> projectile-find-file<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Open TBcom"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-alltheicon</span> <span style="color: #bcd42a;">"git"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-pink</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> open-tbcom<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Open Foot Config"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-fileicon</span> <span style="color: #bcd42a;">"terminal"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-yellow</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> open-foot-org<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Open config.org"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-faicon</span> <span style="color: #bcd42a;">"cogs"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-green</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:when</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">file-directory-p</span> <span style="color: #f8f8f0;">doom-private-dir</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> open-config-org<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Doom Reload"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-faicon</span> <span style="color: #bcd42a;">"refresh"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-orange</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> doom/reload<span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"Change Theme"</span>
+        <span style="color: #ff5d38;">:icon</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">all-the-icons-faicon</span> <span style="color: #bcd42a;">"paint-brush"</span> <span style="color: #ff5d38;">:face</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-purple</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:face</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">:inherit</span> <span style="color: #51afef;">(</span>doom-dashboard-menu-title bold<span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #ff5d38;">:action</span> consult-theme<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1798ad3" class="outline-2">
-<h2 id="org1798ad3">Keybindings</h2>
-<div class="outline-text-2" id="text-org1798ad3">
+<div id="outline-container-org41e7ddd" class="outline-2">
+<h2 id="org41e7ddd">Keybindings</h2>
+<div class="outline-text-2" id="text-org41e7ddd">
 <p>
 This first bit lets us navigate between windows easier.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-h"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-left</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-j"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-down</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-k"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-up</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-l"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-right</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-w"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-vsplit</span>
-    <span style="color: #5EC4FF;">:m</span> <span style="color: #539AFC;">"C-o"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-window-split</span>
-<span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-h"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-left</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-j"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-down</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-k"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-up</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-l"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-right</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-w"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-vsplit</span>
+    <span style="color: #ff5d38;">:m</span> <span style="color: #bcd42a;">"C-o"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-window-split</span>
+<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org6c4774e" class="outline-3">
-<h3 id="org6c4774e">Dashboard</h3>
-<div class="outline-text-3" id="text-org6c4774e">
+<div id="outline-container-orga579cde" class="outline-3">
+<h3 id="orga579cde">Dashboard</h3>
+<div class="outline-text-3" id="text-orga579cde">
 <p>
 This part is the shortcuts for our Doom Dashboard. These keybindings only work in Dashboard mode.
 </p>
@@ -748,42 +748,42 @@ This part is the shortcuts for our Doom Dashboard. These keybindings only work i
 </table>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">+doom-dashboard-mode-map</span> <span style="color: #E27E8D;">(</span><span style="color: #E27E8D;">make-sparse-keymap</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:map</span> <span style="color: #718CA1;">+doom-dashboard-mode-map</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Find File"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"f"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">find-file</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Recent Files"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"r"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">consult-recent-file</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Doom Reload"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"R"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom/reload</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Project"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"p"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">projectile-find-file</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Config Dir"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"C"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom/open-private-config</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open config.org"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"c"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">open-config-org</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open init.org"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"i"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #B62D65;">(</span><span style="color: #E27E8D;">expand-file-name</span> <span style="color: #539AFC;">"init.org"</span> <span style="color: #718CA1;">doom-private-dir</span><span style="color: #B62D65;">)</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open ZSH Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"z"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.zsh.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open ZSH Theme"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"Z"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.oh-my-zsh/themes/babkockicon.zsh-theme"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Qutebrowser Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"q"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/qutebrowser/config.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Polybar Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"o"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/polybar/config.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Foot Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"F"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">open-foot-org</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Waybar Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"w"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/waybar/config.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Waybar Style"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"W"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/waybar/style.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open BSPWM Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"m"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/bspwm/bspwm.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open MPV Config"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"M"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.config/mpv/mpv.conf"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Dotfile"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"d"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #33CED8;">doom-project-find-file</span> <span style="color: #539AFC;">"~/.config/"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open TBcom"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"t"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">open-tbcom</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Dotfiles"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"D"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #33CED8;">doom-project-find-file</span> <span style="color: #539AFC;">"~/git/Dotfiles/"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Dotfiles Fetch"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"h"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/git/Dotfiles/fetch.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Dotfiles README"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"H"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/git/Dotfiles/README.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open Xresources"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"x"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.Xresources"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open .xinitrc"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"X"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/.xinitrc"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Increase Font Size"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"+"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom/increase-font-size</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Decrease Font Size"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"-"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom/decrease-font-size</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Agenda"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"a"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">org-agenda</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Open video.org"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"V"</span> <span style="color: #E27E8D;">(</span><span style="color: #5EC4FF; font-style: italic;">cmd!</span> <span style="color: #8BD49C;">(</span><span style="color: #E27E8D;">find-file</span> <span style="color: #539AFC;">"~/org/video.org"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Kill All Buffers"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"k"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom/kill-all-buffers</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Switch Buffer"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"b"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">+vertico/switch-workspace-buffer</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Switch Buffers (all)"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"B"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">consult-buffer</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Previous Buffer"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"P"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">previous-buffer</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Set Theme"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"T"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">consult-theme</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Vterm Here"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"v"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">+vterm/here</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Quit"</span> <span style="color: #5EC4FF;">:ne</span> <span style="color: #539AFC;">"Q"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">save-buffers-kill-terminal</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">+doom-dashboard-mode-map</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">make-sparse-keymap</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:map</span> <span style="color: #f8f8f0;">+doom-dashboard-mode-map</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Find File"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"f"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">find-file</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Recent Files"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"r"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-recent-file</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Doom Reload"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"R"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/reload</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Project"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"p"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">projectile-find-file</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Config Dir"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"C"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/open-private-config</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open config.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"c"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">open-config-org</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open init.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"i"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">expand-file-name</span> <span style="color: #bcd42a;">"init.org"</span> <span style="color: #f8f8f0;">doom-private-dir</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open ZSH Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"z"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.zsh.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open ZSH Theme"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"Z"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.oh-my-zsh/themes/babkockicon.zsh-theme"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Qutebrowser Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"q"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/qutebrowser/config.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Polybar Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"o"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/polybar/config.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Foot Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"F"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">open-foot-org</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Waybar Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"w"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/waybar/config.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Waybar Style"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"W"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/waybar/style.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open BSPWM Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"m"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/bspwm/bspwm.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open MPV Config"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"M"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.config/mpv/mpv.conf"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfile"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"d"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #bcd42a;">doom-project-find-file</span> <span style="color: #bcd42a;">"~/.config/"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open TBcom"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"t"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">open-tbcom</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"D"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #bcd42a;">doom-project-find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles Fetch"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"h"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/fetch.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles README"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"H"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/README.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Xresources"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"x"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.Xresources"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open .xinitrc"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"X"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.xinitrc"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Increase Font Size"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"+"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/increase-font-size</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Decrease Font Size"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"-"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/decrease-font-size</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Agenda"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"a"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-agenda</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open video.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"V"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/org/video.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Kill All Buffers"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"k"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/kill-all-buffers</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Switch Buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+vertico/switch-workspace-buffer</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Switch Buffers (all)"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"B"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-buffer</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Previous Buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"P"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">previous-buffer</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Set Theme"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"T"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-theme</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Vterm Here"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"v"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+vterm/here</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Quit"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"Q"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">save-buffers-kill-terminal</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 
@@ -792,16 +792,16 @@ This part removes other elements of the Dashboard.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #41505E; font-style: italic;">; </span><span style="color: #41505E; font-style: italic;">(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">remove-hook</span> <span style="color: #5EC4FF;">'</span><span style="color: #718CA1;">+doom-dashboard-functions</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">doom-dashboard-widget-footer</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">; </span><span style="color: #5B6268; font-style: italic;">(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)</span>
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">remove-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">+doom-dashboard-functions</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom-dashboard-widget-footer</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7d30bdc" class="outline-3">
-<h3 id="org7d30bdc">General</h3>
-<div class="outline-text-3" id="text-org7d30bdc">
+<div id="outline-container-org6070dc4" class="outline-3">
+<h3 id="org6070dc4">General</h3>
+<div class="outline-text-3" id="text-org6070dc4">
 <p>
 These are general keybindings, which are available in all modes.
 </p>
@@ -874,60 +874,61 @@ These are general keybindings, which are available in all modes.
 </table>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC b</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Beacon Mode"</span> <span style="color: #539AFC;">"b"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #718CA1;">beacon-mode</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC r</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Rainbow Mode"</span> <span style="color: #539AFC;">"r"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">rainbow-mode</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC z</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Ranger Mode"</span> <span style="color: #539AFC;">"z"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">ranger-minimal-toggle</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC l</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Org Tangle"</span> <span style="color: #539AFC;">"l"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">org-babel-tangle</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC v</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Vterm"</span> <span style="color: #539AFC;">"v"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">+vterm/toggle</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC d</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Org Mark Done"</span> <span style="color: #539AFC;">"d"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">org-todo</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC y</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Magit Status"</span> <span style="color: #539AFC;">"y"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">magit-status</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC u</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Delete Buffer"</span> <span style="color: #539AFC;">"u"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">evil-delete-buffer</span><span style="color: #5EC4FF;">)</span>
-<span style="color: #41505E; font-style: italic;">;; </span><span style="color: #41505E; font-style: italic;">SPC p</span>
-<span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">map!</span> <span style="color: #5EC4FF;">:leader</span>
-    <span style="color: #5EC4FF;">:desc</span> <span style="color: #539AFC;">"Org Export to HTML"</span> <span style="color: #539AFC;">"p"</span> <span style="color: #5EC4FF;">#'</span><span style="color: #EBBF83;">org-html-export-to-html</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC b</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Beacon Mode"</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">beacon-mode</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC r</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Rainbow Mode"</span> <span style="color: #bcd42a;">"r"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">rainbow-mode</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC z</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Ranger Mode"</span> <span style="color: #bcd42a;">"z"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">ranger-minimal-toggle</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC l</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Org Tangle"</span> <span style="color: #bcd42a;">"l"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-babel-tangle</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC v</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Vterm"</span> <span style="color: #bcd42a;">"v"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+vterm/toggle</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC d</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Org Mark Done"</span> <span style="color: #bcd42a;">"d"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-todo</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC y</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Magit Status"</span> <span style="color: #bcd42a;">"y"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">magit-status</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC u</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Delete Buffer"</span> <span style="color: #bcd42a;">"u"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">evil-delete-buffer</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC p</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Org Export to HTML"</span> <span style="color: #bcd42a;">"p"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-html-export-to-html</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org888b680" class="outline-2">
-<h2 id="org888b680">Dired</h2>
-<div class="outline-text-2" id="text-org888b680">
+<div id="outline-container-orgad3cb5b" class="outline-2">
+<h2 id="orgad3cb5b">Dired</h2>
+<div class="outline-text-2" id="text-orgad3cb5b">
 </div>
-<div id="outline-container-orgf66a1b1" class="outline-3">
-<h3 id="orgf66a1b1">File Associations</h3>
-<div class="outline-text-3" id="text-orgf66a1b1">
+<div id="outline-container-orgc03bbf9" class="outline-3">
+<h3 id="orgc03bbf9">File Associations</h3>
+<div class="outline-text-3" id="text-orgc03bbf9">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> dired-guess-shell-alist-user
-      <span style="color: #5EC4FF;">'</span><span style="color: #E27E8D;">(</span><span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"\\.pdf\\'"</span> <span style="color: #539AFC;">"mupdf -I"</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"\\.</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">(?:</span><span style="color: #539AFC;">flac</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">mp3</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">m4a</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">ape</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">wav</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">ogg</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">)</span><span style="color: #539AFC;">\\'"</span> <span style="color: #539AFC;">"mpv --audio-device=auto --no-audio-display"</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"\\.</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">(?:</span><span style="color: #539AFC;">mp4</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">mkv</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">avi</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">mpg</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">wmv</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">)</span><span style="color: #539AFC;">\\'"</span> <span style="color: #539AFC;">"mpv --audio-device=auto"</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"\\.asc\\'"</span> <span style="color: #539AFC;">"gpg --decrypt"</span><span style="color: #8BD49C;">)</span>
-        <span style="color: #8BD49C;">(</span><span style="color: #539AFC;">"\\.</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">(?:</span><span style="color: #539AFC;">jpg</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">jpeg</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">png</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">gif</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">|</span><span style="color: #539AFC;">webp</span><span style="color: #5EC4FF; font-weight: bold;">\\</span><span style="color: #5EC4FF; font-weight: bold;">)</span><span style="color: #539AFC;">\\'"</span> <span style="color: #539AFC;">"feh"</span><span style="color: #8BD49C;">)</span><span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> dired-guess-shell-alist-user
+      <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.pdf\\'"</span> <span style="color: #bcd42a;">"mupdf -I"</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">(?:</span><span style="color: #bcd42a;">flac</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">mp3</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">m4a</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">ape</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">wav</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">ogg</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">)</span><span style="color: #bcd42a;">\\'"</span> <span style="color: #bcd42a;">"mpv --audio-device=auto --no-audio-display"</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">(?:</span><span style="color: #bcd42a;">mp4</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">mkv</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">avi</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">mpg</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">wmv</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">)</span><span style="color: #bcd42a;">\\'"</span> <span style="color: #bcd42a;">"mpv --audio-device=auto"</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.asc\\'"</span> <span style="color: #bcd42a;">"gpg --decrypt"</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">(?:</span><span style="color: #bcd42a;">jpg</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">jpeg</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">png</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">gif</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">|</span><span style="color: #bcd42a;">webp</span><span style="color: #ff5d38; font-weight: bold;">\\</span><span style="color: #ff5d38; font-weight: bold;">)</span><span style="color: #bcd42a;">\\'"</span> <span style="color: #bcd42a;">"feh"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
+    <p>This page licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC 4.0).</p>
+    <p class="nav"><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
     <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a></p>
@@ -939,7 +940,7 @@ These are general keybindings, which are available in all modes.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-30 Sun 18:41</p>
+<p class="date">Created: 2022-11-03 Thu 00:52</p>
 </div>
 </body>
 </html>

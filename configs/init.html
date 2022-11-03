@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-30 Sun 18:42 -->
+<!-- 2022-10-30 Sun 20:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -220,7 +220,7 @@ This is the other, secondary Doom Emacs config file <code>init.org</code>, which
             <li><a href="https://babkock.github.io">Home</a></li>
             <li><a href="https://tannerbabcock.com/home">Website</a></li>
             <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
-            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">This Repository</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a></li>
             <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
             <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
         </ul>
@@ -231,23 +231,23 @@ This is the other, secondary Doom Emacs config file <code>init.org</code>, which
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org94c0428">Lexical Binding</a></li>
-<li><a href="#org5723243">Packages</a></li>
-<li><a href="#org33b6eaa">Preferences</a>
+<li><a href="#orge791763">Lexical Binding</a></li>
+<li><a href="#org6d2ef75">Packages</a></li>
+<li><a href="#orgfb1cfd3">Preferences</a>
 <ul>
-<li><a href="#org68e3d30">Frame Title</a></li>
-<li><a href="#orgbd68445">Fallback Buffer Name</a></li>
-<li><a href="#org58dd5ec">Doom Dashboard</a></li>
-<li><a href="#org7d2c09e">Modeline</a></li>
+<li><a href="#org96ce04b">Frame Title</a></li>
+<li><a href="#org1958e27">Fallback Buffer Name</a></li>
+<li><a href="#org66c264c">Doom Dashboard</a></li>
+<li><a href="#org4c94f98">Modeline</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org94c0428" class="outline-2">
-<h2 id="org94c0428">Lexical Binding</h2>
-<div class="outline-text-2" id="text-org94c0428">
+<div id="outline-container-orge791763" class="outline-2">
+<h2 id="orge791763">Lexical Binding</h2>
+<div class="outline-text-2" id="text-orge791763">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -259,9 +259,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org5723243" class="outline-2">
-<h2 id="org5723243">Packages</h2>
-<div class="outline-text-2" id="text-org5723243">
+<div id="outline-container-org6d2ef75" class="outline-2">
+<h2 id="org6d2ef75">Packages</h2>
+<div class="outline-text-2" id="text-org6d2ef75">
 <p>
 This is my list of enabled and installed packages. I try to have a small and minimal Emacs environment, so I&rsquo;ve disabled some common modules.
 </p>
@@ -449,17 +449,17 @@ This is my list of enabled and installed packages. I try to have a small and min
 </div>
 </div>
 
-<div id="outline-container-org33b6eaa" class="outline-2">
-<h2 id="org33b6eaa">Preferences</h2>
-<div class="outline-text-2" id="text-org33b6eaa">
+<div id="outline-container-orgfb1cfd3" class="outline-2">
+<h2 id="orgfb1cfd3">Preferences</h2>
+<div class="outline-text-2" id="text-orgfb1cfd3">
 <p>
 I don&rsquo;t know why, but these next snippets of code must be in this file, (<code>init.el</code>) and not <code>config.el</code>.
 </p>
 </div>
 
-<div id="outline-container-org68e3d30" class="outline-3">
-<h3 id="org68e3d30">Frame Title</h3>
-<div class="outline-text-3" id="text-org68e3d30">
+<div id="outline-container-org96ce04b" class="outline-3">
+<h3 id="org96ce04b">Frame Title</h3>
+<div class="outline-text-3" id="text-org96ce04b">
 <p>
 Conditionally set the title of the frame (or X window) with project name and buffer name (file name).
 </p>
@@ -482,9 +482,9 @@ Conditionally set the title of the frame (or X window) with project name and buf
 </div>
 </div>
 
-<div id="outline-container-orgbd68445" class="outline-3">
-<h3 id="orgbd68445">Fallback Buffer Name</h3>
-<div class="outline-text-3" id="text-orgbd68445">
+<div id="outline-container-org1958e27" class="outline-3">
+<h3 id="org1958e27">Fallback Buffer Name</h3>
+<div class="outline-text-3" id="text-org1958e27">
 <p>
 The default buffer name.
 </p>
@@ -499,9 +499,9 @@ The default buffer name.
 </div>
 </div>
 
-<div id="outline-container-org58dd5ec" class="outline-3">
-<h3 id="org58dd5ec">Doom Dashboard</h3>
-<div class="outline-text-3" id="text-org58dd5ec">
+<div id="outline-container-org66c264c" class="outline-3">
+<h3 id="org66c264c">Doom Dashboard</h3>
+<div class="outline-text-3" id="text-org66c264c">
 <p>
 Show a custom image on the splash screen, and hide cursor and mode line.
 </p>
@@ -531,9 +531,9 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 </div>
 
-<div id="outline-container-org7d2c09e" class="outline-3">
-<h3 id="org7d2c09e">Modeline</h3>
-<div class="outline-text-3" id="text-org7d2c09e">
+<div id="outline-container-org4c94f98" class="outline-3">
+<h3 id="org4c94f98">Modeline</h3>
+<div class="outline-text-3" id="text-org4c94f98">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">inhibit-compacting-font-caches</span> t<span style="color: #5EC4FF;">)</span>
 <span style="color: #5EC4FF;">(</span><span style="color: #5EC4FF; font-style: italic;">setq</span> <span style="color: #718CA1;">find-file-visit-truename</span> t<span style="color: #5EC4FF;">)</span>
@@ -555,7 +555,7 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 <footer>
     <center>
     <p>Copyright &copy; 2022 Tanner Babcock.</p>
-    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">This Repository</a> &nbsp;&bull;&nbsp;
+    <p><a href="https://babkock.github.io">Home</a> &bull;&nbsp; <a href="https://github.com/Babkock/Babkock.github.io">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
     <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp; <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
     <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a></p>
@@ -567,7 +567,7 @@ Show a custom image on the splash screen, and hide cursor and mode line.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-30 Sun 18:42</p>
+<p class="date">Created: 2022-10-30 Sun 20:45</p>
 </div>
 </body>
 </html>
