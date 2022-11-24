@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-07 Mon 01:22 -->
+<!-- 2022-11-24 Thu 01:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -231,45 +231,46 @@ This literate configuration is available online on my <a href="https://babkock.g
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6270fd5">Lexical Binding</a></li>
-<li><a href="#orgd09e2b5">Basic Info</a></li>
-<li><a href="#org7478a5c">Preferences</a></li>
-<li><a href="#orgccd75b9">Appearance</a></li>
-<li><a href="#orgd490584">Modeline</a></li>
+<li><a href="#orga571d1e">Lexical Binding</a></li>
+<li><a href="#orge02a434">Basic Info</a></li>
+<li><a href="#org0e2023e">Preferences</a></li>
+<li><a href="#orgf4f5783">Appearance</a></li>
+<li><a href="#org8d8f02b">Modeline</a></li>
 </ul>
 </li>
-<li><a href="#org6277882">Packages</a>
+<li><a href="#orgbc0cd8f">Packages</a>
 <ul>
-<li><a href="#orgf1474d4">Org Mode</a></li>
-<li><a href="#org3150e3e">Treemacs</a></li>
-<li><a href="#orgfa56b9c">Doom Themes</a></li>
-<li><a href="#org5ebda68">Dashboard</a></li>
-<li><a href="#orgc84c2c3">Elfeed</a></li>
+<li><a href="#orgfffb41f">Org Mode</a></li>
+<li><a href="#orgcb57446">Treemacs</a></li>
+<li><a href="#org99ca5fc">Doom Themes</a></li>
+<li><a href="#org835bd64">Magit</a></li>
+<li><a href="#org39f9a43">Dashboard</a></li>
+<li><a href="#org521a2b6">Elfeed</a></li>
 </ul>
 </li>
-<li><a href="#org49e39fe">Keybindings</a>
+<li><a href="#org38bdc00">Keybindings</a>
 <ul>
-<li><a href="#orgd908501">Dashboard</a></li>
-<li><a href="#org118942a">Elfeed</a></li>
-<li><a href="#org20ce384">General</a></li>
+<li><a href="#orgc41720e">Dashboard</a></li>
+<li><a href="#org95928ad">Elfeed</a></li>
+<li><a href="#orgd7d1d50">General</a></li>
 </ul>
 </li>
-<li><a href="#orga7516ae">Dired</a>
+<li><a href="#orga47b8ca">Dired</a>
 <ul>
-<li><a href="#org68ae58f">File Associations</a></li>
+<li><a href="#org4a11d65">File Associations</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="org2868ca7" class="figure">
+<div id="orgaf3684b" class="figure">
 <p><img src="https://babkock.github.io/images/emacs1.png" alt="emacs1.png" />
 </p>
 </div>
 
-<div id="outline-container-org6270fd5" class="outline-3">
-<h3 id="org6270fd5">Lexical Binding</h3>
-<div class="outline-text-3" id="text-org6270fd5">
+<div id="outline-container-orga571d1e" class="outline-3">
+<h3 id="orga571d1e">Lexical Binding</h3>
+<div class="outline-text-3" id="text-orga571d1e">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -281,9 +282,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-orgd09e2b5" class="outline-3">
-<h3 id="orgd09e2b5">Basic Info</h3>
-<div class="outline-text-3" id="text-orgd09e2b5">
+<div id="outline-container-orge02a434" class="outline-3">
+<h3 id="orge02a434">Basic Info</h3>
+<div class="outline-text-3" id="text-orge02a434">
 <p>
 Here, I set my name and email address.
 </p>
@@ -296,9 +297,9 @@ Here, I set my name and email address.
 </div>
 </div>
 
-<div id="outline-container-org7478a5c" class="outline-3">
-<h3 id="org7478a5c">Preferences</h3>
-<div class="outline-text-3" id="text-org7478a5c">
+<div id="outline-container-org0e2023e" class="outline-3">
+<h3 id="org0e2023e">Preferences</h3>
+<div class="outline-text-3" id="text-org0e2023e">
 <p>
 Fix the garbage collector, enable zoom in and zoom out keybindings.
 </p>
@@ -316,15 +317,20 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">scroll-conservatively</span> <span style="color: #ff5d38; font-weight: bold;">101</span>
       <span style="color: #f8f8f0;">mouse-wheel-scroll-amount</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">3</span> <span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>shift<span style="color: #a9a1e1;">)</span> . <span style="color: #ff5d38; font-weight: bold;">3</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
       <span style="color: #f8f8f0;">mouse-wheel-progressive-speed</span> t
-      <span style="color: #f8f8f0;">mouse-wheel-follow-mouse</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">t</span><span style="color: #51afef;">)</span>
+      <span style="color: #f8f8f0;">mouse-wheel-follow-mouse</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">t</span>
+      writeroom-width <span style="color: #ff5d38; font-weight: bold;">100</span>
+      writeroom-mode-line t
+      writeroom-extra-line-spacing <span style="color: #ff5d38; font-weight: bold;">0.1</span>
+      writeroom-maximize-window t
+      <span style="color: #f8f8f0;">+zen-text-scale</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgccd75b9" class="outline-3">
-<h3 id="orgccd75b9">Appearance</h3>
-<div class="outline-text-3" id="text-orgccd75b9">
+<div id="outline-container-orgf4f5783" class="outline-3">
+<h3 id="orgf4f5783">Appearance</h3>
+<div class="outline-text-3" id="text-orgf4f5783">
 <p>
 Now the fun stuff, where I set the fonts, theme, and colors.
 </p>
@@ -332,7 +338,7 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">; </span><span style="color: #5B6268; font-style: italic;">(setq doom-theme 'doom-tomorrow-night)</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-theme</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">doom-peacock</span><span style="color: #51afef;">)</span>
-<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">which-key-idle-delay</span> <span style="color: #ff5d38; font-weight: bold;">0.4</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">which-key-idle-delay</span> <span style="color: #ff5d38; font-weight: bold;">0.3</span>
       <span style="color: #f8f8f0;">which-key-idle-secondary-delay</span> <span style="color: #ff5d38; font-weight: bold;">0.05</span>
       <span style="color: #f8f8f0;">+doom-dashboard-banner-padding</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">0</span> . <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
@@ -342,17 +348,33 @@ Now the fun stuff, where I set the fonts, theme, and colors.
       <span style="color: #f8f8f0;">doom-variable-pitch-font</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">font-spec</span> <span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"NotoSerif Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span> <span style="color: #ff5d38;">:height</span> <span style="color: #ff5d38; font-weight: bold;">1.1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-frame-font</span> <span style="color: #bcd42a;">"Space Mono Nerd Font 18"</span> nil t<span style="color: #51afef;">)</span>
 
+<span style="color: #51afef;">(</span><span style="color: #ff5d38;">custom-set-faces</span>
+  <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>mode-line <span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #51afef;">(</span><span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span><span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>mode-line-active <span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #51afef;">(</span><span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span><span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>mode-line-inactive <span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #51afef;">(</span><span style="color: #ff5d38;">:family</span> <span style="color: #bcd42a;">"Space Mono Nerd Font"</span> <span style="color: #ff5d38;">:size</span> <span style="color: #ff5d38; font-weight: bold;">18</span><span style="color: #51afef;">)</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> ls-lisp-format-time-list <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #bcd42a;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #bcd42a;">"%m/%d/%Y %I:%M:%S"</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> ls-lisp-use-localized-time-format t
       display-time-format <span style="color: #bcd42a;">"%I:%M"</span>
-      display-time-default-load-average nil<span style="color: #51afef;">)</span>
-<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">display-line-numbers-type</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">relative</span><span style="color: #51afef;">)</span>
-<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">confirm-kill-emacs</span> nil<span style="color: #51afef;">)</span>
+      display-time-default-load-average nil
+      <span style="color: #f8f8f0;">display-line-numbers-type</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">relative</span>
+      <span style="color: #f8f8f0;">confirm-kill-emacs</span> t<span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> <span style="color: #f8f8f0;">shell-file-name</span> <span style="color: #bcd42a;">"/bin/zsh"</span><span style="color: #51afef;">)</span>
 
-<span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-frame-parameter</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">selected-frame</span><span style="color: #c678dd;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">alpha</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">70</span> <span style="color: #ff5d38; font-weight: bold;">70</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">writeroom-mode-enable-hook</span> <span style="color: #c678dd;">(</span><span style="color: #bcd42a;">doom/increase-font-size</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">writeroom-mode-disable-hook</span> <span style="color: #c678dd;">(</span><span style="color: #bcd42a;">doom/decrease-font-size</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">writeroom-mode-disable-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">mixed-pitch-mode</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+
+<p>
+These next two lines are where the alpha channel for the window is defined. The Emacs window can only be transparent on X.org.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #ff5d38;">set-frame-parameter</span> <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">selected-frame</span><span style="color: #c678dd;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">alpha</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #ff5d38; font-weight: bold;">70</span> <span style="color: #ff5d38; font-weight: bold;">70</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #ff5d38;">add-to-list</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">default-frame-alist</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>alpha <span style="color: #ff5d38; font-weight: bold;">70</span> <span style="color: #ff5d38; font-weight: bold;">70</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
-<span style="color: #51afef;">(</span><span style="color: #ff5d38;">add-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">dired-mode-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-dired-mode</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">dired-mode-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">all-the-icons-dired-mode</span><span style="color: #51afef;">)</span>
 
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">warning-minimum-level</span> <span style="color: #ff5d38;">:emergency</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #f8f8f0;">menu-bar-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #51afef;">)</span>
@@ -363,45 +385,52 @@ Now the fun stuff, where I set the fonts, theme, and colors.
 </div>
 </div>
 
-<div id="outline-container-orgd490584" class="outline-3">
-<h3 id="orgd490584">Modeline</h3>
-<div class="outline-text-3" id="text-orgd490584">
+<div id="outline-container-org8d8f02b" class="outline-3">
+<h3 id="org8d8f02b">Modeline</h3>
+<div class="outline-text-3" id="text-org8d8f02b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> modeline
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">auto</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">relative-to-project</span>
           <span style="color: #f8f8f0;">doom-modeline-icon</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">display-graphic-p</span><span style="color: #98be65;">)</span>
           <span style="color: #f8f8f0;">doom-modeline-major-mode-icon</span> t
           <span style="color: #f8f8f0;">doom-modeline-major-mode-color-icon</span> t
-          <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+          <span style="color: #f8f8f0;">doom-modeline-env-version</span> t
+          <span style="color: #f8f8f0;">doom-modeline-persp-icon</span> t
+          <span style="color: #f8f8f0;">doom-modeline-unicode-fallback</span> nil
+          <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span>
+          <span style="color: #f8f8f0;">doom-modeline-hud</span> t
+          <span style="color: #f8f8f0;">doom-modeline-buffer-modification-icon</span> nil<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq-default</span> <span style="color: #f8f8f0;">doom-modeline-major-mode-icon</span> t
               <span style="color: #f8f8f0;">doom-modeline-major-mode-color-icon</span> t
-              <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">auto</span>
+              <span style="color: #f8f8f0;">doom-modeline-buffer-file-name-style</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">relative-to-project</span>
+              <span style="color: #f8f8f0;">doom-modeline-env-version</span> t
               <span style="color: #f8f8f0;">doom-modeline-persp-icon</span> t
               <span style="color: #f8f8f0;">doom-modeline-unicode-fallback</span> nil
               <span style="color: #f8f8f0;">doom-modeline-hud</span> t
-              <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span><span style="color: #51afef;">)</span>
+              <span style="color: #f8f8f0;">doom-modeline-height</span> <span style="color: #ff5d38; font-weight: bold;">30</span>
+              <span style="color: #f8f8f0;">doom-modeline-buffer-modification-icon</span> nil<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org6277882" class="outline-2">
-<h2 id="org6277882">Packages</h2>
-<div class="outline-text-2" id="text-org6277882">
+<div id="outline-container-orgbc0cd8f" class="outline-2">
+<h2 id="orgbc0cd8f">Packages</h2>
+<div class="outline-text-2" id="text-orgbc0cd8f">
 <p>
 Here is what my Doom splash screen (Dashboard) typically looks like.
 </p>
 
 
-<div id="orga8b22c5" class="figure">
+<div id="org449e213" class="figure">
 <p><img src="https://babkock.github.io/images/emacs2.png" alt="emacs2.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf1474d4" class="outline-3">
-<h3 id="orgf1474d4">Org Mode</h3>
-<div class="outline-text-3" id="text-orgf1474d4">
+<div id="outline-container-orgfffb41f" class="outline-3">
+<h3 id="orgfffb41f">Org Mode</h3>
+<div class="outline-text-3" id="text-orgfffb41f">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> org
     <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">require</span> <span style="color: #ff5d38;">'</span><span style="color: #ff5d38;">org-bullets</span><span style="color: #c678dd;">)</span>
@@ -437,9 +466,9 @@ Here is what my Doom splash screen (Dashboard) typically looks like.
 </div>
 </div>
 
-<div id="outline-container-org3150e3e" class="outline-3">
-<h3 id="org3150e3e">Treemacs</h3>
-<div class="outline-text-3" id="text-org3150e3e">
+<div id="outline-container-orgcb57446" class="outline-3">
+<h3 id="orgcb57446">Treemacs</h3>
+<div class="outline-text-3" id="text-orgcb57446">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> treemacs
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">doom-themes-treemacs-theme</span> <span style="color: #bcd42a;">"doom-colors"</span><span style="color: #c678dd;">)</span>
@@ -449,9 +478,9 @@ Here is what my Doom splash screen (Dashboard) typically looks like.
 </div>
 </div>
 
-<div id="outline-container-orgfa56b9c" class="outline-3">
-<h3 id="orgfa56b9c">Doom Themes</h3>
-<div class="outline-text-3" id="text-orgfa56b9c">
+<div id="outline-container-org99ca5fc" class="outline-3">
+<h3 id="org99ca5fc">Doom Themes</h3>
+<div class="outline-text-3" id="text-org99ca5fc">
 <p>
 Just a couple more things to make our lives easier.
 </p>
@@ -471,9 +500,26 @@ Just a couple more things to make our lives easier.
 </div>
 </div>
 
-<div id="outline-container-org5ebda68" class="outline-3">
-<h3 id="org5ebda68">Dashboard</h3>
-<div class="outline-text-3" id="text-org5ebda68">
+<div id="outline-container-org835bd64" class="outline-3">
+<h3 id="org835bd64">Magit</h3>
+<div class="outline-text-3" id="text-org835bd64">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> magit
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">custom-set-faces!</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>magit-log-author <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#f46"</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>magit-log-date <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#7fc"</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>magit-hash <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#0f3"</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>magit-filename <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#ff3"</span><span style="color: #98be65;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>magit-branch-current <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#e96"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #f8f8f0;">magit-status-mode-hook</span> <span style="color: #98be65;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org39f9a43" class="outline-3">
+<h3 id="org39f9a43">Dashboard</h3>
+<div class="outline-text-3" id="text-org39f9a43">
 <p>
 My customized dashboard.
 </p>
@@ -543,9 +589,9 @@ My customized dashboard.
 </div>
 </div>
 
-<div id="outline-container-orgc84c2c3" class="outline-3">
-<h3 id="orgc84c2c3">Elfeed</h3>
-<div class="outline-text-3" id="text-orgc84c2c3">
+<div id="outline-container-org521a2b6" class="outline-3">
+<h3 id="org521a2b6">Elfeed</h3>
+<div class="outline-text-3" id="text-org521a2b6">
 <p>
 This first block of code defines font faces per Elfeed tags, font faces for UI elements, preferences, and hooks.
 </p>
@@ -554,8 +600,10 @@ This first block of code defines font faces per Elfeed tags, font faces for UI e
 <pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #ff5d38;">require</span> <span style="color: #ff5d38;">'</span><span style="color: #ff5d38;">elfeed-goodies</span><span style="color: #51afef;">)</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">after!</span> elfeed
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defun</span> <span style="color: #bcd42a;">elfeed-search-format-date</span> <span style="color: #98be65;">(</span>date<span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">format-time-string</span> <span style="color: #bcd42a;">"%m/%d/%Y %I:%M:%S"</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">seconds-to-time</span> date<span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">elfeed-search-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +unread -stack"</span>
-          <span style="color: #f8f8f0;">elfeed-show-entry-switch</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">pop-to-buffer</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">elfeed-search-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +unread"</span>
+          <span style="color: #f8f8f0;">elfeed-show-entry-switch</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">pop-to-buffer</span>
+          <span style="color: #f8f8f0;">elfeed-curl-max-connections</span> <span style="color: #ff5d38; font-weight: bold;">25</span>
+          <span style="color: #f8f8f0;">elfeed-curl-timeout</span> <span style="color: #ff5d38; font-weight: bold;">3</span><span style="color: #c678dd;">)</span>
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defface</span> <span style="color: #f8f8f0;">git-entry</span>
         <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#f44"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
         <span style="color: #83898d; font-style: italic;">"Entry for Git"</span><span style="color: #c678dd;">)</span>
@@ -565,6 +613,9 @@ This first block of code defines font faces per Elfeed tags, font faces for UI e
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defface</span> <span style="color: #f8f8f0;">youtube-entry</span>
         <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#f46"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
         <span style="color: #83898d; font-style: italic;">"Entry for YouTube"</span><span style="color: #c678dd;">)</span>
+    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defface</span> <span style="color: #f8f8f0;">torrents-entry</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#bfafac"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #83898d; font-style: italic;">"Entry for torrents"</span><span style="color: #c678dd;">)</span>
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defface</span> <span style="color: #f8f8f0;">stack-entry</span>
         <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#0f2"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
         <span style="color: #83898d; font-style: italic;">"Entry for Stack"</span><span style="color: #c678dd;">)</span>
@@ -577,24 +628,42 @@ This first block of code defines font faces per Elfeed tags, font faces for UI e
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">defface</span> <span style="color: #f8f8f0;">tech-entry</span>
         <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span><span style="color: #a9a1e1;">(</span>t <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#f90"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
         <span style="color: #83898d; font-style: italic;">"Entry for Tech"</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>git git-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>reddit reddit-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>youtube youtube-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>stack stack-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>news news-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>tumblr tumblr-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>tech tech-entry<span style="color: #98be65;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">custom-set-faces!</span>
-        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>elfeed-search-feed-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#2f3"</span><span style="color: #98be65;">)</span>
-        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>elfeed-search-tag-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#ee0"</span><span style="color: #98be65;">)</span>
-        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>elfeed-search-title-face <span style="color: #ff5d38;">:inherit</span> variable-pitch <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#eaa"</span><span style="color: #98be65;">)</span>
-        <span style="color: #ff5d38;">'</span><span style="color: #98be65;">(</span>elfeed-search-date-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#0ef"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-update-hook</span> <span style="color: #98be65;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-mode-hook</span> <span style="color: #98be65;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #98be65;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #f8f8f0;">hl-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-mode-hook</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-update</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-update</span><span style="color: #c678dd;">)</span>
-    <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">visual-line-mode</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+
+<p>
+Now we push all of these font faces to the <code>elfeed-search</code> faces list.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>git git-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>reddit reddit-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>youtube youtube-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>torrents torrents-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>stack stack-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>news news-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>tumblr tumblr-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">push</span> <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>tech tech-entry<span style="color: #c678dd;">)</span> <span style="color: #f8f8f0;">elfeed-search-face-alist</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+
+<p>
+Define additional font faces and hooks.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">custom-set-faces!</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>elfeed-search-feed-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#2f3"</span><span style="color: #c678dd;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>elfeed-search-tag-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#ee0"</span><span style="color: #c678dd;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>elfeed-search-title-face <span style="color: #ff5d38;">:inherit</span> variable-pitch <span style="color: #ff5d38;">:slant</span> italic<span style="color: #c678dd;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>elfeed-search-date-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#0ef"</span><span style="color: #c678dd;">)</span>
+        <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span>elfeed-search-last-update-face <span style="color: #ff5d38;">:foreground</span> <span style="color: #bcd42a;">"#2f3"</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-update-hook</span> <span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-mode-hook</span> <span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">hide-mode-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">hl-line-mode</span> <span style="color: #ff5d38; font-weight: bold;">-1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-search-mode-hook</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-update</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-update</span><span style="color: #51afef;">)</span>
+    <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">add-hook!</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-show-mode-hook</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">visual-line-mode</span><span style="color: #51afef;">)</span><span style="color: #ff5d38; font-weight: bold;">)</span>
 </pre>
 </div>
 
@@ -607,16 +676,17 @@ This second block of code sets preferences for the <code>elfeed-goodies</code> p
     <span style="color: #c678dd;">(</span><span style="color: #ff5d38;">elfeed-goodies/setup</span><span style="color: #c678dd;">)</span>
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> <span style="color: #f8f8f0;">elfeed-goodies/entry-pane-size</span> <span style="color: #ff5d38; font-weight: bold;">0.5</span>
           <span style="color: #f8f8f0;">elfeed-goodies/powerline-default-separator</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">wave</span>
-          <span style="color: #f8f8f0;">elfeed-goodies/show-mode-padding</span> <span style="color: #ff5d38; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+          <span style="color: #f8f8f0;">elfeed-goodies/show-mode-padding</span> <span style="color: #ff5d38; font-weight: bold;">1</span>
+          <span style="color: #f8f8f0;">elfeed-goodies/feed-source-column-width</span> <span style="color: #ff5d38; font-weight: bold;">20</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org49e39fe" class="outline-2">
-<h2 id="org49e39fe">Keybindings</h2>
-<div class="outline-text-2" id="text-org49e39fe">
+<div id="outline-container-org38bdc00" class="outline-2">
+<h2 id="org38bdc00">Keybindings</h2>
+<div class="outline-text-2" id="text-org38bdc00">
 <p>
 This first bit lets us navigate between windows easier.
 </p>
@@ -634,9 +704,9 @@ This first bit lets us navigate between windows easier.
 </div>
 </div>
 
-<div id="outline-container-orgd908501" class="outline-3">
-<h3 id="orgd908501">Dashboard</h3>
-<div class="outline-text-3" id="text-orgd908501">
+<div id="outline-container-orgc41720e" class="outline-3">
+<h3 id="orgc41720e">Dashboard</h3>
+<div class="outline-text-3" id="text-orgc41720e">
 <p>
 This part is the shortcuts for our Doom Dashboard. These keybindings only work in Dashboard mode.
 </p>
@@ -857,20 +927,20 @@ This part is the shortcuts for our Doom Dashboard. These keybindings only work i
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"D"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #bcd42a;">doom-project-find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles Fetch"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"h"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/fetch.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Dotfiles README"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"H"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/git/Dotfiles/README.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Xresources"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"x"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.Xresources"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open .xinitrc"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"X"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.xinitrc"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Xresources"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"X"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.Xresources"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open .xinitrc"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"x"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/.xinitrc"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Increase Font Size"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"+"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/increase-font-size</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Decrease Font Size"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"-"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/decrease-font-size</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Agenda"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"a"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-agenda</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open video.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"V"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/org/video.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open todo.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"V"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/org/todo.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Kill All Buffers"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"k"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">doom/kill-all-buffers</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Switch Buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+vertico/switch-workspace-buffer</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Switch Buffers (all)"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"B"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-buffer</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Switch Buffers"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-buffer</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Previous Buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"P"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">previous-buffer</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open Elfeed"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"e"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open elfeed.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"E"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/org/elfeed.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Reset Elfeed"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"n"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-db-unload</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Set Theme"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"T"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">consult-theme</span>
-    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Vterm Here"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"v"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+vterm/here</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Open video.org"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"v"</span> <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">cmd!</span> <span style="color: #98be65;">(</span><span style="color: #ff5d38;">find-file</span> <span style="color: #bcd42a;">"~/org/video.org"</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Quit"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"Q"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">save-buffers-kill-terminal</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
@@ -887,11 +957,11 @@ This part removes other elements of the Dashboard.
 </div>
 </div>
 
-<div id="outline-container-org118942a" class="outline-3">
-<h3 id="org118942a">Elfeed</h3>
-<div class="outline-text-3" id="text-org118942a">
+<div id="outline-container-org95928ad" class="outline-3">
+<h3 id="org95928ad">Elfeed</h3>
+<div class="outline-text-3" id="text-org95928ad">
 <p>
-I have custom key bindings for Elfeed that will filter the feed list by tag names.
+I have custom key bindings for Elfeed that will filter the feed list by tag names. Shift + J and Shift + K (or capital J and K) will update the entry pane with the next item in the <code>elfeed-search</code>.
 </p>
 
 <div class="org-src-container">
@@ -902,22 +972,23 @@ I have custom key bindings for Elfeed that will filter the feed list by tag name
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">evil-define-key</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">normal</span> <span style="color: #f8f8f0;">elfeed-search-mode-map</span>
         <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"J"</span><span style="color: #98be65;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-goodies/split-show-next</span>
         <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"K"</span><span style="color: #98be65;">)</span> <span style="color: #ff5d38;">'</span><span style="color: #f8f8f0;">elfeed-goodies/split-show-prev</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"q"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +tumblr +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"e"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +reddit +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"p"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +stack +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"o"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +news +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"i"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +git +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"x"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +youtube +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
-        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"v"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@3-weeks-ago +tech +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"q"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +tumblr +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"e"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +reddit +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"p"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +stack +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"o"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +news +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"i"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +git +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"x"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +youtube +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"v"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-set-filter</span> <span style="color: #bcd42a;">"@2-weeks-ago +tech +unread"</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+        <span style="color: #98be65;">(</span><span style="color: #ff5d38;">kbd</span> <span style="color: #bcd42a;">"g"</span><span style="color: #98be65;">)</span> <span style="color: #98be65;">(</span><span style="color: #26a6a6; font-style: italic;">lambda</span> <span style="color: #a9a1e1;">()</span> <span style="color: #a9a1e1;">(</span><span style="color: #26a6a6; font-style: italic;">interactive</span><span style="color: #a9a1e1;">)</span> <span style="color: #a9a1e1;">(</span><span style="color: #ff5d38;">elfeed-search-browse-url</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:map</span> +elfeed-search-mode-map
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Show selected entry"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"RET"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-show-entry</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Kill buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"q"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-kill-buffer</span>
-        <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Browse URL"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-browse-url</span>
+        <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Update"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"m"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-update</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Set filter"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"S"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-set-filter</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Clear filter"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"c"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-clear-filter</span><span style="color: #c678dd;">)</span>
     <span style="color: #c678dd;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:map</span> +elfeed-show-mode-map
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Show selected entry"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"RET"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-show-entry</span>
-        <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Browse URL"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-show-visit</span>
+        <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Update"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"m"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-update</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Kill buffer"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"q"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-kill-buffer</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Set filter"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"S"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-set-filter</span>
         <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Clear filter"</span> <span style="color: #ff5d38;">:ne</span> <span style="color: #bcd42a;">"c"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">elfeed-search-clear-filter</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
@@ -926,11 +997,11 @@ I have custom key bindings for Elfeed that will filter the feed list by tag name
 </div>
 </div>
 
-<div id="outline-container-org20ce384" class="outline-3">
-<h3 id="org20ce384">General</h3>
-<div class="outline-text-3" id="text-org20ce384">
+<div id="outline-container-orgd7d1d50" class="outline-3">
+<h3 id="orgd7d1d50">General</h3>
+<div class="outline-text-3" id="text-orgd7d1d50">
 <p>
-These are general keybindings, which are available in all modes.
+These are general keybindings, which are available in all modes. The Magit key bindings will not work if the file is not in a Git repository.
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -949,6 +1020,11 @@ These are general keybindings, which are available in all modes.
 </thead>
 <tbody>
 <tr>
+<td class="org-left"><code>SPC a</code></td>
+<td class="org-left">Toggle Zen Mode</td>
+</tr>
+
+<tr>
 <td class="org-left"><code>SPC b</code></td>
 <td class="org-left">Beacon Mode</td>
 </tr>
@@ -961,6 +1037,11 @@ These are general keybindings, which are available in all modes.
 <tr>
 <td class="org-left"><code>SPC e</code></td>
 <td class="org-left">Magit Log</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SPC i</code></td>
+<td class="org-left">Toggle Fullscreen Zen</td>
 </tr>
 
 <tr>
@@ -979,6 +1060,11 @@ These are general keybindings, which are available in all modes.
 </tr>
 
 <tr>
+<td class="org-left"><code>SPC t</code></td>
+<td class="org-left">Magit Stage File</td>
+</tr>
+
+<tr>
 <td class="org-left"><code>SPC u</code></td>
 <td class="org-left">Delete Buffer</td>
 </tr>
@@ -986,6 +1072,11 @@ These are general keybindings, which are available in all modes.
 <tr>
 <td class="org-left"><code>SPC v</code></td>
 <td class="org-left">Vterm</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SPC x</code></td>
+<td class="org-left">Mixed Pitch Mode</td>
 </tr>
 
 <tr>
@@ -1001,7 +1092,10 @@ These are general keybindings, which are available in all modes.
 </table>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC b</span>
+<pre class="src src-emacs-lisp"><span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC a</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Toggle Zen"</span> <span style="color: #bcd42a;">"a"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+zen/toggle</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC b</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Beacon Mode"</span> <span style="color: #bcd42a;">"b"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">beacon-mode</span><span style="color: #51afef;">)</span>
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC r</span>
@@ -1010,6 +1104,9 @@ These are general keybindings, which are available in all modes.
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC z</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Ranger Mode"</span> <span style="color: #bcd42a;">"z"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">ranger-minimal-toggle</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC i</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Toggle Fullscreen Zen"</span> <span style="color: #bcd42a;">"i"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">+zen/toggle-fullscreen</span><span style="color: #51afef;">)</span>
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC l</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Org Tangle"</span> <span style="color: #bcd42a;">"l"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-babel-tangle</span><span style="color: #51afef;">)</span>
@@ -1019,6 +1116,9 @@ These are general keybindings, which are available in all modes.
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC d</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Org Mark Done"</span> <span style="color: #bcd42a;">"d"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">org-todo</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC x</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Mixed Pitch Mode"</span> <span style="color: #bcd42a;">"x"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">mixed-pitch-mode</span><span style="color: #51afef;">)</span>
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC y</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Magit Status"</span> <span style="color: #bcd42a;">"y"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">magit-status</span><span style="color: #51afef;">)</span>
@@ -1031,19 +1131,22 @@ These are general keybindings, which are available in all modes.
 <span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC e</span>
 <span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
     <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Magit Log"</span> <span style="color: #bcd42a;">"e"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">magit-log-all</span><span style="color: #51afef;">)</span>
+<span style="color: #5B6268; font-style: italic;">;; </span><span style="color: #5B6268; font-style: italic;">SPC t</span>
+<span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">map!</span> <span style="color: #ff5d38;">:leader</span>
+    <span style="color: #ff5d38;">:desc</span> <span style="color: #bcd42a;">"Magit Stage File"</span> <span style="color: #bcd42a;">"t"</span> <span style="color: #ff5d38;">#'</span><span style="color: #f8f8f0;">magit-stage-file</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga7516ae" class="outline-2">
-<h2 id="orga7516ae">Dired</h2>
-<div class="outline-text-2" id="text-orga7516ae">
+<div id="outline-container-orga47b8ca" class="outline-2">
+<h2 id="orga47b8ca">Dired</h2>
+<div class="outline-text-2" id="text-orga47b8ca">
 </div>
-<div id="outline-container-org68ae58f" class="outline-3">
-<h3 id="org68ae58f">File Associations</h3>
-<div class="outline-text-3" id="text-org68ae58f">
+<div id="outline-container-org4a11d65" class="outline-3">
+<h3 id="org4a11d65">File Associations</h3>
+<div class="outline-text-3" id="text-org4a11d65">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #26a6a6; font-style: italic;">setq</span> dired-guess-shell-alist-user
       <span style="color: #ff5d38;">'</span><span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span><span style="color: #bcd42a;">"\\.pdf\\'"</span> <span style="color: #bcd42a;">"mupdf -I"</span><span style="color: #98be65;">)</span>
@@ -1070,7 +1173,7 @@ These are general keybindings, which are available in all modes.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-11-07 Mon 01:22</p>
+<p class="date">Created: 2022-11-24 Thu 01:17</p>
 </div>
 </body>
 </html>

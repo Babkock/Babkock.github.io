@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-03 Thu 01:03 -->
+<!-- 2022-11-24 Thu 01:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zsh</title>
@@ -231,35 +231,35 @@ Welcome to my Zshrc. This configuration relies on <a href="https://ohmyz.sh/">Oh
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfa22bf8">Theme</a></li>
-<li><a href="#org4507553">Preferences</a></li>
-<li><a href="#org4d48f16">Conditional Aliases</a>
+<li><a href="#orgcdc0fd6">Theme</a></li>
+<li><a href="#org46459fb">Preferences</a></li>
+<li><a href="#orgf096b45">Conditional Aliases</a>
 <ul>
-<li><a href="#orge83fb8d">SSH</a></li>
-<li><a href="#orgfe2304e">Terminal</a></li>
+<li><a href="#org772bc64">SSH</a></li>
+<li><a href="#org2bd0d2f">Terminal</a></li>
 </ul>
 </li>
-<li><a href="#orgb8f86d7">Functions</a>
+<li><a href="#org3c43824">Functions</a>
 <ul>
-<li><a href="#org0c127b3">picp</a></li>
-<li><a href="#org22a2085">pf</a></li>
-<li><a href="#org003930a">t</a></li>
-<li><a href="#org976e981">y</a></li>
-<li><a href="#orgd7e1cc7">scr</a></li>
-<li><a href="#orgb2fa247">xs</a></li>
-<li><a href="#orgad45344">j</a></li>
-<li><a href="#orga1c26c4">Backup Website</a></li>
-<li><a href="#org02c3098">Timer</a></li>
+<li><a href="#org4034769">picp</a></li>
+<li><a href="#org9b41cfd">pf</a></li>
+<li><a href="#org7a3d8b5">t</a></li>
+<li><a href="#org00740ca">y</a></li>
+<li><a href="#org218d51b">scr</a></li>
+<li><a href="#org1afc3c8">xs</a></li>
+<li><a href="#orgec4fc8f">j</a></li>
+<li><a href="#orgfe922a9">Backup Website</a></li>
+<li><a href="#org97453fb">Timer</a></li>
 </ul>
 </li>
-<li><a href="#org545de95">Aliases</a></li>
+<li><a href="#org6d36366">Aliases</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgfa22bf8" class="outline-2">
-<h2 id="orgfa22bf8">Theme</h2>
-<div class="outline-text-2" id="text-orgfa22bf8">
+<div id="outline-container-orgcdc0fd6" class="outline-2">
+<h2 id="orgcdc0fd6">Theme</h2>
+<div class="outline-text-2" id="text-orgcdc0fd6">
 <p>
 This first block of code sets the <code>$PATH</code> environment variable, and sources my <code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
 that&rsquo;s what those other variables are for.
@@ -305,6 +305,9 @@ zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babk
     <span style="color: #26a6a6; font-style: italic;">elif</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> $<span style="color: #98be65;">{</span><span style="color: #f8f8f0;">TERM</span><span style="color: #98be65;">}</span> = <span style="color: #bcd42a;">"xterm-256color"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
         <span style="color: #f8f8f0;">ZSH_THEME</span>=<span style="color: #bcd42a;">"babkockicon"</span>
     <span style="color: #26a6a6; font-style: italic;">elif</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> $<span style="color: #98be65;">{</span><span style="color: #f8f8f0;">TERM</span><span style="color: #98be65;">}</span> = <span style="color: #bcd42a;">"foot"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+        <span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">ZSH_THEME="philips"</span>
+        <span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">ZSH_THEME="dieter"</span>
+        <span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">ZSH_THEME="clean"</span>
         <span style="color: #f8f8f0;">ZSH_THEME</span>=<span style="color: #bcd42a;">"babkockicon"</span>
     <span style="color: #26a6a6; font-style: italic;">elif</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> $<span style="color: #98be65;">{</span><span style="color: #f8f8f0;">TERM</span><span style="color: #98be65;">}</span> = <span style="color: #bcd42a;">"alacritty"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
         <span style="color: #f8f8f0;">ZSH_THEME</span>=<span style="color: #bcd42a;">"babkockicon"</span>
@@ -317,9 +320,9 @@ zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babk
 </div>
 </div>
 
-<div id="outline-container-org4507553" class="outline-2">
-<h2 id="org4507553">Preferences</h2>
-<div class="outline-text-2" id="text-org4507553">
+<div id="outline-container-org46459fb" class="outline-2">
+<h2 id="org46459fb">Preferences</h2>
+<div class="outline-text-2" id="text-org46459fb">
 <p>
 Set some preferences. The first line here is responsible for making sure the Shift + TAB combination moves the selection backwards,
 like regular TAB moves forward.
@@ -367,18 +370,18 @@ zstyle :omz:plugins:ssh-agent identities gitlab_rsa github_rsa alpine_rsa tbcom_
 </div>
 </div>
 
-<div id="outline-container-org4d48f16" class="outline-2">
-<h2 id="org4d48f16">Conditional Aliases</h2>
-<div class="outline-text-2" id="text-org4d48f16">
+<div id="outline-container-orgf096b45" class="outline-2">
+<h2 id="orgf096b45">Conditional Aliases</h2>
+<div class="outline-text-2" id="text-orgf096b45">
 <p>
 Determine if the shell is being loaded locally, or over SSH, and set aliases accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
 with too many colors or icons. The shell should behave and feel differently.
 </p>
 </div>
 
-<div id="outline-container-orge83fb8d" class="outline-3">
-<h3 id="orge83fb8d">SSH</h3>
-<div class="outline-text-3" id="text-orge83fb8d">
+<div id="outline-container-org772bc64" class="outline-3">
+<h3 id="org772bc64">SSH</h3>
+<div class="outline-text-3" id="text-org772bc64">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Preferred editor for local and remote sessions</span>
 <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> -n $<span style="color: #f8f8f0;">SSH_CONNECTION</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
@@ -403,9 +406,9 @@ with too many colors or icons. The shell should behave and feel differently.
 </div>
 </div>
 
-<div id="outline-container-orgfe2304e" class="outline-3">
-<h3 id="orgfe2304e">Terminal</h3>
-<div class="outline-text-3" id="text-orgfe2304e">
+<div id="outline-container-org2bd0d2f" class="outline-3">
+<h3 id="org2bd0d2f">Terminal</h3>
+<div class="outline-text-3" id="text-org2bd0d2f">
 <p>
 Here is where I check if the Zsh shell is being loaded in a graphical terminal, or an actual tty. If I change my terminal away from
 <b>st</b>, then I will have to modify this part. Nerd Font icons do not render in the tty, so we should use the standard versions of fancy programs in
@@ -735,25 +738,24 @@ All of these <code>ls</code> commands have flags to show directories first, show
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">atc</span>=<span style="color: #bcd42a;">"exa --icons --group-directories-first -F --tree -L 3 -s time -r"</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">aclt</span>=<span style="color: #bcd42a;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a --tree -L 3 -s time -r"</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">atlc</span>=<span style="color: #bcd42a;">"exa --icons --group-directories-first --git --color-scale -F -h -l -a --tree -L 3 -s time -r"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">e</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs'"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ee</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' ."</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ez</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.zsh.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">eb</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/bspwm/bspwm.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ep</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/polybar/config.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">eq</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/qutebrowser/config.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ec</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/init.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ed</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/config.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ew</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/config.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">es</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/style.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ef</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/foot.org\""</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egp</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' --eval \"(magit-push)\" &gt; /dev/null"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egs</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' --eval \"(magit-status)\" &gt; /dev/null"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ei</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' --eval \"(magit-log-all)\" &gt; /dev/null"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egl</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' --eval \"(magit-log-all)\" &gt; /dev/null"</span>
-        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">er</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' --eval \"(ranger)\" &gt; /dev/null"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">e</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ee</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q ."</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ez</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.zsh.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">eb</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/bspwm/bspwm.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ep</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/polybar/config.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">eq</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/qutebrowser/config.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ec</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/init.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ed</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/config.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ew</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/config.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">es</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/style.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ef</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q \"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/foot.org\""</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egp</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q --eval \"(magit-push)\" &gt; /dev/null"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egs</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q --eval \"(magit-status)\" &gt; /dev/null"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ei</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q --eval \"(magit-log-all)\" &gt; /dev/null"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">egl</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q --eval \"(magit-log-all)\" &gt; /dev/null"</span>
+        <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">er</span>=<span style="color: #bcd42a;">"emacsclient -c -a 'emacs' -q --eval \"(ranger)\" &gt; /dev/null"</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">mx</span>=<span style="color: #bcd42a;">"mpv av://v4l2:/dev/video0 --vo=gpu --hwdec=vaapi --untimed --profile=low-latency --no-osc"</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">me</span>=<span style="color: #bcd42a;">"mpv av://v4l2:/dev/video0 --vo=wlshm --untimed --profile=low-latency --no-osc"</span>
-<span style="color: #5B6268; font-style: italic;">#        </span><span style="color: #5B6268; font-style: italic;">alias j="nnn -d -i -l 2 -H -G -U -R -Q -D"</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">jt</span>=<span style="color: #bcd42a;">"tmux new-session \"export NNN_FIFO=/tmp/nnn.fifo; export NNN_PLUG='p:preview-tui'; nnn -d -i -l 2 -H -G -U -R -Q -D -P preview-tui\""</span>
     <span style="color: #26a6a6; font-style: italic;">elif</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> $<span style="color: #98be65;">{</span><span style="color: #f8f8f0;">TERM</span><span style="color: #98be65;">}</span> = <span style="color: #bcd42a;">"screen-256color"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
         <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">j</span>=<span style="color: #bcd42a;">"nnn -d -i -l 2 -H -G -U -R -Q -D -P preview-tui &amp; ~/.config/nnn/plugins/preview-tui; fg"</span>
@@ -800,13 +802,13 @@ All of these <code>ls</code> commands have flags to show directories first, show
 </div>
 </div>
 
-<div id="outline-container-orgb8f86d7" class="outline-2">
-<h2 id="orgb8f86d7">Functions</h2>
-<div class="outline-text-2" id="text-orgb8f86d7">
+<div id="outline-container-org3c43824" class="outline-2">
+<h2 id="org3c43824">Functions</h2>
+<div class="outline-text-2" id="text-org3c43824">
 </div>
-<div id="outline-container-org0c127b3" class="outline-3">
-<h3 id="org0c127b3">picp</h3>
-<div class="outline-text-3" id="text-org0c127b3">
+<div id="outline-container-org4034769" class="outline-3">
+<h3 id="org4034769">picp</h3>
+<div class="outline-text-3" id="text-org4034769">
 <p>
 I used to use this function to send files to my Raspberry Pi.
 </p>
@@ -826,12 +828,11 @@ I used to use this function to send files to my Raspberry Pi.
 </div>
 </div>
 
-<div id="outline-container-org22a2085" class="outline-3">
-<h3 id="org22a2085">pf</h3>
-<div class="outline-text-3" id="text-org22a2085">
+<div id="outline-container-org9b41cfd" class="outline-3">
+<h3 id="org9b41cfd">pf</h3>
+<div class="outline-text-3" id="text-org9b41cfd">
 <p>
-This function searches the list of running processes provided with <code>ps</code>
-and returns a match.
+This function searches the list of running processes provided with <code>ps</code> and returns a match.
 </p>
 
 <div class="org-src-container">
@@ -848,9 +849,9 @@ and returns a match.
 </div>
 </div>
 
-<div id="outline-container-org003930a" class="outline-3">
-<h3 id="org003930a">t</h3>
-<div class="outline-text-3" id="text-org003930a">
+<div id="outline-container-org7a3d8b5" class="outline-3">
+<h3 id="org7a3d8b5">t</h3>
+<div class="outline-text-3" id="text-org7a3d8b5">
 <p>
 This function, when given no arguments, simply starts the <code>tremc</code> Transmission client. If it is given a single argument, it is assumed it is a torrent file: it gives it to Transmission, then deletes it, and starts <code>tremc</code>.
 If it is given a second argument, it interprets that as the preferred download speed in kB/s.
@@ -884,9 +885,9 @@ If it is given a second argument, it interprets that as the preferred download s
 </div>
 </div>
 
-<div id="outline-container-org976e981" class="outline-3">
-<h3 id="org976e981">y</h3>
-<div class="outline-text-3" id="text-org976e981">
+<div id="outline-container-org00740ca" class="outline-3">
+<h3 id="org00740ca">y</h3>
+<div class="outline-text-3" id="text-org00740ca">
 <p>
 Open a file with <b>mupdf</b>.
 </p>
@@ -905,9 +906,9 @@ Open a file with <b>mupdf</b>.
 </div>
 </div>
 
-<div id="outline-container-orgd7e1cc7" class="outline-3">
-<h3 id="orgd7e1cc7">scr</h3>
-<div class="outline-text-3" id="text-orgd7e1cc7">
+<div id="outline-container-org218d51b" class="outline-3">
+<h3 id="org218d51b">scr</h3>
+<div class="outline-text-3" id="text-org218d51b">
 <p>
 Take a screenshot with the given name.
 </p>
@@ -927,12 +928,11 @@ Take a screenshot with the given name.
 </div>
 </div>
 
-<div id="outline-container-orgb2fa247" class="outline-3">
-<h3 id="orgb2fa247">xs</h3>
-<div class="outline-text-3" id="text-orgb2fa247">
+<div id="outline-container-org1afc3c8" class="outline-3">
+<h3 id="org1afc3c8">xs</h3>
+<div class="outline-text-3" id="text-org1afc3c8">
 <p>
-Compile a project with <code>xbps-src</code> from within the build directory. This is
-useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
+Compile a project with <code>xbps-src</code> from within the build directory. This is useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
 build script. It requires the package name (therefore, part of the current directory&rsquo;s name) as an argument.
 </p>
 
@@ -947,9 +947,9 @@ build script. It requires the package name (therefore, part of the current direc
 </div>
 </div>
 
-<div id="outline-container-orgad45344" class="outline-3">
-<h3 id="orgad45344">j</h3>
-<div class="outline-text-3" id="text-orgad45344">
+<div id="outline-container-orgec4fc8f" class="outline-3">
+<h3 id="orgec4fc8f">j</h3>
+<div class="outline-text-3" id="text-orgec4fc8f">
 <p>
 A wrapper function for <a href="https://github.com/jarun/nnn">nnn</a> that changes CD when it exits.
 </p>
@@ -991,9 +991,9 @@ A wrapper function for <a href="https://github.com/jarun/nnn">nnn</a> that chang
 </div>
 </div>
 
-<div id="outline-container-orga1c26c4" class="outline-3">
-<h3 id="orga1c26c4">Backup Website</h3>
-<div class="outline-text-3" id="text-orga1c26c4">
+<div id="outline-container-orgfe922a9" class="outline-3">
+<h3 id="orgfe922a9">Backup Website</h3>
+<div class="outline-text-3" id="text-orgfe922a9">
 <p>
 This shell function backs up my website. It takes one argument, the output directory to store the backup in.
 </p>
@@ -1013,9 +1013,9 @@ This shell function backs up my website. It takes one argument, the output direc
 </div>
 </div>
 
-<div id="outline-container-org02c3098" class="outline-3">
-<h3 id="org02c3098">Timer</h3>
-<div class="outline-text-3" id="text-org02c3098">
+<div id="outline-container-org97453fb" class="outline-3">
+<h3 id="org97453fb">Timer</h3>
+<div class="outline-text-3" id="text-org97453fb">
 <p>
 These two functions are special functions, they are executed before and after each command. I use these to keep a timer of each command,
 so my shell tells you how long your command took.
@@ -1040,9 +1040,9 @@ so my shell tells you how long your command took.
 </div>
 </div>
 
-<div id="outline-container-org545de95" class="outline-2">
-<h2 id="org545de95">Aliases</h2>
-<div class="outline-text-2" id="text-org545de95">
+<div id="outline-container-org6d36366" class="outline-2">
+<h2 id="org6d36366">Aliases</h2>
+<div class="outline-text-2" id="text-org6d36366">
 <p>
 This is my collection of aliases. Each letter of the alphabet should have its own command, to make the overall way of life easier.
 This was apparent before, but I use a number of tools written in Rust that serve as faster and better-looking versions of standard
@@ -1093,6 +1093,12 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 </tr>
 
 <tr>
+<td class="org-left"><code>cd</code></td>
+<td class="org-left">Directory</td>
+<td class="org-left">Run Zoxide on given directory</td>
+</tr>
+
+<tr>
 <td class="org-left"><code>co</code></td>
 <td class="org-left">N/A</td>
 <td class="org-left">Run Conky</td>
@@ -1125,7 +1131,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <tr>
 <td class="org-left"><code>f</code></td>
 <td class="org-left">N/A</td>
-<td class="org-left">Run duf</td>
+<td class="org-left">A file picker with preview pane</td>
 </tr>
 
 <tr>
@@ -1394,8 +1400,8 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 
 <tr>
 <td class="org-left"><code>z</code></td>
-<td class="org-left">N/A</td>
-<td class="org-left">Clear the screen</td>
+<td class="org-left">Directory</td>
+<td class="org-left">Run Zoxide on given directory</td>
 </tr>
 </tbody>
 </table>
@@ -1405,9 +1411,10 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">bb</span>=<span style="color: #bcd42a;">"neofetch --disk_display bar --memory_display bar --battery_display bar --bar_length 20 --underline off --bar_colors 30 210"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">c</span>=<span style="color: #bcd42a;">"btm"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ca</span>=<span style="color: #bcd42a;">"bat"</span>
+<span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">cd</span>=<span style="color: #bcd42a;">"z"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">co</span>=<span style="color: #bcd42a;">"conky"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">df</span>=<span style="color: #bcd42a;">"duf"</span>
-<span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">f</span>=<span style="color: #bcd42a;">"duf"</span>
+<span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">f</span>=<span style="color: #bcd42a;">"fzf --preview=\"bat --color=always --style=plain {}\" --preview-window=\"border:rounded\" --border=rounded --prompt=\"$ \" --pointer=\"-&gt;\""</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">i</span>=<span style="color: #bcd42a;">"tig"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">h</span>=<span style="color: #bcd42a;">"htop"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">ey</span>=<span style="color: #bcd42a;">"</span><span style="color: #bcd42a;">pkill</span><span style="color: #bcd42a;"> -x emacs; </span><span style="color: #bcd42a;">sleep</span><span style="color: #bcd42a;"> 1; emacs --daemon"</span>
@@ -1455,9 +1462,12 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">kc</span>=<span style="color: #bcd42a;">"</span><span style="color: #bcd42a;">make</span><span style="color: #bcd42a;"> clean"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">wh</span>=<span style="color: #bcd42a;">"which"</span>
 <span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">x</span>=<span style="color: #bcd42a;">"</span><span style="color: #bcd42a;">sudo</span><span style="color: #bcd42a;"> zsh"</span>
-<span style="color: #ff5d38;">alias</span> <span style="color: #f8f8f0;">z</span>=<span style="color: #bcd42a;">"clear"</span>
 </pre>
 </div>
+
+<p>
+These next lines accomplish a few things. They let me use directory-changers like <b>nnn</b> and <b>Zoxide,</b> and configure the programs <b>bat</b>, <b>fzf</b>, and <b>wob</b>.
+</p>
 
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #ff5d38;">source</span> /home/babkock/.config/broot/launcher/bash/br
@@ -1470,6 +1480,12 @@ gpgconf --launch gpg-agent
 <span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">NNN_PLUG</span>=<span style="color: #bcd42a;">"p:-preview-tui;v:imgview;g:!tig*;v:!vim"</span>
 <span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">NNN_COLORS</span>=<span style="color: #bcd42a;">"2365"</span>
 <span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">BAT_STYLE</span>=<span style="color: #bcd42a;">"header,header-filesize,header-filename,changes"</span>
+<span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">FZF_DEFAULT_OPTS</span>=<span style="color: #bcd42a;">"--border=horizontal --color=bg+:black,fg+:bright-green:italic,gutter:-1,hl:blue,hl+:bright-blue,query:bright-yellow,prompt:bright-yellow,pointer:black:dim,info:magenta,preview-bg:black,border:black:dim"</span>
+<span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">_ZO_ECHO</span>=<span style="color: #ff5d38; font-weight: bold;">1</span>
+<span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">_ZO_FZF_OPTS</span>=<span style="color: #bcd42a;">"--border=horizontal --color=bg+:black,fg+:bright-green:italic,gutter:-1,hl:blue,hl+:bright-blue,query:bright-yellow,prompt:bright-yellow,pointer:black:dim,info:magenta,preview-bg:black,border:black:dim"</span>
+<span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">_ZO_RESOLVE_SYMLINKS</span>=<span style="color: #ff5d38; font-weight: bold;">1</span>
+<span style="color: #ff5d38;">eval</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38; font-weight: bold;">$(zoxide init zsh)</span><span style="color: #bcd42a;">"</span>
+<span style="color: #ff5d38;">export</span> <span style="color: #f8f8f0;">WOBSOCK</span>=<span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.wob.sock"</span>
 </pre>
 </div>
 
@@ -1488,7 +1504,7 @@ gpgconf --launch gpg-agent
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-11-03 Thu 01:03</p>
+<p class="date">Created: 2022-11-24 Thu 01:07</p>
 </div>
 </body>
 </html>
