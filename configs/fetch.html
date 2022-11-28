@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-09 Sun 16:06 -->
+<!-- 2022-11-28 Mon 17:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fetch</title>
@@ -224,170 +224,197 @@ This is my Dotfiles fetcher. This script collects configuration files from vario
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7cffd81">System Files</a></li>
-<li><a href="#orga3d311a">Repo Files</a></li>
-<li><a href="#org3edff52">The Code</a>
+<li><a href="#org6cb19bb">System Files</a></li>
+<li><a href="#org48c3d43">Repo Files</a></li>
+<li><a href="#org7d32a28">The Code</a>
 <ul>
-<li><a href="#org889d397">Compare Function</a></li>
-<li><a href="#org70813e0">Driver</a></li>
+<li><a href="#orgb3ced46">Compare Function</a></li>
+<li><a href="#org6c43c45">Driver</a></li>
 </ul>
 </li>
-<li><a href="#orga9328fe">Using</a></li>
+<li><a href="#org34ea2ee">Using</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7cffd81" class="outline-2">
-<h2 id="org7cffd81">System Files</h2>
-<div class="outline-text-2" id="text-org7cffd81">
+<div id="outline-container-org6cb19bb" class="outline-2">
+<h2 id="org6cb19bb">System Files</h2>
+<div class="outline-text-2" id="text-org6cb19bb">
 <p>
 Here is the first array, listing all the files on the system I&rsquo;d like to preserve.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">Dotfiles fetcher script</span>
-<span style="color: #718CA1;">system_files</span>=<span style="color: #5EC4FF;">(</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/bspwm/bspwmrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/bspwm/bspwm.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/.dwm/autostart.sh"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/.dwm/autostart_blocking.sh"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ncmpcpp/config"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.ncmpcpp/bindings"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/polybar/config.ini"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/polybar/config.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/sxhkd/sxhkdrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/conky/conky.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.mozilla/firefox/m7etmxn4.default/chrome/userChrome.css"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.mozilla/firefox/m7etmxn4.default/chrome/userContent.css"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.mozilla/firefox/m7etmxn4.default/user.js"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.vim/bundle/vim-devicons/plugin/webdevicons.vim"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/ranger/plugins/ranger_devicons/devicons.py"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.gitconfig"</span>
-  <span style="color: #539AFC;">"/etc/mpd.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/mpv/mpv.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/ranger/rc.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/ranger/rifle.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/ranger/scope.sh"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.vimrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/foot/foot.ini"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/foot/foot.org"</span>
-<span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">"/usr/share/vim/vim82/syntax/c.vim"</span>
-<span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">"/usr/share/vim/vim82/syntax/php.vim"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.xinitrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.Xresources"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.zsh.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.zshrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.oh-my-zsh/themes/babkock.zsh-theme"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.oh-my-zsh/themes/babkockicon.zsh-theme"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.tmux.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.doom.d/init.el"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.doom.d/init.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.doom.d/config.el"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.doom.d/config.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.doom.d/packages.el"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/qutebrowser/config.py"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/qutebrowser/config.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/qutebrowser/quickmarks"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/tinyserve/index.html"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.fonts.conf"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/gtk-2.0/gtkfilechooser.ini"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/gtk-2.0/gtkrc"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/gtk-3.0/settings.ini"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/dunst/dunstrc"</span>
-  <span style="color: #539AFC;">"/usr/bin/batnotify"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/bin/hdmi"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/bin/rhdmi"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/sway/config"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/config.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/style.org"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/config.json"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/style.css"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/rconfig.json"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/waybar/river.css"</span>
-  <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">HOME</span><span style="color: #539AFC;">/.config/river/init"</span>
-<span style="color: #5EC4FF;">)</span>
+<pre class="src src-sh"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Dotfiles fetcher script</span>
+<span style="color: #f8f8f0;">system_files</span>=<span style="color: #51afef;">(</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/bspwm/bspwmrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/bspwm/bspwm.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/.dwm/autostart.sh"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/.dwm/autostart_blocking.sh"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.ncmpcpp/config"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.ncmpcpp/bindings"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/polybar/config.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/polybar/config.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/sxhkd/sxhkdrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/conky/conky.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.mozilla/firefox/m7etmxn4.default/chrome/userChrome.css"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.mozilla/firefox/m7etmxn4.default/chrome/userContent.css"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.mozilla/firefox/m7etmxn4.default/user.js"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.vim/bundle/vim-devicons/plugin/webdevicons.vim"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/ranger/plugins/ranger_devicons/devicons.py"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.gitconfig"</span>
+  <span style="color: #bcd42a;">"/etc/mpd.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/mpv/mpv.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/ranger/rc.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/ranger/rifle.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/ranger/scope.sh"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.vimrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/foot.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/foot.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/labwc.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/foot/sway.ini"</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">"/usr/share/vim/vim82/syntax/c.vim"</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">"/usr/share/vim/vim82/syntax/php.vim"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.xinitrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.Xresources"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.zsh.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.zshrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.oh-my-zsh/themes/babkock.zsh-theme"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.oh-my-zsh/themes/babkockicon.zsh-theme"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.tmux.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/init.el"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/init.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/config.el"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/config.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.doom.d/packages.el"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/org/elfeed.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/qutebrowser/config.py"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/qutebrowser/config.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/qutebrowser/quickmarks"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/tinyserve/index.html"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.fonts.conf"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/gtk-2.0/gtkfilechooser.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/gtk-2.0/gtkrc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/gtk-3.0/settings.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/dunst/dunstrc"</span>
+  <span style="color: #bcd42a;">"/usr/bin/batnotify"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/bin/hdmi"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/bin/rhdmi"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/bin/ssway"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/bin/start"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/bin/slabwc"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/sway/config"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/config.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/style.org"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/config.json"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/style.css"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/rconfig.json"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/river.css"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/lconfig.json"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/waybar/labwc.css"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/river/init"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/wob/wob.ini"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/labwc/autostart"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/labwc/environment"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/labwc/rc.xml"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.config/labwc/menu.xml"</span>
+  <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">HOME</span><span style="color: #bcd42a;">/.themes/labwc/openbox-3/themerc"</span>
+<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga3d311a" class="outline-2">
-<h2 id="orga3d311a">Repo Files</h2>
-<div class="outline-text-2" id="text-orga3d311a">
+<div id="outline-container-org48c3d43" class="outline-2">
+<h2 id="org48c3d43">Repo Files</h2>
+<div class="outline-text-2" id="text-org48c3d43">
 <p>
-And here&rsquo;s the second array. This is where those files will be copied to. Notice
-the absolute paths vs. relative paths.
+And here&rsquo;s the second array. This is where those files will be copied to. Notice the absolute paths vs. relative paths.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #718CA1;">repo_files</span>=<span style="color: #5EC4FF;">(</span>
-  <span style="color: #539AFC;">"bspwm/bspwmrc"</span>
-  <span style="color: #539AFC;">"bspwm/README.org"</span>
-  <span style="color: #539AFC;">"dwm/autostart.sh"</span>
-  <span style="color: #539AFC;">"dwm/autostart_blocking.sh"</span>
-  <span style="color: #539AFC;">"ncmpcpp/config"</span>
-  <span style="color: #539AFC;">"ncmpcpp/bindings"</span>
-  <span style="color: #539AFC;">"polybar/config.ini"</span>
-  <span style="color: #539AFC;">"polybar/README.org"</span>
-  <span style="color: #539AFC;">"sxhkd/sxhkdrc"</span>
-  <span style="color: #539AFC;">"conky.conf"</span>
-  <span style="color: #539AFC;">"chrome/userChrome.css"</span>
-  <span style="color: #539AFC;">"chrome/userContent.css"</span>
-  <span style="color: #539AFC;">"user.js"</span>
-  <span style="color: #539AFC;">"vim/webdevicons.vim"</span>
-  <span style="color: #539AFC;">"ranger/devicons.py"</span>
-  <span style="color: #539AFC;">"gitconfig"</span>
-  <span style="color: #539AFC;">"mpd.conf"</span>
-  <span style="color: #539AFC;">"mpv.conf"</span>
-  <span style="color: #539AFC;">"ranger/rc.conf"</span>
-  <span style="color: #539AFC;">"ranger/rifle.conf"</span>
-  <span style="color: #539AFC;">"ranger/scope.sh"</span>
-  <span style="color: #539AFC;">"vimrc"</span>
-  <span style="color: #539AFC;">"foot/foot.ini"</span>
-  <span style="color: #539AFC;">"foot/README.org"</span>
-<span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">"vim/c.vim"</span>
-<span style="color: #41505E; font-style: italic;"># </span><span style="color: #41505E; font-style: italic;">"vim/php.vim"</span>
-  <span style="color: #539AFC;">"xinitrc"</span>
-  <span style="color: #539AFC;">"Xresources"</span>
-  <span style="color: #539AFC;">"zsh/README.org"</span>
-  <span style="color: #539AFC;">"zsh/zshrc"</span>
-  <span style="color: #539AFC;">"babkock.zsh-theme"</span>
-  <span style="color: #539AFC;">"babkockicon.zsh-theme"</span>
-  <span style="color: #539AFC;">"tmux.conf"</span>
-  <span style="color: #539AFC;">"doom.d/init.el"</span>
-  <span style="color: #539AFC;">"doom.d/init.org"</span>
-  <span style="color: #539AFC;">"doom.d/config.el"</span>
-  <span style="color: #539AFC;">"doom.d/README.org"</span>
-  <span style="color: #539AFC;">"doom.d/packages.el"</span>
-  <span style="color: #539AFC;">"qutebrowser/config.py"</span>
-  <span style="color: #539AFC;">"qutebrowser/README.org"</span>
-  <span style="color: #539AFC;">"qutebrowser/quickmarks"</span>
-  <span style="color: #539AFC;">"tinyserve/index.html"</span>
-  <span style="color: #539AFC;">"fonts.conf"</span>
-  <span style="color: #539AFC;">"gtkfilechooser.ini"</span>
-  <span style="color: #539AFC;">"gtkrc"</span>
-  <span style="color: #539AFC;">"settings.ini"</span>
-  <span style="color: #539AFC;">"dunstrc"</span>
-  <span style="color: #539AFC;">"bin/batnotify"</span>
-  <span style="color: #539AFC;">"bin/hdmi"</span>
-  <span style="color: #539AFC;">"bin/rhdmi"</span>
-  <span style="color: #539AFC;">"sway/config"</span>
-  <span style="color: #539AFC;">"waybar/README.org"</span>
-  <span style="color: #539AFC;">"waybar/style.org"</span>
-  <span style="color: #539AFC;">"waybar/config.json"</span>
-  <span style="color: #539AFC;">"waybar/style.css"</span>
-  <span style="color: #539AFC;">"waybar/rconfig.json"</span>
-  <span style="color: #539AFC;">"waybar/river.css"</span>
-  <span style="color: #539AFC;">"river/init"</span>
-<span style="color: #5EC4FF;">)</span>
+<pre class="src src-sh"><span style="color: #f8f8f0;">repo_files</span>=<span style="color: #51afef;">(</span>
+  <span style="color: #bcd42a;">"bspwm/bspwmrc"</span>
+  <span style="color: #bcd42a;">"bspwm/README.org"</span>
+  <span style="color: #bcd42a;">"dwm/autostart.sh"</span>
+  <span style="color: #bcd42a;">"dwm/autostart_blocking.sh"</span>
+  <span style="color: #bcd42a;">"ncmpcpp/config"</span>
+  <span style="color: #bcd42a;">"ncmpcpp/bindings"</span>
+  <span style="color: #bcd42a;">"polybar/config.ini"</span>
+  <span style="color: #bcd42a;">"polybar/README.org"</span>
+  <span style="color: #bcd42a;">"sxhkd/sxhkdrc"</span>
+  <span style="color: #bcd42a;">"conky.conf"</span>
+  <span style="color: #bcd42a;">"chrome/userChrome.css"</span>
+  <span style="color: #bcd42a;">"chrome/userContent.css"</span>
+  <span style="color: #bcd42a;">"user.js"</span>
+  <span style="color: #bcd42a;">"vim/webdevicons.vim"</span>
+  <span style="color: #bcd42a;">"ranger/devicons.py"</span>
+  <span style="color: #bcd42a;">"gitconfig"</span>
+  <span style="color: #bcd42a;">"mpd.conf"</span>
+  <span style="color: #bcd42a;">"mpv.conf"</span>
+  <span style="color: #bcd42a;">"ranger/rc.conf"</span>
+  <span style="color: #bcd42a;">"ranger/rifle.conf"</span>
+  <span style="color: #bcd42a;">"ranger/scope.sh"</span>
+  <span style="color: #bcd42a;">"vimrc"</span>
+  <span style="color: #bcd42a;">"foot/foot.ini"</span>
+  <span style="color: #bcd42a;">"foot/README.org"</span>
+  <span style="color: #bcd42a;">"foot/labwc.ini"</span>
+  <span style="color: #bcd42a;">"foot/sway.ini"</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">"vim/c.vim"</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">"vim/php.vim"</span>
+  <span style="color: #bcd42a;">"xinitrc"</span>
+  <span style="color: #bcd42a;">"Xresources"</span>
+  <span style="color: #bcd42a;">"zsh/README.org"</span>
+  <span style="color: #bcd42a;">"zsh/zshrc"</span>
+  <span style="color: #bcd42a;">"babkock.zsh-theme"</span>
+  <span style="color: #bcd42a;">"babkockicon.zsh-theme"</span>
+  <span style="color: #bcd42a;">"tmux.conf"</span>
+  <span style="color: #bcd42a;">"doom.d/init.el"</span>
+  <span style="color: #bcd42a;">"doom.d/init.org"</span>
+  <span style="color: #bcd42a;">"doom.d/config.el"</span>
+  <span style="color: #bcd42a;">"doom.d/README.org"</span>
+  <span style="color: #bcd42a;">"doom.d/packages.el"</span>
+  <span style="color: #bcd42a;">"elfeed.org"</span>
+  <span style="color: #bcd42a;">"qutebrowser/config.py"</span>
+  <span style="color: #bcd42a;">"qutebrowser/README.org"</span>
+  <span style="color: #bcd42a;">"qutebrowser/quickmarks"</span>
+  <span style="color: #bcd42a;">"tinyserve/index.html"</span>
+  <span style="color: #bcd42a;">"fonts.conf"</span>
+  <span style="color: #bcd42a;">"gtkfilechooser.ini"</span>
+  <span style="color: #bcd42a;">"gtkrc"</span>
+  <span style="color: #bcd42a;">"settings.ini"</span>
+  <span style="color: #bcd42a;">"dunstrc"</span>
+  <span style="color: #bcd42a;">"bin/batnotify"</span>
+  <span style="color: #bcd42a;">"bin/hdmi"</span>
+  <span style="color: #bcd42a;">"bin/rhdmi"</span>
+  <span style="color: #bcd42a;">"bin/ssway"</span>
+  <span style="color: #bcd42a;">"bin/start"</span>
+  <span style="color: #bcd42a;">"bin/slabwc"</span>
+  <span style="color: #bcd42a;">"sway/config"</span>
+  <span style="color: #bcd42a;">"waybar/README.org"</span>
+  <span style="color: #bcd42a;">"waybar/style.org"</span>
+  <span style="color: #bcd42a;">"waybar/config.json"</span>
+  <span style="color: #bcd42a;">"waybar/style.css"</span>
+  <span style="color: #bcd42a;">"waybar/rconfig.json"</span>
+  <span style="color: #bcd42a;">"waybar/river.css"</span>
+  <span style="color: #bcd42a;">"waybar/lconfig.json"</span>
+  <span style="color: #bcd42a;">"waybar/labwc.css"</span>
+  <span style="color: #bcd42a;">"river/init"</span>
+  <span style="color: #bcd42a;">"wob.ini"</span>
+  <span style="color: #bcd42a;">"labwc/autostart"</span>
+  <span style="color: #bcd42a;">"labwc/environment"</span>
+  <span style="color: #bcd42a;">"labwc/rc.xml"</span>
+  <span style="color: #bcd42a;">"labwc/menu.xml"</span>
+  <span style="color: #bcd42a;">"labwc/themerc"</span>
+<span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3edff52" class="outline-2">
-<h2 id="org3edff52">The Code</h2>
-<div class="outline-text-2" id="text-org3edff52">
+<div id="outline-container-org7d32a28" class="outline-2">
+<h2 id="org7d32a28">The Code</h2>
+<div class="outline-text-2" id="text-org7d32a28">
 <p>
 If you want to use this Dotfiles fetcher script, you&rsquo;d really only have to worry about the contents of those two arrays, and make sure they&rsquo;re in sync.
 The rest of the code here should not be modified.
@@ -407,68 +434,69 @@ replacing the older version, and adds the new file to the staging area</li>
 </ul>
 </div>
 
-<div id="outline-container-org889d397" class="outline-3">
-<h3 id="org889d397">Compare Function</h3>
-<div class="outline-text-3" id="text-org889d397">
+<div id="outline-container-orgb3ced46" class="outline-3">
+<h3 id="orgb3ced46">Compare Function</h3>
+<div class="outline-text-3" id="text-orgb3ced46">
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #33CED8;">compare</span><span style="color: #5EC4FF;">()</span> <span style="color: #5EC4FF;">{</span>
-    <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #E27E8D;">[</span><span style="color: #8BD49C;">[</span> -f <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> <span style="color: #8BD49C;">]</span><span style="color: #E27E8D;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-        cmp <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> &gt; /dev/null
-        <span style="color: #718CA1;">result</span>=$<span style="color: #718CA1;">?</span>
-        <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #E27E8D;">[</span><span style="color: #8BD49C;">[</span> $<span style="color: #718CA1;">result</span> == <span style="color: #E27E8D; font-weight: bold;">1</span> <span style="color: #8BD49C;">]</span><span style="color: #E27E8D;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-            <span style="color: #EBBF83;">cp</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> &gt; /dev/null
-            printf <span style="color: #539AFC;">"\e[92;1mChanged -- \e[95m%s\n"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span>
-            <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #E27E8D;">[</span><span style="color: #8BD49C;">[</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> != <span style="color: #539AFC;">"surf/bookmarks.txt"</span> &amp;&amp; <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> != <span style="color: #539AFC;">"qutebrowser/quickmarks"</span> <span style="color: #8BD49C;">]</span><span style="color: #E27E8D;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-                <span style="color: #EBBF83;">git</span> add <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span>
-            <span style="color: #5EC4FF; font-style: italic;">fi</span>
-        <span style="color: #5EC4FF; font-style: italic;">elif</span> <span style="color: #E27E8D;">[</span><span style="color: #8BD49C;">[</span> $<span style="color: #718CA1;">result</span> == <span style="color: #E27E8D; font-weight: bold;">0</span> <span style="color: #8BD49C;">]</span><span style="color: #E27E8D;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-            printf <span style="color: #539AFC;">"\e[33mUnchanged -- \e[93m%s\n"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span>
-        <span style="color: #5EC4FF; font-style: italic;">fi</span>
-    <span style="color: #5EC4FF; font-style: italic;">else</span>
-        printf <span style="color: #539AFC;">"\e[92;1mAdded -- \e[95m%s\n"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span>
-        <span style="color: #EBBF83;">cp</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">1</span><span style="color: #539AFC;">"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span> &gt; /dev/null
-        <span style="color: #EBBF83;">git</span> add <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">2</span><span style="color: #539AFC;">"</span>
-    <span style="color: #5EC4FF; font-style: italic;">fi</span>
-<span style="color: #5EC4FF;">}</span>
+<pre class="src src-sh"><span style="color: #bcd42a;">compare</span><span style="color: #51afef;">()</span> <span style="color: #51afef;">{</span>
+    <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #c678dd;">[</span><span style="color: #98be65;">[</span> -f <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> <span style="color: #98be65;">]</span><span style="color: #c678dd;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+        cmp <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">1</span><span style="color: #bcd42a;">"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> &gt; /dev/null
+        <span style="color: #f8f8f0;">result</span>=$<span style="color: #f8f8f0;">?</span>
+        <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #c678dd;">[</span><span style="color: #98be65;">[</span> $<span style="color: #f8f8f0;">result</span> == <span style="color: #ff5d38; font-weight: bold;">1</span> <span style="color: #98be65;">]</span><span style="color: #c678dd;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+            <span style="color: #f8f8f0;">cp</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">1</span><span style="color: #bcd42a;">"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> &gt; /dev/null
+            printf <span style="color: #bcd42a;">"\e[92;1mChanged -- \e[95m%s\n"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span>
+            <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #c678dd;">[</span><span style="color: #98be65;">[</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> != <span style="color: #bcd42a;">"surf/bookmarks.txt"</span> &amp;&amp; <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> != <span style="color: #bcd42a;">"qutebrowser/quickmarks"</span> <span style="color: #98be65;">]</span><span style="color: #c678dd;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+                <span style="color: #f8f8f0;">git</span> add <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span>
+            <span style="color: #26a6a6; font-style: italic;">fi</span>
+        <span style="color: #26a6a6; font-style: italic;">elif</span> <span style="color: #c678dd;">[</span><span style="color: #98be65;">[</span> $<span style="color: #f8f8f0;">result</span> == <span style="color: #ff5d38; font-weight: bold;">0</span> <span style="color: #98be65;">]</span><span style="color: #c678dd;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+            printf <span style="color: #bcd42a;">"\e[33mUnchanged -- \e[93m%s\n"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span>
+        <span style="color: #26a6a6; font-style: italic;">fi</span>
+    <span style="color: #26a6a6; font-style: italic;">else</span>
+        printf <span style="color: #bcd42a;">"\e[92;1mAdded -- \e[95m%s\n"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span>
+        <span style="color: #f8f8f0;">cp</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">1</span><span style="color: #bcd42a;">"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span> &gt; /dev/null
+        <span style="color: #f8f8f0;">git</span> add <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">2</span><span style="color: #bcd42a;">"</span>
+    <span style="color: #26a6a6; font-style: italic;">fi</span>
+<span style="color: #51afef;">}</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org70813e0" class="outline-3">
-<h3 id="org70813e0">Driver</h3>
-<div class="outline-text-3" id="text-org70813e0">
+<div id="outline-container-org6c43c45" class="outline-3">
+<h3 id="org6c43c45">Driver</h3>
+<div class="outline-text-3" id="text-org6c43c45">
 <p>
-This is the Bash version of a &ldquo;foreach&rdquo; loop. The beginning of the driver
-explains to the user what is going to happen, and asks for their confirmation.
+This is the Bash version of a &ldquo;foreach&rdquo; loop. The beginning of the driver explains to the user what is going to happen, and asks for their confirmation.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">printf <span style="color: #539AFC;">"\e[93;1mThis script will overwrite the contents of this repository with\n"</span>
-printf <span style="color: #539AFC;">"\e[93;1mwhatever is in the standard config locations for this user.\n\n"</span>
-printf <span style="color: #539AFC;">"\e[94;1mIt will also add any changed files to the repo's staging area.\n\n"</span>
-printf <span style="color: #539AFC;">"\e[91;1mContinue? (Y/N) "</span>
-<span style="color: #5EC4FF;">read</span> contin
-<span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> $<span style="color: #718CA1;">contin</span> == <span style="color: #539AFC;">"y"</span> || $<span style="color: #718CA1;">contin</span> == <span style="color: #539AFC;">"Y"</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-    printf <span style="color: #539AFC;">"\e[92;1mContinuing...\n"</span>
-    <span style="color: #5EC4FF; font-style: italic;">for</span> <span style="color: #5EC4FF;">(</span><span style="color: #E27E8D;">(</span><span style="color: #718CA1;">i</span>=<span style="color: #E27E8D; font-weight: bold;">0</span>;i&lt;$<span style="color: #8BD49C;">{</span>#<span style="color: #718CA1;">system_files</span><span style="color: #B62D65;">[</span>@<span style="color: #B62D65;">]</span><span style="color: #8BD49C;">}</span>;++i<span style="color: #E27E8D;">)</span><span style="color: #5EC4FF;">)</span>; <span style="color: #5EC4FF; font-style: italic;">do</span>
-        <span style="color: #718CA1;">sys</span>=<span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">{system_files[i]}</span><span style="color: #539AFC;">"</span>
-        <span style="color: #718CA1;">rep</span>=<span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">{repo_files[i]}</span><span style="color: #539AFC;">"</span>
-        <span style="color: #5EC4FF; font-style: italic;">if</span> <span style="color: #5EC4FF;">[</span><span style="color: #E27E8D;">[</span> -f <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">sys</span><span style="color: #539AFC;">"</span> <span style="color: #E27E8D;">]</span><span style="color: #5EC4FF;">]</span>; <span style="color: #5EC4FF; font-style: italic;">then</span>
-            compare <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">sys</span><span style="color: #539AFC;">"</span> <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">rep</span><span style="color: #539AFC;">"</span>
-        <span style="color: #5EC4FF; font-style: italic;">else</span>
-            <span style="color: #5EC4FF; font-style: italic;">continue</span>
-        <span style="color: #5EC4FF; font-style: italic;">fi</span>
-    <span style="color: #5EC4FF; font-style: italic;">done</span>
-    printf <span style="color: #539AFC;">"\e[93;1mFinished fetching\n"</span>
-    <span style="color: #EBBF83;">git</span> add <span style="color: #539AFC;">"</span><span style="color: #E27E8D;">$</span><span style="color: #718CA1;">0</span><span style="color: #539AFC;">"</span>
-    <span style="color: #5EC4FF;">unset</span> compare
-    <span style="color: #5EC4FF;">true</span>
-<span style="color: #5EC4FF; font-style: italic;">else</span>
-    printf <span style="color: #539AFC;">"\e[91;mFetch cancelled\n"</span>
-    <span style="color: #5EC4FF;">unset</span> compare
-    <span style="color: #5EC4FF;">false</span>
-<span style="color: #5EC4FF; font-style: italic;">fi</span>
+<pre class="src src-sh">printf <span style="color: #bcd42a;">"\e[93;1mThis script will overwrite the contents of this repository with\n"</span>
+printf <span style="color: #bcd42a;">"\e[93;1mwhatever is in the standard config locations for this user.\n\n"</span>
+printf <span style="color: #bcd42a;">"\e[94;1mIt will also add any changed files to the repo's staging area.\n\n"</span>
+printf <span style="color: #bcd42a;">"\e[91;1mContinue? (Y/N) "</span>
+<span style="color: #ff5d38;">read</span> contin
+<span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> $<span style="color: #f8f8f0;">contin</span> == <span style="color: #bcd42a;">"y"</span> || $<span style="color: #f8f8f0;">contin</span> == <span style="color: #bcd42a;">"Y"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+    printf <span style="color: #bcd42a;">"\e[92;1mContinuing...\n"</span>
+    <span style="color: #26a6a6; font-style: italic;">for</span> <span style="color: #51afef;">(</span><span style="color: #c678dd;">(</span><span style="color: #f8f8f0;">i</span>=<span style="color: #ff5d38; font-weight: bold;">0</span>;i&lt;$<span style="color: #98be65;">{</span>#<span style="color: #f8f8f0;">system_files</span><span style="color: #a9a1e1;">[</span>@<span style="color: #a9a1e1;">]</span><span style="color: #98be65;">}</span>;++i<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>; <span style="color: #26a6a6; font-style: italic;">do</span>
+        <span style="color: #f8f8f0;">sys</span>=<span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">{system_files[i]}</span><span style="color: #bcd42a;">"</span>
+        <span style="color: #f8f8f0;">rep</span>=<span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">{repo_files[i]}</span><span style="color: #bcd42a;">"</span>
+        <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> -f <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">sys</span><span style="color: #bcd42a;">"</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
+            compare <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">sys</span><span style="color: #bcd42a;">"</span> <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">rep</span><span style="color: #bcd42a;">"</span>
+        <span style="color: #26a6a6; font-style: italic;">else</span>
+            <span style="color: #26a6a6; font-style: italic;">continue</span>
+        <span style="color: #26a6a6; font-style: italic;">fi</span>
+    <span style="color: #26a6a6; font-style: italic;">done</span>
+    printf <span style="color: #bcd42a;">"\e[93;1mFinished fetching\n"</span>
+    <span style="color: #f8f8f0;">git</span> add <span style="color: #bcd42a;">"</span><span style="color: #ff5d38;">$</span><span style="color: #f8f8f0;">0</span><span style="color: #bcd42a;">"</span>
+    <span style="color: #ff5d38;">unset</span> compare
+    <span style="color: #f8f8f0;">git</span> checkout HEAD -- qutebrowser/quickmarks
+    vim elfeed.org
+    <span style="color: #ff5d38;">true</span>
+<span style="color: #26a6a6; font-style: italic;">else</span>
+    printf <span style="color: #bcd42a;">"\e[91;mFetch cancelled\n"</span>
+    <span style="color: #ff5d38;">unset</span> compare
+    <span style="color: #ff5d38;">false</span>
+<span style="color: #26a6a6; font-style: italic;">fi</span>
 </pre>
 </div>
 
@@ -479,9 +507,9 @@ And that&rsquo;s it!
 </div>
 </div>
 
-<div id="outline-container-orga9328fe" class="outline-2">
-<h2 id="orga9328fe">Using</h2>
-<div class="outline-text-2" id="text-orga9328fe">
+<div id="outline-container-org34ea2ee" class="outline-2">
+<h2 id="org34ea2ee">Using</h2>
+<div class="outline-text-2" id="text-org34ea2ee">
 <p>
 After typing <code>./fetch.sh</code> in your command line, you will see the following output.
 </p>
@@ -512,7 +540,7 @@ Simple type &ldquo;Y&rdquo; or &ldquo;y&rdquo; and then Enter to proceed with th
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-10-09 Sun 16:06</p>
+<p class="date">Created: 2022-11-28 Mon 17:17</p>
 </div>
 </body>
 </html>

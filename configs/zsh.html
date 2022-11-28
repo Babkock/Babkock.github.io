@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-25 Fri 05:47 -->
+<!-- 2022-11-25 Fri 17:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zsh</title>
@@ -231,37 +231,37 @@ Welcome to my Zshrc. This configuration relies on <a href="https://ohmyz.sh/">Oh
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb392f56">Theme</a></li>
-<li><a href="#org5e37380">Preferences</a></li>
-<li><a href="#org7af82a0">Conditional Aliases</a>
+<li><a href="#org1ac6a65">Theme</a></li>
+<li><a href="#orge51e30b">Preferences</a></li>
+<li><a href="#org2a9bc15">Conditional Aliases</a>
 <ul>
-<li><a href="#org3aa2940">SSH</a></li>
-<li><a href="#orge6fb5eb">Terminal</a></li>
+<li><a href="#org0954714">SSH</a></li>
+<li><a href="#orga72c777">Terminal</a></li>
 </ul>
 </li>
-<li><a href="#org51fba8a">Functions</a>
+<li><a href="#orgca95071">Functions</a>
 <ul>
-<li><a href="#org817b048">picp</a></li>
-<li><a href="#orgf557f91">pf</a></li>
-<li><a href="#orgd938cd8">t</a></li>
-<li><a href="#orgfdcfc68">y</a></li>
-<li><a href="#org6b13a06">scr</a></li>
-<li><a href="#org66f0e29">xs</a></li>
-<li><a href="#orgb542eec">j</a></li>
-<li><a href="#orgc114146">Pipewire</a></li>
-<li><a href="#org4bedee5">XDG-Desktop-Portal</a></li>
-<li><a href="#orgecc4fd8">Backup Website</a></li>
-<li><a href="#org1b3cfb6">Timer</a></li>
+<li><a href="#orgb3b8616">picp</a></li>
+<li><a href="#org55f1697">pf</a></li>
+<li><a href="#org8f6a37c">t</a></li>
+<li><a href="#org3def548">y</a></li>
+<li><a href="#orge1679a9">scr</a></li>
+<li><a href="#org94c7092">xs</a></li>
+<li><a href="#org2123d36">j</a></li>
+<li><a href="#org0415844">Pipewire</a></li>
+<li><a href="#org75f865f">XDG-Desktop-Portal</a></li>
+<li><a href="#orgac46bad">Backup Website</a></li>
+<li><a href="#org0209ea9">Timer</a></li>
 </ul>
 </li>
-<li><a href="#org40f1e92">Aliases</a></li>
+<li><a href="#org50b2e29">Aliases</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb392f56" class="outline-2">
-<h2 id="orgb392f56">Theme</h2>
-<div class="outline-text-2" id="text-orgb392f56">
+<div id="outline-container-org1ac6a65" class="outline-2">
+<h2 id="org1ac6a65">Theme</h2>
+<div class="outline-text-2" id="text-org1ac6a65">
 <p>
 This first block of code sets the <code>$PATH</code> environment variable, and sources my <code>$LS_COLORS</code> script from <a href="https://github.com/trapd00r/LS_COLORS">this project</a>. I have a cross-compiler installed, and
 that&rsquo;s what those other variables are for.
@@ -322,9 +322,9 @@ zsh-theme &ldquo;<a href="https://gitlab.com/Babkock/Dotfiles/-/blob/master/babk
 </div>
 </div>
 
-<div id="outline-container-org5e37380" class="outline-2">
-<h2 id="org5e37380">Preferences</h2>
-<div class="outline-text-2" id="text-org5e37380">
+<div id="outline-container-orge51e30b" class="outline-2">
+<h2 id="orge51e30b">Preferences</h2>
+<div class="outline-text-2" id="text-orge51e30b">
 <p>
 Set some preferences. The first line here is responsible for making sure the Shift + TAB combination moves the selection backwards,
 like regular TAB moves forward.
@@ -372,18 +372,18 @@ zstyle :omz:plugins:ssh-agent identities gitlab_rsa github_rsa alpine_rsa tbcom_
 </div>
 </div>
 
-<div id="outline-container-org7af82a0" class="outline-2">
-<h2 id="org7af82a0">Conditional Aliases</h2>
-<div class="outline-text-2" id="text-org7af82a0">
+<div id="outline-container-org2a9bc15" class="outline-2">
+<h2 id="org2a9bc15">Conditional Aliases</h2>
+<div class="outline-text-2" id="text-org2a9bc15">
 <p>
 Determine if the shell is being loaded locally, or over SSH, and set aliases accordingly. The reason I do this is so I don&rsquo;t strain the SSH connection
 with too many colors or icons. The shell should behave and feel differently.
 </p>
 </div>
 
-<div id="outline-container-org3aa2940" class="outline-3">
-<h3 id="org3aa2940">SSH</h3>
-<div class="outline-text-3" id="text-org3aa2940">
+<div id="outline-container-org0954714" class="outline-3">
+<h3 id="org0954714">SSH</h3>
+<div class="outline-text-3" id="text-org0954714">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Preferred editor for local and remote sessions</span>
 <span style="color: #26a6a6; font-style: italic;">if</span> <span style="color: #51afef;">[</span><span style="color: #c678dd;">[</span> -n $<span style="color: #f8f8f0;">SSH_CONNECTION</span> <span style="color: #c678dd;">]</span><span style="color: #51afef;">]</span>; <span style="color: #26a6a6; font-style: italic;">then</span>
@@ -408,9 +408,9 @@ with too many colors or icons. The shell should behave and feel differently.
 </div>
 </div>
 
-<div id="outline-container-orge6fb5eb" class="outline-3">
-<h3 id="orge6fb5eb">Terminal</h3>
-<div class="outline-text-3" id="text-orge6fb5eb">
+<div id="outline-container-orga72c777" class="outline-3">
+<h3 id="orga72c777">Terminal</h3>
+<div class="outline-text-3" id="text-orga72c777">
 <p>
 Here is where I check if the Zsh shell is being loaded in a graphical terminal, or an actual tty. If I change my terminal away from
 <b>st</b>, then I will have to modify this part. Nerd Font icons do not render in the tty, so we should use the standard versions of fancy programs in
@@ -804,13 +804,13 @@ All of these <code>ls</code> commands have flags to show directories first, show
 </div>
 </div>
 
-<div id="outline-container-org51fba8a" class="outline-2">
-<h2 id="org51fba8a">Functions</h2>
-<div class="outline-text-2" id="text-org51fba8a">
+<div id="outline-container-orgca95071" class="outline-2">
+<h2 id="orgca95071">Functions</h2>
+<div class="outline-text-2" id="text-orgca95071">
 </div>
-<div id="outline-container-org817b048" class="outline-3">
-<h3 id="org817b048">picp</h3>
-<div class="outline-text-3" id="text-org817b048">
+<div id="outline-container-orgb3b8616" class="outline-3">
+<h3 id="orgb3b8616">picp</h3>
+<div class="outline-text-3" id="text-orgb3b8616">
 <p>
 I used to use this function to send files to my Raspberry Pi.
 </p>
@@ -830,9 +830,9 @@ I used to use this function to send files to my Raspberry Pi.
 </div>
 </div>
 
-<div id="outline-container-orgf557f91" class="outline-3">
-<h3 id="orgf557f91">pf</h3>
-<div class="outline-text-3" id="text-orgf557f91">
+<div id="outline-container-org55f1697" class="outline-3">
+<h3 id="org55f1697">pf</h3>
+<div class="outline-text-3" id="text-org55f1697">
 <p>
 This function searches the list of running processes provided with <code>ps</code> and returns a match.
 </p>
@@ -851,9 +851,9 @@ This function searches the list of running processes provided with <code>ps</cod
 </div>
 </div>
 
-<div id="outline-container-orgd938cd8" class="outline-3">
-<h3 id="orgd938cd8">t</h3>
-<div class="outline-text-3" id="text-orgd938cd8">
+<div id="outline-container-org8f6a37c" class="outline-3">
+<h3 id="org8f6a37c">t</h3>
+<div class="outline-text-3" id="text-org8f6a37c">
 <p>
 This function, when given no arguments, simply starts the <code>tremc</code> Transmission client. If it is given a single argument, it is assumed it is a torrent file: it gives it to Transmission, then deletes it, and starts <code>tremc</code>.
 If it is given a second argument, it interprets that as the preferred download speed in kB/s.
@@ -887,9 +887,9 @@ If it is given a second argument, it interprets that as the preferred download s
 </div>
 </div>
 
-<div id="outline-container-orgfdcfc68" class="outline-3">
-<h3 id="orgfdcfc68">y</h3>
-<div class="outline-text-3" id="text-orgfdcfc68">
+<div id="outline-container-org3def548" class="outline-3">
+<h3 id="org3def548">y</h3>
+<div class="outline-text-3" id="text-org3def548">
 <p>
 Open a file with <b>mupdf</b>.
 </p>
@@ -908,9 +908,9 @@ Open a file with <b>mupdf</b>.
 </div>
 </div>
 
-<div id="outline-container-org6b13a06" class="outline-3">
-<h3 id="org6b13a06">scr</h3>
-<div class="outline-text-3" id="text-org6b13a06">
+<div id="outline-container-orge1679a9" class="outline-3">
+<h3 id="orge1679a9">scr</h3>
+<div class="outline-text-3" id="text-orge1679a9">
 <p>
 Take a screenshot with the given name.
 </p>
@@ -930,9 +930,9 @@ Take a screenshot with the given name.
 </div>
 </div>
 
-<div id="outline-container-org66f0e29" class="outline-3">
-<h3 id="org66f0e29">xs</h3>
-<div class="outline-text-3" id="text-org66f0e29">
+<div id="outline-container-org94c7092" class="outline-3">
+<h3 id="org94c7092">xs</h3>
+<div class="outline-text-3" id="text-org94c7092">
 <p>
 Compile a project with <code>xbps-src</code> from within the build directory. This is useful, and easier than typing &ldquo;make&rdquo;, or changing directory to run the
 build script. It requires the package name (therefore, part of the current directory&rsquo;s name) as an argument.
@@ -949,9 +949,9 @@ build script. It requires the package name (therefore, part of the current direc
 </div>
 </div>
 
-<div id="outline-container-orgb542eec" class="outline-3">
-<h3 id="orgb542eec">j</h3>
-<div class="outline-text-3" id="text-orgb542eec">
+<div id="outline-container-org2123d36" class="outline-3">
+<h3 id="org2123d36">j</h3>
+<div class="outline-text-3" id="text-org2123d36">
 <p>
 A wrapper function for <a href="https://github.com/jarun/nnn">nnn</a> that changes CD when it exits.
 </p>
@@ -993,9 +993,9 @@ A wrapper function for <a href="https://github.com/jarun/nnn">nnn</a> that chang
 </div>
 </div>
 
-<div id="outline-container-orgc114146" class="outline-3">
-<h3 id="orgc114146">Pipewire</h3>
-<div class="outline-text-3" id="text-orgc114146">
+<div id="outline-container-org0415844" class="outline-3">
+<h3 id="org0415844">Pipewire</h3>
+<div class="outline-text-3" id="text-org0415844">
 <p>
 Carefully launches PipeWire and <code>pipewire-pulse</code>. So, if you&rsquo;d want to use some OBS, be sure to run <code>pipes</code>, and then <code>portal</code>, in that order, and make sure PipeWire and XDPW are both running. These steps cannot be automated any further than this. After that you can type &ldquo;<code>obs</code>&rdquo; somewhere to start it.
 </p>
@@ -1010,9 +1010,7 @@ Carefully launches PipeWire and <code>pipewire-pulse</code>. So, if you&rsquo;d 
     <span style="color: #f8f8f0;">sudo</span> sv down pipewire
     <span style="color: #f8f8f0;">sudo</span> sv down pipewire-pulse
     <span style="color: #f8f8f0;">sudo</span> <span style="color: #f8f8f0;">pkill</span> -x pipewire
-    <span style="color: #f8f8f0;">pkill</span> -x pulseaudio
     pipewire &amp;
-    pipewire-pulse
 <span style="color: #51afef;">}</span>
 </pre>
 </div>
@@ -1023,25 +1021,25 @@ And notice the ampersands. Even if you Control+C your way out of <code>pipes</co
 </div>
 </div>
 
-<div id="outline-container-org4bedee5" class="outline-3">
-<h3 id="org4bedee5">XDG-Desktop-Portal</h3>
-<div class="outline-text-3" id="text-org4bedee5">
+<div id="outline-container-org75f865f" class="outline-3">
+<h3 id="org75f865f">XDG-Desktop-Portal</h3>
+<div class="outline-text-3" id="text-org75f865f">
 <p>
 Launches the global XDG-Desktop-Portal, with XDPW right after it. These two commands must be run together, in a shell, and not in a startup or configuration file.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #26a6a6; font-style: italic;">function</span> <span style="color: #bcd42a;">portal</span><span style="color: #51afef;">()</span> <span style="color: #51afef;">{</span>
-    /usr/libexec/xdg-desktop-portal -r &amp; /usr/libexec/xdg-desktop-portal-wlr -l DEBUG
+    /usr/libexec/xdg-desktop-portal -r &amp; /usr/libexec/xdg-desktop-portal-wlr -l DEBUG &amp;
 <span style="color: #51afef;">}</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgecc4fd8" class="outline-3">
-<h3 id="orgecc4fd8">Backup Website</h3>
-<div class="outline-text-3" id="text-orgecc4fd8">
+<div id="outline-container-orgac46bad" class="outline-3">
+<h3 id="orgac46bad">Backup Website</h3>
+<div class="outline-text-3" id="text-orgac46bad">
 <p>
 This shell function backs up my website. It takes one argument, the output directory to store the backup in.
 </p>
@@ -1061,9 +1059,9 @@ This shell function backs up my website. It takes one argument, the output direc
 </div>
 </div>
 
-<div id="outline-container-org1b3cfb6" class="outline-3">
-<h3 id="org1b3cfb6">Timer</h3>
-<div class="outline-text-3" id="text-org1b3cfb6">
+<div id="outline-container-org0209ea9" class="outline-3">
+<h3 id="org0209ea9">Timer</h3>
+<div class="outline-text-3" id="text-org0209ea9">
 <p>
 These two functions are special functions, they are executed before and after each command. I use these to keep a timer of each command,
 so my shell tells you how long your command took.
@@ -1088,9 +1086,9 @@ so my shell tells you how long your command took.
 </div>
 </div>
 
-<div id="outline-container-org40f1e92" class="outline-2">
-<h2 id="org40f1e92">Aliases</h2>
-<div class="outline-text-2" id="text-org40f1e92">
+<div id="outline-container-org50b2e29" class="outline-2">
+<h2 id="org50b2e29">Aliases</h2>
+<div class="outline-text-2" id="text-org50b2e29">
 <p>
 This is my collection of aliases. Each letter of the alphabet should have its own command, to make the overall way of life easier.
 This was apparent before, but I use a number of tools written in Rust that serve as faster and better-looking versions of standard
@@ -1552,7 +1550,7 @@ gpgconf --launch gpg-agent
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2022-11-25 Fri 05:47</p>
+<p class="date">Created: 2022-11-25 Fri 17:35</p>
 </div>
 </body>
 </html>
