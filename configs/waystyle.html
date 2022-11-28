@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-11-28 Mon 21:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waybar Style</title>
+<meta name="author" content="Tanner Babcock" />
+<meta name="description" content="The CSS configuration for Waybar. This literate configuration outputs three CSS files, one for each of the Waybars." />
+<meta name="keywords" content="tanner babcock, tanner, babcock, emacs, linux, gnu linux, waybar, wayland, compositor, sway, river, labwc, sway wm, experimental, noise, technology, open source" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta property="og:image" content="/images/ogimage.png" />
+<meta property="og:image:width" content="660" />
+<meta property="og:image:height" content="461" />
+<meta property="og:title" content="Waybar Style" />
+<meta property="og:description" content="The CSS configuration for Waybar. This literate configuration outputs three CSS files, one for each of the Waybars." />
+<meta property="og:locale" content="en_US" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+<link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Waybar Style</h1>
+<p>
+These are the cosmetic CSS files for my <a href="https://babkock.github.io/configs/waybar.html">Waybar configuration</a>. Please, if you appreciate my work, consider <a href="https://tannerbabcock.com/donate">making a donation</a>.
+</p>
+
+<header>
+    <center>
+        <ul>
+            <li><a href="https://babkock.github.io">Home</a></li>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io/blob/main/configs/waystyle.html" target="_blank">Source Code</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+        </ul>
+    </center>
+</header>
+
+<div id="outline-container-orgeea9024" class="outline-2">
+<h2 id="orgeea9024">Sway Waybar Style</h2>
+<div class="outline-text-2" id="text-orgeea9024">
+<p>
+This is the Sway Waybar style. Load this document into Emacs, and turn on Rainbow mode for extra fun! Now these Org documents serve yet another purpose. The colors for each of the three CSS files match the rices for <b>Sway</b>, <b>River</b>, and <b>LabWC</b>.
+</p>
+</div>
+
+<div id="outline-container-orgdc00aa8" class="outline-3">
+<h3 id="orgdc00aa8">All</h3>
+<div class="outline-text-3" id="text-orgdc00aa8">
+<p>
+Notice the space before the asterisk.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"> <span style="color: #51afef;">* </span>{
+    <span style="color: #98be65;">font-family</span>:<span style="color: #bcd42a;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #98be65;">font-size</span>:21px;
+    <span style="color: #98be65;">background</span>:transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efefef;">#efefef</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org912eeaf" class="outline-3">
+<h3 id="org912eeaf">Window</h3>
+<div class="outline-text-3" id="text-org912eeaf">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#window </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0f98efe" class="outline-3">
+<h3 id="org0f98efe">MPD</h3>
+<div class="outline-text-3" id="text-org0f98efe">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#mpd </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org94b7d31" class="outline-3">
+<h3 id="org94b7d31">CPU</h3>
+<div class="outline-text-3" id="text-org94b7d31">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #d03844;">rgba(208, 56, 68, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:12px;
+    <span style="color: #98be65;">padding-right</span>:12px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6f4923" class="outline-3">
+<h3 id="orge6f4923">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-orge6f4923">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #dedc91;">#dedc91</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dedc91;">rgba(222, 220, 145, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:11px;
+    <span style="color: #98be65;">padding-right</span>:11px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1dde96b" class="outline-3">
+<h3 id="org1dde96b">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org1dde96b">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #40a789;">#40a789</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3aa183;">rgba(58, 161, 131, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:11px;
+    <span style="color: #98be65;">padding-right</span>:11px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c07d0c" class="outline-3">
+<h3 id="org9c07d0c">Workspaces</h3>
+<div class="outline-text-3" id="text-org9c07d0c">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#workspaces button, #tags button </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #787878;">rgba(120, 120, 120, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">padding-left</span>:17px;
+    <span style="color: #98be65;">padding-right</span>:17px;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #dfdfdf;">#dfdfdf</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+
+<span style="color: #51afef;">#workspaces button * </span>{
+    <span style="color: #98be65;">background</span>:none;
+}
+
+<span style="color: #51afef;">#workspaces button:hover, #tags button:hover </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">box-shadow</span>:inherit;
+    <span style="color: #98be65;">text-shadow</span>:inherit;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #b93b2b;">#b93b2b</span>;
+    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.6)</span>;
+}
+
+<span style="color: #51afef;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #61b9a7;">rgba(97, 185, 167, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #81d8c6;">#81d8c6</span>;
+}
+
+<span style="color: #51afef;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover </span>{
+    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #6bc3b1;">rgba(107, 195, 177, 0.6)</span>;
+}
+
+<span style="color: #51afef;">#tags button.occupied </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #efaf60;">rgba(239, 175, 96, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #fff293;">#fff293</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga740b32" class="outline-3">
+<h3 id="orga740b32">Battery</h3>
+<div class="outline-text-3" id="text-orga740b32">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#battery </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #61b8a6;">#61b8a6</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #6bc2b0;">rgba(107, 194, 176, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:11px;
+    <span style="color: #98be65;">padding-right</span>:12px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28b62b9" class="outline-3">
+<h3 id="org28b62b9">Clock/Network</h3>
+<div class="outline-text-3" id="text-org28b62b9">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#custom-clock, #network </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c26cd5;">#c26cd5</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b06998;">rgba(176, 105, 152, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:12px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4139141" class="outline-2">
+<h2 id="org4139141">River Waybar Style</h2>
+<div class="outline-text-2" id="text-org4139141">
+</div>
+<div id="outline-container-org97ab066" class="outline-3">
+<h3 id="org97ab066">All</h3>
+<div class="outline-text-3" id="text-org97ab066">
+<div class="org-src-container">
+<pre class="src src-css"> <span style="color: #51afef;">* </span>{
+    <span style="color: #98be65;">font-family</span>:<span style="color: #bcd42a;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #98be65;">font-size</span>:21px;
+    <span style="color: #98be65;">background</span>:transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb66b153" class="outline-3">
+<h3 id="orgb66b153">Title</h3>
+<div class="outline-text-3" id="text-orgb66b153">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#title, #window </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfd9b4fa" class="outline-3">
+<h3 id="orgfd9b4fa">MPD</h3>
+<div class="outline-text-3" id="text-orgfd9b4fa">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#mpd </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbdb3da9" class="outline-3">
+<h3 id="orgbdb3da9">CPU</h3>
+<div class="outline-text-3" id="text-orgbdb3da9">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #dd6359;">#dd6359</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfbd0472" class="outline-3">
+<h3 id="orgfbd0472">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-orgfbd0472">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #eec484;">#eec484</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #ddb474;">rgba(221, 180, 116, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8565607" class="outline-3">
+<h3 id="org8565607">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org8565607">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #63b268;">#63b268</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #539f58;">rgba(83, 159, 88, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org692568e" class="outline-3">
+<h3 id="org692568e">Workspaces</h3>
+<div class="outline-text-3" id="text-org692568e">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#workspaces button, #tags button </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #4b8ac0;">rgba(75, 138, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">padding-left</span>:16px;
+    <span style="color: #98be65;">padding-right</span>:16px;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+
+<span style="color: #51afef;">#workspaces button:hover, #tags button:hover </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #ddb474;">rgba(221, 180, 116, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">box-shadow</span>:inherit;
+    <span style="color: #98be65;">text-shadow</span>:inherit;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #bcbcbc;">#bcbcbc</span>;
+    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #ddb474;">rgba(221, 180, 116, 0.5)</span>;
+}
+
+<span style="color: #51afef;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #dd6359;">#dd6359</span>;
+}
+
+<span style="color: #51afef;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover </span>{
+    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.7)</span>;
+}
+
+<span style="color: #51afef;">#tags button.occupied </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #ddb474;">rgba(221, 180, 116, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #eec484;">#eec484</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc72856c" class="outline-3">
+<h3 id="orgc72856c">Battery</h3>
+<div class="outline-text-3" id="text-orgc72856c">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#battery </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #5b9ad1;">#5b9ad1</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #4b8ac0;">rgba(75, 138, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:12px;
+    <span style="color: #98be65;">padding-right</span>:11px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org61c627c" class="outline-3">
+<h3 id="org61c627c">Clock/Network</h3>
+<div class="outline-text-3" id="text-org61c627c">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#custom-clock, #network </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.3)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:13px;
+    <span style="color: #98be65;">padding-right</span>:11px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge72c369" class="outline-2">
+<h2 id="orge72c369">LabWC Waybar Style</h2>
+<div class="outline-text-2" id="text-orge72c369">
+</div>
+<div id="outline-container-org623d6d5" class="outline-3">
+<h3 id="org623d6d5">All</h3>
+<div class="outline-text-3" id="text-org623d6d5">
+<div class="org-src-container">
+<pre class="src src-css"> <span style="color: #51afef;">* </span>{
+    <span style="color: #98be65;">font-family</span>:<span style="color: #bcd42a;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #98be65;">font-size</span>:21px;
+    <span style="color: #98be65;">background</span>:transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee419a2" class="outline-3">
+<h3 id="orgee419a2">CPU</h3>
+<div class="outline-text-3" id="text-orgee419a2">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #dd6359;">#dd6359</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.4)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d7718d" class="outline-3">
+<h3 id="org4d7718d">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-org4d7718d">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6ca1b5f" class="outline-3">
+<h3 id="org6ca1b5f">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org6ca1b5f">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:10px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0271a5f" class="outline-3">
+<h3 id="org0271a5f">Battery</h3>
+<div class="outline-text-3" id="text-org0271a5f">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#battery </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #39a5eb;">#39a5eb</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #2995db;">rgba(41, 149, 219, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:12px;
+    <span style="color: #98be65;">padding-right</span>:11px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeca1669" class="outline-3">
+<h3 id="orgeca1669">Taskbar</h3>
+<div class="outline-text-3" id="text-orgeca1669">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#taskbar button </span>{
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b76178;">rgba(183, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:9px;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+<span style="color: #51afef;">#taskbar button:hover </span>{
+    <span style="color: #98be65;">padding-left</span>:10px;
+    <span style="color: #98be65;">padding-right</span>:9px;
+    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #98be65;">border</span>:0px solid transparent;
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000014;">rgba(0, 0, 20, 0.7)</span>;
+}
+<span style="color: #51afef;">#taskbar button.maximized </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+}
+<span style="color: #51afef;">#taskbar button.minimized </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+}
+<span style="color: #51afef;">#taskbar button.active </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #c98e86;">#c98e86</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #bd7f74;">rgba(189, 127, 116, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+}
+<span style="color: #51afef;">#taskbar button.maximized:hover </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b86178;">rgba(184, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+}
+<span style="color: #51afef;">#taskbar button.active:hover, #taskbar button.minimized:hover </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8221f6c" class="outline-3">
+<h3 id="org8221f6c">Clock/Network</h3>
+<div class="outline-text-3" id="text-org8221f6c">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#custom-clock, #clock, #network </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #98be65;">margin-left</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">margin-right</span>:<span style="color: #ff5d38; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">padding-left</span>:11px;
+    <span style="color: #98be65;">padding-right</span>:9px;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org677e545" class="outline-3">
+<h3 id="org677e545">MPD</h3>
+<div class="outline-text-3" id="text-org677e545">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">#mpd </span>{
+    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #000000;">#000000</span>;
+    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+
+<footer>
+    <center>
+        <p>Copyright &copy; 2022 Tanner Babcock.</p>
+        <p>This page licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC 4.0).</p>
+        <p class="nav">
+            <a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp;
+            <a href="https://github.com/Babkock/Babkock.github.io/blob/main/configs/waystyle.html" target="_blank">Source Code</a> &nbsp;&bull;&nbsp;
+            <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
+            <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
+            <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
+            <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a>
+        </p>
+    </center>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Tanner Babcock</p>
+<p class="date">Created: 2022-11-28 Mon 21:01</p>
+</div>
+</body>
+</html>
