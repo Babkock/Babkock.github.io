@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-11-28 Mon 20:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waybar</title>
+<meta name="author" content="Tanner Babcock" />
+<meta name="description" content="Waybar configuration on Tanner Babcock GitHub Pages. Contains working status bars for Sway, River, and LabWC." />
+<meta name="keywords" content="tanner babcock, emacs, waybar, wayland, compositor, sway, river, labwc, org mode, linux, gnu linux, experimental, noise" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta property="og:image" content="/images/ogimage.png" />
+<meta property="og:image:width" content="660" />
+<meta property="og:image:height" content="461" />
+<meta property="og:title" content="Waybar" />
+<meta property="og:description" content="Waybar configuration on Tanner Babcock GitHub Pages. Contains working status bars for Sway, River, and LabWC." />
+<meta property="og:locale" content="en_US" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" />
+<link rel="icon" href="/images/icon-hires.png" sizes="192x192" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Waybar</h1>
+<p>
+Thanks for checking out my <a href="https://github.com/Alexays/Waybar">Waybar</a> literate configuration. Please, if you appreciate my work, consider <a href="https://tannerbabcock.com/donate">making a donation</a>.
+</p>
+
+<header>
+    <center>
+        <ul>
+            <li><a href="https://babkock.github.io">Home</a></li>
+            <li><a href="https://tannerbabcock.com/home">Website</a></li>
+            <li><a href="https://github.com/Babkock" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a></li>
+            <li><a href="https://gitlab.com/Babkock/" target="_blank">GitLab</a></li>
+            <li><a href="https://www.youtube.com/channel/UCdXmrPRUtsl-6pq83x3FrTQ" target="_blank">YouTube</a></li>
+        </ul>
+    </center>
+</header>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgfdb94ae">Sway Laptop Bar</a>
+<ul>
+<li><a href="#orge673320">Appearance</a></li>
+<li><a href="#org3d21ce6">MPD</a></li>
+<li><a href="#org289f5b8">Clock</a></li>
+<li><a href="#orgf7d3af4">CPU</a></li>
+<li><a href="#org232beb4">Memory</a></li>
+<li><a href="#org502e5c1">Battery</a></li>
+<li><a href="#org3303603">Backlight</a></li>
+<li><a href="#orgd00fd99">Pulseaudio</a></li>
+</ul>
+</li>
+<li><a href="#org4d90a93">Sway Monitor Bar</a>
+<ul>
+<li><a href="#org9862b03">Appearance</a></li>
+<li><a href="#orgaf5a74a">Window</a></li>
+<li><a href="#org2be3f1c">Battery</a></li>
+<li><a href="#org1ccc64b">Network</a></li>
+<li><a href="#org993e85c">Backlight</a></li>
+<li><a href="#org4776e10">Disk</a></li>
+<li><a href="#org76d135e">Clock</a></li>
+</ul>
+</li>
+<li><a href="#org84720c1">River Laptop Bar</a>
+<ul>
+<li><a href="#orgd7cc544">Appearance</a></li>
+<li><a href="#orga4265dd">MPD</a></li>
+<li><a href="#org73189fb">Clock</a></li>
+<li><a href="#orgdf515ed">CPU</a></li>
+<li><a href="#orgfbe443b">Memory</a></li>
+<li><a href="#org6f0f3ee">Battery</a></li>
+<li><a href="#orge41b45b">Backlight</a></li>
+<li><a href="#org61f98f3">Pulseaudio</a></li>
+</ul>
+</li>
+<li><a href="#orga6332e4">River Monitor Bar</a>
+<ul>
+<li><a href="#org3396f1a">Appearance</a></li>
+<li><a href="#orgb829f39">Window</a></li>
+<li><a href="#orgebb3008">Battery</a></li>
+<li><a href="#org1cb4aa3">Network</a></li>
+<li><a href="#orgcd6db2c">Backlight</a></li>
+<li><a href="#org433f309">Disk</a></li>
+<li><a href="#org12f405f">Clock</a></li>
+</ul>
+</li>
+<li><a href="#org2dada71">LabWC Laptop Bar</a>
+<ul>
+<li><a href="#orgeb7e54e">Appearance</a></li>
+<li><a href="#orgd9b6d2b">MPD</a></li>
+<li><a href="#org5eb0402">Clock</a></li>
+<li><a href="#org662fe0b">CPU</a></li>
+<li><a href="#org478d8cf">Battery</a></li>
+<li><a href="#org4bdd97c">Memory</a></li>
+<li><a href="#orgd666ba9">Backlight</a></li>
+<li><a href="#orgbc27d62">Pulseaudio</a></li>
+</ul>
+</li>
+<li><a href="#orgac0d3a8">LabWC Monitor Bar</a>
+<ul>
+<li><a href="#orgb279387">Appearance</a></li>
+<li><a href="#org4f0016b">MPD</a></li>
+<li><a href="#org3e9bbd9">Disk</a></li>
+<li><a href="#org4031309">Battery</a></li>
+<li><a href="#org4e08ed0">Network</a></li>
+<li><a href="#orga0140b3">Backlight</a></li>
+<li><a href="#org48993d0">Clock</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfdb94ae" class="outline-2">
+<h2 id="orgfdb94ae">Sway Laptop Bar</h2>
+<div class="outline-text-2" id="text-orgfdb94ae">
+<p>
+This Org documents contains my Waybar configurations for three different Wayland compositors: <a href="https://github.com/swaywm/sway">Sway</a>, <a href="https://github.com/riverwm/river">River</a>, and <a href="https://github.com/labwc/labwc">LabWC</a>. It has a total of six separate status bars, one for each of my two outputs, on each of the three compositors.
+If you&rsquo;ve ever seen me use a Wayland compositor in a video, I was using a Waybar from this document.
+</p>
+
+<p>
+This Org document outputs to three separate files: <code>config.json</code>, <code>rconfig.json</code> for River, and <code>lconfig.json</code> for LabWC. In turn, these bars use the stylesheets <code>style.css</code>, <code>river.css</code>, and <code>labwc.css</code> respectively.
+</p>
+</div>
+
+<div id="outline-container-orge673320" class="outline-3">
+<h3 id="orge673320">Appearance</h3>
+<div class="outline-text-3" id="text-orge673320">
+<div class="org-src-container">
+<pre class="src src-json">[{
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">38</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"eDP-1"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"sway/workspaces"</span>, <span style="color: #bcd42a;">"sway/mode"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"mpd"</span>, <span style="color: #bcd42a;">"pulseaudio"</span>, <span style="color: #bcd42a;">"cpu"</span>, <span style="color: #bcd42a;">"memory"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"sway/workspaces"</span>: {
+         <span style="color: #26a6a6; font-style: italic;">"disable-scroll"</span>: <span style="color: #ff5d38;">false</span>,
+         <span style="color: #26a6a6; font-style: italic;">"disable-scroll-wraparound"</span>: <span style="color: #ff5d38;">true</span>,
+         <span style="color: #26a6a6; font-style: italic;">"enable-bar-scroll"</span>: <span style="color: #ff5d38;">true</span>,
+         <span style="color: #26a6a6; font-style: italic;">"all-outputs"</span>: <span style="color: #ff5d38;">false</span>,
+         <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon}"</span>,
+         <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: {
+             <span style="color: #26a6a6; font-style: italic;">"1"</span>: <span style="color: #bcd42a;">"&#61728;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"2"</span>: <span style="color: #bcd42a;">"&#64158;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"3"</span>: <span style="color: #bcd42a;">"&#61441;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"4"</span>: <span style="color: #bcd42a;">"&#61729;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"5"</span>: <span style="color: #bcd42a;">"&#61442;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"6"</span>: <span style="color: #bcd42a;">"&#61448;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"7"</span>: <span style="color: #bcd42a;">"&#61729;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"8"</span>: <span style="color: #bcd42a;">"&#61928;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"urgent"</span>: <span style="color: #bcd42a;">"&#61546;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"focused"</span>: <span style="color: #bcd42a;">"&#61842;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"default"</span>: <span style="color: #bcd42a;">"&#61713;"</span>
+         }
+    },
+    <span style="color: #26a6a6; font-style: italic;">"sway/mode"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&lt;span style=\"italic\"&gt;{}&lt;/span&gt;"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d21ce6" class="outline-3">
+<h3 id="org3d21ce6">MPD</h3>
+<div class="outline-text-3" id="text-org3d21ce6">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"mpd"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"server"</span>: <span style="color: #bcd42a;">"127.0.0.2"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}{artist} - {title} &#61441; {stateIcon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-stopped"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"title-len"</span>: <span style="color: #ff5d38; font-weight: bold;">34</span>,
+        <span style="color: #26a6a6; font-style: italic;">"unknown-tag"</span>: <span style="color: #bcd42a;">"N/A"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"consume-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61636; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"random-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"off"</span>: <span style="color: #bcd42a;">"&lt;span color=\"#f53c3c\"&gt;&#61556;&lt;/span&gt; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61556; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"repeat-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"single-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470;1 "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"state-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"playing"</span>: <span style="color: #bcd42a;">"&#61516; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"paused"</span>: <span style="color: #bcd42a;">"&#61515; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{artist} - {album} ({date})"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org289f5b8" class="outline-3">
+<h3 id="org289f5b8">Clock</h3>
+<div class="outline-text-3" id="text-org289f5b8">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7d3af4" class="outline-3">
+<h3 id="orgf7d3af4">CPU</h3>
+<div class="outline-text-3" id="text-orgf7d3af4">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"cpu"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#57912; {usage}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#57912; {avg_frequency} GHz {max_frequency} GHz"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org232beb4" class="outline-3">
+<h3 id="org232beb4">Memory</h3>
+<div class="outline-text-3" id="text-org232beb4">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"memory"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#62171; {}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#62171; {used:0.1f} GB {swapUsed:0.1f} GB"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"RAM: {used:0.2f} GB, Swap: {swapUsed:0.2f} GB"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org502e5c1" class="outline-3">
+<h3 id="org502e5c1">Battery</h3>
+<div class="outline-text-3" id="text-org502e5c1">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>, 
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3303603" class="outline-3">
+<h3 id="org3303603">Backlight</h3>
+<div class="outline-text-3" id="text-org3303603">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd00fd99" class="outline-3">
+<h3 id="orgd00fd99">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgd00fd99">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"pulseaudio"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth"</span>: <span style="color: #bcd42a;">"{icon}&#62100; {volume}% {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth-muted"</span>: <span style="color: #bcd42a;">"&#63145; {icon}&#62100; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-muted"</span>: <span style="color: #bcd42a;">"&#63145; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source"</span>: <span style="color: #bcd42a;">"&#61744; {volume}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source-muted"</span>: <span style="color: #bcd42a;">"&#61745;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"headphone"</span>: <span style="color: #bcd42a;">"&#61477;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"hands-free"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"headset"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"phone"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"portable"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"car"</span>: <span style="color: #bcd42a;">"&#61881;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"default"</span>: [<span style="color: #bcd42a;">"&#61478;"</span>, <span style="color: #bcd42a;">"&#61479;"</span>, <span style="color: #bcd42a;">"&#61480;"</span>]
+        },
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"pactl set-sink-mute @DEFAULT_SINK@ toggle &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ +2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ -2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>
+    }
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d90a93" class="outline-2">
+<h2 id="org4d90a93">Sway Monitor Bar</h2>
+<div class="outline-text-2" id="text-org4d90a93">
+<p>
+This is the second bar that Sway uses, and it places it on my monitor (<code>HDMI-A-2</code>), to the right of the bar detailed above.
+</p>
+</div>
+
+<div id="outline-container-org9862b03" class="outline-3">
+<h3 id="org9862b03">Appearance</h3>
+<div class="outline-text-3" id="text-org9862b03">
+<div class="org-src-container">
+<pre class="src src-json">}, {
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">39</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"HDMI-A-2"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"sway/workspaces"</span>, <span style="color: #bcd42a;">"sway/window"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"disk"</span>, <span style="color: #bcd42a;">"network"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"sway/workspaces"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"disable-scroll"</span>: <span style="color: #ff5d38;">false</span>,
+        <span style="color: #26a6a6; font-style: italic;">"disable-scroll-wraparound"</span>: <span style="color: #ff5d38;">true</span>,
+        <span style="color: #26a6a6; font-style: italic;">"enable-bar-scroll"</span>: <span style="color: #ff5d38;">true</span>,
+        <span style="color: #26a6a6; font-style: italic;">"all-outputs"</span>: <span style="color: #ff5d38;">false</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon}"</span>,
+         <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: {
+             <span style="color: #26a6a6; font-style: italic;">"1"</span>: <span style="color: #bcd42a;">"&#61728;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"2"</span>: <span style="color: #bcd42a;">"&#64158;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"3"</span>: <span style="color: #bcd42a;">"&#61441;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"4"</span>: <span style="color: #bcd42a;">"&#61729;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"5"</span>: <span style="color: #bcd42a;">"&#61442;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"6"</span>: <span style="color: #bcd42a;">"&#61448;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"7"</span>: <span style="color: #bcd42a;">"&#61729;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"8"</span>: <span style="color: #bcd42a;">"&#61928;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"urgent"</span>: <span style="color: #bcd42a;">"&#61546;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"focused"</span>: <span style="color: #bcd42a;">"&#61842;"</span>,
+             <span style="color: #26a6a6; font-style: italic;">"default"</span>: <span style="color: #bcd42a;">"&#61713;"</span>
+         }
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf5a74a" class="outline-3">
+<h3 id="orgaf5a74a">Window</h3>
+<div class="outline-text-3" id="text-orgaf5a74a">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"sway/window"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"max-length"</span>: <span style="color: #ff5d38; font-weight: bold;">71</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">" &lt;span style=\"italic\"&gt;{}&lt;/span&gt;"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2be3f1c" class="outline-3">
+<h3 id="org2be3f1c">Battery</h3>
+<div class="outline-text-3" id="text-org2be3f1c">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{time}"</span>, 
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>]
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1ccc64b" class="outline-3">
+<h3 id="org1ccc64b">Network</h3>
+<div class="outline-text-3" id="text-org1ccc64b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"network"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"interface"</span>: <span style="color: #bcd42a;">"wlp0s20f3"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-wifi"</span>: <span style="color: #bcd42a;">"&#61931; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-ethernet"</span>: <span style="color: #bcd42a;">"&#61633; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61931; {ipaddr}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61554;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{essid} ({signalStrength}%)"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org993e85c" class="outline-3">
+<h3 id="org993e85c">Backlight</h3>
+<div class="outline-text-3" id="text-org993e85c">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4776e10" class="outline-3">
+<h3 id="org4776e10">Disk</h3>
+<div class="outline-text-3" id="text-org4776e10">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"disk"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"path"</span>: <span style="color: #bcd42a;">"/"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">2</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61600; &lt;span style=\"italic\"&gt;{free}&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61600; {used}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{percentageUsed}% of {total}"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org76d135e" class="outline-3">
+<h3 id="org76d135e">Clock</h3>
+<div class="outline-text-3" id="text-org76d135e">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    }
+}]
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org84720c1" class="outline-2">
+<h2 id="org84720c1">River Laptop Bar</h2>
+<div class="outline-text-2" id="text-org84720c1">
+<p>
+This is the first and primary bar for the River compositor. It appears on my laptop&rsquo;s screen (<code>eDP-1</code>). Notice how the <code>modules-left</code> are different for each of the three output files.
+</p>
+</div>
+
+<div id="outline-container-orgd7cc544" class="outline-3">
+<h3 id="orgd7cc544">Appearance</h3>
+<div class="outline-text-3" id="text-orgd7cc544">
+<div class="org-src-container">
+<pre class="src src-json">[{
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">38</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"eDP-1"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"river/tags"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"mpd"</span>, <span style="color: #bcd42a;">"pulseaudio"</span>, <span style="color: #bcd42a;">"cpu"</span>, <span style="color: #bcd42a;">"memory"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"river/tags"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"num-tags"</span>: <span style="color: #ff5d38; font-weight: bold;">6</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tag-labels"</span>: [<span style="color: #bcd42a;">"&#61728;"</span>, <span style="color: #bcd42a;">"&#64158;"</span>, <span style="color: #bcd42a;">"&#61441;"</span>, <span style="color: #bcd42a;">"&#61729;"</span>, <span style="color: #bcd42a;">"&#61442;"</span>, <span style="color: #bcd42a;">"&#61448;"</span>]
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga4265dd" class="outline-3">
+<h3 id="orga4265dd">MPD</h3>
+<div class="outline-text-3" id="text-orga4265dd">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"mpd"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"server"</span>: <span style="color: #bcd42a;">"127.0.0.2"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}{artist} - {title} &#61441; {stateIcon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-stopped"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"title-len"</span>: <span style="color: #ff5d38; font-weight: bold;">34</span>,
+        <span style="color: #26a6a6; font-style: italic;">"unknown-tag"</span>: <span style="color: #bcd42a;">"N/A"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"consume-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61636; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"random-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"off"</span>: <span style="color: #bcd42a;">"&lt;span color=\"#f53c3c\"&gt;&#61556;&lt;/span&gt; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61556; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"repeat-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"single-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470;1 "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"state-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"playing"</span>: <span style="color: #bcd42a;">"&#61516; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"paused"</span>: <span style="color: #bcd42a;">"&#61515; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{artist} - {album} ({date})"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org73189fb" class="outline-3">
+<h3 id="org73189fb">Clock</h3>
+<div class="outline-text-3" id="text-org73189fb">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdf515ed" class="outline-3">
+<h3 id="orgdf515ed">CPU</h3>
+<div class="outline-text-3" id="text-orgdf515ed">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"cpu"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#57912; {usage}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#57912; {avg_frequency} GHz {max_frequency} GHz"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfbe443b" class="outline-3">
+<h3 id="orgfbe443b">Memory</h3>
+<div class="outline-text-3" id="text-orgfbe443b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"memory"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#62171; {}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#62171; {used:0.1f} GB {swapUsed:0.1f} GB"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"RAM: {used:0.2f} GB, Swap: {swapUsed:0.2f} GB"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f0f3ee" class="outline-3">
+<h3 id="org6f0f3ee">Battery</h3>
+<div class="outline-text-3" id="text-org6f0f3ee">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>, 
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{time}"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge41b45b" class="outline-3">
+<h3 id="orge41b45b">Backlight</h3>
+<div class="outline-text-3" id="text-orge41b45b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org61f98f3" class="outline-3">
+<h3 id="org61f98f3">Pulseaudio</h3>
+<div class="outline-text-3" id="text-org61f98f3">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"pulseaudio"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth"</span>: <span style="color: #bcd42a;">"{icon}&#62100; {volume}% {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth-muted"</span>: <span style="color: #bcd42a;">"&#63145; {icon}&#62100; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-muted"</span>: <span style="color: #bcd42a;">"&#63145; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source"</span>: <span style="color: #bcd42a;">"&#61744; {volume}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source-muted"</span>: <span style="color: #bcd42a;">"&#61745;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"headphone"</span>: <span style="color: #bcd42a;">"&#61477;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"hands-free"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"headset"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"phone"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"portable"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"car"</span>: <span style="color: #bcd42a;">"&#61881;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"default"</span>: [<span style="color: #bcd42a;">"&#61478;"</span>, <span style="color: #bcd42a;">"&#61479;"</span>, <span style="color: #bcd42a;">"&#61480;"</span>]
+        },
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"pactl set-sink-mute @DEFAULT_SINK@ toggle &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ +2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ -2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>
+    }
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6332e4" class="outline-2">
+<h2 id="orga6332e4">River Monitor Bar</h2>
+<div class="outline-text-2" id="text-orga6332e4">
+<p>
+This is the second status bar that River uses. It appears on my monitor (<code>HDMI-A-2</code>).
+</p>
+</div>
+
+<div id="outline-container-org3396f1a" class="outline-3">
+<h3 id="org3396f1a">Appearance</h3>
+<div class="outline-text-3" id="text-org3396f1a">
+<div class="org-src-container">
+<pre class="src src-json">}, {
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">40</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"HDMI-A-2"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"river/tags"</span>, <span style="color: #bcd42a;">"river/window"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"disk"</span>, <span style="color: #bcd42a;">"network"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"river/tags"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"num-tags"</span>: <span style="color: #ff5d38; font-weight: bold;">4</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tag-labels"</span>: [<span style="color: #bcd42a;">"&#61448;"</span>, <span style="color: #bcd42a;">"&#64158;"</span>, <span style="color: #bcd42a;">"&#61557;"</span>, <span style="color: #bcd42a;">"&#61729;"</span>]
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb829f39" class="outline-3">
+<h3 id="orgb829f39">Window</h3>
+<div class="outline-text-3" id="text-orgb829f39">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"river/window"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"max-length"</span>: <span style="color: #ff5d38; font-weight: bold;">67</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">" &lt;span style=\"italic\"&gt;{}&lt;/span&gt;"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgebb3008" class="outline-3">
+<h3 id="orgebb3008">Battery</h3>
+<div class="outline-text-3" id="text-orgebb3008">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{time}"</span>, 
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>]
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1cb4aa3" class="outline-3">
+<h3 id="org1cb4aa3">Network</h3>
+<div class="outline-text-3" id="text-org1cb4aa3">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"network"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"interface"</span>: <span style="color: #bcd42a;">"wlp0s20f3"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-wifi"</span>: <span style="color: #bcd42a;">"&#61931; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-ethernet"</span>: <span style="color: #bcd42a;">"&#61633; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61931; {ipaddr}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61554;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{essid} ({signalStrength}%)"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcd6db2c" class="outline-3">
+<h3 id="orgcd6db2c">Backlight</h3>
+<div class="outline-text-3" id="text-orgcd6db2c">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org433f309" class="outline-3">
+<h3 id="org433f309">Disk</h3>
+<div class="outline-text-3" id="text-org433f309">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"disk"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"path"</span>: <span style="color: #bcd42a;">"/"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">2</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61600; &lt;span style=\"italic\"&gt;{free}&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61600; {used}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{percentageUsed}% of {total}"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org12f405f" class="outline-3">
+<h3 id="org12f405f">Clock</h3>
+<div class="outline-text-3" id="text-org12f405f">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    }
+}]
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2dada71" class="outline-2">
+<h2 id="org2dada71">LabWC Laptop Bar</h2>
+<div class="outline-text-2" id="text-org2dada71">
+<p>
+This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s screen (<code>eDP-1</code>). Notice how LabWC does not use <b>workspaces</b> or <b>tags</b> like Sway and River, but it instead has a Taskbar module. The Taskbar elements are buttons, and they are styled like the workspace buttons.
+</p>
+</div>
+
+<div id="outline-container-orgeb7e54e" class="outline-3">
+<h3 id="orgeb7e54e">Appearance</h3>
+<div class="outline-text-3" id="text-orgeb7e54e">
+<div class="org-src-container">
+<pre class="src src-json">[{
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">39</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"eDP-1"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"wlr/taskbar"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"mpd"</span>, <span style="color: #bcd42a;">"pulseaudio"</span>, <span style="color: #bcd42a;">"cpu"</span>, <span style="color: #bcd42a;">"memory"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"wlr/taskbar"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{short_state}{icon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"minimize-raise"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click-right"</span>: <span style="color: #bcd42a;">"close"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click-middle"</span>: <span style="color: #bcd42a;">"maximize"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{app_id} {title}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"icon-size"</span>: <span style="color: #ff5d38; font-weight: bold;">29</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd9b6d2b" class="outline-3">
+<h3 id="orgd9b6d2b">MPD</h3>
+<div class="outline-text-3" id="text-orgd9b6d2b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"mpd"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"server"</span>: <span style="color: #bcd42a;">"127.0.0.2"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon} {title} &#61441; {stateIcon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-stopped"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"title-len"</span>: <span style="color: #ff5d38; font-weight: bold;">38</span>,
+        <span style="color: #26a6a6; font-style: italic;">"unknown-tag"</span>: <span style="color: #bcd42a;">"N/A"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"consume-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61636; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"random-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"off"</span>: <span style="color: #bcd42a;">"&lt;span color=\"#f53c3c\"&gt;&#61556;&lt;/span&gt; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61556; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"repeat-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"single-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470;1 "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"state-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"playing"</span>: <span style="color: #bcd42a;">"&#61516; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"paused"</span>: <span style="color: #bcd42a;">"&#61515; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{artist} - {album} ({date})"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5eb0402" class="outline-3">
+<h3 id="org5eb0402">Clock</h3>
+<div class="outline-text-3" id="text-org5eb0402">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org662fe0b" class="outline-3">
+<h3 id="org662fe0b">CPU</h3>
+<div class="outline-text-3" id="text-org662fe0b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"cpu"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#57912; {usage}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#57912; {avg_frequency} GHz {max_frequency} GHz"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org478d8cf" class="outline-3">
+<h3 id="org478d8cf">Battery</h3>
+<div class="outline-text-3" id="text-org478d8cf">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4bdd97c" class="outline-3">
+<h3 id="org4bdd97c">Memory</h3>
+<div class="outline-text-3" id="text-org4bdd97c">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"memory"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#62171; {}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#62171; {used:0.1f} GB {swapUsed:0.1f} GB"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"RAM: {used:0.2f} GB, Swap: {swapUsed:0.2f} GB"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd666ba9" class="outline-3">
+<h3 id="orgd666ba9">Backlight</h3>
+<div class="outline-text-3" id="text-orgd666ba9">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock; pkill -x sh"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc27d62" class="outline-3">
+<h3 id="orgbc27d62">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgbc27d62">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"pulseaudio"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth"</span>: <span style="color: #bcd42a;">"{icon}&#62100; {volume}% {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-bluetooth-muted"</span>: <span style="color: #bcd42a;">"&#63145; {icon}&#62100; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-muted"</span>: <span style="color: #bcd42a;">"&#63145; {format_source}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source"</span>: <span style="color: #bcd42a;">"&#61744; {volume}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-source-muted"</span>: <span style="color: #bcd42a;">"&#61745;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"headphone"</span>: <span style="color: #bcd42a;">"&#61477;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"hands-free"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"headset"</span>: <span style="color: #bcd42a;">"&#62864;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"phone"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"portable"</span>: <span style="color: #bcd42a;">"&#61589;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"car"</span>: <span style="color: #bcd42a;">"&#61881;"</span>,
+            <span style="color: #26a6a6; font-style: italic;">"default"</span>: [<span style="color: #bcd42a;">"&#61478;"</span>, <span style="color: #bcd42a;">"&#61479;"</span>, <span style="color: #bcd42a;">"&#61480;"</span>]
+        },
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"pactl set-sink-mute @DEFAULT_SINK@ toggle &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ +2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"pactl set-sink-volume @DEFAULT_SINK@ -2% &amp;&amp; pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' &gt; /home/babkock/.wob.sock"</span>
+    }
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgac0d3a8" class="outline-2">
+<h2 id="orgac0d3a8">LabWC Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgac0d3a8">
+<p>
+And finally, the sixth status bar, this is the second status bar that LabWC uses when my monitor (<code>HDMI-A-2</code>) is connected.
+</p>
+</div>
+
+<div id="outline-container-orgb279387" class="outline-3">
+<h3 id="orgb279387">Appearance</h3>
+<div class="outline-text-3" id="text-orgb279387">
+<div class="org-src-container">
+<pre class="src src-json">}, {
+    <span style="color: #26a6a6; font-style: italic;">"position"</span>: <span style="color: #bcd42a;">"bottom"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"height"</span>: <span style="color: #ff5d38; font-weight: bold;">41</span>,
+    <span style="color: #26a6a6; font-style: italic;">"spacing"</span>: <span style="color: #ff5d38; font-weight: bold;">0</span>,
+    <span style="color: #26a6a6; font-style: italic;">"output"</span>: <span style="color: #bcd42a;">"HDMI-A-2"</span>,
+    <span style="color: #26a6a6; font-style: italic;">"modules-left"</span>: [<span style="color: #bcd42a;">"wlr/taskbar"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"modules-right"</span>: [<span style="color: #bcd42a;">"mpd"</span>, <span style="color: #bcd42a;">"disk"</span>, <span style="color: #bcd42a;">"network"</span>, <span style="color: #bcd42a;">"battery"</span>, <span style="color: #bcd42a;">"backlight"</span>, <span style="color: #bcd42a;">"custom/clock"</span>],
+    <span style="color: #26a6a6; font-style: italic;">"wlr/taskbar"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{short_state}{icon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"icon-size"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{app_id} {title}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"minimize-raise"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click-right"</span>: <span style="color: #bcd42a;">"close"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-click-middle"</span>: <span style="color: #bcd42a;">"maximize"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4f0016b" class="outline-3">
+<h3 id="org4f0016b">MPD</h3>
+<div class="outline-text-3" id="text-org4f0016b">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"mpd"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"server"</span>: <span style="color: #bcd42a;">"127.0.0.2"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}{artist} - {title} &#61441; {stateIcon}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-stopped"</span>: <span style="color: #bcd42a;">"{consumeIcon}{singleIcon}&#61441; "</span>,
+        <span style="color: #26a6a6; font-style: italic;">"title-len"</span>: <span style="color: #ff5d38; font-weight: bold;">28</span>,
+        <span style="color: #26a6a6; font-style: italic;">"unknown-tag"</span>: <span style="color: #bcd42a;">"N/A"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"consume-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61636; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"random-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"off"</span>: <span style="color: #bcd42a;">"&lt;span color=\"#f53c3c\"&gt;&#61556;&lt;/span&gt; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61556; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"repeat-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"single-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"on"</span>: <span style="color: #bcd42a;">"&#61470;1 "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"state-icons"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"playing"</span>: <span style="color: #bcd42a;">"&#61516; "</span>,
+            <span style="color: #26a6a6; font-style: italic;">"paused"</span>: <span style="color: #bcd42a;">"&#61515; "</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{artist} - {album} ({date})"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e9bbd9" class="outline-3">
+<h3 id="org3e9bbd9">Disk</h3>
+<div class="outline-text-3" id="text-org3e9bbd9">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"disk"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"path"</span>: <span style="color: #bcd42a;">"/"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">2</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61600; &lt;span style=\"italic\"&gt;{free}&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61600; {used}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{percentageUsed}% of {total}"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4031309" class="outline-3">
+<h3 id="org4031309">Battery</h3>
+<div class="outline-text-3" id="text-org4031309">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"battery"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"states"</span>: {
+            <span style="color: #26a6a6; font-style: italic;">"good"</span>: <span style="color: #ff5d38; font-weight: bold;">94</span>,
+            <span style="color: #26a6a6; font-style: italic;">"warning"</span>: <span style="color: #ff5d38; font-weight: bold;">30</span>,
+            <span style="color: #26a6a6; font-style: italic;">"critical"</span>: <span style="color: #ff5d38; font-weight: bold;">15</span>
+        },
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-charging"</span>: <span style="color: #bcd42a;">"&#62951; &lt;span style=\"italic\"&gt;{capacity}%&lt;/span&gt;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-plugged"</span>: <span style="color: #bcd42a;">"&#61926; {capacity}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"{icon} {time}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{time}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#62020;"</span>, <span style="color: #bcd42a;">"&#62019;"</span>, <span style="color: #bcd42a;">"&#62018;"</span>, <span style="color: #bcd42a;">"&#62017;"</span>, <span style="color: #bcd42a;">"&#62016;"</span>]
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e08ed0" class="outline-3">
+<h3 id="org4e08ed0">Network</h3>
+<div class="outline-text-3" id="text-org4e08ed0">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"network"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"interface"</span>: <span style="color: #bcd42a;">"wlp0s20f3"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-wifi"</span>: <span style="color: #bcd42a;">"&#61931; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-ethernet"</span>: <span style="color: #bcd42a;">"&#61633; {bandwidthDownBits}&#61539; {bandwidthUpBits} &#61538;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-alt"</span>: <span style="color: #bcd42a;">"&#61931; {ipaddr}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-disconnected"</span>: <span style="color: #bcd42a;">"&#61554;"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip-format"</span>: <span style="color: #bcd42a;">"{essid} ({signalStrength}%)"</span>,
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga0140b3" class="outline-3">
+<h3 id="orga0140b3">Backlight</h3>
+<div class="outline-text-3" id="text-orga0140b3">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"backlight"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"device"</span>: <span style="color: #bcd42a;">"intel_backlight"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"{icon} {percent}%"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format-icons"</span>: [<span style="color: #bcd42a;">"&#58253;"</span>, <span style="color: #bcd42a;">"&#58323;"</span>, <span style="color: #bcd42a;">"&#58321;"</span>, <span style="color: #bcd42a;">"&#58319;"</span>, <span style="color: #bcd42a;">"&#58318;"</span>, <span style="color: #bcd42a;">"&#58317;"</span>, <span style="color: #bcd42a;">"&#58314;"</span>, <span style="color: #bcd42a;">"&#58312;"</span>, <span style="color: #bcd42a;">"&#58267;"</span>],
+        <span style="color: #26a6a6; font-style: italic;">"on-click"</span>: <span style="color: #bcd42a;">"light -S 20 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-up"</span>: <span style="color: #bcd42a;">"light -A 1 &amp;&amp; light -G | cut -d'.' -f1 &gt; /home/babkock/.wob.sock"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"on-scroll-down"</span>: <span style="color: #bcd42a;">"light -U 1 &amp;&amp; light -G | cut -d '.' -f1 &gt; /home/babkock/.wob.sock"</span>
+    },
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org48993d0" class="outline-3">
+<h3 id="org48993d0">Clock</h3>
+<div class="outline-text-3" id="text-org48993d0">
+<div class="org-src-container">
+<pre class="src src-json">    <span style="color: #26a6a6; font-style: italic;">"custom/clock"</span>: {
+        <span style="color: #26a6a6; font-style: italic;">"exec"</span>: <span style="color: #bcd42a;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"interval"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"format"</span>: <span style="color: #bcd42a;">"&#61463; {}"</span>,
+        <span style="color: #26a6a6; font-style: italic;">"align"</span>: <span style="color: #ff5d38; font-weight: bold;">1</span>,
+        <span style="color: #26a6a6; font-style: italic;">"tooltip"</span>: <span style="color: #ff5d38;">false</span>
+    }
+}]
+</pre>
+</div>
+
+<footer>
+    <center>
+        <p>Copyright &copy; 2022 Tanner Babcock.</p>
+        <p>This page licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC 4.0).</p>
+        <p class="nav">
+            <a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp;
+            <a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a> &nbsp;&bull;&nbsp;
+            <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
+            <a href="https://gitlab.com/Babkock/Dotfiles">Dotfiles</a> &nbsp;&bull;&nbsp;
+            <a href="https://www.twitch.tv/babkock">Twitch</a> &nbsp;&bull;&nbsp;
+            <a href="https://www.paypal.com/donate/?business=X8ZY4CNBJEXVE&no_recurring=0&item_name=Please+help+me+pay+my+bills%2C+and+make+more+interesting+GNU%2FLinux+content%21+I+appreciate+you%21&currency_code=USD" target="_blank"><i>Donate!</i></a>
+        </p>
+    </center>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Tanner Babcock</p>
+<p class="date">Created: 2022-11-28 Mon 20:30</p>
+</div>
+</body>
+</html>
