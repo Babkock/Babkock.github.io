@@ -73,7 +73,7 @@ This is my personal GitHub Pages website. I use it to host my literate configura
 - [[https://gitlab.com/tbhomework/homework/-/tree/master/wdv341][Intro to PHP]] - ([[https://tannerbabcock.com/homework/index?c=wdv341][live]]) ([[https://tannerbabcock.com/homework/wdv341/wax/index][Final Project]])
 - [[https://gitlab.com/tbhomework/python][Python]]
 - [[https://gitlab.com/tbhomework/cis164][Advanced C++]] - ([[https://github.com/naertz/CasualMockSkirmish][Group Project]])
-- [[https://gitlab.com/tbhomework/cis152][Data Structures]]
+- [[https://gitlab.com/tbhomework/cis152][Data Structures]] - ([[https://github.com/Babkock/VideoStore][Final Project]])
 
 #+BEGIN_EXPORT html
 <footer>
