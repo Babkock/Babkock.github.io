@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-15 Wed 20:49 -->
+<!-- 2023-02-28 Tue 04:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Qutebrowser</title>
@@ -231,38 +231,38 @@ This is my Qutebrowser config. This literate configuration is available online o
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga918673">The Theme</a>
+<li><a href="#orgdd2c551">The Theme</a>
 <ul>
-<li><a href="#org985802c">Colors</a></li>
-<li><a href="#orgcb99fec">The Style</a></li>
+<li><a href="#org62b047b">Colors</a></li>
+<li><a href="#orgefcc2a3">The Style</a></li>
 </ul>
 </li>
-<li><a href="#org3ab153d">Qutebrowser</a>
+<li><a href="#org7a32f46">Qutebrowser</a>
 <ul>
-<li><a href="#orgb33470a">Preferences</a></li>
-<li><a href="#orgc018935">Fonts</a></li>
-<li><a href="#org28c4155">Appearance</a></li>
-<li><a href="#orgec00a54">Home page/Search engines</a></li>
-<li><a href="#org8c1e232">Keybindings</a></li>
+<li><a href="#orgb7a88d6">Preferences</a></li>
+<li><a href="#org9c59c10">Fonts</a></li>
+<li><a href="#org39d71dd">Appearance</a></li>
+<li><a href="#org90ad58f">Home page/Search engines</a></li>
+<li><a href="#org51fa5f4">Keybindings</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga918673" class="outline-2">
-<h2 id="orga918673">The Theme</h2>
-<div class="outline-text-2" id="text-orga918673">
+<div id="outline-container-orgdd2c551" class="outline-2">
+<h2 id="orgdd2c551">The Theme</h2>
+<div class="outline-text-2" id="text-orgdd2c551">
 
-<div id="org20c5654" class="figure">
+<div id="org2f1ae91" class="figure">
 <p><img src="https://babkock.github.io/images/qutebrowser.png" alt="qutebrowser.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org985802c" class="outline-3">
-<h3 id="org985802c">Colors</h3>
-<div class="outline-text-3" id="text-org985802c">
+<div id="outline-container-org62b047b" class="outline-3">
+<h3 id="org62b047b">Colors</h3>
+<div class="outline-text-3" id="text-org62b047b">
 <p>
 This was originally in a separate theme file, but I might as well include it in this one. These are the 16 colors that make up all of Qutebrowser&rsquo;s visual elements.
 </p>
@@ -299,9 +299,9 @@ This was originally in a separate theme file, but I might as well include it in 
 </div>
 </div>
 
-<div id="outline-container-orgcb99fec" class="outline-3">
-<h3 id="orgcb99fec">The Style</h3>
-<div class="outline-text-3" id="text-orgcb99fec">
+<div id="outline-container-orgefcc2a3" class="outline-3">
+<h3 id="orgefcc2a3">The Style</h3>
+<div class="outline-text-3" id="text-orgefcc2a3">
 <p>
 I try to have dark backgrounds and light foregrounds. Here is the color scheme for
 the completion widget and context menu.
@@ -365,7 +365,7 @@ c.colors.downloads.error.<span style="color: #fd971f;">fg</span> = base09
 
 c.colors.hints.<span style="color: #fd971f;">fg</span> = base0E
 <span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Note that you can use a `rgba(...)` value for transparency.</span>
-c.colors.hints.<span style="color: #fd971f;">bg</span> = base00
+c.colors.hints.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88101010'</span>
 c.colors.hints.match.<span style="color: #fd971f;">fg</span> = base05
 c.colors.keyhint.<span style="color: #fd971f;">fg</span> = base05
 <span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Highlight color for keys to complete the current keychain.</span>
@@ -459,13 +459,13 @@ c.colors.tabs.odd.<span style="color: #fd971f;">fg</span> = base02
 c.colors.tabs.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
 c.colors.tabs.even.<span style="color: #fd971f;">fg</span> = base03
 c.colors.tabs.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.tabs.pinned.even.<span style="color: #fd971f;">bg</span> = base0F
+c.colors.tabs.pinned.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
 c.colors.tabs.pinned.even.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.odd.<span style="color: #fd971f;">bg</span> = base0F
+c.colors.tabs.pinned.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
 c.colors.tabs.pinned.odd.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.selected.even.<span style="color: #fd971f;">bg</span> = base02
+c.colors.tabs.pinned.selected.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#cc81db54'</span>
 c.colors.tabs.pinned.selected.even.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.selected.odd.<span style="color: #fd971f;">bg</span> = base02
+c.colors.tabs.pinned.selected.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#cc81db54'</span>
 c.colors.tabs.pinned.selected.odd.<span style="color: #fd971f;">fg</span> = base00
 
 <span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Selected tabs ---</span>
@@ -482,18 +482,18 @@ c.colors.webpage.<span style="color: #fd971f;">bg</span> = base00
 </div>
 </div>
 
-<div id="outline-container-org3ab153d" class="outline-2">
-<h2 id="org3ab153d">Qutebrowser</h2>
-<div class="outline-text-2" id="text-org3ab153d">
+<div id="outline-container-org7a32f46" class="outline-2">
+<h2 id="org7a32f46">Qutebrowser</h2>
+<div class="outline-text-2" id="text-org7a32f46">
 <p>
 Okay, so all of the code above was just the theme for Qutebrowser. This is the actual
 configuration.
 </p>
 </div>
 
-<div id="outline-container-orgb33470a" class="outline-3">
-<h3 id="orgb33470a">Preferences</h3>
-<div class="outline-text-3" id="text-orgb33470a">
+<div id="outline-container-orgb7a88d6" class="outline-3">
+<h3 id="orgb7a88d6">Preferences</h3>
+<div class="outline-text-3" id="text-orgb7a88d6">
 <div class="org-src-container">
 <pre class="src src-python">config.load_autoconfig()
 
@@ -514,9 +514,9 @@ c.content.<span style="color: #fd971f;">xss_auditing</span> = <span style="color
 </div>
 </div>
 
-<div id="outline-container-orgc018935" class="outline-3">
-<h3 id="orgc018935">Fonts</h3>
-<div class="outline-text-3" id="text-orgc018935">
+<div id="outline-container-org9c59c10" class="outline-3">
+<h3 id="org9c59c10">Fonts</h3>
+<div class="outline-text-3" id="text-org9c59c10">
 <p>
 I have grouped all of the font settings for all interface elements together. These font sizes can be made bigger and smaller with the keybindings <code>,z</code>, <code>,x</code>, <code>,m</code>, <code>,n</code>, <code>,v</code>, and <code>,p</code>.
 </p>
@@ -547,9 +547,9 @@ c.fonts.messages.<span style="color: #fd971f;">warning</span> = <span style="col
 </div>
 </div>
 
-<div id="outline-container-org28c4155" class="outline-3">
-<h3 id="org28c4155">Appearance</h3>
-<div class="outline-text-3" id="text-org28c4155">
+<div id="outline-container-org39d71dd" class="outline-3">
+<h3 id="org39d71dd">Appearance</h3>
+<div class="outline-text-3" id="text-org39d71dd">
 <p>
 Here is where I set the padding for hints and tabs, and for some reason I&rsquo;d like
 to change some of the colors.
@@ -570,8 +570,6 @@ c.colors.downloads.start.<span style="color: #fd971f;">fg</span> = <span style="
 c.colors.downloads.start.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#00101010'</span>
 c.colors.downloads.stop.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#00101010'</span>
 c.colors.downloads.stop.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#ef4869ee'</span>
-c.colors.keyhint.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#f9c65b'</span>
-c.colors.keyhint.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99000000'</span>
 
 c.tabs.<span style="color: #fd971f;">padding</span> = {
     <span style="color: #e2c770;">"left"</span>: <span style="color: #9c91e4; font-weight: bold;">5</span>,
@@ -582,16 +580,16 @@ c.tabs.<span style="color: #fd971f;">padding</span> = {
 c.tabs.title.<span style="color: #fd971f;">format</span> = <span style="color: #e2c770;">"{audio}{current_title}"</span>
 c.tabs.<span style="color: #fd971f;">last_close</span> = <span style="color: #e2c770;">"close"</span>
 c.tabs.indicator.<span style="color: #fd971f;">width</span> = <span style="color: #9c91e4; font-weight: bold;">0</span>
-c.tabs.favicons.<span style="color: #fd971f;">scale</span> = <span style="color: #9c91e4; font-weight: bold;">1.0</span>
+c.tabs.favicons.<span style="color: #fd971f;">scale</span> = <span style="color: #9c91e4; font-weight: bold;">1.4</span>
 c.tabs.<span style="color: #fd971f;">show_switching_delay</span> = <span style="color: #9c91e4; font-weight: bold;">700</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgec00a54" class="outline-3">
-<h3 id="orgec00a54">Home page/Search engines</h3>
-<div class="outline-text-3" id="text-orgec00a54">
+<div id="outline-container-org90ad58f" class="outline-3">
+<h3 id="org90ad58f">Home page/Search engines</h3>
+<div class="outline-text-3" id="text-org90ad58f">
 <p>
 I have eight search engines: DuckDuckGo, Arch Wiki, Google, Google Images,
 Wikipedia, Invidious, YouTube, and GitHub.
@@ -620,9 +618,9 @@ c.fileselect.multiple_files.<span style="color: #fd971f;">command</span> = [<spa
 </div>
 </div>
 
-<div id="outline-container-org8c1e232" class="outline-3">
-<h3 id="org8c1e232">Keybindings</h3>
-<div class="outline-text-3" id="text-org8c1e232">
+<div id="outline-container-org51fa5f4" class="outline-3">
+<h3 id="org51fa5f4">Keybindings</h3>
+<div class="outline-text-3" id="text-org51fa5f4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -715,17 +713,17 @@ bookmarked sites. The second set is for loading my custom stylesheets.
 
 config.bind(<span style="color: #e2c770;">',`'</span>, <span style="color: #e2c770;">'open https://github.com/Babkock'</span>)
 config.bind(<span style="color: #e2c770;">',1'</span>, <span style="color: #e2c770;">'open https://gitlab.com/Babkock/'</span>)
-config.bind(<span style="color: #e2c770;">',2'</span>, <span style="color: #e2c770;">'open https://y.com.sb/feed/subscriptions'</span>)
+config.bind(<span style="color: #e2c770;">',2'</span>, <span style="color: #e2c770;">'open https://yt.funami.tech/feed/subscriptions'</span>)
 config.bind(<span style="color: #e2c770;">',3'</span>, <span style="color: #e2c770;">'open https://proton.me'</span>)
-config.bind(<span style="color: #e2c770;">',4'</span>, <span style="color: #e2c770;">'open https://en.wikipedia.org/wiki/Main_Page'</span>)
+config.bind(<span style="color: #e2c770;">',4'</span>, <span style="color: #e2c770;">'open https://tannerbabcock.com/home'</span>)
 config.bind(<span style="color: #e2c770;">',5'</span>, <span style="color: #e2c770;">'open https://passthepopcorn.me'</span>)
 config.bind(<span style="color: #e2c770;">',6'</span>, <span style="color: #e2c770;">'open https://empornium.is'</span>)
 config.bind(<span style="color: #e2c770;">',7'</span>, <span style="color: #e2c770;">'open https://boards.4channel.org/g/catalog'</span>)
-config.bind(<span style="color: #e2c770;">',8'</span>, <span style="color: #e2c770;">'open https://recordsrecordings.bandcamp.com'</span>)
+config.bind(<span style="color: #e2c770;">',8'</span>, <span style="color: #e2c770;">'open https://news.ycombinator.com/news'</span>)
 config.bind(<span style="color: #e2c770;">',9'</span>, <span style="color: #e2c770;">'open https://old.reddit.com'</span>)
 config.bind(<span style="color: #e2c770;">',0'</span>, <span style="color: #e2c770;">'open https://babkock.github.io'</span>)
 config.bind(<span style="color: #e2c770;">',-'</span>, <span style="color: #e2c770;">'open https://www.messenger.com'</span>)
-config.bind(<span style="color: #e2c770;">',='</span>, <span style="color: #e2c770;">'open https://tannerbabcock.com/home'</span>)
+config.bind(<span style="color: #e2c770;">',='</span>, <span style="color: #e2c770;">'open https://en.wikipedia.org/wiki/Main_Page'</span>)
 </pre>
 </div>
 
@@ -761,11 +759,6 @@ As you can see, I am a master of productivity and imagination. Don&rsquo;t ask m
 <tr>
 <td class="org-left"><code>,b</code></td>
 <td class="org-left">Reddit Style</td>
-</tr>
-
-<tr>
-<td class="org-left"><code>,w</code></td>
-<td class="org-left">Wikipedia Style</td>
 </tr>
 
 <tr>
@@ -811,7 +804,6 @@ As you can see, I am a master of productivity and imagination. Don&rsquo;t ask m
 config.bind(<span style="color: #e2c770;">',c'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets "" ""'</span>)
 config.bind(<span style="color: #e2c770;">',a'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/4chan.css ""'</span>)
 config.bind(<span style="color: #e2c770;">',b'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/reddit.css ""'</span>)
-config.bind(<span style="color: #e2c770;">',w'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/wikipedia.css ""'</span>)
 config.bind(<span style="color: #e2c770;">',e'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/empornium.css ""'</span>)
 
 config.bind(<span style="color: #e2c770;">',z'</span>, <span style="color: #e2c770;">'config-cycle fonts.default_size "16pt" "14pt"'</span>)
@@ -911,7 +903,7 @@ config.bind(<span style="color: #e2c770;">'.'</span>, <span style="color: #e2c77
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2023-02-15 Wed 20:49</p>
+<p class="date">Created: 2023-02-28 Tue 04:29</p>
 </div>
 </body>
 </html>
