@@ -55,6 +55,8 @@ This is my personal GitHub Pages website. I use it to host my literate configura
 - [[https://babkock.github.io/configs/foot.html][Foot]]
 - [[https://babkock.github.io/configs/polybar.html][Polybar]]
 - [[https://babkock.github.io/configs/qutebrowser.html][Qutebrowser]]
+- [[https://babkock.github.io/configs/waybar.html][Waybar]]
+- [[https://babkock.github.io/configs/waystyle.html][Waybar Style]]
 - [[https://babkock.github.io/configs/zsh.html][Zshrc]]
 
 ** My Music
