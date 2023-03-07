@@ -1003,7 +1003,7 @@ This shell function backs up my website. It takes one argument, the output direc
         printf <span style="color: #e2c770;">"Please specify directory to store backup in\n"</span> &gt; /dev/stderr
         <span style="color: #fd971f;">false</span>
     <span style="color: #fb2874; font-style: italic;">else</span>
-        <span style="color: #66d9ef;">sudo</span> rsync -Pa -e <span style="color: #e2c770;">"ssh -p 2222 -i </span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">HOME</span><span style="color: #e2c770;">/.ssh/tbcom_ssh"</span> tababcock@198.23.51.224:/home/www/tannerbabcock.com <span style="color: #e2c770;">"</span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">1</span><span style="color: #e2c770;">"</span>
+        <span style="color: #66d9ef;">sudo</span> rsync -Pa -e <span style="color: #e2c770;">"ssh -p 2222 -i </span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">HOME</span><span style="color: #e2c770;">/.ssh/tbcom_ssh"</span> redacted@redacted:/home/www/tannerbabcock.com <span style="color: #e2c770;">"</span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">1</span><span style="color: #e2c770;">"</span>
         <span style="color: #fd971f;">true</span>
     <span style="color: #fb2874; font-style: italic;">fi</span>
 <span style="color: #fb2874;">}</span>
@@ -1585,7 +1585,7 @@ the GNU coreutils they&rsquo;re modeled after. These projects are worth checking
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">p</span>=<span style="color: #e2c770;">"</span><span style="color: #e2c770;">sudo</span><span style="color: #e2c770;"> flowtop -46UTDISs -t 2"</span>
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">q</span>=<span style="color: #e2c770;">"feh"</span>
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">qw</span>=<span style="color: #e2c770;">"nsxiv ."</span>
-<span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">s</span>=<span style="color: #e2c770;">"ssh tababcock@198.23.51.224 -p 2222"</span>
+<span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">s</span>=<span style="color: #e2c770;">"ssh redacted@redacted -p 2222"</span>
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">se</span>=<span style="color: #e2c770;">"</span><span style="color: #e2c770;">pkill</span><span style="color: #e2c770;"> -x emacs; emacs --daemon"</span>
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">sp</span>=<span style="color: #e2c770;">"</span><span style="color: #e2c770;">pkill</span><span style="color: #e2c770;"> -x pulseaudio; pulseaudio --start"</span>
 <span style="color: #fd971f;">alias</span> <span style="color: #fd971f;">sr</span>=<span style="color: #e2c770;">"</span><span style="color: #e2c770;">pkill</span><span style="color: #e2c770;"> -x waybar; waybar -c '</span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">HOME</span><span style="color: #e2c770;">/.config/waybar/rconfig.json' -s '</span><span style="color: #fd971f;">$</span><span style="color: #fd971f;">HOME</span><span style="color: #e2c770;">/.config/waybar/river.css' &amp;"</span>
