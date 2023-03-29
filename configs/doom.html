@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-05 Sun 01:13 -->
+<!-- 2023-03-29 Wed 02:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doom Emacs</title>
@@ -231,66 +231,66 @@ This literate configuration is available online on my <a href="https://babkock.g
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2fccb9a">Opening</a>
+<li><a href="#org5447448">Opening</a>
 <ul>
-<li><a href="#org8bd108d">Basic Info</a></li>
-<li><a href="#org095724c">Preferences</a></li>
-<li><a href="#org0f87624">Appearance</a></li>
-<li><a href="#org4a44a64">Doom Themes</a></li>
-<li><a href="#org8e3fe7a">Garbage Collection</a></li>
+<li><a href="#orgb2d2344">Basic Info</a></li>
+<li><a href="#orgedfc7a6">Preferences</a></li>
+<li><a href="#orgeda8a1c">Appearance</a></li>
+<li><a href="#orgd0a29a0">Doom Themes</a></li>
+<li><a href="#org45455e4">Garbage Collection</a></li>
 </ul>
 </li>
-<li><a href="#org593c657">Circe</a></li>
-<li><a href="#org72cb6a6">Dired</a>
+<li><a href="#org71d54ff">Circe</a></li>
+<li><a href="#orgbc8a659">Dired</a>
 <ul>
-<li><a href="#org692b9f2">File Associations</a></li>
-<li><a href="#org27fce42">Keybindings</a></li>
+<li><a href="#orgc0eaa17">File Associations</a></li>
+<li><a href="#org5a00b64">Keybindings</a></li>
 </ul>
 </li>
-<li><a href="#org2aa2c67">Doom Dashboard</a>
+<li><a href="#org9c08473">Doom Dashboard</a>
 <ul>
-<li><a href="#org24c3931">Splash Phrases</a></li>
-<li><a href="#orgccec4b8">Functions</a></li>
-<li><a href="#org384e84d">Menu</a></li>
-<li><a href="#orgff9caa5">Keybindings</a></li>
+<li><a href="#org6ed4250">Splash Phrases</a></li>
+<li><a href="#orgc0f600b">Functions</a></li>
+<li><a href="#org04b0db9">Menu</a></li>
+<li><a href="#org7f8bbaf">Keybindings</a></li>
 </ul>
 </li>
-<li><a href="#org25ff5b1">Elfeed</a>
+<li><a href="#org1edfd36">Elfeed</a>
 <ul>
-<li><a href="#org5c6e53b">Preferences</a></li>
-<li><a href="#org2a17e37">Keybindings</a></li>
+<li><a href="#org1199a8a">Preferences</a></li>
+<li><a href="#org3b221dc">Keybindings</a></li>
 </ul>
 </li>
-<li><a href="#orgef9c89a">Helm</a></li>
-<li><a href="#org2d8a49b">Keybindings</a>
+<li><a href="#orgb017b52">Helm</a></li>
+<li><a href="#orgb46406b">Keybindings</a>
 <ul>
-<li><a href="#org35d8588">Global Keybindings</a></li>
+<li><a href="#orgd64d37c">Global Keybindings</a></li>
 </ul>
 </li>
-<li><a href="#org60646b7">Magit</a></li>
-<li><a href="#orgbe88fac">Modeline</a></li>
-<li><a href="#org9db8c92">MPDel</a>
+<li><a href="#orgc7c4605">Magit</a></li>
+<li><a href="#orge106013">Modeline</a></li>
+<li><a href="#orgef138f3">MPDel</a>
 <ul>
-<li><a href="#orge125d42">Functions</a></li>
-<li><a href="#orgd2c2761">Preferences</a></li>
-<li><a href="#orgbe71480">Keybindings</a></li>
+<li><a href="#orgce8a427">Functions</a></li>
+<li><a href="#orgb2ac700">Preferences</a></li>
+<li><a href="#org0d079ca">Keybindings</a></li>
 </ul>
 </li>
-<li><a href="#org643de22">Org</a></li>
-<li><a href="#orgc0c617a">Treemacs</a></li>
+<li><a href="#org683d36a">Org</a></li>
+<li><a href="#org3708d1c">Treemacs</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="org1f3b2b8" class="figure">
+<div id="org97bd7be" class="figure">
 <p><img src="https://babkock.github.io/images/emacs1.png" alt="emacs1.png" />
 </p>
 </div>
 
-<div id="outline-container-org2fccb9a" class="outline-2">
-<h2 id="org2fccb9a">Opening</h2>
-<div class="outline-text-2" id="text-org2fccb9a">
+<div id="outline-container-org5447448" class="outline-2">
+<h2 id="org5447448">Opening</h2>
+<div class="outline-text-2" id="text-org5447448">
 <p>
 Gotta have this at the beginning of the config file.
 </p>
@@ -301,9 +301,9 @@ Gotta have this at the beginning of the config file.
 </div>
 </div>
 
-<div id="outline-container-org8bd108d" class="outline-3">
-<h3 id="org8bd108d">Basic Info</h3>
-<div class="outline-text-3" id="text-org8bd108d">
+<div id="outline-container-orgb2d2344" class="outline-3">
+<h3 id="orgb2d2344">Basic Info</h3>
+<div class="outline-text-3" id="text-orgb2d2344">
 <p>
 Here, I set my name and email address.
 </p>
@@ -316,9 +316,9 @@ Here, I set my name and email address.
 </div>
 </div>
 
-<div id="outline-container-org095724c" class="outline-3">
-<h3 id="org095724c">Preferences</h3>
-<div class="outline-text-3" id="text-org095724c">
+<div id="outline-container-orgedfc7a6" class="outline-3">
+<h3 id="orgedfc7a6">Preferences</h3>
+<div class="outline-text-3" id="text-orgedfc7a6">
 <p>
 Fix the garbage collector, enable zoom in and zoom out keybindings.
 </p>
@@ -345,7 +345,7 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
 <span style="color: #fb2874;">(</span><span style="color: #fd971f;">global-set-key</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">kbd</span> <span style="color: #e2c770;">"C-&lt;wheel-down&gt;"</span><span style="color: #fd971f;">)</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">text-scale-decrease</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fd971f;">global-set-key</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">kbd</span> <span style="color: #e2c770;">"&lt;escape&gt;"</span><span style="color: #fd971f;">)</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">keyboard-escape-quit</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fd971f;">delete-selection-mode</span> t<span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">ranger-show-hidden</span> t<span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> ranger-show-hidden t<span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">scroll-conservatively</span> <span style="color: #9c91e4; font-weight: bold;">101</span>
       <span style="color: #fd971f;">battery-update-interval</span> <span style="color: #9c91e4; font-weight: bold;">2</span>
       <span style="color: #fd971f;">focus-follows-mouse</span> t
@@ -364,6 +364,8 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
       writeroom-maximize-window t
       <span style="color: #fd971f;">+zen-text-scale</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">fancy-battery-show-percentage</span> t<span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">evil-vsplit-window-right</span> t
+      <span style="color: #fd971f;">evil-split-window-below</span> t<span style="color: #fb2874;">)</span>
 
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">minibuffer-setup-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">+popup-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
@@ -373,9 +375,9 @@ Fix the garbage collector, enable zoom in and zoom out keybindings.
 </div>
 </div>
 
-<div id="outline-container-org0f87624" class="outline-3">
-<h3 id="org0f87624">Appearance</h3>
-<div class="outline-text-3" id="text-org0f87624">
+<div id="outline-container-orgeda8a1c" class="outline-3">
+<h3 id="orgeda8a1c">Appearance</h3>
+<div class="outline-text-3" id="text-orgeda8a1c">
 <p>
 Now the fun stuff, where I set the fonts, theme, and colors.
 </p>
@@ -417,7 +419,7 @@ Now the fun stuff, where I set the fonts, theme, and colors.
       <span style="color: #fd971f;">large-file-warning-threshold</span> nil<span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq-default</span> <span style="color: #fd971f;">shell-file-name</span> <span style="color: #e2c770;">"/bin/zsh"</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">helpful-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mixed-pitch-mode</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">helpful-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mixed-pitch-mode</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">writeroom-mode-enable-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mixed-pitch-mode</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">writeroom-mode-disable-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mixed-pitch-mode</span><span style="color: #fb2874;">)</span>
 </pre>
@@ -443,9 +445,9 @@ These next two lines are where the alpha channel for the window is defined. The 
 </div>
 </div>
 
-<div id="outline-container-org4a44a64" class="outline-3">
-<h3 id="org4a44a64">Doom Themes</h3>
-<div class="outline-text-3" id="text-org4a44a64">
+<div id="outline-container-orgd0a29a0" class="outline-3">
+<h3 id="orgd0a29a0">Doom Themes</h3>
+<div class="outline-text-3" id="text-orgd0a29a0">
 <p>
 Just a couple more things to make our lives easier.
 </p>
@@ -465,15 +467,16 @@ Just a couple more things to make our lives easier.
 </div>
 </div>
 
-<div id="outline-container-org8e3fe7a" class="outline-3">
-<h3 id="org8e3fe7a">Garbage Collection</h3>
-<div class="outline-text-3" id="text-org8e3fe7a">
+<div id="outline-container-org45455e4" class="outline-3">
+<h3 id="org45455e4">Garbage Collection</h3>
+<div class="outline-text-3" id="text-org45455e4">
 <p>
 Just do it all the time.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">doom-dashboard-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">doom-dashboard-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">doom-load-theme-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">doom-first-file-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">kill-emacs-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
@@ -481,23 +484,22 @@ Just do it all the time.
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">after-init-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">beacon-mode</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">doom-init-ui-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">doom-after-init-modules-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">eww-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">eww-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org593c657" class="outline-2">
-<h2 id="org593c657">Circe</h2>
-<div class="outline-text-2" id="text-org593c657">
+<div id="outline-container-org71d54ff" class="outline-2">
+<h2 id="org71d54ff">Circe</h2>
+<div class="outline-text-2" id="text-org71d54ff">
 <p>
 This is a simple list of font faces for various Circe UI elements.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> circe
+<pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> circe
   <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">custom-set-faces!</span>
     <span style="color: #9c91e4;">'</span><span style="color: #b6e63e;">(</span>circe-prompt-face <span style="color: #fd971f;">:foreground</span> <span style="color: #e2c770;">"#0ef"</span><span style="color: #b6e63e;">)</span>
     <span style="color: #9c91e4;">'</span><span style="color: #b6e63e;">(</span>circe-server-face <span style="color: #fd971f;">:foreground</span> <span style="color: #e2c770;">"#ee0"</span><span style="color: #b6e63e;">)</span>
@@ -509,13 +511,13 @@ This is a simple list of font faces for various Circe UI elements.
 </div>
 </div>
 
-<div id="outline-container-org72cb6a6" class="outline-2">
-<h2 id="org72cb6a6">Dired</h2>
-<div class="outline-text-2" id="text-org72cb6a6">
+<div id="outline-container-orgbc8a659" class="outline-2">
+<h2 id="orgbc8a659">Dired</h2>
+<div class="outline-text-2" id="text-orgbc8a659">
 </div>
-<div id="outline-container-org692b9f2" class="outline-3">
-<h3 id="org692b9f2">File Associations</h3>
-<div class="outline-text-3" id="text-org692b9f2">
+<div id="outline-container-orgc0eaa17" class="outline-3">
+<h3 id="orgc0eaa17">File Associations</h3>
+<div class="outline-text-3" id="text-orgc0eaa17">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> dired-open-extensions <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"jpg"</span> . <span style="color: #e2c770;">"sxiv"</span><span style="color: #b6e63e;">)</span>
                               <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"png"</span> . <span style="color: #e2c770;">"sxiv"</span><span style="color: #b6e63e;">)</span>
@@ -531,9 +533,9 @@ This is a simple list of font faces for various Circe UI elements.
 </div>
 </div>
 
-<div id="outline-container-org27fce42" class="outline-3">
-<h3 id="org27fce42">Keybindings</h3>
-<div class="outline-text-3" id="text-org27fce42">
+<div id="outline-container-org5a00b64" class="outline-3">
+<h3 id="org5a00b64">Keybindings</h3>
+<div class="outline-text-3" id="text-org5a00b64">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">evil-define-key</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">normal</span> <span style="color: #fd971f;">dired-mode-map</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">kbd</span> <span style="color: #e2c770;">"J"</span><span style="color: #fd971f;">)</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">image-dired-previous-line-and-display</span>
@@ -544,13 +546,13 @@ This is a simple list of font faces for various Circe UI elements.
 </div>
 </div>
 
-<div id="outline-container-org2aa2c67" class="outline-2">
-<h2 id="org2aa2c67">Doom Dashboard</h2>
-<div class="outline-text-2" id="text-org2aa2c67">
+<div id="outline-container-org9c08473" class="outline-2">
+<h2 id="org9c08473">Doom Dashboard</h2>
+<div class="outline-text-2" id="text-org9c08473">
 </div>
-<div id="outline-container-org24c3931" class="outline-3">
-<h3 id="org24c3931">Splash Phrases</h3>
-<div class="outline-text-3" id="text-org24c3931">
+<div id="outline-container-org6ed4250" class="outline-3">
+<h3 id="org6ed4250">Splash Phrases</h3>
+<div class="outline-text-3" id="text-org6ed4250">
 <p>
 I stole this entire next section from someone else.
 </p>
@@ -644,15 +646,15 @@ I stole this entire next section from someone else.
 </div>
 </div>
 
-<div id="outline-container-orgccec4b8" class="outline-3">
-<h3 id="orgccec4b8">Functions</h3>
-<div class="outline-text-3" id="text-orgccec4b8">
+<div id="outline-container-orgc0f600b" class="outline-3">
+<h3 id="orgc0f600b">Functions</h3>
+<div class="outline-text-3" id="text-orgc0f600b">
 <p>
 Here is what my Doom splash screen (Dashboard) typically looks like.
 </p>
 
 
-<div id="orgfa39e78" class="figure">
+<div id="org8c4c1a5" class="figure">
 <p><img src="https://babkock.github.io/images/emacs2.png" alt="emacs2.png" />
 </p>
 </div>
@@ -672,27 +674,27 @@ My customized dashboard. These first two lines are just for setting up my Multip
       foot-org-file-name <span style="color: #e2c770;">"foot.org"</span>
       foot-org-directory <span style="color: #e2c770;">"~/.config/foot/"</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">open-config-org</span> <span style="color: #fd971f;">()</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">tb/open-config-org</span> <span style="color: #fd971f;">()</span>
     <span style="color: #7f7f80; font-style: italic;">"Open your private Config.org file."</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">expand-file-name</span> config-org-file-name config-org-directory<span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">open-agenda-org</span> <span style="color: #fd971f;">()</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">tb/open-agenda-org</span> <span style="color: #fd971f;">()</span>
     <span style="color: #7f7f80; font-style: italic;">"Open your agenda.org file."</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">expand-file-name</span> agenda-org-file-name agenda-org-directory<span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">open-foot-org</span> <span style="color: #fd971f;">()</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">tb/open-foot-org</span> <span style="color: #fd971f;">()</span>
     <span style="color: #7f7f80; font-style: italic;">"Open the Foot configuration file."</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">expand-file-name</span> foot-org-file-name foot-org-directory<span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">open-tbcom</span> <span style="color: #fd971f;">()</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">tb/open-tbcom</span> <span style="color: #fd971f;">()</span>
     <span style="color: #7f7f80; font-style: italic;">"Opens TBcom repository"</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">dired</span> <span style="color: #e2c770;">"~/TBcom"</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">open-dotfiles</span> <span style="color: #fd971f;">()</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">tb/open-dotfiles</span> <span style="color: #fd971f;">()</span>
     <span style="color: #7f7f80; font-style: italic;">"Opens Dotfiles repository"</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">dired</span> <span style="color: #e2c770;">"~/git/Dotfiles"</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
@@ -706,13 +708,13 @@ directories, make sure you change the variable names too, and change the content
 </div>
 </div>
 
-<div id="outline-container-org384e84d" class="outline-3">
-<h3 id="org384e84d">Menu</h3>
-<div class="outline-text-3" id="text-org384e84d">
+<div id="outline-container-org04b0db9" class="outline-3">
+<h3 id="org04b0db9">Menu</h3>
+<div class="outline-text-3" id="text-org04b0db9">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq-default</span> <span style="color: #fd971f;">+doom-dashboard-menu-sections</span>
     <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Kill All Buffers"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-octicon</span> <span style="color: #e2c770;">"alert"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-red</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-octicon</span> <span style="color: #e2c770;">"alert"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-red</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lred<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> doom/kill-all-buffers<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Open Recent File"</span>
@@ -720,32 +722,32 @@ directories, make sure you change the variable names too, and change the content
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lblue<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> helm-recentf<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Open Project"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-octicon</span> <span style="color: #e2c770;">"repo"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-red</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-octicon</span> <span style="color: #e2c770;">"repo"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-red</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lred<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> projectile-find-file<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Open TBcom"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-alltheicon</span> <span style="color: #e2c770;">"git"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-pink</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-alltheicon</span> <span style="color: #e2c770;">"git"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-pink</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lpink<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
-        <span style="color: #fd971f;">:action</span> open-tbcom<span style="color: #b6e63e;">)</span>
+        <span style="color: #fd971f;">:action</span> tb/open-tbcom<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Org Agenda"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"calendar"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-maroon</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"calendar"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-maroon</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lmaroon<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> org-agenda<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Open Dotfiles"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"floppy-o"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-blue</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"floppy-o"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-blue</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lblue<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
-        <span style="color: #fd971f;">:action</span> open-dotfiles<span style="color: #b6e63e;">)</span>
+        <span style="color: #fd971f;">:action</span> tb/open-dotfiles<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"RSS Feeds"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"rss"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-yellow</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"rss"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-yellow</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lyellow<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> elfeed<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Open config.org"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"cogs"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-green</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"cogs"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-green</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:when</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">file-directory-p</span> <span style="color: #fd971f;">doom-private-dir</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lgreen<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
-        <span style="color: #fd971f;">:action</span> open-config-org<span style="color: #b6e63e;">)</span>
+        <span style="color: #fd971f;">:action</span> tb/open-config-org<span style="color: #b6e63e;">)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Doom Reload"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"refresh"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-orange</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"refresh"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-orange</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lorange<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> doom/reload<span style="color: #b6e63e;">)</span>
 <span style="color: #555556; font-style: italic;">;      </span><span style="color: #555556; font-style: italic;">("Change Theme"</span>
@@ -753,7 +755,7 @@ directories, make sure you change the variable names too, and change the content
 <span style="color: #555556; font-style: italic;">;        </span><span style="color: #555556; font-style: italic;">:face (:inherit (doom-dashboard-menu-title bold) :inherit (all-the-icons-lpurple) :height 0.95)</span>
 <span style="color: #555556; font-style: italic;">;        </span><span style="color: #555556; font-style: italic;">:action consult-theme)</span>
       <span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"Music Player"</span>
-        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"music"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-cyan</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.94</span><span style="color: #66d9ef;">)</span>
+        <span style="color: #fd971f;">:icon</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">all-the-icons-faicon</span> <span style="color: #e2c770;">"music"</span> <span style="color: #fd971f;">:face</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">all-the-icons-cyan</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:face</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>doom-dashboard-menu-title bold<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:inherit</span> <span style="color: #fb2874;">(</span>all-the-icons-lcyan<span style="color: #fb2874;">)</span> <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">0.95</span><span style="color: #66d9ef;">)</span>
         <span style="color: #fd971f;">:action</span> mpdel-playlist-open<span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 </pre>
@@ -765,9 +767,9 @@ Each menu item should share a similar color with its respective icon. Using a va
 </div>
 </div>
 
-<div id="outline-container-orgff9caa5" class="outline-3">
-<h3 id="orgff9caa5">Keybindings</h3>
-<div class="outline-text-3" id="text-orgff9caa5">
+<div id="outline-container-org7f8bbaf" class="outline-3">
+<h3 id="org7f8bbaf">Keybindings</h3>
+<div class="outline-text-3" id="text-org7f8bbaf">
 <p>
 This part installs the shortcuts for our Doom Dashboard. These keybindings only work in Dashboard mode. This block of code uses the quick-opener functions I defined above, by the
 Dashboard menu sections.
@@ -929,6 +931,11 @@ Dashboard menu sections.
 </tr>
 
 <tr>
+<td class="org-left"><code>s</code></td>
+<td class="org-left">Open Other Dashboard</td>
+</tr>
+
+<tr>
 <td class="org-left"><code>t</code></td>
 <td class="org-left">Open TBcom</td>
 </tr>
@@ -1037,20 +1044,18 @@ Dashboard menu sections.
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Config Dir"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"C"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">doom/open-private-config</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dired"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"j"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">dired</span> <span style="color: #e2c770;">"."</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dired in Home Directory"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"J"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">dired</span> <span style="color: #e2c770;">"~/"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open config.org"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"c"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">open-config-org</span>
+    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open config.org"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"c"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">tb/open-config-org</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open init.org"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"i"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #66d9ef;">(</span><span style="color: #fd971f;">expand-file-name</span> <span style="color: #e2c770;">"init.org"</span> <span style="color: #fd971f;">doom-private-dir</span><span style="color: #66d9ef;">)</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open ZSH Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"z"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.zsh.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open ZSH Theme"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"Z"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.oh-my-zsh/themes/babkockicon.zsh-theme"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Qutebrowser Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"q"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/qutebrowser/config.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Polybar Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"o"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/polybar/config.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Foot Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"F"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">open-foot-org</span>
+    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Foot Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"F"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">tb/open-foot-org</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Waybar Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"w"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/waybar/config.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Waybar Style"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"W"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/waybar/style.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open BSPWM Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"m"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/bspwm/bspwm.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open MPV Config"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"M"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.config/mpv/mpv.conf"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dotfile"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"d"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #b6e63e;">doom-project-find-file</span> <span style="color: #e2c770;">"~/.config/"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open TBcom"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"t"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">open-tbcom</span>
-    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dotfiles"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"D"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">open-dotfiles</span>
+    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open TBcom"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"t"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">tb/open-tbcom</span>
+    <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dotfiles"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"D"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">tb/open-dotfiles</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dotfiles Fetch"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"h"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/git/Dotfiles/fetch.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Dotfiles README"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"H"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/git/Dotfiles/README.org"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Open Xresources"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"X"</span> <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">cmd!</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">find-file</span> <span style="color: #e2c770;">"~/.Xresources"</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span>
@@ -1094,17 +1099,17 @@ This part removes other elements of the Dashboard.
 </div>
 </div>
 
-<div id="outline-container-org25ff5b1" class="outline-2">
-<h2 id="org25ff5b1">Elfeed</h2>
-<div class="outline-text-2" id="text-org25ff5b1">
+<div id="outline-container-org1edfd36" class="outline-2">
+<h2 id="org1edfd36">Elfeed</h2>
+<div class="outline-text-2" id="text-org1edfd36">
 <p>
 This first block of code defines font faces per Elfeed tags, font faces for UI elements, preferences, and hooks.
 </p>
 </div>
 
-<div id="outline-container-org5c6e53b" class="outline-3">
-<h3 id="org5c6e53b">Preferences</h3>
-<div class="outline-text-3" id="text-org5c6e53b">
+<div id="outline-container-org1199a8a" class="outline-3">
+<h3 id="org1199a8a">Preferences</h3>
+<div class="outline-text-3" id="text-org1199a8a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fd971f;">require</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">elfeed-goodies</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> elfeed
@@ -1198,9 +1203,9 @@ This second block of code sets preferences for the <code>elfeed-goodies</code> p
 </div>
 </div>
 
-<div id="outline-container-org2a17e37" class="outline-3">
-<h3 id="org2a17e37">Keybindings</h3>
-<div class="outline-text-3" id="text-org2a17e37">
+<div id="outline-container-org3b221dc" class="outline-3">
+<h3 id="org3b221dc">Keybindings</h3>
+<div class="outline-text-3" id="text-org3b221dc">
 <p>
 I have custom key bindings for Elfeed that will filter the feed list by tag names. Shift + J and Shift + K (or capital J and K) will update the entry pane with the next item in the <code>elfeed-search</code>.
 </p>
@@ -1300,20 +1305,20 @@ I have custom key bindings for Elfeed that will filter the feed list by tag name
 </div>
 </div>
 
-<div id="outline-container-orgef9c89a" class="outline-2">
-<h2 id="orgef9c89a">Helm</h2>
-<div class="outline-text-2" id="text-orgef9c89a">
+<div id="outline-container-orgb017b52" class="outline-2">
+<h2 id="orgb017b52">Helm</h2>
+<div class="outline-text-2" id="text-orgb017b52">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> helm
-    <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">helm-show-completion-min-window-height</span> <span style="color: #9c91e4; font-weight: bold;">9</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+    <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> helm-show-completion-min-window-height <span style="color: #9c91e4; font-weight: bold;">9</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2d8a49b" class="outline-2">
-<h2 id="org2d8a49b">Keybindings</h2>
-<div class="outline-text-2" id="text-org2d8a49b">
+<div id="outline-container-orgb46406b" class="outline-2">
+<h2 id="orgb46406b">Keybindings</h2>
+<div class="outline-text-2" id="text-orgb46406b">
 <p>
 This first bit lets us navigate between windows easier.
 </p>
@@ -1331,9 +1336,9 @@ This first bit lets us navigate between windows easier.
 </div>
 </div>
 
-<div id="outline-container-org35d8588" class="outline-3">
-<h3 id="org35d8588">Global Keybindings</h3>
-<div class="outline-text-3" id="text-org35d8588">
+<div id="outline-container-orgd64d37c" class="outline-3">
+<h3 id="orgd64d37c">Global Keybindings</h3>
+<div class="outline-text-3" id="text-orgd64d37c">
 <p>
 These are global keybindings, which are available in all modes. The Magit key bindings will not work if the file is not in a Git repository.
 </p>
@@ -1514,9 +1519,9 @@ These are global keybindings, which are available in all modes. The Magit key bi
 </div>
 </div>
 
-<div id="outline-container-org60646b7" class="outline-2">
-<h2 id="org60646b7">Magit</h2>
-<div class="outline-text-2" id="text-org60646b7">
+<div id="outline-container-orgc7c4605" class="outline-2">
+<h2 id="orgc7c4605">Magit</h2>
+<div class="outline-text-2" id="text-orgc7c4605">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> magit
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">custom-set-faces!</span>
@@ -1536,8 +1541,8 @@ These are global keybindings, which are available in all modes. The Magit key bi
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">global-diff-hl-mode</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">diff-hl-margin-mode</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">diff-hl-flydiff-mode</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">(</span><span style="color: #b6e63e;">diff-hl-dired-mode</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">(</span><span style="color: #b6e63e;">diff-hl-show-hunk-mouse-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+    <span style="color: #fd971f;">(</span><span style="color: #fd971f;">diff-hl-dired-mode</span><span style="color: #fd971f;">)</span>
+    <span style="color: #fd971f;">(</span><span style="color: #fd971f;">diff-hl-show-hunk-mouse-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">magit-pre-refresh-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">diff-hl-magit-pre-refresh</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">magit-post-refresh-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">diff-hl-magit-post-refresh</span><span style="color: #fb2874;">)</span>
@@ -1546,9 +1551,9 @@ These are global keybindings, which are available in all modes. The Magit key bi
 </div>
 </div>
 
-<div id="outline-container-orgbe88fac" class="outline-2">
-<h2 id="orgbe88fac">Modeline</h2>
-<div class="outline-text-2" id="text-orgbe88fac">
+<div id="outline-container-orge106013" class="outline-2">
+<h2 id="orge106013">Modeline</h2>
+<div class="outline-text-2" id="text-orge106013">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> modeline
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">doom-modeline-buffer-file-name-style</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">relative-to-project</span>
@@ -1578,13 +1583,13 @@ These are global keybindings, which are available in all modes. The Magit key bi
 </div>
 </div>
 
-<div id="outline-container-org9db8c92" class="outline-2">
-<h2 id="org9db8c92">MPDel</h2>
-<div class="outline-text-2" id="text-org9db8c92">
+<div id="outline-container-orgef138f3" class="outline-2">
+<h2 id="orgef138f3">MPDel</h2>
+<div class="outline-text-2" id="text-orgef138f3">
 </div>
-<div id="outline-container-orge125d42" class="outline-3">
-<h3 id="orge125d42">Functions</h3>
-<div class="outline-text-3" id="text-orge125d42">
+<div id="outline-container-orgce8a427" class="outline-3">
+<h3 id="orgce8a427">Functions</h3>
+<div class="outline-text-3" id="text-orgce8a427">
 <p>
 These two functions are useful for showing MPD notifications with album artwork and artist and album fields. I will add these functions to MPDel&rsquo;s hooks.
 </p>
@@ -1601,16 +1606,16 @@ These two functions are useful for showing MPD notifications with album artwork 
 
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">defun</span> <span style="color: #b6e63e;">mpdnotify-play</span> <span style="color: #fd971f;">()</span>
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">interactive</span><span style="color: #fd971f;">)</span>
-    <span style="color: #fd971f;">(</span>mpdel-playlist-play<span style="color: #fd971f;">)</span>
+    <span style="color: #fd971f;">(</span><span style="color: #fd971f;">mpdel-playlist-play</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #b6e63e;">mpdnotify</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd2c2761" class="outline-3">
-<h3 id="orgd2c2761">Preferences</h3>
-<div class="outline-text-3" id="text-orgd2c2761">
+<div id="outline-container-orgb2ac700" class="outline-3">
+<h3 id="orgb2ac700">Preferences</h3>
+<div class="outline-text-3" id="text-orgb2ac700">
 <p>
 This is a list of faces for the MPDel interface. After this list is where I add the <code>mpdnotify</code> function to the hooks.
 </p>
@@ -1626,18 +1631,18 @@ This is a list of faces for the MPDel interface. After this list is where I add 
     <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span>mpdel-tablist-date-face <span style="color: #fd971f;">:foreground</span> <span style="color: #e2c770;">"#f9c65b"</span><span style="color: #fd971f;">)</span>
     <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span>header-line <span style="color: #fd971f;">:height</span> <span style="color: #9c91e4; font-weight: bold;">1.1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-playlist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #fd971f;">hl-line-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdnotify</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">libmpdel-current-song-changed-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdnotify</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-tablist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-playlist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #fd971f;">hl-line-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-playlist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdnotify</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">libmpdel-current-song-changed-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdnotify</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-tablist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-browser-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #fd971f;">hl-line-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">navigel-tablist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #fd971f;">hl-line-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">mpdel-tablist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">navigel-tablist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">navigel-tablist-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #fd971f;">hl-line-mode</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel-tablist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">navigel-tablist-mode-hook</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">hide-mode-line-mode</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> mpdel
-    <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> libmpdel-hostname <span style="color: #e2c770;">"127.0.0.2"</span><span style="color: #fd971f;">)</span>
+    <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">libmpdel-hostname</span> <span style="color: #e2c770;">"127.0.0.2"</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span><span style="color: #fd971f;">require</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">mpdel</span><span style="color: #fd971f;">)</span>
     <span style="color: #fd971f;">(</span>mpdel-mode<span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
 </pre>
@@ -1645,12 +1650,12 @@ This is a list of faces for the MPDel interface. After this list is where I add 
 </div>
 </div>
 
-<div id="outline-container-orgbe71480" class="outline-3">
-<h3 id="orgbe71480">Keybindings</h3>
-<div class="outline-text-3" id="text-orgbe71480">
+<div id="outline-container-org0d079ca" class="outline-3">
+<h3 id="org0d079ca">Keybindings</h3>
+<div class="outline-text-3" id="text-org0d079ca">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> mpdel-playlist-mode-map <span style="color: #fd971f;">(</span><span style="color: #fd971f;">make-sparse-keymap</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">map!</span> <span style="color: #fd971f;">:map</span> mpdel-playlist-mode-map
+<pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">mpdel-playlist-mode-map</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">make-sparse-keymap</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
+<span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">map!</span> <span style="color: #fd971f;">:map</span> <span style="color: #fd971f;">mpdel-playlist-mode-map</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Play/Pause"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"p"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">libmpdel-playback-play-pause</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Browser"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"b"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">mpdel-browser-open</span>
     <span style="color: #fd971f;">:desc</span> <span style="color: #e2c770;">"Play"</span> <span style="color: #fd971f;">:ne</span> <span style="color: #e2c770;">"RET"</span> <span style="color: #9c91e4;">#'</span><span style="color: #66d9ef;">mpdnotify-play</span>
@@ -1670,9 +1675,9 @@ This is a list of faces for the MPDel interface. After this list is where I add 
 </div>
 </div>
 
-<div id="outline-container-org643de22" class="outline-2">
-<h2 id="org643de22">Org</h2>
-<div class="outline-text-2" id="text-org643de22">
+<div id="outline-container-org683d36a" class="outline-2">
+<h2 id="org683d36a">Org</h2>
+<div class="outline-text-2" id="text-org683d36a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> org
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">add-hook!</span> <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">org-mode-hook</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">garbage-collect</span><span style="color: #fd971f;">)</span>
@@ -1741,15 +1746,14 @@ This is a list of faces for the MPDel interface. After this list is where I add 
 <span style="color: #fb2874;">(</span><span style="color: #fd971f;">font-lock-add-keywords</span> <span style="color: #9c91e4;">'</span><span style="color: #66d9ef;">org-mode</span>
     <span style="color: #9c91e4;">'</span><span style="color: #fd971f;">(</span><span style="color: #b6e63e;">(</span><span style="color: #e2c770;">"^ *</span><span style="color: #9c91e4; font-weight: bold;">\\</span><span style="color: #9c91e4; font-weight: bold;">(</span><span style="color: #e2c770;">[-]</span><span style="color: #9c91e4; font-weight: bold;">\\</span><span style="color: #9c91e4; font-weight: bold;">)</span><span style="color: #e2c770;"> "</span>
         <span style="color: #66d9ef;">(</span><span style="color: #9c91e4; font-weight: bold;">0</span> <span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">prog1</span> <span style="color: #fd971f;">()</span> <span style="color: #fd971f;">(</span><span style="color: #fd971f;">compose-region</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">match-beginning</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #b6e63e;">)</span> <span style="color: #b6e63e;">(</span><span style="color: #fd971f;">match-end</span> <span style="color: #9c91e4; font-weight: bold;">1</span><span style="color: #b6e63e;">)</span> <span style="color: #e2c770;">"&#8226;"</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span><span style="color: #66d9ef;">)</span><span style="color: #b6e63e;">)</span><span style="color: #fd971f;">)</span><span style="color: #fb2874;">)</span>
-
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc0c617a" class="outline-2">
-<h2 id="orgc0c617a">Treemacs</h2>
-<div class="outline-text-2" id="text-orgc0c617a">
+<div id="outline-container-org3708d1c" class="outline-2">
+<h2 id="org3708d1c">Treemacs</h2>
+<div class="outline-text-2" id="text-org3708d1c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #fb2874;">(</span><span style="color: #fb2874; font-style: italic;">after!</span> treemacs
     <span style="color: #fd971f;">(</span><span style="color: #fb2874; font-style: italic;">setq</span> <span style="color: #fd971f;">doom-themes-treemacs-theme</span> <span style="color: #e2c770;">"doom-colors"</span><span style="color: #fd971f;">)</span>
@@ -1772,7 +1776,7 @@ This is a list of faces for the MPDel interface. After this list is where I add 
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2023-03-05 Sun 01:13</p>
+<p class="date">Created: 2023-03-29 Wed 02:53</p>
 </div>
 </body>
 </html>
