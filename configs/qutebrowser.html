@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-28 Tue 04:29 -->
+<!-- 2023-05-31 Wed 16:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Qutebrowser</title>
@@ -231,116 +231,116 @@ This is my Qutebrowser config. This literate configuration is available online o
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdd2c551">The Theme</a>
+<li><a href="#orgebf7a29">The Theme</a>
 <ul>
-<li><a href="#org62b047b">Colors</a></li>
-<li><a href="#orgefcc2a3">The Style</a></li>
+<li><a href="#org71913e3">Colors</a></li>
+<li><a href="#orga9b43a5">The Style</a></li>
 </ul>
 </li>
-<li><a href="#org7a32f46">Qutebrowser</a>
+<li><a href="#org9978b05">Qutebrowser</a>
 <ul>
-<li><a href="#orgb7a88d6">Preferences</a></li>
-<li><a href="#org9c59c10">Fonts</a></li>
-<li><a href="#org39d71dd">Appearance</a></li>
-<li><a href="#org90ad58f">Home page/Search engines</a></li>
-<li><a href="#org51fa5f4">Keybindings</a></li>
+<li><a href="#org6eb8789">Preferences</a></li>
+<li><a href="#org7ba5406">Fonts</a></li>
+<li><a href="#org8e8d6d8">Appearance</a></li>
+<li><a href="#org2f59c58">Home page/Search engines</a></li>
+<li><a href="#orgba5d095">Keybindings</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdd2c551" class="outline-2">
-<h2 id="orgdd2c551">The Theme</h2>
-<div class="outline-text-2" id="text-orgdd2c551">
+<div id="outline-container-orgebf7a29" class="outline-2">
+<h2 id="orgebf7a29">The Theme</h2>
+<div class="outline-text-2" id="text-orgebf7a29">
 
-<div id="org2f1ae91" class="figure">
+<div id="org6e87e1a" class="figure">
 <p><img src="https://babkock.github.io/images/qutebrowser.png" alt="qutebrowser.png" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org62b047b" class="outline-3">
-<h3 id="org62b047b">Colors</h3>
-<div class="outline-text-3" id="text-org62b047b">
+<div id="outline-container-org71913e3" class="outline-3">
+<h3 id="org71913e3">Colors</h3>
+<div class="outline-text-3" id="text-org71913e3">
 <p>
-This was originally in a separate theme file, but I might as well include it in this one. These are the 16 colors that make up all of Qutebrowser&rsquo;s visual elements.
+This was originally in a separate theme file, but I might as well include it in this one. These are the 16 colors that make up all of Qutebrowser&rsquo;s visual elements. You should not use these variables if you want to use ARGB, or transparency.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;">#               </span><span style="color: #555556; font-style: italic;">__       __</span>
-<span style="color: #555556; font-style: italic;">#  </span><span style="color: #555556; font-style: italic;">____ ___  __/ /____  / /_  _________ _      __________  _____</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">/ __ `/ / / / __/ _ \/ __ \/ ___/ __ \ | /| / / ___/ _ \/ ___/</span>
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">/ /_/ / /_/ / /_/  __/ /_/ / /  / /_/ / |/ |/ (__  )  __/ /</span>
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">\__, /\__,_/\__/\___/_.___/_/   \____/|__/|__/____/\___/_/</span>
-<span style="color: #555556; font-style: italic;">#  </span><span style="color: #555556; font-style: italic;">/_/</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;">#               </span><span style="color: #5B6268; font-style: italic;">__       __</span>
+<span style="color: #5B6268; font-style: italic;">#  </span><span style="color: #5B6268; font-style: italic;">____ ___  __/ /____  / /_  _________ _      __________  _____</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">/ __ `/ / / / __/ _ \/ __ \/ ___/ __ \ | /| / / ___/ _ \/ ___/</span>
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">/ /_/ / /_/ / /_/  __/ /_/ / /  / /_/ / |/ |/ (__  )  __/ /</span>
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">\__, /\__,_/\__/\___/_.___/_/   \____/|__/|__/____/\___/_/</span>
+<span style="color: #5B6268; font-style: italic;">#  </span><span style="color: #5B6268; font-style: italic;">/_/</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Colors ---</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Match with Xresources</span>
-<span style="color: #fd971f;">base00</span> = <span style="color: #e2c770;">"#101710"</span>
-<span style="color: #fd971f;">base01</span> = <span style="color: #e2c770;">"#e93479"</span>
-<span style="color: #fd971f;">base02</span> = <span style="color: #e2c770;">"#81db54"</span>
-<span style="color: #fd971f;">base03</span> = <span style="color: #e2c770;">"#f9c65b"</span>
-<span style="color: #fd971f;">base04</span> = <span style="color: #e2c770;">"#5879ee"</span>
-<span style="color: #fd971f;">base05</span> = <span style="color: #e2c770;">"#d48eb6"</span>
-<span style="color: #fd971f;">base06</span> = <span style="color: #e2c770;">"#9d8af7"</span>
-<span style="color: #fd971f;">base07</span> = <span style="color: #e2c770;">"#dfefdf"</span>
-<span style="color: #fd971f;">base08</span> = <span style="color: #e2c770;">"#171002"</span>
-<span style="color: #fd971f;">base09</span> = <span style="color: #e2c770;">"#d72463"</span>
-<span style="color: #fd971f;">base0A</span> = <span style="color: #e2c770;">"#70ca44"</span>
-<span style="color: #fd971f;">base0B</span> = <span style="color: #e2c770;">"#e9b64b"</span>
-<span style="color: #fd971f;">base0C</span> = <span style="color: #e2c770;">"#4768dd"</span>
-<span style="color: #fd971f;">base0D</span> = <span style="color: #e2c770;">"#a9668c"</span>
-<span style="color: #fd971f;">base0E</span> = <span style="color: #e2c770;">"#9d8af7"</span>
-<span style="color: #fd971f;">base0F</span> = <span style="color: #e2c770;">"#efefef"</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Colors ---</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Match with Xresources</span>
+<span style="color: #dcaeea;">base00</span> = <span style="color: #98be65;">"#101010"</span>
+<span style="color: #dcaeea;">base01</span> = <span style="color: #98be65;">"#d0484e"</span>
+<span style="color: #dcaeea;">base02</span> = <span style="color: #98be65;">"#25c192"</span>
+<span style="color: #dcaeea;">base03</span> = <span style="color: #98be65;">"#f28735"</span>
+<span style="color: #dcaeea;">base04</span> = <span style="color: #98be65;">"#49a6d0"</span>
+<span style="color: #dcaeea;">base05</span> = <span style="color: #98be65;">"#f74e8b"</span>
+<span style="color: #dcaeea;">base06</span> = <span style="color: #98be65;">"#d8a89a"</span>
+<span style="color: #dcaeea;">base07</span> = <span style="color: #98be65;">"#fdeadb"</span>
+<span style="color: #dcaeea;">base08</span> = <span style="color: #98be65;">"#121012"</span>
+<span style="color: #dcaeea;">base09</span> = <span style="color: #98be65;">"#c0383e"</span>
+<span style="color: #dcaeea;">base0A</span> = <span style="color: #98be65;">"#15b082"</span>
+<span style="color: #dcaeea;">base0B</span> = <span style="color: #98be65;">"#e27725"</span>
+<span style="color: #dcaeea;">base0C</span> = <span style="color: #98be65;">"#3996c0"</span>
+<span style="color: #dcaeea;">base0D</span> = <span style="color: #98be65;">"#f74e8b"</span>
+<span style="color: #dcaeea;">base0E</span> = <span style="color: #98be65;">"#c8988a"</span>
+<span style="color: #dcaeea;">base0F</span> = <span style="color: #98be65;">"#fdeadb"</span>
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgefcc2a3" class="outline-3">
-<h3 id="orgefcc2a3">The Style</h3>
-<div class="outline-text-3" id="text-orgefcc2a3">
+<div id="outline-container-orga9b43a5" class="outline-3">
+<h3 id="orga9b43a5">The Style</h3>
+<div class="outline-text-3" id="text-orga9b43a5">
 <p>
 I try to have dark backgrounds and light foregrounds. Here is the color scheme for
-the completion widget and context menu.
+the completion widget and context menu. Remember, these colors can be in the format <code>#AARRGGBB</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Completion widget ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Completion widget ---</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">May be a single color to use for</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">all columns or a list of three colors, one for each column.</span>
-c.colors.completion.<span style="color: #fd971f;">fg</span> = base05
-c.colors.completion.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-c.colors.completion.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#9917100e'</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">May be a single color to use for</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">all columns or a list of three colors, one for each column.</span>
+c.colors.completion.<span style="color: #dcaeea;">fg</span> = <span style="color: #98be65;">'#88fdeadb'</span>
+c.colors.completion.odd.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+c.colors.completion.even.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88100000'</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Foreground color of completion widget category headers.</span>
-c.colors.completion.category.<span style="color: #fd971f;">fg</span> = base0F
-c.colors.completion.category.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99171002'</span>
-c.colors.completion.category.border.<span style="color: #fd971f;">top</span> = <span style="color: #e2c770;">'#99e93479'</span>
-c.colors.completion.category.border.<span style="color: #fd971f;">bottom</span> = <span style="color: #e2c770;">'#99e93479'</span>
-c.colors.completion.item.selected.<span style="color: #fd971f;">fg</span> = base00
-c.colors.completion.item.selected.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#bb81db54'</span>
-c.colors.completion.item.selected.border.<span style="color: #fd971f;">top</span> = <span style="color: #e2c770;">'#ccefdfef'</span>
-c.colors.completion.item.selected.border.<span style="color: #fd971f;">bottom</span> = <span style="color: #e2c770;">'#cc81db54'</span>
-c.colors.completion.item.selected.match.<span style="color: #fd971f;">fg</span> = base0F
-c.colors.completion.match.<span style="color: #fd971f;">fg</span> = base0A
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Color of the scrollbar handle in the completion view.</span>
-c.colors.completion.scrollbar.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#aa81db54'</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Color of the scrollbar in the completion view.</span>
-c.colors.completion.scrollbar.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#77101010'</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Foreground color of completion widget category headers.</span>
+c.colors.completion.category.<span style="color: #dcaeea;">fg</span> = base0F
+c.colors.completion.category.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.completion.category.border.<span style="color: #dcaeea;">top</span> = <span style="color: #98be65;">'#8849a6d0'</span>
+c.colors.completion.category.border.<span style="color: #dcaeea;">bottom</span> = <span style="color: #98be65;">'#8849a6d0'</span>
+c.colors.completion.item.selected.<span style="color: #dcaeea;">fg</span> = base00
+c.colors.completion.item.selected.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#ccf74e8b'</span>
+c.colors.completion.item.selected.border.<span style="color: #dcaeea;">top</span> = <span style="color: #98be65;">'#aaefdfef'</span>
+c.colors.completion.item.selected.border.<span style="color: #dcaeea;">bottom</span> = <span style="color: #98be65;">'#bbe73d7b'</span>
+c.colors.completion.item.selected.match.<span style="color: #dcaeea;">fg</span> = base0F
+c.colors.completion.match.<span style="color: #dcaeea;">fg</span> = base0A
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Color of the scrollbar handle in the completion view.</span>
+c.colors.completion.scrollbar.<span style="color: #dcaeea;">fg</span> = <span style="color: #98be65;">'#aaf28735'</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Color of the scrollbar in the completion view.</span>
+c.colors.completion.scrollbar.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#55101010'</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Context menu ---</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Context menu ---</span>
 
-c.colors.contextmenu.disabled.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#77101010'</span>
-c.colors.contextmenu.disabled.<span style="color: #fd971f;">fg</span> = base01
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Background color of the context menu. If set to null, the Qt default is used.</span>
-c.colors.contextmenu.menu.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99171002'</span>
-c.colors.contextmenu.menu.<span style="color: #fd971f;">fg</span> =  base0F
-c.colors.contextmenu.selected.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#aa81db54'</span>
-c.colors.contextmenu.selected.<span style="color: #fd971f;">fg</span> = base00
+c.colors.contextmenu.disabled.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77000000'</span>
+c.colors.contextmenu.disabled.<span style="color: #dcaeea;">fg</span> = base01
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Background color of the context menu. If set to null, the Qt default is used.</span>
+c.colors.contextmenu.menu.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#99101010'</span>
+c.colors.contextmenu.menu.<span style="color: #dcaeea;">fg</span> =  base0F
+c.colors.contextmenu.selected.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#ddf74e8b'</span>
+c.colors.contextmenu.selected.<span style="color: #dcaeea;">fg</span> = base00
 
 </pre>
 </div>
@@ -350,39 +350,40 @@ Here is the setup for downloads, hints, and messages.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Downloads ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Downloads ---</span>
 
-c.colors.downloads.bar.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88101010'</span>
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">c.colors.downloads.start.fg = base00</span>
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">c.colors.downloads.start.bg = base0D</span>
-c.colors.downloads.start.<span style="color: #fd971f;">fg</span> = base0D
-c.colors.downloads.start.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#00101010'</span>
-c.colors.downloads.stop.<span style="color: #fd971f;">fg</span> = base0C
-c.colors.downloads.stop.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#77101010'</span>
-c.colors.downloads.error.<span style="color: #fd971f;">fg</span> = base09
+c.colors.downloads.bar.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">c.colors.downloads.start.fg = base00</span>
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">c.colors.downloads.start.bg = base0D</span>
+c.colors.downloads.start.<span style="color: #dcaeea;">fg</span> = base0D
+c.colors.downloads.start.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#00101010'</span>
+c.colors.downloads.stop.<span style="color: #dcaeea;">fg</span> = base0C
+c.colors.downloads.stop.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.downloads.error.<span style="color: #dcaeea;">fg</span> = base09
+c.colors.downloads.system.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'hsv'</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Hints ---</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Hints ---</span>
 
-c.colors.hints.<span style="color: #fd971f;">fg</span> = base0E
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Note that you can use a `rgba(...)` value for transparency.</span>
-c.colors.hints.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88101010'</span>
-c.colors.hints.match.<span style="color: #fd971f;">fg</span> = base05
-c.colors.keyhint.<span style="color: #fd971f;">fg</span> = base05
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Highlight color for keys to complete the current keychain.</span>
-c.colors.keyhint.suffix.<span style="color: #fd971f;">fg</span> = base05
-c.colors.keyhint.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88101010'</span>
+c.colors.hints.<span style="color: #dcaeea;">fg</span> = base0E
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Note that you can use a `rgba(...)` value for transparency.</span>
+c.colors.hints.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+c.colors.hints.match.<span style="color: #dcaeea;">fg</span> = base05
+c.colors.keyhint.<span style="color: #dcaeea;">fg</span> = base05
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Highlight color for keys to complete the current keychain.</span>
+c.colors.keyhint.suffix.<span style="color: #dcaeea;">fg</span> = base05
+c.colors.keyhint.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Messages ---</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Messages ---</span>
 
-c.colors.messages.error.<span style="color: #fd971f;">fg</span> = base09
-c.colors.messages.error.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#66171002'</span>
-c.colors.messages.error.<span style="color: #fd971f;">border</span> = base09
-c.colors.messages.warning.<span style="color: #fd971f;">fg</span> = base09
-c.colors.messages.warning.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#77171002'</span>
-c.colors.messages.warning.<span style="color: #fd971f;">border</span> = base09
-c.colors.messages.info.<span style="color: #fd971f;">fg</span> = base01
-c.colors.messages.info.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#66101010'</span>
-c.colors.messages.info.<span style="color: #fd971f;">border</span> = <span style="color: #e2c770;">'#99101010'</span>
+c.colors.messages.error.<span style="color: #dcaeea;">fg</span> = base09
+c.colors.messages.error.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101010'</span>
+c.colors.messages.error.<span style="color: #dcaeea;">border</span> = base09
+c.colors.messages.warning.<span style="color: #dcaeea;">fg</span> = base09
+c.colors.messages.warning.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.messages.warning.<span style="color: #dcaeea;">border</span> = base09
+c.colors.messages.info.<span style="color: #dcaeea;">fg</span> = base01
+c.colors.messages.info.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101010'</span>
+c.colors.messages.info.<span style="color: #dcaeea;">border</span> = <span style="color: #98be65;">'#99101010'</span>
 
 </pre>
 </div>
@@ -392,14 +393,14 @@ The prompt:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Prompts ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Prompts ---</span>
 
-c.colors.prompts.<span style="color: #fd971f;">fg</span> = base0F
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Border used around UI elements in prompts.</span>
-c.colors.prompts.<span style="color: #fd971f;">border</span> = <span style="color: #e2c770;">'#d72463'</span>
-c.colors.prompts.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#171004'</span>
-c.colors.prompts.selected.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#70ca44'</span>
-c.colors.prompts.selected.<span style="color: #fd971f;">fg</span> = base00
+c.colors.prompts.<span style="color: #dcaeea;">fg</span> = base0F
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Border used around UI elements in prompts.</span>
+c.colors.prompts.<span style="color: #dcaeea;">border</span> = <span style="color: #98be65;">'#25c192'</span>
+c.colors.prompts.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#ef101010'</span>
+c.colors.prompts.selected.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#ef101010'</span>
+c.colors.prompts.selected.<span style="color: #dcaeea;">fg</span> = base00
 
 </pre>
 </div>
@@ -409,37 +410,37 @@ The status bar object has many options to set, so this next section may be compl
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Status bar ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Status bar ---</span>
 
-c.colors.statusbar.normal.<span style="color: #fd971f;">fg</span> = base05
-c.colors.statusbar.normal.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-c.colors.statusbar.insert.<span style="color: #fd971f;">fg</span> = base08
-c.colors.statusbar.insert.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#8881db54'</span>
-c.colors.statusbar.passthrough.<span style="color: #fd971f;">fg</span> = base0A
-c.colors.statusbar.passthrough.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Foreground color of the statusbar in private browsing mode.</span>
-c.colors.statusbar.private.<span style="color: #fd971f;">fg</span> = base0E
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Background color of the statusbar in private browsing mode.</span>
-c.colors.statusbar.private.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-c.colors.statusbar.command.<span style="color: #fd971f;">fg</span> = base04
-c.colors.statusbar.command.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#cc171004'</span>
-c.colors.statusbar.command.private.<span style="color: #fd971f;">fg</span> = base0E
-c.colors.statusbar.command.private.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.statusbar.caret.<span style="color: #fd971f;">fg</span> = base0D
-c.colors.statusbar.caret.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-c.colors.statusbar.caret.selection.<span style="color: #fd971f;">fg</span> = base0D
-c.colors.statusbar.caret.selection.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99101010'</span>
-c.colors.statusbar.progress.<span style="color: #fd971f;">bg</span> = base0D
+c.colors.statusbar.normal.<span style="color: #dcaeea;">fg</span> = base05
+c.colors.statusbar.normal.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+c.colors.statusbar.insert.<span style="color: #dcaeea;">fg</span> = base08
+c.colors.statusbar.insert.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#aa25c192'</span>
+c.colors.statusbar.passthrough.<span style="color: #dcaeea;">fg</span> = base0A
+c.colors.statusbar.passthrough.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Foreground color of the statusbar in private browsing mode.</span>
+c.colors.statusbar.private.<span style="color: #dcaeea;">fg</span> = base0E
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Background color of the statusbar in private browsing mode.</span>
+c.colors.statusbar.private.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+c.colors.statusbar.command.<span style="color: #dcaeea;">fg</span> = base04
+c.colors.statusbar.command.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101004'</span>
+c.colors.statusbar.command.private.<span style="color: #dcaeea;">fg</span> = base0E
+c.colors.statusbar.command.private.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#88101010'</span>
+c.colors.statusbar.caret.<span style="color: #dcaeea;">fg</span> = base0D
+c.colors.statusbar.caret.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.statusbar.caret.selection.<span style="color: #dcaeea;">fg</span> = base0D
+c.colors.statusbar.caret.selection.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.statusbar.progress.<span style="color: #dcaeea;">bg</span> = base0D
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Status bar URL ---</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Status bar URL ---</span>
 
-c.colors.statusbar.url.<span style="color: #fd971f;">fg</span> = base05
-c.colors.statusbar.url.error.<span style="color: #fd971f;">fg</span> = base08
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Foreground color of the URL in the statusbar for hovered links.</span>
-c.colors.statusbar.url.hover.<span style="color: #fd971f;">fg</span> = base0B
-c.colors.statusbar.url.success.http.<span style="color: #fd971f;">fg</span> = base0C
-c.colors.statusbar.url.success.https.<span style="color: #fd971f;">fg</span> = base0C
-c.colors.statusbar.url.warn.<span style="color: #fd971f;">fg</span> = base09
+c.colors.statusbar.url.<span style="color: #dcaeea;">fg</span> = base05
+c.colors.statusbar.url.error.<span style="color: #dcaeea;">fg</span> = base08
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Foreground color of the URL in the statusbar for hovered links.</span>
+c.colors.statusbar.url.hover.<span style="color: #dcaeea;">fg</span> = base0B
+c.colors.statusbar.url.success.http.<span style="color: #dcaeea;">fg</span> = base0C
+c.colors.statusbar.url.success.https.<span style="color: #dcaeea;">fg</span> = base0C
+c.colors.statusbar.url.warn.<span style="color: #dcaeea;">fg</span> = base09
 
 </pre>
 </div>
@@ -449,32 +450,32 @@ And finally, we have the tabs. An essential part of the interface.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Tabs ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Tabs ---</span>
 
-c.colors.tabs.bar.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#10101010'</span>
-c.colors.tabs.indicator.<span style="color: #fd971f;">start</span> = base03
-c.colors.tabs.indicator.<span style="color: #fd971f;">stop</span> = base0B
-c.colors.tabs.indicator.<span style="color: #fd971f;">error</span> = base08
-c.colors.tabs.odd.<span style="color: #fd971f;">fg</span> = base02
-c.colors.tabs.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.tabs.even.<span style="color: #fd971f;">fg</span> = base03
-c.colors.tabs.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.tabs.pinned.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.tabs.pinned.even.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-c.colors.tabs.pinned.odd.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.selected.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#cc81db54'</span>
-c.colors.tabs.pinned.selected.even.<span style="color: #fd971f;">fg</span> = base00
-c.colors.tabs.pinned.selected.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#cc81db54'</span>
-c.colors.tabs.pinned.selected.odd.<span style="color: #fd971f;">fg</span> = base00
+c.colors.tabs.bar.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#10101010'</span>
+c.colors.tabs.indicator.<span style="color: #dcaeea;">start</span> = base03
+c.colors.tabs.indicator.<span style="color: #dcaeea;">stop</span> = base0B
+c.colors.tabs.indicator.<span style="color: #dcaeea;">error</span> = base08
+c.colors.tabs.odd.<span style="color: #dcaeea;">fg</span> = base02
+c.colors.tabs.odd.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101010'</span>
+c.colors.tabs.even.<span style="color: #dcaeea;">fg</span> = base03
+c.colors.tabs.even.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101010'</span>
+c.colors.tabs.pinned.even.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101002'</span>
+c.colors.tabs.pinned.even.<span style="color: #dcaeea;">fg</span> = base00
+c.colors.tabs.pinned.odd.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#66101002'</span>
+c.colors.tabs.pinned.odd.<span style="color: #dcaeea;">fg</span> = base00
+c.colors.tabs.pinned.selected.even.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#aaf74e8b'</span>
+c.colors.tabs.pinned.selected.even.<span style="color: #dcaeea;">fg</span> = base00
+c.colors.tabs.pinned.selected.odd.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#aaf74e8b'</span>
+c.colors.tabs.pinned.selected.odd.<span style="color: #dcaeea;">fg</span> = base00
 
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Selected tabs ---</span>
-c.colors.tabs.selected.odd.<span style="color: #fd971f;">fg</span> = base0A
-c.colors.tabs.selected.odd.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#99171002'</span>
-c.colors.tabs.selected.even.<span style="color: #fd971f;">fg</span> = base0A
-c.colors.tabs.selected.even.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#88171002'</span>
-<span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">Default page background when there is none</span>
-c.colors.webpage.<span style="color: #fd971f;">bg</span> = base00
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Selected tabs ---</span>
+c.colors.tabs.selected.odd.<span style="color: #dcaeea;">fg</span> = base0A
+c.colors.tabs.selected.odd.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+c.colors.tabs.selected.even.<span style="color: #dcaeea;">fg</span> = base0A
+c.colors.tabs.selected.even.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#77101010'</span>
+<span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">Default page background when there is none</span>
+c.colors.webpage.<span style="color: #dcaeea;">bg</span> = base0F
 
 </pre>
 </div>
@@ -482,124 +483,133 @@ c.colors.webpage.<span style="color: #fd971f;">bg</span> = base00
 </div>
 </div>
 
-<div id="outline-container-org7a32f46" class="outline-2">
-<h2 id="org7a32f46">Qutebrowser</h2>
-<div class="outline-text-2" id="text-org7a32f46">
+<div id="outline-container-org9978b05" class="outline-2">
+<h2 id="org9978b05">Qutebrowser</h2>
+<div class="outline-text-2" id="text-org9978b05">
 <p>
 Okay, so all of the code above was just the theme for Qutebrowser. This is the actual
 configuration.
 </p>
 </div>
 
-<div id="outline-container-orgb7a88d6" class="outline-3">
-<h3 id="orgb7a88d6">Preferences</h3>
-<div class="outline-text-3" id="text-orgb7a88d6">
+<div id="outline-container-org6eb8789" class="outline-3">
+<h3 id="org6eb8789">Preferences</h3>
+<div class="outline-text-3" id="text-org6eb8789">
 <div class="org-src-container">
 <pre class="src src-python">config.load_autoconfig()
 
-c.completion.<span style="color: #fd971f;">height</span> = <span style="color: #e2c770;">"28%"</span>
-c.downloads.location.<span style="color: #fd971f;">directory</span> = <span style="color: #e2c770;">"/home/babkock"</span>
-c.downloads.location.<span style="color: #fd971f;">prompt</span> = <span style="color: #fd971f;">False</span>
-c.prompt.<span style="color: #fd971f;">filebrowser</span> = <span style="color: #fd971f;">False</span>
-c.<span style="color: #fd971f;">input</span>.insert_mode.<span style="color: #fd971f;">auto_load</span> = <span style="color: #fd971f;">True</span>
-c.<span style="color: #fd971f;">input</span>.insert_mode.<span style="color: #fd971f;">auto_leave</span> = <span style="color: #fd971f;">True</span>
-c.downloads.<span style="color: #fd971f;">prevent_mixed_content</span> = <span style="color: #fd971f;">True</span>
-c.downloads.<span style="color: #fd971f;">position</span> = <span style="color: #e2c770;">'bottom'</span>
-c.window.<span style="color: #fd971f;">transparent</span> = <span style="color: #fd971f;">True</span>
-c.content.<span style="color: #fd971f;">webgl</span> = <span style="color: #fd971f;">True</span>
-c.content.<span style="color: #fd971f;">xss_auditing</span> = <span style="color: #fd971f;">False</span>
+c.completion.<span style="color: #dcaeea;">height</span> = <span style="color: #98be65;">"30%"</span>
+c.downloads.location.<span style="color: #dcaeea;">directory</span> = <span style="color: #98be65;">"/home/babkock"</span>
+c.downloads.location.<span style="color: #dcaeea;">prompt</span> = <span style="color: #a9a1e1;">False</span>
+c.prompt.<span style="color: #dcaeea;">filebrowser</span> = <span style="color: #a9a1e1;">False</span>
+c.<span style="color: #c678dd;">input</span>.insert_mode.<span style="color: #dcaeea;">auto_load</span> = <span style="color: #a9a1e1;">True</span>
+c.<span style="color: #c678dd;">input</span>.insert_mode.<span style="color: #dcaeea;">auto_leave</span> = <span style="color: #a9a1e1;">True</span>
+c.downloads.<span style="color: #dcaeea;">prevent_mixed_content</span> = <span style="color: #a9a1e1;">True</span>
+c.downloads.<span style="color: #dcaeea;">position</span> = <span style="color: #98be65;">'bottom'</span>
+c.window.<span style="color: #dcaeea;">transparent</span> = <span style="color: #a9a1e1;">True</span>
+c.content.notifications.<span style="color: #dcaeea;">enabled</span> = <span style="color: #a9a1e1;">True</span>
+c.content.<span style="color: #dcaeea;">webgl</span> = <span style="color: #a9a1e1;">True</span>
+c.content.<span style="color: #dcaeea;">pdfjs</span> = <span style="color: #a9a1e1;">True</span>
+c.content.<span style="color: #dcaeea;">xss_auditing</span> = <span style="color: #a9a1e1;">False</span>
+c.content.<span style="color: #dcaeea;">local_content_can_access_remote_urls</span> = <span style="color: #a9a1e1;">True</span>
+c.content.<span style="color: #dcaeea;">plugins</span> = <span style="color: #a9a1e1;">True</span>
+c.content.tls.<span style="color: #dcaeea;">certificate_errors</span> = <span style="color: #98be65;">"load-insecurely"</span>
+c.content.<span style="color: #dcaeea;">geolocation</span> = <span style="color: #a9a1e1;">False</span>
+c.hints.<span style="color: #dcaeea;">radius</span> = <span style="color: #da8548; font-weight: bold;">7</span>
+c.hints.<span style="color: #dcaeea;">uppercase</span> = <span style="color: #a9a1e1;">True</span>
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9c59c10" class="outline-3">
-<h3 id="org9c59c10">Fonts</h3>
-<div class="outline-text-3" id="text-org9c59c10">
+<div id="outline-container-org7ba5406" class="outline-3">
+<h3 id="org7ba5406">Fonts</h3>
+<div class="outline-text-3" id="text-org7ba5406">
 <p>
 I have grouped all of the font settings for all interface elements together. These font sizes can be made bigger and smaller with the keybindings <code>,z</code>, <code>,x</code>, <code>,m</code>, <code>,n</code>, <code>,v</code>, and <code>,p</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Fonts ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Fonts ---</span>
 
-c.fonts.<span style="color: #fd971f;">default_family</span> = <span style="color: #e2c770;">'Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">default_size</span> = <span style="color: #e2c770;">'14pt'</span>
-c.fonts.messages.<span style="color: #fd971f;">error</span> = <span style="color: #e2c770;">'14pt Space Mono'</span>
-c.fonts.messages.<span style="color: #fd971f;">info</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.messages.<span style="color: #fd971f;">warning</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">statusbar</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">downloads</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">prompts</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">keyhint</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">hints</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.<span style="color: #fd971f;">contextmenu</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.completion.<span style="color: #fd971f;">category</span> = <span style="color: #e2c770;">'bold 14pt Space Mono Nerd Font'</span>
-c.fonts.completion.<span style="color: #fd971f;">entry</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.tabs.<span style="color: #fd971f;">selected</span> = <span style="color: #e2c770;">'italic 14pt Space Mono Nerd Font'</span>
-c.fonts.tabs.<span style="color: #fd971f;">unselected</span> = <span style="color: #e2c770;">'14pt Space Mono Nerd Font'</span>
-c.fonts.messages.<span style="color: #fd971f;">info</span> = <span style="color: #e2c770;">'italic 14pt Space Mono Nerd Font'</span>
-c.fonts.messages.<span style="color: #fd971f;">error</span> = <span style="color: #e2c770;">'italic 14pt Space Mono Nerd Font'</span>
-c.fonts.messages.<span style="color: #fd971f;">warning</span> = <span style="color: #e2c770;">'italic 14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">default_family</span> = <span style="color: #98be65;">'Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">default_size</span> = <span style="color: #98be65;">'14pt'</span>
+c.fonts.messages.<span style="color: #dcaeea;">error</span> = <span style="color: #98be65;">'14pt Space Mono'</span>
+c.fonts.messages.<span style="color: #dcaeea;">info</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.messages.<span style="color: #dcaeea;">warning</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">statusbar</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">downloads</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">prompts</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">keyhint</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">hints</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.<span style="color: #dcaeea;">contextmenu</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.completion.<span style="color: #dcaeea;">category</span> = <span style="color: #98be65;">'bold 14pt Space Mono Nerd Font'</span>
+c.fonts.completion.<span style="color: #dcaeea;">entry</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.tabs.<span style="color: #dcaeea;">selected</span> = <span style="color: #98be65;">'italic 14pt Space Mono Nerd Font'</span>
+c.fonts.tabs.<span style="color: #dcaeea;">unselected</span> = <span style="color: #98be65;">'14pt Space Mono Nerd Font'</span>
+c.fonts.messages.<span style="color: #dcaeea;">info</span> = <span style="color: #98be65;">'italic 14pt Space Mono Nerd Font'</span>
+c.fonts.messages.<span style="color: #dcaeea;">error</span> = <span style="color: #98be65;">'italic 14pt Space Mono Nerd Font'</span>
+c.fonts.messages.<span style="color: #dcaeea;">warning</span> = <span style="color: #98be65;">'italic 14pt Space Mono Nerd Font'</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org39d71dd" class="outline-3">
-<h3 id="org39d71dd">Appearance</h3>
-<div class="outline-text-3" id="text-org39d71dd">
+<div id="outline-container-org8e8d6d8" class="outline-3">
+<h3 id="org8e8d6d8">Appearance</h3>
+<div class="outline-text-3" id="text-org8e8d6d8">
 <p>
 Here is where I set the padding for hints and tabs, and for some reason I&rsquo;d like
 to change some of the colors.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Appearance ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Appearance ---</span>
 
-c.hints.<span style="color: #fd971f;">padding</span> = {
-    <span style="color: #e2c770;">"left"</span>: <span style="color: #9c91e4; font-weight: bold;">3</span>,
-    <span style="color: #e2c770;">"right"</span>: <span style="color: #9c91e4; font-weight: bold;">3</span>,
-    <span style="color: #e2c770;">"top"</span>: <span style="color: #9c91e4; font-weight: bold;">3</span>,
-    <span style="color: #e2c770;">"bottom"</span>: <span style="color: #9c91e4; font-weight: bold;">4</span>
+c.hints.<span style="color: #dcaeea;">padding</span> = {
+    <span style="color: #98be65;">"left"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #98be65;">"right"</span>: <span style="color: #da8548; font-weight: bold;">4</span>,
+    <span style="color: #98be65;">"top"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #98be65;">"bottom"</span>: <span style="color: #da8548; font-weight: bold;">4</span>
 }
 
-c.colors.completion.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#efefef'</span>
-c.colors.downloads.start.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#bb9d8af7'</span>
-c.colors.downloads.start.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#00101010'</span>
-c.colors.downloads.stop.<span style="color: #fd971f;">bg</span> = <span style="color: #e2c770;">'#00101010'</span>
-c.colors.downloads.stop.<span style="color: #fd971f;">fg</span> = <span style="color: #e2c770;">'#ef4869ee'</span>
+c.colors.completion.<span style="color: #dcaeea;">fg</span> = <span style="color: #98be65;">'#efefef'</span>
+c.colors.downloads.start.<span style="color: #dcaeea;">fg</span> = <span style="color: #98be65;">'#bbd0484e'</span>
+c.colors.downloads.start.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#00101010'</span>
+c.colors.downloads.stop.<span style="color: #dcaeea;">bg</span> = <span style="color: #98be65;">'#00101010'</span>
+c.colors.downloads.stop.<span style="color: #dcaeea;">fg</span> = <span style="color: #98be65;">'#ee25c192'</span>
 
-c.tabs.<span style="color: #fd971f;">padding</span> = {
-    <span style="color: #e2c770;">"left"</span>: <span style="color: #9c91e4; font-weight: bold;">5</span>,
-    <span style="color: #e2c770;">"right"</span>: <span style="color: #9c91e4; font-weight: bold;">3</span>,
-    <span style="color: #e2c770;">"top"</span>: <span style="color: #9c91e4; font-weight: bold;">3</span>,
-    <span style="color: #e2c770;">"bottom"</span>: <span style="color: #9c91e4; font-weight: bold;">4</span>
+c.tabs.<span style="color: #dcaeea;">padding</span> = {
+    <span style="color: #98be65;">"left"</span>: <span style="color: #da8548; font-weight: bold;">5</span>,
+    <span style="color: #98be65;">"right"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #98be65;">"top"</span>: <span style="color: #da8548; font-weight: bold;">3</span>,
+    <span style="color: #98be65;">"bottom"</span>: <span style="color: #da8548; font-weight: bold;">4</span>
 }
-c.tabs.title.<span style="color: #fd971f;">format</span> = <span style="color: #e2c770;">"{audio}{current_title}"</span>
-c.tabs.<span style="color: #fd971f;">last_close</span> = <span style="color: #e2c770;">"close"</span>
-c.tabs.indicator.<span style="color: #fd971f;">width</span> = <span style="color: #9c91e4; font-weight: bold;">0</span>
-c.tabs.favicons.<span style="color: #fd971f;">scale</span> = <span style="color: #9c91e4; font-weight: bold;">1.4</span>
-c.tabs.<span style="color: #fd971f;">show_switching_delay</span> = <span style="color: #9c91e4; font-weight: bold;">700</span>
+c.tabs.title.<span style="color: #c678dd;">format</span> = <span style="color: #98be65;">"{audio}{current_title}"</span>
+c.window.<span style="color: #dcaeea;">title_format</span> = <span style="color: #98be65;">"{perc}{current_title}"</span>
+c.tabs.<span style="color: #dcaeea;">last_close</span> = <span style="color: #98be65;">"close"</span>
+c.tabs.indicator.<span style="color: #dcaeea;">width</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+c.tabs.favicons.<span style="color: #dcaeea;">scale</span> = <span style="color: #da8548; font-weight: bold;">1.4</span>
+c.tabs.<span style="color: #dcaeea;">show_switching_delay</span> = <span style="color: #da8548; font-weight: bold;">700</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org90ad58f" class="outline-3">
-<h3 id="org90ad58f">Home page/Search engines</h3>
-<div class="outline-text-3" id="text-org90ad58f">
+<div id="outline-container-org2f59c58" class="outline-3">
+<h3 id="org2f59c58">Home page/Search engines</h3>
+<div class="outline-text-3" id="text-org2f59c58">
 <p>
 I have eight search engines: DuckDuckGo, Arch Wiki, Google, Google Images,
 Wikipedia, Invidious, YouTube, and GitHub.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Search engines ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Search engines ---</span>
 
-c.url.<span style="color: #fd971f;">start_pages</span> = [<span style="color: #e2c770;">"file:///home/babkock/.config/qutebrowser/index.html"</span>]
-c.url.<span style="color: #fd971f;">searchengines</span> = { <span style="color: #e2c770;">'DEFAULT'</span>: <span style="color: #e2c770;">'https://duckduckgo.com/?ia=web&amp;q={}'</span>, <span style="color: #e2c770;">'!a'</span>: <span style="color: #e2c770;">'https://wiki.archlinux.org/index.php?title=Special%3ASearch&amp;search={}'</span>, <span style="color: #e2c770;">'!g'</span>: <span style="color: #e2c770;">'https://google.com/search?hl=en&amp;q={}'</span>, <span style="color: #e2c770;">'!i'</span>: <span style="color: #e2c770;">'https://google.com/search?hl=en&amp;tbm=isch&amp;q={}'</span>, <span style="color: #e2c770;">'!w'</span>: <span style="color: #e2c770;">'https://en.wikipedia.org/w/index.php?title=Special%3ASearch&amp;search={}'</span>, <span style="color: #e2c770;">'!h'</span>: <span style="color: #e2c770;">'https://github.com/search?q={}'</span>, <span style="color: #e2c770;">'!i'</span>: <span style="color: #e2c770;">'https://y.com.sb/search?q={}'</span>, <span style="color: #e2c770;">'!y'</span>: <span style="color: #e2c770;">'https://youtube.com/results?search_query={}'</span>, <span style="color: #e2c770;">'!n'</span>: <span style="color: #e2c770;">'https://yandex.ru/search/?text={}'</span> }
+c.url.<span style="color: #dcaeea;">start_pages</span> = [<span style="color: #98be65;">"file:///home/babkock/.config/qutebrowser/index.html"</span>]
+c.url.<span style="color: #dcaeea;">searchengines</span> = { <span style="color: #98be65;">'DEFAULT'</span>: <span style="color: #98be65;">'https://duckduckgo.com/?ia=web&amp;q={}'</span>, <span style="color: #98be65;">'!a'</span>: <span style="color: #98be65;">'https://wiki.archlinux.org/index.php?title=Special%3ASearch&amp;search={}'</span>, <span style="color: #98be65;">'!g'</span>: <span style="color: #98be65;">'https://google.com/search?hl=en&amp;q={}'</span>, <span style="color: #98be65;">'!i'</span>: <span style="color: #98be65;">'https://google.com/search?hl=en&amp;tbm=isch&amp;q={}'</span>, <span style="color: #98be65;">'!m'</span>: <span style="color: #98be65;">'https://google.com/maps?q={}'</span>, <span style="color: #98be65;">'!w'</span>: <span style="color: #98be65;">'https://en.wikipedia.org/w/index.php?title=Special%3ASearch&amp;search={}'</span>, <span style="color: #98be65;">'!h'</span>: <span style="color: #98be65;">'https://github.com/search?q={}'</span>, <span style="color: #98be65;">'!i'</span>: <span style="color: #98be65;">'https://yewtu.be/search?q={}'</span>, <span style="color: #98be65;">'!y'</span>: <span style="color: #98be65;">'https://youtube.com/results?search_query={}'</span>, <span style="color: #98be65;">'!n'</span>: <span style="color: #98be65;">'https://yandex.ru/search/?text={}'</span> }
 </pre>
 </div>
 
@@ -608,19 +618,19 @@ How to handle selecting a file for upload:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python">c.fileselect.<span style="color: #fd971f;">handler</span> = <span style="color: #e2c770;">'external'</span>
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']</span>
-c.fileselect.single_file.<span style="color: #fd971f;">command</span> = [<span style="color: #e2c770;">'foot'</span>, <span style="color: #e2c770;">'-e'</span>, <span style="color: #e2c770;">'nnn'</span>, <span style="color: #e2c770;">'-d'</span>, <span style="color: #e2c770;">'-l'</span>, <span style="color: #e2c770;">'2'</span>, <span style="color: #e2c770;">'-U'</span>, <span style="color: #e2c770;">'-D'</span>, <span style="color: #e2c770;">'-R'</span>, <span style="color: #e2c770;">'-p'</span>, <span style="color: #e2c770;">'{}'</span>]
-<span style="color: #555556; font-style: italic;">#</span><span style="color: #555556; font-style: italic;">c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']</span>
-c.fileselect.multiple_files.<span style="color: #fd971f;">command</span> = [<span style="color: #e2c770;">'foot'</span>, <span style="color: #e2c770;">'-e'</span>, <span style="color: #e2c770;">'nnn'</span>, <span style="color: #e2c770;">'-d'</span>, <span style="color: #e2c770;">'-l'</span>, <span style="color: #e2c770;">'2'</span>, <span style="color: #e2c770;">'-U'</span>, <span style="color: #e2c770;">'-D'</span>, <span style="color: #e2c770;">'-R'</span>, <span style="color: #e2c770;">'-p'</span>, <span style="color: #e2c770;">'{}'</span>]
+<pre class="src src-python">c.fileselect.<span style="color: #dcaeea;">handler</span> = <span style="color: #98be65;">'external'</span>
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']</span>
+c.fileselect.single_file.<span style="color: #dcaeea;">command</span> = [<span style="color: #98be65;">'foot'</span>, <span style="color: #98be65;">'-e'</span>, <span style="color: #98be65;">'nnn'</span>, <span style="color: #98be65;">'-d'</span>, <span style="color: #98be65;">'-l'</span>, <span style="color: #98be65;">'2'</span>, <span style="color: #98be65;">'-U'</span>, <span style="color: #98be65;">'-D'</span>, <span style="color: #98be65;">'-R'</span>, <span style="color: #98be65;">'-p'</span>, <span style="color: #98be65;">'{}'</span>]
+<span style="color: #5B6268; font-style: italic;">#</span><span style="color: #5B6268; font-style: italic;">c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']</span>
+c.fileselect.multiple_files.<span style="color: #dcaeea;">command</span> = [<span style="color: #98be65;">'foot'</span>, <span style="color: #98be65;">'-e'</span>, <span style="color: #98be65;">'nnn'</span>, <span style="color: #98be65;">'-d'</span>, <span style="color: #98be65;">'-l'</span>, <span style="color: #98be65;">'2'</span>, <span style="color: #98be65;">'-U'</span>, <span style="color: #98be65;">'-D'</span>, <span style="color: #98be65;">'-R'</span>, <span style="color: #98be65;">'-p'</span>, <span style="color: #98be65;">'{}'</span>]
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org51fa5f4" class="outline-3">
-<h3 id="org51fa5f4">Keybindings</h3>
-<div class="outline-text-3" id="text-org51fa5f4">
+<div id="outline-container-orgba5d095" class="outline-3">
+<h3 id="orgba5d095">Keybindings</h3>
+<div class="outline-text-3" id="text-orgba5d095">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -709,21 +719,21 @@ bookmarked sites. The second set is for loading my custom stylesheets.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Keybindings: Bookmarks ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Keybindings: Bookmarks ---</span>
 
-config.bind(<span style="color: #e2c770;">',`'</span>, <span style="color: #e2c770;">'open https://github.com/Babkock'</span>)
-config.bind(<span style="color: #e2c770;">',1'</span>, <span style="color: #e2c770;">'open https://gitlab.com/Babkock/'</span>)
-config.bind(<span style="color: #e2c770;">',2'</span>, <span style="color: #e2c770;">'open https://yt.funami.tech/feed/subscriptions'</span>)
-config.bind(<span style="color: #e2c770;">',3'</span>, <span style="color: #e2c770;">'open https://proton.me'</span>)
-config.bind(<span style="color: #e2c770;">',4'</span>, <span style="color: #e2c770;">'open https://tannerbabcock.com/home'</span>)
-config.bind(<span style="color: #e2c770;">',5'</span>, <span style="color: #e2c770;">'open https://passthepopcorn.me'</span>)
-config.bind(<span style="color: #e2c770;">',6'</span>, <span style="color: #e2c770;">'open https://empornium.is'</span>)
-config.bind(<span style="color: #e2c770;">',7'</span>, <span style="color: #e2c770;">'open https://boards.4channel.org/g/catalog'</span>)
-config.bind(<span style="color: #e2c770;">',8'</span>, <span style="color: #e2c770;">'open https://news.ycombinator.com/news'</span>)
-config.bind(<span style="color: #e2c770;">',9'</span>, <span style="color: #e2c770;">'open https://old.reddit.com'</span>)
-config.bind(<span style="color: #e2c770;">',0'</span>, <span style="color: #e2c770;">'open https://babkock.github.io'</span>)
-config.bind(<span style="color: #e2c770;">',-'</span>, <span style="color: #e2c770;">'open https://www.messenger.com'</span>)
-config.bind(<span style="color: #e2c770;">',='</span>, <span style="color: #e2c770;">'open https://en.wikipedia.org/wiki/Main_Page'</span>)
+config.bind(<span style="color: #98be65;">',`'</span>, <span style="color: #98be65;">'open https://github.com/Babkock'</span>)
+config.bind(<span style="color: #98be65;">',1'</span>, <span style="color: #98be65;">'open https://gitlab.com/Babkock/'</span>)
+config.bind(<span style="color: #98be65;">',2'</span>, <span style="color: #98be65;">'open https://yt.funami.tech/feed/subscriptions'</span>)
+config.bind(<span style="color: #98be65;">',3'</span>, <span style="color: #98be65;">'open https://proton.me'</span>)
+config.bind(<span style="color: #98be65;">',4'</span>, <span style="color: #98be65;">'open https://tannerbabcock.com/home'</span>)
+config.bind(<span style="color: #98be65;">',5'</span>, <span style="color: #98be65;">'open https://passthepopcorn.me'</span>)
+config.bind(<span style="color: #98be65;">',6'</span>, <span style="color: #98be65;">'open https://empornium.is'</span>)
+config.bind(<span style="color: #98be65;">',7'</span>, <span style="color: #98be65;">'open https://boards.4channel.org/g/catalog'</span>)
+config.bind(<span style="color: #98be65;">',8'</span>, <span style="color: #98be65;">'open https://news.ycombinator.com/news'</span>)
+config.bind(<span style="color: #98be65;">',9'</span>, <span style="color: #98be65;">'open https://old.reddit.com'</span>)
+config.bind(<span style="color: #98be65;">',0'</span>, <span style="color: #98be65;">'open https://babkock.github.io'</span>)
+config.bind(<span style="color: #98be65;">',-'</span>, <span style="color: #98be65;">'open https://www.messenger.com'</span>)
+config.bind(<span style="color: #98be65;">',='</span>, <span style="color: #98be65;">'open https://en.wikipedia.org/wiki/Main_Page'</span>)
 </pre>
 </div>
 
@@ -799,19 +809,19 @@ As you can see, I am a master of productivity and imagination. Don&rsquo;t ask m
 </table>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Keybindings: Stylesheets ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Keybindings: Stylesheets ---</span>
 
-config.bind(<span style="color: #e2c770;">',c'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets "" ""'</span>)
-config.bind(<span style="color: #e2c770;">',a'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/4chan.css ""'</span>)
-config.bind(<span style="color: #e2c770;">',b'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/reddit.css ""'</span>)
-config.bind(<span style="color: #e2c770;">',e'</span>, <span style="color: #e2c770;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/empornium.css ""'</span>)
+config.bind(<span style="color: #98be65;">',c'</span>, <span style="color: #98be65;">'config-cycle content.user_stylesheets "" ""'</span>)
+config.bind(<span style="color: #98be65;">',a'</span>, <span style="color: #98be65;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/4chan.css ""'</span>)
+config.bind(<span style="color: #98be65;">',b'</span>, <span style="color: #98be65;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/reddit.css ""'</span>)
+config.bind(<span style="color: #98be65;">',e'</span>, <span style="color: #98be65;">'config-cycle content.user_stylesheets ~/.config/qutebrowser/empornium.css ""'</span>)
 
-config.bind(<span style="color: #e2c770;">',z'</span>, <span style="color: #e2c770;">'config-cycle fonts.default_size "16pt" "14pt"'</span>)
-config.bind(<span style="color: #e2c770;">',x'</span>, <span style="color: #e2c770;">'config-cycle fonts.statusbar "16pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
-config.bind(<span style="color: #e2c770;">',p'</span>, <span style="color: #e2c770;">'config-cycle fonts.tabs.selected "italic 16pt Space Mono Nerd Font" "italic 14pt Space Mono Nerd Font"'</span>)
-config.bind(<span style="color: #e2c770;">',v'</span>, <span style="color: #e2c770;">'config-cycle fonts.downloads "16pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
-config.bind(<span style="color: #e2c770;">',n'</span>, <span style="color: #e2c770;">'config-cycle fonts.completion.category "17pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
-config.bind(<span style="color: #e2c770;">',m'</span>, <span style="color: #e2c770;">'config-cycle fonts.completion.entry "17pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
+config.bind(<span style="color: #98be65;">',z'</span>, <span style="color: #98be65;">'config-cycle fonts.default_size "16pt" "14pt"'</span>)
+config.bind(<span style="color: #98be65;">',x'</span>, <span style="color: #98be65;">'config-cycle fonts.statusbar "16pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
+config.bind(<span style="color: #98be65;">',p'</span>, <span style="color: #98be65;">'config-cycle fonts.tabs.selected "italic 16pt Space Mono Nerd Font" "italic 14pt Space Mono Nerd Font"'</span>)
+config.bind(<span style="color: #98be65;">',v'</span>, <span style="color: #98be65;">'config-cycle fonts.downloads "16pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
+config.bind(<span style="color: #98be65;">',n'</span>, <span style="color: #98be65;">'config-cycle fonts.completion.category "17pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
+config.bind(<span style="color: #98be65;">',m'</span>, <span style="color: #98be65;">'config-cycle fonts.completion.entry "17pt Space Mono Nerd Font" "14pt Space Mono Nerd Font"'</span>)
 </pre>
 </div>
 
@@ -873,16 +883,16 @@ config.bind(<span style="color: #e2c770;">',m'</span>, <span style="color: #e2c7
 </table>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #555556; font-style: italic;"># </span><span style="color: #555556; font-style: italic;">--- Keybindings: UI ---</span>
+<pre class="src src-python"><span style="color: #5B6268; font-style: italic;"># </span><span style="color: #5B6268; font-style: italic;">--- Keybindings: UI ---</span>
 
-config.bind(<span style="color: #e2c770;">'M'</span>, <span style="color: #e2c770;">'hint links spawn mpv --vo=gpu --hwdec=vaapi --ytdl-format=\"bestvideo[height&lt;=720]+bestaudio\" --audio-device=\"pulse/alsa_output.pci-0000_00_1f.3.analog-stereo\" --script-opts=ytdl_hook-ytdl_path=yt-dlp \"{hint-url}\"'</span>)
-config.bind(<span style="color: #e2c770;">'xx'</span>, <span style="color: #e2c770;">'config-cycle statusbar.show never never'</span>)
-config.bind(<span style="color: #e2c770;">'yy'</span>, <span style="color: #e2c770;">'config-cycle statusbar.show always always'</span>)
-config.bind(<span style="color: #e2c770;">'xy'</span>, <span style="color: #e2c770;">'config-cycle tabs.show switching switching'</span>)
-config.bind(<span style="color: #e2c770;">'yx'</span>, <span style="color: #e2c770;">'config-cycle tabs.show multiple multiple'</span>)
-config.bind(<span style="color: #e2c770;">'zz'</span>, <span style="color: #e2c770;">'history-clear'</span>)
-config.bind(<span style="color: #e2c770;">'l'</span>, <span style="color: #e2c770;">'tab-pin'</span>)
-config.bind(<span style="color: #e2c770;">'.'</span>, <span style="color: #e2c770;">'download-cancel'</span>)
+config.bind(<span style="color: #98be65;">'M'</span>, <span style="color: #98be65;">'hint links spawn mpv --vo=gpu --hwdec=vaapi --ytdl-format=\"bestvideo[height&lt;=720]+bestaudio\" --audio-device=\"pulse/alsa_output.pci-0000_00_1f.3.analog-stereo\" --script-opts=ytdl_hook-ytdl_path=yt-dlp \"{hint-url}\"'</span>)
+config.bind(<span style="color: #98be65;">'xx'</span>, <span style="color: #98be65;">'config-cycle statusbar.show never never'</span>)
+config.bind(<span style="color: #98be65;">'yy'</span>, <span style="color: #98be65;">'config-cycle statusbar.show always always'</span>)
+config.bind(<span style="color: #98be65;">'xy'</span>, <span style="color: #98be65;">'config-cycle tabs.show switching switching'</span>)
+config.bind(<span style="color: #98be65;">'yx'</span>, <span style="color: #98be65;">'config-cycle tabs.show multiple multiple'</span>)
+config.bind(<span style="color: #98be65;">'zz'</span>, <span style="color: #98be65;">'history-clear'</span>)
+config.bind(<span style="color: #98be65;">'l'</span>, <span style="color: #98be65;">'tab-pin'</span>)
+config.bind(<span style="color: #98be65;">'.'</span>, <span style="color: #98be65;">'download-cancel'</span>)
 </pre>
 </div>
 
@@ -903,7 +913,7 @@ config.bind(<span style="color: #e2c770;">'.'</span>, <span style="color: #e2c77
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2023-02-28 Tue 04:29</p>
+<p class="date">Created: 2023-05-31 Wed 16:21</p>
 </div>
 </body>
 </html>
