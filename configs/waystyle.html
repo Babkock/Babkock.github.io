@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-31 Wed 16:25 -->
+<!-- 2023-06-13 Tue 23:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Waybar Style</title>
 <meta name="author" content="Tanner Babcock" />
-<meta name="description" content="The CSS configuration for Waybar. This literate configuration outputs three CSS files, one for each of the Waybars." />
+<meta name="description" content="The CSS configuration for Waybar. This literate configuration outputs four CSS files, one for each of the Waybars." />
 <meta name="keywords" content="tanner babcock, tanner, babcock, emacs, linux, gnu linux, waybar, wayland, compositor, sway, river, labwc, sway wm, experimental, noise, technology, open source" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -226,189 +226,189 @@ These are the cosmetic CSS files for my <a href="https://babkock.github.io/confi
     </center>
 </header>
 
-<div id="outline-container-orgf8886f5" class="outline-2">
-<h2 id="orgf8886f5">Sway Waybar Style</h2>
-<div class="outline-text-2" id="text-orgf8886f5">
+<div id="outline-container-org672bb6f" class="outline-2">
+<h2 id="org672bb6f">Sway Waybar Style</h2>
+<div class="outline-text-2" id="text-org672bb6f">
 <p>
-This is the Sway Waybar style. Load this document into Emacs, and turn on Rainbow mode for extra fun! Now these Org documents serve yet another purpose. The colors for each of the three CSS files match the rices for <b>Sway</b>, <b>River</b>, and <b>LabWC</b>.
+This is the Sway Waybar style. Load this document into Emacs, and turn on Rainbow mode for extra fun! Now these Org documents serve yet another purpose. The colors for each of the four CSS files match the rices for <b>Sway</b>, <b>River</b>, <b>LabWC</b>, and <b>Hyprland</b>.
 </p>
 </div>
 
-<div id="outline-container-org8965747" class="outline-3">
-<h3 id="org8965747">All</h3>
-<div class="outline-text-3" id="text-org8965747">
+<div id="outline-container-org23fd535" class="outline-3">
+<h3 id="org23fd535">All</h3>
+<div class="outline-text-3" id="text-org23fd535">
 <p>
 Notice the space before the asterisk.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-css"> <span style="color: #51afef;">* </span>{
-    <span style="color: #98be65;">font-family</span>:<span style="color: #98be65;">"SpaceMono Nerd Font"</span>;
-    <span style="color: #98be65;">font-size</span>:21px;
-    <span style="color: #98be65;">background</span>:transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efefef;">#efefef</span>;
+<pre class="src src-css"> <span style="color: #e95678;">* </span>{
+    <span style="color: #c7c9cb;">font-family</span>:<span style="color: #fab795;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #c7c9cb;">font-size</span>:21px;
+    <span style="color: #c7c9cb;">background</span>:transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #efefef;">#efefef</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd01605f" class="outline-3">
-<h3 id="orgd01605f">Window</h3>
-<div class="outline-text-3" id="text-orgd01605f">
+<div id="outline-container-org8421434" class="outline-3">
+<h3 id="org8421434">Window</h3>
+<div class="outline-text-3" id="text-org8421434">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#window </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>
+<pre class="src src-css"><span style="color: #e95678;">#window </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org46745d8" class="outline-3">
-<h3 id="org46745d8">MPD</h3>
-<div class="outline-text-3" id="text-org46745d8">
+<div id="outline-container-org9d5b7f9" class="outline-3">
+<h3 id="org9d5b7f9">MPD</h3>
+<div class="outline-text-3" id="text-org9d5b7f9">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#mpd </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#mpd </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #010101;">#010101</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4d1fee0" class="outline-3">
-<h3 id="org4d1fee0">CPU</h3>
-<div class="outline-text-3" id="text-org4d1fee0">
+<div id="outline-container-org7395508" class="outline-3">
+<h3 id="org7395508">CPU</h3>
+<div class="outline-text-3" id="text-org7395508">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #d03844;">rgba(208, 56, 68, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:12px;
-    <span style="color: #98be65;">padding-right</span>:12px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#cpu </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #d03844;">rgba(208, 56, 68, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:12px;
+    <span style="color: #c7c9cb;">padding-right</span>:12px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7a94949" class="outline-3">
-<h3 id="org7a94949">Pulseaudio/Disk</h3>
-<div class="outline-text-3" id="text-org7a94949">
+<div id="outline-container-orgcb55ac5" class="outline-3">
+<h3 id="orgcb55ac5">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-orgcb55ac5">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #dedc91;">#dedc91</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dedc91;">rgba(222, 220, 145, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#pulseaudio, #disk </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #dedc91;">#dedc91</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dedc91;">rgba(222, 220, 145, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga954264" class="outline-3">
-<h3 id="orga954264">Memory/Backlight</h3>
-<div class="outline-text-3" id="text-orga954264">
+<div id="outline-container-org4692277" class="outline-3">
+<h3 id="org4692277">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org4692277">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #40a789;">#40a789</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3aa183;">rgba(58, 161, 131, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#memory, #backlight </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #40a789;">#40a789</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3aa183;">rgba(58, 161, 131, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7c9da8d" class="outline-3">
-<h3 id="org7c9da8d">Workspaces</h3>
-<div class="outline-text-3" id="text-org7c9da8d">
+<div id="outline-container-orgf37766e" class="outline-3">
+<h3 id="orgf37766e">Workspaces</h3>
+<div class="outline-text-3" id="text-orgf37766e">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#workspaces button, #tags button </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #787878;">rgba(120, 120, 120, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">padding-left</span>:17px;
-    <span style="color: #98be65;">padding-right</span>:17px;
-    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #dfdfdf;">#dfdfdf</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#workspaces button, #tags button </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #787878;">rgba(120, 120, 120, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">padding-left</span>:17px;
+    <span style="color: #c7c9cb;">padding-right</span>:17px;
+    <span style="color: #c7c9cb;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #dfdfdf;">#dfdfdf</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 
-<span style="color: #51afef;">#workspaces button * </span>{
-    <span style="color: #98be65;">background</span>:none;
+<span style="color: #e95678;">#workspaces button * </span>{
+    <span style="color: #c7c9cb;">background</span>:none;
 }
 
-<span style="color: #51afef;">#workspaces button:hover, #tags button:hover </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">box-shadow</span>:inherit;
-    <span style="color: #98be65;">text-shadow</span>:inherit;
-    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #b93b2b;">#b93b2b</span>;
-    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.6)</span>;
+<span style="color: #e95678;">#workspaces button:hover, #tags button:hover </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">box-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">text-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #b93b2b;">#b93b2b</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #ab2b1b;">rgba(171, 43, 27, 0.6)</span>;
 }
 
-<span style="color: #51afef;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #61b9a7;">rgba(97, 185, 167, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #81d8c6;">#81d8c6</span>;
+<span style="color: #e95678;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #61b9a7;">rgba(97, 185, 167, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #81d8c6;">#81d8c6</span>;
 }
 
-<span style="color: #51afef;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover </span>{
-    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #6bc3b1;">rgba(107, 195, 177, 0.6)</span>;
+<span style="color: #e95678;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover </span>{
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #6bc3b1;">rgba(107, 195, 177, 0.6)</span>;
 }
 
-<span style="color: #51afef;">#tags button.occupied </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #efaf60;">rgba(239, 175, 96, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #fff293;">#fff293</span>;
+<span style="color: #e95678;">#tags button.occupied </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #efaf60;">rgba(239, 175, 96, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fff293;">#fff293</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgef41d48" class="outline-3">
-<h3 id="orgef41d48">Battery</h3>
-<div class="outline-text-3" id="text-orgef41d48">
+<div id="outline-container-orgf6866ea" class="outline-3">
+<h3 id="orgf6866ea">Battery</h3>
+<div class="outline-text-3" id="text-orgf6866ea">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#battery </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #61b8a6;">#61b8a6</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #6bc2b0;">rgba(107, 194, 176, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:12px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#battery </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #61b8a6;">#61b8a6</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #6bc2b0;">rgba(107, 194, 176, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:12px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org76d982d" class="outline-3">
-<h3 id="org76d982d">Clock/Network</h3>
-<div class="outline-text-3" id="text-org76d982d">
+<div id="outline-container-org2ca6f90" class="outline-3">
+<h3 id="org2ca6f90">Clock/Network</h3>
+<div class="outline-text-3" id="text-org2ca6f90">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#custom-clock, #network </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c26cd5;">#c26cd5</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b06998;">rgba(176, 105, 152, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:12px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#custom-clock, #network </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #c26cd5;">#c26cd5</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b06998;">rgba(176, 105, 152, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:12px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
 }
 </pre>
 </div>
@@ -416,265 +416,274 @@ Notice the space before the asterisk.
 </div>
 </div>
 
-<div id="outline-container-orge70f1bc" class="outline-2">
-<h2 id="orge70f1bc">River Waybar Style</h2>
-<div class="outline-text-2" id="text-orge70f1bc">
+<div id="outline-container-org25f8331" class="outline-2">
+<h2 id="org25f8331">River Waybar Style</h2>
+<div class="outline-text-2" id="text-org25f8331">
 </div>
-<div id="outline-container-org39064a1" class="outline-3">
-<h3 id="org39064a1">All</h3>
-<div class="outline-text-3" id="text-org39064a1">
+<div id="outline-container-orgf1484c3" class="outline-3">
+<h3 id="orgf1484c3">All</h3>
+<div class="outline-text-3" id="text-orgf1484c3">
 <div class="org-src-container">
-<pre class="src src-css"> <span style="color: #51afef;">* </span>{
-    <span style="color: #98be65;">font-family</span>:<span style="color: #98be65;">"SpaceMono Nerd Font"</span>;
-    <span style="color: #98be65;">font-size</span>:21px;
-    <span style="color: #98be65;">background</span>:transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+<pre class="src src-css"> <span style="color: #e95678;">* </span>{
+    <span style="color: #c7c9cb;">font-family</span>:<span style="color: #fab795;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #c7c9cb;">font-size</span>:21px;
+    <span style="color: #c7c9cb;">background</span>:transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+}
+
+<span style="color: #e95678;">tooltip </span>{
+    <span style="color: #c7c9cb;">border</span>:none;
+    <span style="color: #c7c9cb;">border-radius</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+    <span style="color: #c7c9cb;">margin-bottom</span>:1px;
+    <span style="color: #c7c9cb;">padding</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org46cbd2c" class="outline-3">
-<h3 id="org46cbd2c">Title</h3>
-<div class="outline-text-3" id="text-org46cbd2c">
+<div id="outline-container-orgc6e8812" class="outline-3">
+<h3 id="orgc6e8812">Title</h3>
+<div class="outline-text-3" id="text-orgc6e8812">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#title, #window </span>{
-    <span style="color: #98be65;">padding-left</span>:6px;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#title, #window </span>{
+    <span style="color: #c7c9cb;">padding-left</span>:6px;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9b8e04f" class="outline-3">
-<h3 id="org9b8e04f">MPD</h3>
-<div class="outline-text-3" id="text-org9b8e04f">
+<div id="outline-container-org3cd6d14" class="outline-3">
+<h3 id="org3cd6d14">MPD</h3>
+<div class="outline-text-3" id="text-org3cd6d14">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#mpd, #bluetooth.off </span>{
-    <span style="color: #98be65;">padding-right</span>:6px;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#mpd, #bluetooth.off </span>{
+    <span style="color: #c7c9cb;">padding-right</span>:6px;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1f49dd9" class="outline-3">
-<h3 id="org1f49dd9">CPU</h3>
-<div class="outline-text-3" id="text-org1f49dd9">
+<div id="outline-container-orgcb3376a" class="outline-3">
+<h3 id="orgcb3376a">CPU</h3>
+<div class="outline-text-3" id="text-orgcb3376a">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #c43c48;">rgba(196, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#cpu, #wireplumber.muted, #pulseaudio.muted </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #c43c48;">rgba(196, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgdb033ab" class="outline-3">
-<h3 id="orgdb033ab">Pulseaudio/Disk</h3>
-<div class="outline-text-3" id="text-orgdb033ab">
+<div id="outline-container-org7874528" class="outline-3">
+<h3 id="org7874528">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-org7874528">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #f28735;">#f28735</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e27735;">rgba(226, 119, 53, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:2px;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">border-radius</span>:40px 0px 0px 40px;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#pulseaudio, #disk </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #f28735;">#f28735</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e27735;">rgba(226, 119, 53, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:2px;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 0px 0px 40px;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1dced16" class="outline-3">
-<h3 id="org1dced16">Memory/Backlight</h3>
-<div class="outline-text-3" id="text-org1dced16">
+<div id="outline-container-org3dd9383" class="outline-3">
+<h3 id="org3dd9383">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org3dd9383">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#memory, #backlight, #wireplumber </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
-<span style="color: #51afef;">#backlight </span>{
-    <span style="color: #98be65;">border-radius</span>:0px 40px 40px 0px;
-    <span style="color: #98be65;">margin-right</span>:2px;
+<span style="color: #e95678;">#backlight </span>{
+    <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+    <span style="color: #c7c9cb;">margin-right</span>:2px;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org518f160" class="outline-3">
-<h3 id="org518f160">Workspaces</h3>
-<div class="outline-text-3" id="text-org518f160">
+<div id="outline-container-org927f321" class="outline-3">
+<h3 id="org927f321">Workspaces</h3>
+<div class="outline-text-3" id="text-org927f321">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#workspaces button, #tags button </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">padding-left</span>:16px;
-    <span style="color: #98be65;">padding-right</span>:17px;
-    <span style="color: #98be65;">margin-left</span>:1px;
-    <span style="color: #98be65;">margin-right</span>:1px;
-    <span style="color: #98be65;">border-radius</span>:40px 40px 40px 40px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#workspaces button, #tags button </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">padding-left</span>:16px;
+    <span style="color: #c7c9cb;">padding-right</span>:17px;
+    <span style="color: #c7c9cb;">margin-left</span>:1px;
+    <span style="color: #c7c9cb;">margin-right</span>:1px;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 40px 40px 40px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 
-<span style="color: #51afef;">#workspaces button:hover, #tags button:hover </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">box-shadow</span>:inherit;
-    <span style="color: #98be65;">text-shadow</span>:inherit;
-    <span style="color: #98be65;">margin-left</span>:1px;
-    <span style="color: #98be65;">margin-right</span>:1px;
-    <span style="color: #98be65;">border-radius</span>:40px 40px 40px 40px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #bcbcbc;">#bcbcbc</span>;
-    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #f74e8b;">rgba(247, 78, 139, 0.5)</span>;
+<span style="color: #e95678;">#workspaces button:hover, #tags button:hover </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">box-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">text-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">margin-left</span>:1px;
+    <span style="color: #c7c9cb;">margin-right</span>:1px;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 40px 40px 40px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #bcbcbc;">#bcbcbc</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #f74e8b;">rgba(247, 78, 139, 0.5)</span>;
 }
 
-<span style="color: #51afef;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied, #workspaces button.active </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+<span style="color: #e95678;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied, #workspaces button.active </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
 }
 
-<span style="color: #51afef;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover, #workspaces button.active:hover </span>{
-    <span style="color: #98be65;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>;
+<span style="color: #e95678;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover, #workspaces button.active:hover </span>{
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>;
 }
 
-<span style="color: #51afef;">#tags button.occupied </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #70ca44;">rgba(112, 202, 68, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+<span style="color: #e95678;">#tags button.occupied </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #70ca44;">rgba(112, 202, 68, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1ecbaf1" class="outline-3">
-<h3 id="org1ecbaf1">Battery</h3>
-<div class="outline-text-3" id="text-org1ecbaf1">
+<div id="outline-container-org388c8f4" class="outline-3">
+<h3 id="org388c8f4">Battery</h3>
+<div class="outline-text-3" id="text-org388c8f4">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#battery, #idle_inhibitor </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#battery, #idle_inhibitor, #pulseaudio.bluetooth </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
-<span style="color: #51afef;">#idle_inhibitor </span>{
-    <span style="color: #98be65;">border-radius</span>:40px 0px 0px 40px;
-    <span style="color: #98be65;">margin-left</span>:2px;
+<span style="color: #e95678;">#idle_inhibitor, #pulseaudio.bluetooth </span>{
+    <span style="color: #c7c9cb;">border-radius</span>:40px 0px 0px 40px;
+    <span style="color: #c7c9cb;">margin-left</span>:2px;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgaa9b839" class="outline-3">
-<h3 id="orgaa9b839">Clock</h3>
-<div class="outline-text-3" id="text-orgaa9b839">
+<div id="outline-container-org7c378dd" class="outline-3">
+<h3 id="org7c378dd">Clock</h3>
+<div class="outline-text-3" id="text-org7c378dd">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#custom-clock </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #d8a89a;">#d8a89a</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #c8988a;">rgba(200, 152, 138, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">border-radius</span>:0px 40px 40px 0px;
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:2px;
-    <span style="color: #98be65;">padding-left</span>:12px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#custom-clock </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #d8a89a;">#d8a89a</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #c8988a;">rgba(200, 152, 138, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:2px;
+    <span style="color: #c7c9cb;">padding-left</span>:12px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7e4d2e0" class="outline-3">
-<h3 id="org7e4d2e0">Network</h3>
-<div class="outline-text-3" id="text-org7e4d2e0">
+<div id="outline-container-org85153ad" class="outline-3">
+<h3 id="org85153ad">Network</h3>
+<div class="outline-text-3" id="text-org85153ad">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#network </span>{
-   <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #f74e8b;">#f74e8b</span>;
-   <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-   <span style="color: #98be65;">border-radius</span>:0px 40px 40px 0px;
-   <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-   <span style="color: #98be65;">margin-right</span>:2px;
-   <span style="color: #98be65;">padding-left</span>:11px;
-   <span style="color: #98be65;">padding-right</span>:11px;
-   <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#network </span>{
+   <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #f74e8b;">#f74e8b</span>;
+   <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+   <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+   <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+   <span style="color: #c7c9cb;">margin-right</span>:2px;
+   <span style="color: #c7c9cb;">padding-left</span>:11px;
+   <span style="color: #c7c9cb;">padding-right</span>:11px;
+   <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge989d12" class="outline-3">
-<h3 id="orge989d12">Bluetooth</h3>
-<div class="outline-text-3" id="text-orge989d12">
+<div id="outline-container-org51f0150" class="outline-3">
+<h3 id="org51f0150">Bluetooth</h3>
+<div class="outline-text-3" id="text-org51f0150">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#bluetooth.off </span>{
-    <span style="color: #98be65;">padding-left</span>:9px;
-    <span style="color: #98be65;">padding-right</span>:9px;
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
+<pre class="src src-css"><span style="color: #e95678;">#bluetooth.off </span>{
+    <span style="color: #c7c9cb;">padding-left</span>:9px;
+    <span style="color: #c7c9cb;">padding-right</span>:9px;
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
 }
 
-<span style="color: #51afef;">#bluetooth.on </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ba3c48;">rgba(186, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<span style="color: #e95678;">#bluetooth.on </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ba3c48;">rgba(186, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 
-<span style="color: #51afef;">#bluetooth.connected, #bluetooth.connected.pairable </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<span style="color: #e95678;">#bluetooth.connected, #bluetooth.connected.pairable </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 
-<span style="color: #51afef;">#bluetooth.pairable:not(.connected), #bluetooth.discoverable </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<span style="color: #e95678;">#bluetooth.pairable:not(.connected), #bluetooth.discoverable </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 
-<span style="color: #51afef;">#bluetooth.discovering </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #f9c65b;">#f9c65b</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #e9b64b;">rgba(233, 182, 75, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<span style="color: #e95678;">#bluetooth.discovering </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #f9c65b;">#f9c65b</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #e9b64b;">rgba(233, 182, 75, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
@@ -682,176 +691,452 @@ Notice the space before the asterisk.
 </div>
 </div>
 
-<div id="outline-container-org33ce74b" class="outline-2">
-<h2 id="org33ce74b">LabWC Waybar Style</h2>
-<div class="outline-text-2" id="text-org33ce74b">
+<div id="outline-container-org1d4cb28" class="outline-2">
+<h2 id="org1d4cb28">LabWC Waybar Style</h2>
+<div class="outline-text-2" id="text-org1d4cb28">
 </div>
-<div id="outline-container-org49b850a" class="outline-3">
-<h3 id="org49b850a">All</h3>
-<div class="outline-text-3" id="text-org49b850a">
+<div id="outline-container-orgacc7951" class="outline-3">
+<h3 id="orgacc7951">All</h3>
+<div class="outline-text-3" id="text-orgacc7951">
 <div class="org-src-container">
-<pre class="src src-css"> <span style="color: #51afef;">* </span>{
-    <span style="color: #98be65;">font-family</span>:<span style="color: #98be65;">"SpaceMono Nerd Font"</span>;
-    <span style="color: #98be65;">font-size</span>:21px;
-    <span style="color: #98be65;">background</span>:transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
+<pre class="src src-css"> <span style="color: #e95678;">* </span>{
+    <span style="color: #c7c9cb;">font-family</span>:<span style="color: #fab795;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #c7c9cb;">font-size</span>:21px;
+    <span style="color: #c7c9cb;">background</span>:transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #edc9b9;">#edc9b9</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org58050ad" class="outline-3">
-<h3 id="org58050ad">CPU</h3>
-<div class="outline-text-3" id="text-org58050ad">
+<div id="outline-container-org6cbdc25" class="outline-3">
+<h3 id="org6cbdc25">CPU</h3>
+<div class="outline-text-3" id="text-org6cbdc25">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#cpu </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #dd6359;">#dd6359</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.4)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#cpu </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #dd6359;">#dd6359</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #cd5349;">rgba(205, 83, 73, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.4)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org688eb61" class="outline-3">
-<h3 id="org688eb61">Pulseaudio/Disk</h3>
-<div class="outline-text-3" id="text-org688eb61">
+<div id="outline-container-org7061383" class="outline-3">
+<h3 id="org7061383">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-org7061383">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#pulseaudio, #disk </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#pulseaudio, #disk </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5555df2" class="outline-3">
-<h3 id="org5555df2">Memory/Backlight</h3>
-<div class="outline-text-3" id="text-org5555df2">
+<div id="outline-container-org3e0d2ca" class="outline-3">
+<h3 id="org3e0d2ca">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-org3e0d2ca">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#memory, #backlight </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:10px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#memory, #backlight </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org99241f2" class="outline-3">
-<h3 id="org99241f2">Battery</h3>
-<div class="outline-text-3" id="text-org99241f2">
+<div id="outline-container-org0e4e071" class="outline-3">
+<h3 id="org0e4e071">Battery</h3>
+<div class="outline-text-3" id="text-org0e4e071">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#battery </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #39a5eb;">#39a5eb</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #2995db;">rgba(41, 149, 219, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:12px;
-    <span style="color: #98be65;">padding-right</span>:11px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#battery </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #39a5eb;">#39a5eb</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #2995db;">rgba(41, 149, 219, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:12px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2db3e60" class="outline-3">
-<h3 id="org2db3e60">Taskbar</h3>
-<div class="outline-text-3" id="text-org2db3e60">
+<div id="outline-container-orgd7bb401" class="outline-3">
+<h3 id="orgd7bb401">Taskbar</h3>
+<div class="outline-text-3" id="text-orgd7bb401">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#taskbar button </span>{
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b76178;">rgba(183, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:9px;
-    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#taskbar button </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b76178;">rgba(183, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:9px;
+    <span style="color: #c7c9cb;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
-<span style="color: #51afef;">#taskbar button:hover </span>{
-    <span style="color: #98be65;">padding-left</span>:10px;
-    <span style="color: #98be65;">padding-right</span>:9px;
-    <span style="color: #98be65;">border-radius</span>:0px 0px 0px 0px;
-    <span style="color: #98be65;">border</span>:0px solid transparent;
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000014;">rgba(0, 0, 20, 0.7)</span>;
+<span style="color: #e95678;">#taskbar button:hover </span>{
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:9px;
+    <span style="color: #c7c9cb;">border-radius</span>:0px 0px 0px 0px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000014;">rgba(0, 0, 20, 0.7)</span>;
 }
-<span style="color: #51afef;">#taskbar button.maximized </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+<span style="color: #e95678;">#taskbar button.maximized </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #00dd30;">#00dd30</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #00cc20;">rgba(0, 204, 32, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
 }
-<span style="color: #51afef;">#taskbar button.minimized </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+<span style="color: #e95678;">#taskbar button.minimized </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #efef20;">#efef20</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #dfdd10;">rgba(223, 221, 16, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
 }
-<span style="color: #51afef;">#taskbar button.active </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #000000; background-color: #c98e86;">#c98e86</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #bd7f74;">rgba(189, 127, 116, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+<span style="color: #e95678;">#taskbar button.active </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #c98e86;">#c98e86</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #bd7f74;">rgba(189, 127, 116, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
 }
-<span style="color: #51afef;">#taskbar button.maximized:hover </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b86178;">rgba(184, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+<span style="color: #e95678;">#taskbar button.maximized:hover </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #c77188;">#c77188</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #b86178;">rgba(184, 97, 120, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
 }
-<span style="color: #51afef;">#taskbar button.active:hover, #taskbar button.minimized:hover </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+<span style="color: #e95678;">#taskbar button.active:hover, #taskbar button.minimized:hover </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb77bbeb" class="outline-3">
-<h3 id="orgb77bbeb">Clock/Network</h3>
-<div class="outline-text-3" id="text-orgb77bbeb">
+<div id="outline-container-org6d93c12" class="outline-3">
+<h3 id="org6d93c12">Clock/Network</h3>
+<div class="outline-text-3" id="text-org6d93c12">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#custom-clock, #clock, #network </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
-    <span style="color: #98be65;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
-    <span style="color: #98be65;">margin-left</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">margin-right</span>:<span style="color: #da8548; font-weight: bold;">0</span>;
-    <span style="color: #98be65;">padding-left</span>:11px;
-    <span style="color: #98be65;">padding-right</span>:9px;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#custom-clock, #clock, #network </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #58a4a1;">#58a4a1</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #489390;">rgba(72, 147, 144, 0.9)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.5)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:9px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org822f5b0" class="outline-3">
-<h3 id="org822f5b0">MPD</h3>
-<div class="outline-text-3" id="text-org822f5b0">
+<div id="outline-container-org50d5879" class="outline-3">
+<h3 id="org50d5879">MPD</h3>
+<div class="outline-text-3" id="text-org50d5879">
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">#mpd </span>{
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #000000;">#000000</span>;
-    <span style="color: #98be65;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+<pre class="src src-css"><span style="color: #e95678;">#mpd </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #000000;">#000000</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
 }
 </pre>
 </div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org114665c" class="outline-2">
+<h2 id="org114665c">Hyprland Waybar Style</h2>
+<div class="outline-text-2" id="text-org114665c">
+</div>
+<div id="outline-container-org5d81e81" class="outline-3">
+<h3 id="org5d81e81">All</h3>
+<div class="outline-text-3" id="text-org5d81e81">
+<div class="org-src-container">
+<pre class="src src-css"> <span style="color: #e95678;">* </span>{
+    <span style="color: #c7c9cb;">font-family</span>:<span style="color: #fab795;">"SpaceMono Nerd Font"</span>;
+    <span style="color: #c7c9cb;">font-size</span>:21px;
+    <span style="color: #c7c9cb;">background</span>:transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+}
+
+<span style="color: #e95678;">tooltip </span>{
+    <span style="color: #c7c9cb;">border</span>:none;
+    <span style="color: #c7c9cb;">border-radius</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.6)</span>;
+    <span style="color: #c7c9cb;">margin-bottom</span>:1px;
+    <span style="color: #c7c9cb;">padding</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7221bc9" class="outline-3">
+<h3 id="org7221bc9">Title</h3>
+<div class="outline-text-3" id="text-org7221bc9">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#title, #window </span>{
+    <span style="color: #c7c9cb;">padding-left</span>:6px;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf01f62" class="outline-3">
+<h3 id="orgaf01f62">MPD</h3>
+<div class="outline-text-3" id="text-orgaf01f62">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#mpd, #bluetooth.off </span>{
+    <span style="color: #c7c9cb;">padding-right</span>:6px;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #fdeadb;">#fdeadb</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org891c911" class="outline-3">
+<h3 id="org891c911">CPU</h3>
+<div class="outline-text-3" id="text-org891c911">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#cpu, #wireplumber.muted, #pulseaudio.muted </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #c43c48;">rgba(196, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd43f1a4" class="outline-3">
+<h3 id="orgd43f1a4">Pulseaudio/Disk</h3>
+<div class="outline-text-3" id="text-orgd43f1a4">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#pulseaudio, #disk </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #f28735;">#f28735</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e27735;">rgba(226, 119, 53, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:2px;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 0px 0px 40px;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga3f6856" class="outline-3">
+<h3 id="orga3f6856">Memory/Backlight</h3>
+<div class="outline-text-3" id="text-orga3f6856">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#memory, #backlight, #wireplumber </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+<span style="color: #e95678;">#backlight </span>{
+    <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+    <span style="color: #c7c9cb;">margin-right</span>:2px;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf21c51" class="outline-3">
+<h3 id="orgbf21c51">Workspaces</h3>
+<div class="outline-text-3" id="text-orgbf21c51">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#workspaces button, #tags button </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">padding-left</span>:16px;
+    <span style="color: #c7c9cb;">padding-right</span>:17px;
+    <span style="color: #c7c9cb;">margin-left</span>:1px;
+    <span style="color: #c7c9cb;">margin-right</span>:1px;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 40px 40px 40px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #fc3c35;">#fc3c35</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+
+<span style="color: #e95678;">#workspaces button:hover, #tags button:hover </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">box-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">text-shadow</span>:inherit;
+    <span style="color: #c7c9cb;">margin-left</span>:1px;
+    <span style="color: #c7c9cb;">margin-right</span>:1px;
+    <span style="color: #c7c9cb;">border-radius</span>:40px 40px 40px 40px;
+    <span style="color: #c7c9cb;">border</span>:0px solid transparent;
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #bcbcbc;">#bcbcbc</span>;
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #ffffff; background-color: #f74e8b;">rgba(247, 78, 139, 0.5)</span>;
+}
+
+<span style="color: #e95678;">#workspaces button.focused, #tags button.focused, #tags button.focused.occupied, #workspaces button.active </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+}
+
+<span style="color: #e95678;">#workspaces button.focused:hover, #tags button.focused:hover, #tags button.focused.occupied:hover, #workspaces button.active:hover </span>{
+    <span style="color: #c7c9cb;">text-shadow</span>:3px 3px <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>;
+}
+
+<span style="color: #e95678;">#tags button.occupied </span>{
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #70ca44;">rgba(112, 202, 68, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf594f53" class="outline-3">
+<h3 id="orgf594f53">Battery</h3>
+<div class="outline-text-3" id="text-orgf594f53">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#battery, #idle_inhibitor, #pulseaudio.bluetooth </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+<span style="color: #e95678;">#idle_inhibitor, #pulseaudio.bluetooth </span>{
+    <span style="color: #c7c9cb;">border-radius</span>:40px 0px 0px 40px;
+    <span style="color: #c7c9cb;">margin-left</span>:2px;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1f77ecc" class="outline-3">
+<h3 id="org1f77ecc">Clock</h3>
+<div class="outline-text-3" id="text-org1f77ecc">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#custom-clock </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #d8a89a;">#d8a89a</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #c8988a;">rgba(200, 152, 138, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:2px;
+    <span style="color: #c7c9cb;">padding-left</span>:12px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0172cd7" class="outline-3">
+<h3 id="org0172cd7">Network</h3>
+<div class="outline-text-3" id="text-org0172cd7">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#network </span>{
+   <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #f74e8b;">#f74e8b</span>;
+   <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #e73d7b;">rgba(231, 61, 123, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+   <span style="color: #c7c9cb;">border-radius</span>:0px 40px 40px 0px;
+   <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+   <span style="color: #c7c9cb;">margin-right</span>:2px;
+   <span style="color: #c7c9cb;">padding-left</span>:11px;
+   <span style="color: #c7c9cb;">padding-right</span>:11px;
+   <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2104096" class="outline-3">
+<h3 id="org2104096">Bluetooth</h3>
+<div class="outline-text-3" id="text-org2104096">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #e95678;">#bluetooth.off </span>{
+    <span style="color: #c7c9cb;">padding-left</span>:9px;
+    <span style="color: #c7c9cb;">padding-right</span>:9px;
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+}
+
+<span style="color: #e95678;">#bluetooth.on </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #d0484e;">#d0484e</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #ba3c48;">rgba(186, 60, 72, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+
+<span style="color: #e95678;">#bluetooth.connected, #bluetooth.connected.pairable </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #25c192;">#25c192</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #000000; background-color: #15b082;">rgba(21, 176, 130, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:10px;
+    <span style="color: #c7c9cb;">padding-right</span>:10px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+
+<span style="color: #e95678;">#bluetooth.pairable:not(.connected), #bluetooth.discoverable </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #ffffff; background-color: #3996c0;">#3996c0</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(180deg, <span style="color: #ffffff; background-color: #3996c0;">rgba(57, 150, 192, 0.7)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+
+<span style="color: #e95678;">#bluetooth.discovering </span>{
+    <span style="color: #c7c9cb;">color</span>:<span style="color: #000000; background-color: #f9c65b;">#f9c65b</span>;
+    <span style="color: #c7c9cb;">background</span>:linear-gradient(0deg, <span style="color: #000000; background-color: #e9b64b;">rgba(233, 182, 75, 0.6)</span>, <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.1)</span>);
+    <span style="color: #c7c9cb;">margin-left</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">margin-right</span>:<span style="color: #f09383; font-weight: bold;">0</span>;
+    <span style="color: #c7c9cb;">padding-left</span>:11px;
+    <span style="color: #c7c9cb;">padding-right</span>:11px;
+    <span style="color: #c7c9cb;">text-shadow</span>:2px 2px <span style="color: #ffffff; background-color: #000000;">rgba(0, 0, 0, 0.7)</span>;
+}
+</pre>
+</div>
+
 
 <footer>
     <center>
-        <p>Copyright &copy; 2022 Tanner Babcock.</p>
+        <p>Copyright &copy; 2023 Tanner Babcock.</p>
         <p>This page licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC 4.0).</p>
         <p class="nav">
             <a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp;
@@ -869,7 +1154,7 @@ Notice the space before the asterisk.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2023-05-31 Wed 16:25</p>
+<p class="date">Created: 2023-06-13 Tue 23:02</p>
 </div>
 </body>
 </html>
