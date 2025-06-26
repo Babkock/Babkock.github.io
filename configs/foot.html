@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-31 Wed 16:19 -->
+<!-- 2025-06-25 Wed 19:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Foot</title>
@@ -11,7 +11,7 @@
 <meta name="description" content="Foot terminal config on Tanner Babcock GitHub Pages. Features colors, fonts, and preferences." />
 <meta name="keywords" content="tanner babcock, tanner, babcock, emacs, github, foot, doom emacs, org mode, linux, gnu linux, void linux, art, experimental, noise" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -230,266 +230,381 @@ This is the configuration for the <a href="https://codeberg.org/dnkl/foot">Foot<
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1279291">Hyprland</a>
+<li><a href="#org8b39992">Sway</a>
 <ul>
-<li><a href="#org95986ff">Font</a></li>
-<li><a href="#org0a9e2c1">Preferences</a></li>
-<li><a href="#orgb66f9df">Appearance</a></li>
-<li><a href="#org6b4ba2c">Colors</a></li>
+<li><a href="#orgc3051c1">Font</a></li>
+<li><a href="#org3b0775a">Preferences</a></li>
+<li><a href="#org45e6110">Appearance</a></li>
+<li><a href="#org230190f">Colors</a></li>
 </ul>
 </li>
-<li><a href="#org4b75942">Sway</a>
+<li><a href="#orge002fc2">Wayfire</a>
 <ul>
-<li><a href="#org98de87e">Font</a></li>
-<li><a href="#org2284f75">Preferences</a></li>
-<li><a href="#org1ae9145">Appearance</a></li>
-<li><a href="#orgbe5b528">Colors</a></li>
+<li><a href="#org845b739">Font</a></li>
+<li><a href="#org4e5a1eb">Preferences</a></li>
+<li><a href="#org1d40601">Appearance</a></li>
+<li><a href="#org6ff461c">Colors</a></li>
 </ul>
 </li>
-<li><a href="#org6c3588d">LabWC</a>
+<li><a href="#orgfb5e2ba">Hyprland</a>
 <ul>
-<li><a href="#orgefaa381">Font</a></li>
-<li><a href="#org8c3a826">Preferences</a></li>
-<li><a href="#org3685aae">Appearance</a></li>
-<li><a href="#org27fc7b9">Colors</a></li>
+<li><a href="#orgf7b7d00">Font</a></li>
+<li><a href="#org1cd91bc">Preferences</a></li>
+<li><a href="#org90ad916">Appearance</a></li>
+<li><a href="#org8c7fcbd">Colors</a></li>
+</ul>
+</li>
+<li><a href="#orga206b31">Niri</a>
+<ul>
+<li><a href="#orgd0f2cba">Font</a></li>
+<li><a href="#org60945b2">Preferences</a></li>
+<li><a href="#orgb85d608">Appearance</a></li>
+<li><a href="#org01d32b0">Colors</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org1279291" class="outline-2">
-<h2 id="org1279291">Hyprland</h2>
-<div class="outline-text-2" id="text-org1279291">
+<div id="outline-container-org8b39992" class="outline-2">
+<h2 id="org8b39992">Sway</h2>
+<div class="outline-text-2" id="text-org8b39992">
 </div>
-<div id="outline-container-org95986ff" class="outline-3">
-<h3 id="org95986ff">Font</h3>
-<div class="outline-text-3" id="text-org95986ff">
+<div id="outline-container-orgc3051c1" class="outline-3">
+<h3 id="orgc3051c1">Font</h3>
+<div class="outline-text-3" id="text-orgc3051c1">
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
+<pre class="src src-conf"><span style="color: #bfbdb6;">shell</span> = /usr/bin/zsh
+
+<span style="color: #bfbdb6;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org0a9e2c1" class="outline-3">
-<h3 id="org0a9e2c1">Preferences</h3>
-<div class="outline-text-3" id="text-org0a9e2c1">
+<div id="outline-container-org3b0775a" class="outline-3">
+<h3 id="org3b0775a">Preferences</h3>
+<div class="outline-text-3" id="text-org3b0775a">
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">dpi-aware</span>=yes
-<span style="color: #dcaeea;">pad</span>=9x9 center
-<span style="color: #dcaeea;">vertical-letter-offset</span>=-4px
-<span style="color: #dcaeea;">line-height</span>=25px
-<span style="color: #dcaeea;">letter-spacing</span>=-1px
-<span style="color: #dcaeea;">bold-text-in-bright</span>=palette-based
-<span style="color: #dcaeea;">resize-delay-ms</span>=<span style="color: #da8548; font-weight: bold;">80</span>
+<pre class="src src-conf"><span style="color: #bfbdb6;">dpi-aware</span>=yes
+<span style="color: #bfbdb6;">pad</span>=9x9 center
+<span style="color: #bfbdb6;">vertical-letter-offset</span>=-4px
+<span style="color: #bfbdb6;">notify</span>=notify-send -i ${app-id} {$title} {$body}
+<span style="color: #bfbdb6;">line-height</span>=24px
+<span style="color: #bfbdb6;">letter-spacing</span>=-1px
+<span style="color: #bfbdb6;">bold-text-in-bright</span>=palette-based
+<span style="color: #bfbdb6;">resize-delay-ms</span>=<span style="color: #ffb454; font-weight: bold;">90</span>
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgb66f9df" class="outline-3">
-<h3 id="orgb66f9df">Appearance</h3>
-<div class="outline-text-3" id="text-orgb66f9df">
+<div id="outline-container-org45e6110" class="outline-3">
+<h3 id="org45e6110">Appearance</h3>
+<div class="outline-text-3" id="text-org45e6110">
 <div class="org-src-container">
-<pre class="src src-conf">[<span style="color: #ECBE7B;">cursor</span>]
-<span style="color: #dcaeea;">style</span>=beam
-<span style="color: #dcaeea;">blink</span>=yes
+<pre class="src src-conf">[<span style="color: #e6b673;">cursor</span>]
+<span style="color: #bfbdb6;">style</span>=beam
+<span style="color: #bfbdb6;">blink</span>=yes
 
-[<span style="color: #ECBE7B;">colors</span>]
-<span style="color: #dcaeea;">background</span>=<span style="color: #da8548; font-weight: bold;">100002</span>
-<span style="color: #dcaeea;">foreground</span>=fdeadb
-<span style="color: #dcaeea;">alpha</span>=<span style="color: #da8548; font-weight: bold;">0.6</span>
+[<span style="color: #e6b673;">bell</span>]
+<span style="color: #bfbdb6;">urgent</span>=yes
+<span style="color: #bfbdb6;">notify</span>=yes
+<span style="color: #bfbdb6;">visual</span>=yes
+
+[<span style="color: #e6b673;">mouse</span>]
+<span style="color: #bfbdb6;">hide-when-typing</span>=yes
+<span style="color: #bfbdb6;">alternate-scroll-mode</span>=no
+
+[<span style="color: #e6b673;">url</span>]
+<span style="color: #bfbdb6;">launch</span>=xdg-open ${url}
+
+[<span style="color: #e6b673;">colors</span>]
+<span style="color: #bfbdb6;">background</span>=<span style="color: #ffb454; font-weight: bold;">020202</span>
+<span style="color: #bfbdb6;">foreground</span>=eeeeee
+<span style="color: #bfbdb6;">alpha</span>=<span style="color: #ffb454; font-weight: bold;">0.6</span>
+<span style="color: #bfbdb6;">flash</span>=ffffff
 </pre>
 </div>
 </div>
 </div>
+<div id="outline-container-org230190f" class="outline-3">
+<h3 id="org230190f">Colors</h3>
+<div class="outline-text-3" id="text-org230190f">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">regular0</span>=<span style="color: #ffb454; font-weight: bold;">000000</span>
+<span style="color: #bfbdb6;">bright0</span>=<span style="color: #ffb454; font-weight: bold;">121212</span>
+<span style="color: #bfbdb6;">regular1</span>=ee0009
+<span style="color: #bfbdb6;">bright1</span>=fe0219
+<span style="color: #bfbdb6;">regular2</span>=99cf01
+<span style="color: #bfbdb6;">bright2</span>=a9df11
+<span style="color: #bfbdb6;">regular3</span>=e4cf13
+<span style="color: #bfbdb6;">bright3</span>=f4df23
+<span style="color: #bfbdb6;">regular4</span>=6b65da
+<span style="color: #bfbdb6;">bright4</span>=6264fe
+<span style="color: #bfbdb6;">regular5</span>=af38db
+<span style="color: #bfbdb6;">bright5</span>=ff4de7
+<span style="color: #bfbdb6;">regular6</span>=43e7e9
+<span style="color: #bfbdb6;">bright6</span>=53f7f9
+<span style="color: #bfbdb6;">regular7</span>=eecd73
+<span style="color: #bfbdb6;">bright7</span>=fedd83
+<span style="color: #bfbdb6;">urls</span>=ff0000
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge002fc2" class="outline-2">
+<h2 id="orge002fc2">Wayfire</h2>
+<div class="outline-text-2" id="text-orge002fc2">
+</div>
+<div id="outline-container-org845b739" class="outline-3">
+<h3 id="org845b739">Font</h3>
+<div class="outline-text-3" id="text-org845b739">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">shell</span> = /usr/bin/zsh
 
-<div id="outline-container-org6b4ba2c" class="outline-3">
-<h3 id="org6b4ba2c">Colors</h3>
-<div class="outline-text-3" id="text-org6b4ba2c">
+<span style="color: #bfbdb6;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e5a1eb" class="outline-3">
+<h3 id="org4e5a1eb">Preferences</h3>
+<div class="outline-text-3" id="text-org4e5a1eb">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">dpi-aware</span>=yes
+<span style="color: #bfbdb6;">pad</span>=9x9 center
+<span style="color: #bfbdb6;">vertical-letter-offset</span>=-4px
+<span style="color: #bfbdb6;">line-height</span>=24px
+<span style="color: #bfbdb6;">letter-spacing</span>=-1px
+<span style="color: #bfbdb6;">bold-text-in-bright</span>=palette-based
+<span style="color: #bfbdb6;">resize-delay-ms</span>=<span style="color: #ffb454; font-weight: bold;">90</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1d40601" class="outline-3">
+<h3 id="org1d40601">Appearance</h3>
+<div class="outline-text-3" id="text-org1d40601">
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #e6b673;">cursor</span>]
+<span style="color: #bfbdb6;">style</span>=beam
+<span style="color: #bfbdb6;">blink</span>=yes
+
+[<span style="color: #e6b673;">colors</span>]
+<span style="color: #bfbdb6;">background</span>=<span style="color: #ffb454; font-weight: bold;">101010</span>
+<span style="color: #bfbdb6;">foreground</span>=efefef
+<span style="color: #bfbdb6;">alpha</span>=<span style="color: #ffb454; font-weight: bold;">0.6</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ff461c" class="outline-3">
+<h3 id="org6ff461c">Colors</h3>
+<div class="outline-text-3" id="text-org6ff461c">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">regular0</span>=<span style="color: #ffb454; font-weight: bold;">000000</span>
+<span style="color: #bfbdb6;">bright0</span>=<span style="color: #ffb454; font-weight: bold;">121212</span>
+<span style="color: #bfbdb6;">regular1</span>=c77188
+<span style="color: #bfbdb6;">bright1</span>=d78198
+<span style="color: #bfbdb6;">regular2</span>=00bb10
+<span style="color: #bfbdb6;">bright2</span>=00cc20
+<span style="color: #bfbdb6;">regular3</span>=dfdf10
+<span style="color: #bfbdb6;">bright3</span>=efef20
+<span style="color: #bfbdb6;">regular4</span>=2995db
+<span style="color: #bfbdb6;">bright4</span>=39a5eb
+<span style="color: #bfbdb6;">regular5</span>=b97e76
+<span style="color: #bfbdb6;">bright5</span>=c98e86
+<span style="color: #bfbdb6;">regular6</span>=<span style="color: #ffb454; font-weight: bold;">489390</span>
+<span style="color: #bfbdb6;">bright6</span>=58a4a1
+<span style="color: #bfbdb6;">regular7</span>=edc9b9
+<span style="color: #bfbdb6;">bright7</span>=fdd9c9
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb5e2ba" class="outline-2">
+<h2 id="orgfb5e2ba">Hyprland</h2>
+<div class="outline-text-2" id="text-orgfb5e2ba">
+</div>
+<div id="outline-container-orgf7b7d00" class="outline-3">
+<h3 id="orgf7b7d00">Font</h3>
+<div class="outline-text-3" id="text-orgf7b7d00">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">shell</span> = /usr/bin/zsh
+
+<span style="color: #bfbdb6;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1cd91bc" class="outline-3">
+<h3 id="org1cd91bc">Preferences</h3>
+<div class="outline-text-3" id="text-org1cd91bc">
+<div class="org-src-container">
+<pre class="src src-conf"><span style="color: #bfbdb6;">dpi-aware</span>=yes
+<span style="color: #bfbdb6;">pad</span>=9x9 center
+<span style="color: #bfbdb6;">notify</span>=notify-send -i ${app-id} ${title} ${body}
+<span style="color: #bfbdb6;">vertical-letter-offset</span>=-4px
+<span style="color: #bfbdb6;">line-height</span>=24px
+<span style="color: #bfbdb6;">letter-spacing</span>=-1px
+<span style="color: #bfbdb6;">bold-text-in-bright</span>=palette-based
+<span style="color: #bfbdb6;">resize-delay-ms</span>=<span style="color: #ffb454; font-weight: bold;">80</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org90ad916" class="outline-3">
+<h3 id="org90ad916">Appearance</h3>
+<div class="outline-text-3" id="text-org90ad916">
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #e6b673;">cursor</span>]
+<span style="color: #bfbdb6;">style</span>=beam
+<span style="color: #bfbdb6;">blink</span>=yes
+
+[<span style="color: #e6b673;">bell</span>]
+<span style="color: #bfbdb6;">urgent</span>=yes
+<span style="color: #bfbdb6;">notify</span>=yes
+<span style="color: #bfbdb6;">visual</span>=yes
+
+[<span style="color: #e6b673;">url</span>]
+<span style="color: #bfbdb6;">launch</span>=xdg-open ${url}
+
+[<span style="color: #e6b673;">colors</span>]
+<span style="color: #bfbdb6;">background</span>=<span style="color: #ffb454; font-weight: bold;">100002</span>
+<span style="color: #bfbdb6;">foreground</span>=fdeadb
+<span style="color: #bfbdb6;">alpha</span>=<span style="color: #ffb454; font-weight: bold;">0.6</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8c7fcbd" class="outline-3">
+<h3 id="org8c7fcbd">Colors</h3>
+<div class="outline-text-3" id="text-org8c7fcbd">
 <p>
 This is where you edit the actual color scheme.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">regular0</span>=<span style="color: #da8548; font-weight: bold;">000000</span>
-<span style="color: #dcaeea;">bright0</span>=<span style="color: #da8548; font-weight: bold;">121212</span>
-<span style="color: #dcaeea;">regular1</span>=c03b3e
-<span style="color: #dcaeea;">bright1</span>=d04b4e
-<span style="color: #dcaeea;">regular2</span>=15b082
-<span style="color: #dcaeea;">bright2</span>=25c192
-<span style="color: #dcaeea;">regular3</span>=e27725
-<span style="color: #dcaeea;">bright3</span>=f28735
-<span style="color: #dcaeea;">regular4</span>=3996c0
-<span style="color: #dcaeea;">bright4</span>=49a6d0
-<span style="color: #dcaeea;">regular5</span>=e73d7b
-<span style="color: #dcaeea;">bright5</span>=f74e8b
-<span style="color: #dcaeea;">regular6</span>=c8988a
-<span style="color: #dcaeea;">bright6</span>=d8a89a
-<span style="color: #dcaeea;">regular7</span>=eddacb
-<span style="color: #dcaeea;">bright7</span>=fdeadb
+<pre class="src src-conf"><span style="color: #bfbdb6;">regular0</span>=<span style="color: #ffb454; font-weight: bold;">000000</span>
+<span style="color: #bfbdb6;">bright0</span>=<span style="color: #ffb454; font-weight: bold;">121212</span>
+<span style="color: #bfbdb6;">regular1</span>=c03b3e
+<span style="color: #bfbdb6;">bright1</span>=d04b4e
+<span style="color: #bfbdb6;">regular2</span>=15b082
+<span style="color: #bfbdb6;">bright2</span>=25c192
+<span style="color: #bfbdb6;">regular3</span>=e27725
+<span style="color: #bfbdb6;">bright3</span>=f28735
+<span style="color: #bfbdb6;">regular4</span>=3996c0
+<span style="color: #bfbdb6;">bright4</span>=49a6d0
+<span style="color: #bfbdb6;">regular5</span>=e73d7b
+<span style="color: #bfbdb6;">bright5</span>=f74e8b
+<span style="color: #bfbdb6;">regular6</span>=c8988a
+<span style="color: #bfbdb6;">bright6</span>=d8a89a
+<span style="color: #bfbdb6;">regular7</span>=eddacb
+<span style="color: #bfbdb6;">bright7</span>=fdeadb
 </pre>
 </div>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org4b75942" class="outline-2">
-<h2 id="org4b75942">Sway</h2>
-<div class="outline-text-2" id="text-org4b75942">
+<div id="outline-container-orga206b31" class="outline-2">
+<h2 id="orga206b31">Niri</h2>
+<div class="outline-text-2" id="text-orga206b31">
 </div>
-<div id="outline-container-org98de87e" class="outline-3">
-<h3 id="org98de87e">Font</h3>
-<div class="outline-text-3" id="text-org98de87e">
+<div id="outline-container-orgd0f2cba" class="outline-3">
+<h3 id="orgd0f2cba">Font</h3>
+<div class="outline-text-3" id="text-orgd0f2cba">
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
+<pre class="src src-conf"><span style="color: #bfbdb6;">shell</span> = /usr/bin/zsh
+
+<span style="color: #bfbdb6;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
+<span style="color: #bfbdb6;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #ffb454; font-weight: bold;">19</span>:antialias=true
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org2284f75" class="outline-3">
-<h3 id="org2284f75">Preferences</h3>
-<div class="outline-text-3" id="text-org2284f75">
+<div id="outline-container-org60945b2" class="outline-3">
+<h3 id="org60945b2">Preferences</h3>
+<div class="outline-text-3" id="text-org60945b2">
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">dpi-aware</span>=yes
-<span style="color: #dcaeea;">pad</span>=9x9 center
-<span style="color: #dcaeea;">vertical-letter-offset</span>=-4px
-<span style="color: #dcaeea;">line-height</span>=25px
-<span style="color: #dcaeea;">letter-spacing</span>=-1px
-<span style="color: #dcaeea;">bold-text-in-bright</span>=palette-based
-<span style="color: #dcaeea;">resize-delay-ms</span>=<span style="color: #da8548; font-weight: bold;">90</span>
+<pre class="src src-conf"><span style="color: #bfbdb6;">dpi-aware</span>=yes
+<span style="color: #bfbdb6;">pad</span>=9x9 center
+<span style="color: #bfbdb6;">vertical-letter-offset</span>=-4px
+<span style="color: #bfbdb6;">notify</span>=notify-send -i ${app-id} {$title} {$body}
+<span style="color: #bfbdb6;">line-height</span>=24px
+<span style="color: #bfbdb6;">letter-spacing</span>=-1px
+<span style="color: #bfbdb6;">bold-text-in-bright</span>=palette-based
+<span style="color: #bfbdb6;">resize-delay-ms</span>=<span style="color: #ffb454; font-weight: bold;">90</span>
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org1ae9145" class="outline-3">
-<h3 id="org1ae9145">Appearance</h3>
-<div class="outline-text-3" id="text-org1ae9145">
+<div id="outline-container-orgb85d608" class="outline-3">
+<h3 id="orgb85d608">Appearance</h3>
+<div class="outline-text-3" id="text-orgb85d608">
 <div class="org-src-container">
-<pre class="src src-conf">[<span style="color: #ECBE7B;">cursor</span>]
-<span style="color: #dcaeea;">style</span>=beam
-<span style="color: #dcaeea;">blink</span>=yes
+<pre class="src src-conf">[<span style="color: #e6b673;">cursor</span>]
+<span style="color: #bfbdb6;">style</span>=beam
+<span style="color: #bfbdb6;">blink</span>=yes
 
-[<span style="color: #ECBE7B;">colors</span>]
-<span style="color: #dcaeea;">background</span>=<span style="color: #da8548; font-weight: bold;">030303</span>
-<span style="color: #dcaeea;">foreground</span>=eeeeee
-<span style="color: #dcaeea;">alpha</span>=<span style="color: #da8548; font-weight: bold;">0.6</span>
+[<span style="color: #e6b673;">bell</span>]
+<span style="color: #bfbdb6;">urgent</span>=yes
+<span style="color: #bfbdb6;">notify</span>=yes
+<span style="color: #bfbdb6;">visual</span>=yes
+
+[<span style="color: #e6b673;">mouse</span>]
+<span style="color: #bfbdb6;">hide-when-typing</span>=yes
+<span style="color: #bfbdb6;">alternate-scroll-mode</span>=no
+
+[<span style="color: #e6b673;">url</span>]
+<span style="color: #bfbdb6;">launch</span>=xdg-open ${url}
+
+[<span style="color: #e6b673;">colors</span>]
+<span style="color: #bfbdb6;">background</span>=<span style="color: #ffb454; font-weight: bold;">020202</span>
+<span style="color: #bfbdb6;">foreground</span>=eeeeee
+<span style="color: #bfbdb6;">alpha</span>=<span style="color: #ffb454; font-weight: bold;">0.5</span>
+<span style="color: #bfbdb6;">flash</span>=ffffff
 </pre>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgbe5b528" class="outline-3">
-<h3 id="orgbe5b528">Colors</h3>
-<div class="outline-text-3" id="text-orgbe5b528">
+<div id="outline-container-org01d32b0" class="outline-3">
+<h3 id="org01d32b0">Colors</h3>
+<div class="outline-text-3" id="text-org01d32b0">
 <div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">regular0</span>=<span style="color: #da8548; font-weight: bold;">000000</span>
-<span style="color: #dcaeea;">bright0</span>=<span style="color: #da8548; font-weight: bold;">121212</span>
-<span style="color: #dcaeea;">regular1</span>=b93b2b
-<span style="color: #dcaeea;">bright1</span>=d54044
-<span style="color: #dcaeea;">regular2</span>=40a789
-<span style="color: #dcaeea;">bright2</span>=50b799
-<span style="color: #dcaeea;">regular3</span>=dedc91
-<span style="color: #dcaeea;">bright3</span>=eeeca1
-<span style="color: #dcaeea;">regular4</span>=61b8a6
-<span style="color: #dcaeea;">bright4</span>=71c9b7
-<span style="color: #dcaeea;">regular5</span>=b06998
-<span style="color: #dcaeea;">bright5</span>=c26cd5
-<span style="color: #dcaeea;">regular6</span>=6d878d
-<span style="color: #dcaeea;">bright6</span>=42717b
-<span style="color: #dcaeea;">regular7</span>=eeeeee
-<span style="color: #dcaeea;">bright7</span>=fefefe
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6c3588d" class="outline-2">
-<h2 id="org6c3588d">LabWC</h2>
-<div class="outline-text-2" id="text-org6c3588d">
-</div>
-<div id="outline-container-orgefaa381" class="outline-3">
-<h3 id="orgefaa381">Font</h3>
-<div class="outline-text-3" id="text-orgefaa381">
-<div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">font</span> = SpaceMono Nerd Font:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold</span> = SpaceMono Nerd Font:style=Bold:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-italic</span> = SpaceMono Nerd Font:style=Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-<span style="color: #dcaeea;">font-bold-italic</span> = SpaceMono Nerd Font:style=Bold Italic:pixelsize=<span style="color: #da8548; font-weight: bold;">19</span>:antialias=true
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org8c3a826" class="outline-3">
-<h3 id="org8c3a826">Preferences</h3>
-<div class="outline-text-3" id="text-org8c3a826">
-<div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">dpi-aware</span>=yes
-<span style="color: #dcaeea;">pad</span>=9x9 center
-<span style="color: #dcaeea;">vertical-letter-offset</span>=-4px
-<span style="color: #dcaeea;">line-height</span>=25px
-<span style="color: #dcaeea;">letter-spacing</span>=-1px
-<span style="color: #dcaeea;">bold-text-in-bright</span>=palette-based
-<span style="color: #dcaeea;">resize-delay-ms</span>=<span style="color: #da8548; font-weight: bold;">90</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org3685aae" class="outline-3">
-<h3 id="org3685aae">Appearance</h3>
-<div class="outline-text-3" id="text-org3685aae">
-<div class="org-src-container">
-<pre class="src src-conf">[<span style="color: #ECBE7B;">cursor</span>]
-<span style="color: #dcaeea;">style</span>=beam
-<span style="color: #dcaeea;">blink</span>=yes
-
-[<span style="color: #ECBE7B;">colors</span>]
-<span style="color: #dcaeea;">background</span>=<span style="color: #da8548; font-weight: bold;">101010</span>
-<span style="color: #dcaeea;">foreground</span>=efefef
-<span style="color: #dcaeea;">alpha</span>=<span style="color: #da8548; font-weight: bold;">0.6</span>
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org27fc7b9" class="outline-3">
-<h3 id="org27fc7b9">Colors</h3>
-<div class="outline-text-3" id="text-org27fc7b9">
-<div class="org-src-container">
-<pre class="src src-conf"><span style="color: #dcaeea;">regular0</span>=<span style="color: #da8548; font-weight: bold;">000000</span>
-<span style="color: #dcaeea;">bright0</span>=<span style="color: #da8548; font-weight: bold;">121212</span>
-<span style="color: #dcaeea;">regular1</span>=c77188
-<span style="color: #dcaeea;">bright1</span>=d78198
-<span style="color: #dcaeea;">regular2</span>=00bb10
-<span style="color: #dcaeea;">bright2</span>=00cc20
-<span style="color: #dcaeea;">regular3</span>=dfdf10
-<span style="color: #dcaeea;">bright3</span>=efef20
-<span style="color: #dcaeea;">regular4</span>=2995db
-<span style="color: #dcaeea;">bright4</span>=39a5eb
-<span style="color: #dcaeea;">regular5</span>=b97e76
-<span style="color: #dcaeea;">bright5</span>=c98e86
-<span style="color: #dcaeea;">regular6</span>=<span style="color: #da8548; font-weight: bold;">489390</span>
-<span style="color: #dcaeea;">bright6</span>=58a4a1
-<span style="color: #dcaeea;">regular7</span>=edc9b9
-<span style="color: #dcaeea;">bright7</span>=fdd9c9
+<pre class="src src-conf"><span style="color: #bfbdb6;">regular0</span>=<span style="color: #ffb454; font-weight: bold;">000000</span>
+<span style="color: #bfbdb6;">bright0</span>=<span style="color: #ffb454; font-weight: bold;">121212</span>
+<span style="color: #bfbdb6;">regular1</span>=e04a00
+<span style="color: #bfbdb6;">bright1</span>=ff2800
+<span style="color: #bfbdb6;">regular2</span>=81c071
+<span style="color: #bfbdb6;">bright2</span>=93eab9
+<span style="color: #bfbdb6;">regular3</span>=e3af67
+<span style="color: #bfbdb6;">bright3</span>=fdcb46
+<span style="color: #bfbdb6;">regular4</span>=4bc8dc
+<span style="color: #bfbdb6;">bright4</span>=6be8fc
+<span style="color: #bfbdb6;">regular5</span>=e56f95
+<span style="color: #bfbdb6;">bright5</span>=f36c97
+<span style="color: #bfbdb6;">regular6</span>=0fbd98
+<span style="color: #bfbdb6;">bright6</span>=12e5b8
+<span style="color: #bfbdb6;">regular7</span>=dddddd
+<span style="color: #bfbdb6;">bright7</span>=ffffff
+<span style="color: #bfbdb6;">urls</span>=ff0000
 </pre>
 </div>
 
 <footer>
     <center>
-    <p>Copyright &copy; 2022 Tanner Babcock.</p>
+    <p>Copyright &copy; 2026 Tanner Babcock.</p>
     <p><a href="https://babkock.github.io">Home</a> &nbsp;&bull;&nbsp;
     <a href="https://github.com/Babkock/Babkock.github.io" target="_blank">Source Code</a> &nbsp;&bull;&nbsp;
     <a href="https://tannerbabcock.com/home">Website</a> &nbsp;&bull;&nbsp;
@@ -504,7 +619,7 @@ This is where you edit the actual color scheme.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2023-05-31 Wed 16:19</p>
+<p class="date">Created: 2025-06-25 Wed 19:57</p>
 </div>
 </body>
 </html>

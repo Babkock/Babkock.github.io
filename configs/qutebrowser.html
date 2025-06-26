@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-22 Thu 12:46 -->
+<!-- 2025-06-25 Wed 19:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Qutebrowser</title>
@@ -231,36 +231,36 @@ This is my Qutebrowser config. This literate configuration is available online o
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7c1d2e9">The Theme</a>
+<li><a href="#orgea88874">The Theme</a>
 <ul>
-<li><a href="#org8bdb86c">Colors</a></li>
-<li><a href="#orgbac2538">The Style</a></li>
+<li><a href="#org2087b74">Colors</a></li>
+<li><a href="#orgde2c482">The Style</a></li>
 </ul>
 </li>
-<li><a href="#org5f78e8b">Qutebrowser</a>
+<li><a href="#org0cfd052">Qutebrowser</a>
 <ul>
-<li><a href="#org80f6b31">Preferences</a></li>
-<li><a href="#org2d38200">Fonts</a></li>
-<li><a href="#orgdba5f80">Appearance</a></li>
-<li><a href="#orge99c11a">Home page/Search engines</a></li>
-<li><a href="#orgeab791b">Keybindings</a></li>
+<li><a href="#orgd5f86e4">Preferences</a></li>
+<li><a href="#org586f278">Fonts</a></li>
+<li><a href="#orgf1fe4fa">Appearance</a></li>
+<li><a href="#org8f378bf">Home page/Search engines</a></li>
+<li><a href="#org4c1b909">Keybindings</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7c1d2e9" class="outline-2">
-<h2 id="org7c1d2e9">The Theme</h2>
-<div class="outline-text-2" id="text-org7c1d2e9">
+<div id="outline-container-orgea88874" class="outline-2">
+<h2 id="orgea88874">The Theme</h2>
+<div class="outline-text-2" id="text-orgea88874">
 
-<div id="org495d302" class="figure">
+<div id="orgcf98ffe" class="figure">
 <p><img src="https://babkock.github.io/images/qutebrowser.png" alt="qutebrowser.png" />
 </p>
 </div>
 </div>
-<div id="outline-container-org8bdb86c" class="outline-3">
-<h3 id="org8bdb86c">Colors</h3>
-<div class="outline-text-3" id="text-org8bdb86c">
+<div id="outline-container-org2087b74" class="outline-3">
+<h3 id="org2087b74">Colors</h3>
+<div class="outline-text-3" id="text-org2087b74">
 <p>
 This was originally in a separate theme file, but I might as well include it in this one. These are the 16 colors that make up all of Qutebrowser&rsquo;s visual elements. You should not use these variables if you want to use ARGB, or transparency.
 </p>
@@ -296,9 +296,9 @@ This was originally in a separate theme file, but I might as well include it in 
 </div>
 </div>
 </div>
-<div id="outline-container-orgbac2538" class="outline-3">
-<h3 id="orgbac2538">The Style</h3>
-<div class="outline-text-3" id="text-orgbac2538">
+<div id="outline-container-orgde2c482" class="outline-3">
+<h3 id="orgde2c482">The Style</h3>
+<div class="outline-text-3" id="text-orgde2c482">
 <p>
 I try to have dark backgrounds and light foregrounds. Here is the color scheme for
 the completion widget and context menu. Remember, these colors can be in the format <code>#AARRGGBB</code>.
@@ -482,17 +482,17 @@ c.colors.webpage.<span style="color: #bfbdb6;">bg</span> = <span style="color: #
 </div>
 </div>
 </div>
-<div id="outline-container-org5f78e8b" class="outline-2">
-<h2 id="org5f78e8b">Qutebrowser</h2>
-<div class="outline-text-2" id="text-org5f78e8b">
+<div id="outline-container-org0cfd052" class="outline-2">
+<h2 id="org0cfd052">Qutebrowser</h2>
+<div class="outline-text-2" id="text-org0cfd052">
 <p>
 Okay, so all of the code above was just the theme for Qutebrowser. This is the actual
 configuration.
 </p>
 </div>
-<div id="outline-container-org80f6b31" class="outline-3">
-<h3 id="org80f6b31">Preferences</h3>
-<div class="outline-text-3" id="text-org80f6b31">
+<div id="outline-container-orgd5f86e4" class="outline-3">
+<h3 id="orgd5f86e4">Preferences</h3>
+<div class="outline-text-3" id="text-orgd5f86e4">
 <div class="org-src-container">
 <pre class="src src-python">config.load_autoconfig()
 
@@ -506,7 +506,7 @@ c.input.insert_mode.<span style="color: #bfbdb6;">auto_leave</span> = <span styl
 c.downloads.<span style="color: #bfbdb6;">prevent_mixed_content</span> = <span style="color: #d2a6ff;">True</span>
 c.downloads.<span style="color: #bfbdb6;">position</span> = <span style="color: #7fd962;">"bottom"</span>
 c.window.<span style="color: #bfbdb6;">transparent</span> = <span style="color: #d2a6ff;">True</span>
-c.completion.web_history.<span style="color: #bfbdb6;">max_items</span> = <span style="color: #ffb454; font-weight: bold;">6</span>
+c.completion.web_history.<span style="color: #bfbdb6;">max_items</span> = <span style="color: #ffb454; font-weight: bold;">20</span>
 c.completion.<span style="color: #bfbdb6;">timestamp_format</span> = <span style="color: #7fd962;">"%a, %b %d %H:%M:%S"</span>
 c.completion.scrollbar.<span style="color: #bfbdb6;">width</span> = <span style="color: #ffb454; font-weight: bold;">18</span>
 c.content.<span style="color: #bfbdb6;">default_encoding</span> = <span style="color: #7fd962;">"utf-8"</span>
@@ -538,9 +538,9 @@ c.statusbar.<span style="color: #bfbdb6;">widgets</span> = [<span style="color: 
 </div>
 </div>
 </div>
-<div id="outline-container-org2d38200" class="outline-3">
-<h3 id="org2d38200">Fonts</h3>
-<div class="outline-text-3" id="text-org2d38200">
+<div id="outline-container-org586f278" class="outline-3">
+<h3 id="org586f278">Fonts</h3>
+<div class="outline-text-3" id="text-org586f278">
 <p>
 I have grouped all of the font settings for all interface elements together. These font sizes can be made bigger and smaller with the keybindings <code>,z</code>, <code>,x</code>, <code>,m</code>, <code>,n</code>, <code>,v</code>, and <code>,p</code>.
 </p>
@@ -571,9 +571,9 @@ c.fonts.messages.<span style="color: #bfbdb6;">warning</span> = <span style="col
 </div>
 </div>
 </div>
-<div id="outline-container-orgdba5f80" class="outline-3">
-<h3 id="orgdba5f80">Appearance</h3>
-<div class="outline-text-3" id="text-orgdba5f80">
+<div id="outline-container-orgf1fe4fa" class="outline-3">
+<h3 id="orgf1fe4fa">Appearance</h3>
+<div class="outline-text-3" id="text-orgf1fe4fa">
 <p>
 Here is where I set the padding for hints and tabs, and for some reason I&rsquo;d like
 to change some of the colors.
@@ -616,9 +616,9 @@ c.auto_save.<span style="color: #bfbdb6;">interval</span> = <span style="color: 
 </div>
 </div>
 </div>
-<div id="outline-container-orge99c11a" class="outline-3">
-<h3 id="orge99c11a">Home page/Search engines</h3>
-<div class="outline-text-3" id="text-orge99c11a">
+<div id="outline-container-org8f378bf" class="outline-3">
+<h3 id="org8f378bf">Home page/Search engines</h3>
+<div class="outline-text-3" id="text-org8f378bf">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #373b42; font-style: italic;"># </span><span style="color: #373b42; font-style: italic;">--- Search engines ---</span>
 
@@ -643,9 +643,9 @@ c.fileselect.folder.<span style="color: #bfbdb6;">command</span> = [<span style=
 </div>
 </div>
 </div>
-<div id="outline-container-orgeab791b" class="outline-3">
-<h3 id="orgeab791b">Keybindings</h3>
-<div class="outline-text-3" id="text-orgeab791b">
+<div id="outline-container-org4c1b909" class="outline-3">
+<h3 id="org4c1b909">Keybindings</h3>
+<div class="outline-text-3" id="text-org4c1b909">
 <p>
 I have two large sets of keybindings. The first set is for quickly opening some
 bookmarked sites. The second set is for loading my custom stylesheets.
@@ -848,7 +848,7 @@ config.bind(<span style="color: #7fd962;">'.'</span>, <span style="color: #7fd96
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2025-05-22 Thu 12:46</p>
+<p class="date">Created: 2025-06-25 Wed 19:54</p>
 </div>
 </body>
 </html>
