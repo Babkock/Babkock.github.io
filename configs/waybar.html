@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-06-25 Wed 19:49 -->
+<!-- 2025-06-30 Mon 18:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Waybar</title>
@@ -242,20 +242,183 @@ Thanks for checking out my <a href="https://github.com/Alexays/Waybar">Waybar</a
     </center>
 </header>
 
-<p>
-+# TOC: headlines 2
-</p>
-<div id="outline-container-org4839109" class="outline-2">
-<h2 id="org4839109">Sway Laptop Bar</h2>
-<div class="outline-text-2" id="text-org4839109">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5d300e3">Sway Laptop Bar</a>
+<ul>
+<li><a href="#org9dfd173">Appearance</a></li>
+<li><a href="#org101c183">MPD</a></li>
+<li><a href="#orgd0292d1">Image</a></li>
+<li><a href="#orgbfc2243">Clock</a></li>
+<li><a href="#orgf9a7ad5">CPU</a></li>
+<li><a href="#orgb19df72">Memory</a></li>
+<li><a href="#orgee14db9">Disk</a></li>
+<li><a href="#org4ad7131">Battery</a></li>
+<li><a href="#org19d7ebb">Backlight</a></li>
+<li><a href="#orgff155fd">Pulseaudio</a></li>
+</ul>
+</li>
+<li><a href="#orgd5c481a">Sway Left Monitor Bar</a>
+<ul>
+<li><a href="#orgf3aaf62">Appearance</a></li>
+<li><a href="#org569b3f3">Scratchpad</a></li>
+<li><a href="#org8f64760">Window</a></li>
+<li><a href="#org92b13e7">Idle Inhibit</a></li>
+<li><a href="#orga028ccf">Network</a></li>
+<li><a href="#org6517e1f">Wireplumber</a></li>
+<li><a href="#org3bc18a4">Bluetooth</a></li>
+<li><a href="#org3c83f3a">Privacy</a></li>
+<li><a href="#orgdbb41d4">Temperature</a></li>
+<li><a href="#org88ed564">Disk</a></li>
+<li><a href="#org8031037">Keyboard State</a></li>
+<li><a href="#orga5751e9">Cava</a></li>
+<li><a href="#org9ea35b7">Tray</a></li>
+</ul>
+</li>
+<li><a href="#orgc5f5529">Sway Right Monitor Bar</a>
+<ul>
+<li><a href="#org42ed431">Appearance</a></li>
+<li><a href="#org56f0a10">Weather</a></li>
+<li><a href="#org69e6734">Bluetooth</a></li>
+<li><a href="#orgbc44fd8">Memory</a></li>
+<li><a href="#org8433e54">Disk</a></li>
+<li><a href="#org64053d2">CPU</a></li>
+<li><a href="#org7c00942">Clock</a></li>
+</ul>
+</li>
+<li><a href="#org54093fa">Wayfire Laptop Bar</a>
+<ul>
+<li><a href="#org121f614">Appearance</a></li>
+<li><a href="#org3441d4e">MPD</a></li>
+<li><a href="#org2fe175b">Clock</a></li>
+<li><a href="#org79d5eae">CPU</a></li>
+<li><a href="#org520d095">Battery</a></li>
+<li><a href="#org5094485">Memory</a></li>
+<li><a href="#org1f46947">Backlight</a></li>
+<li><a href="#org904b9fa">Disk</a></li>
+<li><a href="#orgbd6ea6d">Pulseaudio</a></li>
+<li><a href="#org1181847">Image</a></li>
+</ul>
+</li>
+<li><a href="#orgf537844">Wayfire Left Monitor Bar</a>
+<ul>
+<li><a href="#orgb1d2965">Appearance</a></li>
+<li><a href="#org5a6965d">Disk</a></li>
+<li><a href="#orgf7f29fd">Network</a></li>
+<li><a href="#org4dcf5df">Idle Inhibit</a></li>
+<li><a href="#orgeea91e5">Wireplumber</a></li>
+<li><a href="#org1aea00a">Bluetooth</a></li>
+<li><a href="#org6afc01e">Temperature</a></li>
+<li><a href="#orgfa7331d">Keyboard State</a></li>
+<li><a href="#org7ad66b4">Tray</a></li>
+</ul>
+</li>
+<li><a href="#orge499c82">Wayfire Right TV Bar</a>
+<ul>
+<li><a href="#org9cca1e6">Appearance</a></li>
+<li><a href="#orgfdcd07f">Weather</a></li>
+<li><a href="#org71389cd">Bluetooth</a></li>
+<li><a href="#orgc34882b">Memory</a></li>
+<li><a href="#org0ceb817">Disk</a></li>
+<li><a href="#org742deb6">Privacy</a></li>
+<li><a href="#orga3f62f0">CPU</a></li>
+<li><a href="#orgdf4bb8e">Clock</a></li>
+</ul>
+</li>
+<li><a href="#org45a62ea">Hyprland Laptop Bar</a>
+<ul>
+<li><a href="#org05322f0">Appearance</a></li>
+<li><a href="#org57cb5e3">Disk (External HD)</a></li>
+<li><a href="#orgec0c5cf">MPD</a></li>
+<li><a href="#org6a7fae9">Clock</a></li>
+<li><a href="#orgf84686f">CPU</a></li>
+<li><a href="#org72e7ef3">Memory</a></li>
+<li><a href="#orge531005">Battery</a></li>
+<li><a href="#org1d8d820">Backlight</a></li>
+<li><a href="#org8a7aee0">Pulseaudio</a></li>
+<li><a href="#org436fb75">Image</a></li>
+</ul>
+</li>
+<li><a href="#orgb4dee64">Hyprland Left Monitor Bar</a>
+<ul>
+<li><a href="#org5aa9e3f">Appearance</a></li>
+<li><a href="#org444a7e3">Window</a></li>
+<li><a href="#orga393194">Disk (Internal SSD)</a></li>
+<li><a href="#org05449dd">Privacy</a></li>
+<li><a href="#org2c1200b">Wireplumber</a></li>
+<li><a href="#orgd740224">Idle Inhibit</a></li>
+<li><a href="#org00c2d46">Temperature</a></li>
+<li><a href="#org7225eb1">Network</a></li>
+<li><a href="#orgb3dd5bf">Cava</a></li>
+<li><a href="#org02ebf17">Tray</a></li>
+</ul>
+</li>
+<li><a href="#org7d612e2">Hyprland Right Monitor Bar</a>
+<ul>
+<li><a href="#org6157521">Appearance</a></li>
+<li><a href="#orge684fcc">Weather</a></li>
+<li><a href="#orga314d6b">Bluetooth</a></li>
+<li><a href="#orgecfd309">Memory</a></li>
+<li><a href="#org7b85b63">Disk</a></li>
+<li><a href="#org54f7681">CPU</a></li>
+<li><a href="#orgc90d225">Clock</a></li>
+</ul>
+</li>
+<li><a href="#orgdad6eda">Niri Laptop Bar</a>
+<ul>
+<li><a href="#org4d774bf">Appearance</a></li>
+<li><a href="#orgc5b404e">MPD</a></li>
+<li><a href="#org4fe5041">Image</a></li>
+<li><a href="#orgf78f594">Clock</a></li>
+<li><a href="#org234f5b3">CPU</a></li>
+<li><a href="#org79ff415">Memory</a></li>
+<li><a href="#orgfc3ca49">Disk</a></li>
+<li><a href="#orgdaee55e">Battery</a></li>
+<li><a href="#org28a20f0">Backlight</a></li>
+<li><a href="#orgddefaad">Pulseaudio</a></li>
+</ul>
+</li>
+<li><a href="#orgcc6c0e1">Niri Left Monitor Bar</a>
+<ul>
+<li><a href="#org8a55926">Appearance</a></li>
+<li><a href="#org695de57">Window</a></li>
+<li><a href="#org61f51c1">Idle Inhibit</a></li>
+<li><a href="#org4f2d3b0">Network</a></li>
+<li><a href="#org722b740">Wireplumber</a></li>
+<li><a href="#org9acfc13">Privacy</a></li>
+<li><a href="#orge236c91">Temperature</a></li>
+<li><a href="#org5cd1aa8">Disk</a></li>
+<li><a href="#org0da3e21">Cava</a></li>
+<li><a href="#org44a527e">Tray</a></li>
+</ul>
+</li>
+<li><a href="#org1462c06">Niri Right Monitor Bar</a>
+<ul>
+<li><a href="#org1733c7e">Appearance</a></li>
+<li><a href="#org27da80b">Weather</a></li>
+<li><a href="#org293f3d5">Bluetooth</a></li>
+<li><a href="#org89c09e1">Memory</a></li>
+<li><a href="#orga8e6bc2">Disk</a></li>
+<li><a href="#org98cc835">CPU</a></li>
+<li><a href="#org604fd2b">Clock</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5d300e3" class="outline-2">
+<h2 id="org5d300e3">Sway Laptop Bar</h2>
+<div class="outline-text-2" id="text-org5d300e3">
 <p>
 Some of the Waybar JSON objects have stray modules that are not included in the &ldquo;<code>modules</code>&rdquo; fields of the bars. This is because I don&rsquo;t always like to use
 every single one of the modules, if I don&rsquo;t have to. The modules and their orders are always subject to change.
 </p>
 </div>
-<div id="outline-container-org7cf82ce" class="outline-3">
-<h3 id="org7cf82ce">Appearance</h3>
-<div class="outline-text-3" id="text-org7cf82ce">
+<div id="outline-container-org9dfd173" class="outline-3">
+<h3 id="org9dfd173">Appearance</h3>
+<div class="outline-text-3" id="text-org9dfd173">
 <div class="org-src-container">
 <pre class="src src-json">[{
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -293,9 +456,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-orgd2e1109" class="outline-3">
-<h3 id="orgd2e1109">MPD</h3>
-<div class="outline-text-3" id="text-orgd2e1109">
+<div id="outline-container-org101c183" class="outline-3">
+<h3 id="org101c183">MPD</h3>
+<div class="outline-text-3" id="text-org101c183">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"mpd"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"server"</span>: <span style="color: #7fd962;">"127.0.0.2"</span>,
@@ -331,9 +494,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa38b12" class="outline-3">
-<h3 id="orgfa38b12">Image</h3>
-<div class="outline-text-3" id="text-orgfa38b12">
+<div id="outline-container-orgd0292d1" class="outline-3">
+<h3 id="orgd0292d1">Image</h3>
+<div class="outline-text-3" id="text-orgd0292d1">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"image#album-art"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/tmp/mpd_cover.jpg"</span>,
@@ -346,9 +509,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-org685a634" class="outline-3">
-<h3 id="org685a634">Clock</h3>
-<div class="outline-text-3" id="text-org685a634">
+<div id="outline-container-orgbfc2243" class="outline-3">
+<h3 id="orgbfc2243">Clock</h3>
+<div class="outline-text-3" id="text-orgbfc2243">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -364,9 +527,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-org83cce1d" class="outline-3">
-<h3 id="org83cce1d">CPU</h3>
-<div class="outline-text-3" id="text-org83cce1d">
+<div id="outline-container-orgf9a7ad5" class="outline-3">
+<h3 id="orgf9a7ad5">CPU</h3>
+<div class="outline-text-3" id="text-orgf9a7ad5">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -377,9 +540,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb023da" class="outline-3">
-<h3 id="orgdb023da">Memory</h3>
-<div class="outline-text-3" id="text-orgdb023da">
+<div id="outline-container-orgb19df72" class="outline-3">
+<h3 id="orgb19df72">Memory</h3>
+<div class="outline-text-3" id="text-orgb19df72">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -391,9 +554,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-org51c7f5f" class="outline-3">
-<h3 id="org51c7f5f">Disk</h3>
-<div class="outline-text-3" id="text-org51c7f5f">
+<div id="outline-container-orgee14db9" class="outline-3">
+<h3 id="orgee14db9">Disk</h3>
+<div class="outline-text-3" id="text-orgee14db9">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/mega/"</span>,
@@ -408,9 +571,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-org334a44b" class="outline-3">
-<h3 id="org334a44b">Battery</h3>
-<div class="outline-text-3" id="text-org334a44b">
+<div id="outline-container-org4ad7131" class="outline-3">
+<h3 id="org4ad7131">Battery</h3>
+<div class="outline-text-3" id="text-org4ad7131">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"battery"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"states"</span>: {
@@ -432,9 +595,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-orgccaf7dc" class="outline-3">
-<h3 id="orgccaf7dc">Backlight</h3>
-<div class="outline-text-3" id="text-orgccaf7dc">
+<div id="outline-container-org19d7ebb" class="outline-3">
+<h3 id="org19d7ebb">Backlight</h3>
+<div class="outline-text-3" id="text-org19d7ebb">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"backlight"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"device"</span>: <span style="color: #7fd962;">"intel_backlight"</span>,
@@ -451,9 +614,9 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-orgd7a1649" class="outline-3">
-<h3 id="orgd7a1649">Pulseaudio</h3>
-<div class="outline-text-3" id="text-orgd7a1649">
+<div id="outline-container-orgff155fd" class="outline-3">
+<h3 id="orgff155fd">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgff155fd">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"pulseaudio"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt; {format_source}"</span>,
@@ -483,16 +646,16 @@ every single one of the modules, if I don&rsquo;t have to. The modules and their
 </div>
 </div>
 </div>
-<div id="outline-container-org1d244ef" class="outline-2">
-<h2 id="org1d244ef">Sway Left Monitor Bar</h2>
-<div class="outline-text-2" id="text-org1d244ef">
+<div id="outline-container-orgd5c481a" class="outline-2">
+<h2 id="orgd5c481a">Sway Left Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgd5c481a">
 <p>
 This is the second bar that Sway uses, and it places it on my monitor (<code>HDMI-A-2</code>), to the right of the bar detailed above.
 </p>
 </div>
-<div id="outline-container-orge27283c" class="outline-3">
-<h3 id="orge27283c">Appearance</h3>
-<div class="outline-text-3" id="text-orge27283c">
+<div id="outline-container-orgf3aaf62" class="outline-3">
+<h3 id="orgf3aaf62">Appearance</h3>
+<div class="outline-text-3" id="text-orgf3aaf62">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -527,9 +690,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org6e37e09" class="outline-3">
-<h3 id="org6e37e09">Scratchpad</h3>
-<div class="outline-text-3" id="text-org6e37e09">
+<div id="outline-container-org569b3f3" class="outline-3">
+<h3 id="org569b3f3">Scratchpad</h3>
+<div class="outline-text-3" id="text-org569b3f3">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"sway/scratchpad"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} {count}"</span>,
@@ -542,9 +705,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org7823720" class="outline-3">
-<h3 id="org7823720">Window</h3>
-<div class="outline-text-3" id="text-org7823720">
+<div id="outline-container-org8f64760" class="outline-3">
+<h3 id="org8f64760">Window</h3>
+<div class="outline-text-3" id="text-org8f64760">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"sway/window"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{title}"</span>,
@@ -771,9 +934,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org26b5e85" class="outline-3">
-<h3 id="org26b5e85">Idle Inhibit</h3>
-<div class="outline-text-3" id="text-org26b5e85">
+<div id="outline-container-org92b13e7" class="outline-3">
+<h3 id="org92b13e7">Idle Inhibit</h3>
+<div class="outline-text-3" id="text-org92b13e7">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"idle_inhibitor"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon}"</span>,
@@ -788,9 +951,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-orgb1681af" class="outline-3">
-<h3 id="orgb1681af">Network</h3>
-<div class="outline-text-3" id="text-orgb1681af">
+<div id="outline-container-orga028ccf" class="outline-3">
+<h3 id="orga028ccf">Network</h3>
+<div class="outline-text-3" id="text-orga028ccf">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"network"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"interface"</span>: <span style="color: #7fd962;">"enp0s31f6"</span>,
@@ -808,9 +971,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org57c16d3" class="outline-3">
-<h3 id="org57c16d3">Wireplumber</h3>
-<div class="outline-text-3" id="text-org57c16d3">
+<div id="outline-container-org6517e1f" class="outline-3">
+<h3 id="org6517e1f">Wireplumber</h3>
+<div class="outline-text-3" id="text-org6517e1f">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"wireplumber"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
@@ -828,9 +991,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org376fff6" class="outline-3">
-<h3 id="org376fff6">Bluetooth</h3>
-<div class="outline-text-3" id="text-org376fff6">
+<div id="outline-container-org3bc18a4" class="outline-3">
+<h3 id="org3bc18a4">Bluetooth</h3>
+<div class="outline-text-3" id="text-org3bc18a4">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -849,9 +1012,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org484c7be" class="outline-3">
-<h3 id="org484c7be">Privacy</h3>
-<div class="outline-text-3" id="text-org484c7be">
+<div id="outline-container-org3c83f3a" class="outline-3">
+<h3 id="org3c83f3a">Privacy</h3>
+<div class="outline-text-3" id="text-org3c83f3a">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"privacy"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-spacing"</span>: <span style="color: #ffb454; font-weight: bold;">8</span>,
@@ -879,9 +1042,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-orgfabfd9c" class="outline-3">
-<h3 id="orgfabfd9c">Temperature</h3>
-<div class="outline-text-3" id="text-orgfabfd9c">
+<div id="outline-container-orgdbb41d4" class="outline-3">
+<h3 id="orgdbb41d4">Temperature</h3>
+<div class="outline-text-3" id="text-orgdbb41d4">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"temperature"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"thermal-zone"</span>: <span style="color: #ffb454; font-weight: bold;">1</span>,
@@ -893,9 +1056,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org539eecf" class="outline-3">
-<h3 id="org539eecf">Disk</h3>
-<div class="outline-text-3" id="text-org539eecf">
+<div id="outline-container-org88ed564" class="outline-3">
+<h3 id="org88ed564">Disk</h3>
+<div class="outline-text-3" id="text-org88ed564">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/"</span>,
@@ -910,9 +1073,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-orgc278bcd" class="outline-3">
-<h3 id="orgc278bcd">Keyboard State</h3>
-<div class="outline-text-3" id="text-orgc278bcd">
+<div id="outline-container-org8031037" class="outline-3">
+<h3 id="org8031037">Keyboard State</h3>
+<div class="outline-text-3" id="text-org8031037">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"keyboard-state"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"numlock"</span>: <span style="color: #d2a6ff;">true</span>,
@@ -930,9 +1093,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-orgbc73c94" class="outline-3">
-<h3 id="orgbc73c94">Cava</h3>
-<div class="outline-text-3" id="text-orgbc73c94">
+<div id="outline-container-orga5751e9" class="outline-3">
+<h3 id="orga5751e9">Cava</h3>
+<div class="outline-text-3" id="text-orga5751e9">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cava"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"framerate"</span>: <span style="color: #ffb454; font-weight: bold;">30</span>,
@@ -956,9 +1119,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org9771741" class="outline-3">
-<h3 id="org9771741">Tray</h3>
-<div class="outline-text-3" id="text-org9771741">
+<div id="outline-container-org9ea35b7" class="outline-3">
+<h3 id="org9ea35b7">Tray</h3>
+<div class="outline-text-3" id="text-org9ea35b7">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"tray"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-size"</span>: <span style="color: #ffb454; font-weight: bold;">35</span>,
@@ -970,13 +1133,13 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org0a59c33" class="outline-2">
-<h2 id="org0a59c33">Sway Right Monitor Bar</h2>
-<div class="outline-text-2" id="text-org0a59c33">
+<div id="outline-container-orgc5f5529" class="outline-2">
+<h2 id="orgc5f5529">Sway Right Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgc5f5529">
 </div>
-<div id="outline-container-org15f630d" class="outline-3">
-<h3 id="org15f630d">Appearance</h3>
-<div class="outline-text-3" id="text-org15f630d">
+<div id="outline-container-org42ed431" class="outline-3">
+<h3 id="org42ed431">Appearance</h3>
+<div class="outline-text-3" id="text-org42ed431">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -1010,9 +1173,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org0912689" class="outline-3">
-<h3 id="org0912689">Weather</h3>
-<div class="outline-text-3" id="text-org0912689">
+<div id="outline-container-org56f0a10" class="outline-3">
+<h3 id="org56f0a10">Weather</h3>
+<div class="outline-text-3" id="text-org56f0a10">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/weather"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"ansiweather -a false -l Arvada -u imperial -H true -h false -p false -i false -s true"</span>,
@@ -1023,9 +1186,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org91fc143" class="outline-3">
-<h3 id="org91fc143">Bluetooth</h3>
-<div class="outline-text-3" id="text-org91fc143">
+<div id="outline-container-org69e6734" class="outline-3">
+<h3 id="org69e6734">Bluetooth</h3>
+<div class="outline-text-3" id="text-org69e6734">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -1044,9 +1207,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org71d1fae" class="outline-3">
-<h3 id="org71d1fae">Memory</h3>
-<div class="outline-text-3" id="text-org71d1fae">
+<div id="outline-container-orgbc44fd8" class="outline-3">
+<h3 id="orgbc44fd8">Memory</h3>
+<div class="outline-text-3" id="text-orgbc44fd8">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -1058,9 +1221,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org00a7143" class="outline-3">
-<h3 id="org00a7143">Disk</h3>
-<div class="outline-text-3" id="text-org00a7143">
+<div id="outline-container-org8433e54" class="outline-3">
+<h3 id="org8433e54">Disk</h3>
+<div class="outline-text-3" id="text-org8433e54">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/drive/"</span>,
@@ -1075,9 +1238,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org960028b" class="outline-3">
-<h3 id="org960028b">CPU</h3>
-<div class="outline-text-3" id="text-org960028b">
+<div id="outline-container-org64053d2" class="outline-3">
+<h3 id="org64053d2">CPU</h3>
+<div class="outline-text-3" id="text-org64053d2">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -1088,9 +1251,9 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-org02fcf7a" class="outline-3">
-<h3 id="org02fcf7a">Clock</h3>
-<div class="outline-text-3" id="text-org02fcf7a">
+<div id="outline-container-org7c00942" class="outline-3">
+<h3 id="org7c00942">Clock</h3>
+<div class="outline-text-3" id="text-org7c00942">
 <div class="org-src-container">
 <pre class="src src-json">    <span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
         <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -1108,16 +1271,16 @@ This is the second bar that Sway uses, and it places it on my monitor (<code>HDM
 </div>
 </div>
 </div>
-<div id="outline-container-orgb521dd3" class="outline-2">
-<h2 id="orgb521dd3">Wayfire Laptop Bar</h2>
-<div class="outline-text-2" id="text-orgb521dd3">
+<div id="outline-container-org54093fa" class="outline-2">
+<h2 id="org54093fa">Wayfire Laptop Bar</h2>
+<div class="outline-text-2" id="text-org54093fa">
 <p>
 This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s screen (<code>eDP-1</code>). Notice how LabWC does not use <b>workspaces</b> or <b>tags</b> like Sway and River, but it instead has a Taskbar module. The Taskbar elements are buttons, and they are styled like the workspace buttons.
 </p>
 </div>
-<div id="outline-container-orgf16dd08" class="outline-3">
-<h3 id="orgf16dd08">Appearance</h3>
-<div class="outline-text-3" id="text-orgf16dd08">
+<div id="outline-container-org121f614" class="outline-3">
+<h3 id="org121f614">Appearance</h3>
+<div class="outline-text-3" id="text-org121f614">
 <div class="org-src-container">
 <pre class="src src-json">[{
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -1143,9 +1306,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orgb0b3192" class="outline-3">
-<h3 id="orgb0b3192">MPD</h3>
-<div class="outline-text-3" id="text-orgb0b3192">
+<div id="outline-container-org3441d4e" class="outline-3">
+<h3 id="org3441d4e">MPD</h3>
+<div class="outline-text-3" id="text-org3441d4e">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"mpd"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"server"</span>: <span style="color: #7fd962;">"127.0.0.2"</span>,
@@ -1181,9 +1344,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-org1d016a8" class="outline-3">
-<h3 id="org1d016a8">Clock</h3>
-<div class="outline-text-3" id="text-org1d016a8">
+<div id="outline-container-org2fe175b" class="outline-3">
+<h3 id="org2fe175b">Clock</h3>
+<div class="outline-text-3" id="text-org2fe175b">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -1196,9 +1359,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orgf81b009" class="outline-3">
-<h3 id="orgf81b009">CPU</h3>
-<div class="outline-text-3" id="text-orgf81b009">
+<div id="outline-container-org79d5eae" class="outline-3">
+<h3 id="org79d5eae">CPU</h3>
+<div class="outline-text-3" id="text-org79d5eae">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -1208,9 +1371,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-org03a31de" class="outline-3">
-<h3 id="org03a31de">Battery</h3>
-<div class="outline-text-3" id="text-org03a31de">
+<div id="outline-container-org520d095" class="outline-3">
+<h3 id="org520d095">Battery</h3>
+<div class="outline-text-3" id="text-org520d095">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"battery"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"states"</span>: {
@@ -1232,9 +1395,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orgb123cd3" class="outline-3">
-<h3 id="orgb123cd3">Memory</h3>
-<div class="outline-text-3" id="text-orgb123cd3">
+<div id="outline-container-org5094485" class="outline-3">
+<h3 id="org5094485">Memory</h3>
+<div class="outline-text-3" id="text-org5094485">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -1245,9 +1408,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-org1bbc9e9" class="outline-3">
-<h3 id="org1bbc9e9">Backlight</h3>
-<div class="outline-text-3" id="text-org1bbc9e9">
+<div id="outline-container-org1f46947" class="outline-3">
+<h3 id="org1f46947">Backlight</h3>
+<div class="outline-text-3" id="text-org1f46947">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"backlight"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"device"</span>: <span style="color: #7fd962;">"intel_backlight"</span>,
@@ -1264,9 +1427,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orga32cf6a" class="outline-3">
-<h3 id="orga32cf6a">Disk</h3>
-<div class="outline-text-3" id="text-orga32cf6a">
+<div id="outline-container-org904b9fa" class="outline-3">
+<h3 id="org904b9fa">Disk</h3>
+<div class="outline-text-3" id="text-org904b9fa">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/mega/"</span>,
@@ -1280,9 +1443,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orgafa40de" class="outline-3">
-<h3 id="orgafa40de">Pulseaudio</h3>
-<div class="outline-text-3" id="text-orgafa40de">
+<div id="outline-container-orgbd6ea6d" class="outline-3">
+<h3 id="orgbd6ea6d">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgbd6ea6d">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"pulseaudio"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt; {format_source}"</span>,
@@ -1310,9 +1473,9 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-org52e7f59" class="outline-3">
-<h3 id="org52e7f59">Image</h3>
-<div class="outline-text-3" id="text-org52e7f59">
+<div id="outline-container-org1181847" class="outline-3">
+<h3 id="org1181847">Image</h3>
+<div class="outline-text-3" id="text-org1181847">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"image#album-art"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/tmp/mpd_cover.jpg"</span>,
@@ -1324,16 +1487,16 @@ This is the first and primary status bar that LabWC uses, for my laptop&rsquo;s 
 </div>
 </div>
 </div>
-<div id="outline-container-orgd879267" class="outline-2">
-<h2 id="orgd879267">Wayfire Left Monitor Bar</h2>
-<div class="outline-text-2" id="text-orgd879267">
+<div id="outline-container-orgf537844" class="outline-2">
+<h2 id="orgf537844">Wayfire Left Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgf537844">
 <p>
 And finally, the sixth status bar, this is the second status bar that LabWC uses when my monitor (<code>HDMI-A-2</code>) is connected.
 </p>
 </div>
-<div id="outline-container-org2f58cb9" class="outline-3">
-<h3 id="org2f58cb9">Appearance</h3>
-<div class="outline-text-3" id="text-org2f58cb9">
+<div id="outline-container-orgb1d2965" class="outline-3">
+<h3 id="orgb1d2965">Appearance</h3>
+<div class="outline-text-3" id="text-orgb1d2965">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -1455,9 +1618,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org82bf90a" class="outline-3">
-<h3 id="org82bf90a">Disk</h3>
-<div class="outline-text-3" id="text-org82bf90a">
+<div id="outline-container-org5a6965d" class="outline-3">
+<h3 id="org5a6965d">Disk</h3>
+<div class="outline-text-3" id="text-org5a6965d">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/"</span>,
@@ -1471,9 +1634,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org5d5bad8" class="outline-3">
-<h3 id="org5d5bad8">Network</h3>
-<div class="outline-text-3" id="text-org5d5bad8">
+<div id="outline-container-orgf7f29fd" class="outline-3">
+<h3 id="orgf7f29fd">Network</h3>
+<div class="outline-text-3" id="text-orgf7f29fd">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"network"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"interface"</span>: <span style="color: #7fd962;">"enp0s31f6"</span>,
@@ -1490,9 +1653,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orge8d18ec" class="outline-3">
-<h3 id="orge8d18ec">Idle Inhibit</h3>
-<div class="outline-text-3" id="text-orge8d18ec">
+<div id="outline-container-org4dcf5df" class="outline-3">
+<h3 id="org4dcf5df">Idle Inhibit</h3>
+<div class="outline-text-3" id="text-org4dcf5df">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"idle_inhibitor"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon}"</span>,
@@ -1507,9 +1670,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb003e3" class="outline-3">
-<h3 id="orgcb003e3">Wireplumber</h3>
-<div class="outline-text-3" id="text-orgcb003e3">
+<div id="outline-container-orgeea91e5" class="outline-3">
+<h3 id="orgeea91e5">Wireplumber</h3>
+<div class="outline-text-3" id="text-orgeea91e5">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"wireplumber"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
@@ -1526,9 +1689,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org167782a" class="outline-3">
-<h3 id="org167782a">Bluetooth</h3>
-<div class="outline-text-3" id="text-org167782a">
+<div id="outline-container-org1aea00a" class="outline-3">
+<h3 id="org1aea00a">Bluetooth</h3>
+<div class="outline-text-3" id="text-org1aea00a">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -1546,9 +1709,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgc421062" class="outline-3">
-<h3 id="orgc421062">Temperature</h3>
-<div class="outline-text-3" id="text-orgc421062">
+<div id="outline-container-org6afc01e" class="outline-3">
+<h3 id="org6afc01e">Temperature</h3>
+<div class="outline-text-3" id="text-org6afc01e">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"temperature"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"thermal-zone"</span>: <span style="color: #ffb454; font-weight: bold;">1</span>,
@@ -1560,9 +1723,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgdbe5810" class="outline-3">
-<h3 id="orgdbe5810">Keyboard State</h3>
-<div class="outline-text-3" id="text-orgdbe5810">
+<div id="outline-container-orgfa7331d" class="outline-3">
+<h3 id="orgfa7331d">Keyboard State</h3>
+<div class="outline-text-3" id="text-orgfa7331d">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"keyboard-state"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"numlock"</span>: <span style="color: #d2a6ff;">true</span>,
@@ -1580,9 +1743,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgeda4811" class="outline-3">
-<h3 id="orgeda4811">Tray</h3>
-<div class="outline-text-3" id="text-orgeda4811">
+<div id="outline-container-org7ad66b4" class="outline-3">
+<h3 id="org7ad66b4">Tray</h3>
+<div class="outline-text-3" id="text-org7ad66b4">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"tray"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-size"</span>: <span style="color: #ffb454; font-weight: bold;">32</span>,
@@ -1594,13 +1757,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org1bb954b" class="outline-2">
-<h2 id="org1bb954b">Wayfire Right Monitor Bar</h2>
-<div class="outline-text-2" id="text-org1bb954b">
+<div id="outline-container-orge499c82" class="outline-2">
+<h2 id="orge499c82">Wayfire Right TV Bar</h2>
+<div class="outline-text-2" id="text-orge499c82">
 </div>
-<div id="outline-container-orga98631e" class="outline-3">
-<h3 id="orga98631e">Appearance</h3>
-<div class="outline-text-3" id="text-orga98631e">
+<div id="outline-container-org9cca1e6" class="outline-3">
+<h3 id="org9cca1e6">Appearance</h3>
+<div class="outline-text-3" id="text-org9cca1e6">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -1625,9 +1788,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgb00d585" class="outline-3">
-<h3 id="orgb00d585">Weather</h3>
-<div class="outline-text-3" id="text-orgb00d585">
+<div id="outline-container-orgfdcd07f" class="outline-3">
+<h3 id="orgfdcd07f">Weather</h3>
+<div class="outline-text-3" id="text-orgfdcd07f">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/weather"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"ansiweather -a false -l Arvada -u imperial -H true -h false -p false -i false -s true"</span>,
@@ -1638,9 +1801,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgc42b7a3" class="outline-3">
-<h3 id="orgc42b7a3">Bluetooth</h3>
-<div class="outline-text-3" id="text-orgc42b7a3">
+<div id="outline-container-org71389cd" class="outline-3">
+<h3 id="org71389cd">Bluetooth</h3>
+<div class="outline-text-3" id="text-org71389cd">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -1658,9 +1821,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org28c0cbd" class="outline-3">
-<h3 id="org28c0cbd">Memory</h3>
-<div class="outline-text-3" id="text-org28c0cbd">
+<div id="outline-container-orgc34882b" class="outline-3">
+<h3 id="orgc34882b">Memory</h3>
+<div class="outline-text-3" id="text-orgc34882b">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -1671,9 +1834,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb28a1e" class="outline-3">
-<h3 id="orgdb28a1e">Disk</h3>
-<div class="outline-text-3" id="text-orgdb28a1e">
+<div id="outline-container-org0ceb817" class="outline-3">
+<h3 id="org0ceb817">Disk</h3>
+<div class="outline-text-3" id="text-org0ceb817">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/drive/"</span>,
@@ -1687,9 +1850,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org41c4cd8" class="outline-3">
-<h3 id="org41c4cd8">Privacy</h3>
-<div class="outline-text-3" id="text-org41c4cd8">
+<div id="outline-container-org742deb6" class="outline-3">
+<h3 id="org742deb6">Privacy</h3>
+<div class="outline-text-3" id="text-org742deb6">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"privacy"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-spacing"</span>: <span style="color: #ffb454; font-weight: bold;">8</span>,
@@ -1717,9 +1880,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb62833" class="outline-3">
-<h3 id="orgdb62833">CPU</h3>
-<div class="outline-text-3" id="text-orgdb62833">
+<div id="outline-container-orga3f62f0" class="outline-3">
+<h3 id="orga3f62f0">CPU</h3>
+<div class="outline-text-3" id="text-orga3f62f0">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -1729,9 +1892,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org28d7369" class="outline-3">
-<h3 id="org28d7369">Clock</h3>
-<div class="outline-text-3" id="text-org28d7369">
+<div id="outline-container-orgdf4bb8e" class="outline-3">
+<h3 id="orgdf4bb8e">Clock</h3>
+<div class="outline-text-3" id="text-orgdf4bb8e">
 <div class="org-src-container">
 <pre class="src src-json">    <span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
         <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -1746,13 +1909,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb0655c" class="outline-2">
-<h2 id="orgeb0655c">Hyprland Laptop Bar</h2>
-<div class="outline-text-2" id="text-orgeb0655c">
+<div id="outline-container-org45a62ea" class="outline-2">
+<h2 id="org45a62ea">Hyprland Laptop Bar</h2>
+<div class="outline-text-2" id="text-org45a62ea">
 </div>
-<div id="outline-container-org2d991cd" class="outline-3">
-<h3 id="org2d991cd">Appearance</h3>
-<div class="outline-text-3" id="text-org2d991cd">
+<div id="outline-container-org05322f0" class="outline-3">
+<h3 id="org05322f0">Appearance</h3>
+<div class="outline-text-3" id="text-org05322f0">
 <div class="org-src-container">
 <pre class="src src-json">[{
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -1792,9 +1955,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org93b3375" class="outline-3">
-<h3 id="org93b3375">Disk (External HD)</h3>
-<div class="outline-text-3" id="text-org93b3375">
+<div id="outline-container-org57cb5e3" class="outline-3">
+<h3 id="org57cb5e3">Disk (External HD)</h3>
+<div class="outline-text-3" id="text-org57cb5e3">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/mega/"</span>,
@@ -1809,9 +1972,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org62a2cc3" class="outline-3">
-<h3 id="org62a2cc3">MPD</h3>
-<div class="outline-text-3" id="text-org62a2cc3">
+<div id="outline-container-orgec0c5cf" class="outline-3">
+<h3 id="orgec0c5cf">MPD</h3>
+<div class="outline-text-3" id="text-orgec0c5cf">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"mpd"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"server"</span>: <span style="color: #7fd962;">"127.0.0.2"</span>,
@@ -1847,9 +2010,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgceba19b" class="outline-3">
-<h3 id="orgceba19b">Clock</h3>
-<div class="outline-text-3" id="text-orgceba19b">
+<div id="outline-container-org6a7fae9" class="outline-3">
+<h3 id="org6a7fae9">Clock</h3>
+<div class="outline-text-3" id="text-org6a7fae9">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -1862,9 +2025,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org2fd7633" class="outline-3">
-<h3 id="org2fd7633">CPU</h3>
-<div class="outline-text-3" id="text-org2fd7633">
+<div id="outline-container-orgf84686f" class="outline-3">
+<h3 id="orgf84686f">CPU</h3>
+<div class="outline-text-3" id="text-orgf84686f">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -1875,9 +2038,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orga96c5e2" class="outline-3">
-<h3 id="orga96c5e2">Memory</h3>
-<div class="outline-text-3" id="text-orga96c5e2">
+<div id="outline-container-org72e7ef3" class="outline-3">
+<h3 id="org72e7ef3">Memory</h3>
+<div class="outline-text-3" id="text-org72e7ef3">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -1889,9 +2052,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org9081e10" class="outline-3">
-<h3 id="org9081e10">Battery</h3>
-<div class="outline-text-3" id="text-org9081e10">
+<div id="outline-container-orge531005" class="outline-3">
+<h3 id="orge531005">Battery</h3>
+<div class="outline-text-3" id="text-orge531005">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"battery"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"states"</span>: {
@@ -1913,9 +2076,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgb744843" class="outline-3">
-<h3 id="orgb744843">Backlight</h3>
-<div class="outline-text-3" id="text-orgb744843">
+<div id="outline-container-org1d8d820" class="outline-3">
+<h3 id="org1d8d820">Backlight</h3>
+<div class="outline-text-3" id="text-org1d8d820">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"backlight"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"device"</span>: <span style="color: #7fd962;">"intel_backlight"</span>,
@@ -1932,9 +2095,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org2d8224e" class="outline-3">
-<h3 id="org2d8224e">Pulseaudio</h3>
-<div class="outline-text-3" id="text-org2d8224e">
+<div id="outline-container-org8a7aee0" class="outline-3">
+<h3 id="org8a7aee0">Pulseaudio</h3>
+<div class="outline-text-3" id="text-org8a7aee0">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"pulseaudio"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt; {format_source}"</span>,
@@ -1963,9 +2126,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org55323d3" class="outline-3">
-<h3 id="org55323d3">Image</h3>
-<div class="outline-text-3" id="text-org55323d3">
+<div id="outline-container-org436fb75" class="outline-3">
+<h3 id="org436fb75">Image</h3>
+<div class="outline-text-3" id="text-org436fb75">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"image#album-art"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/tmp/mpd_cover.jpg"</span>,
@@ -1979,13 +2142,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org5771acc" class="outline-2">
-<h2 id="org5771acc">Hyprland Left Monitor Bar</h2>
-<div class="outline-text-2" id="text-org5771acc">
+<div id="outline-container-orgb4dee64" class="outline-2">
+<h2 id="orgb4dee64">Hyprland Left Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgb4dee64">
 </div>
-<div id="outline-container-orgf3d974d" class="outline-3">
-<h3 id="orgf3d974d">Appearance</h3>
-<div class="outline-text-3" id="text-orgf3d974d">
+<div id="outline-container-org5aa9e3f" class="outline-3">
+<h3 id="org5aa9e3f">Appearance</h3>
+<div class="outline-text-3" id="text-org5aa9e3f">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -2024,9 +2187,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orge220911" class="outline-3">
-<h3 id="orge220911">Window</h3>
-<div class="outline-text-3" id="text-orge220911">
+<div id="outline-container-org444a7e3" class="outline-3">
+<h3 id="org444a7e3">Window</h3>
+<div class="outline-text-3" id="text-org444a7e3">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"hyprland/window"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{title}"</span>,
@@ -2251,9 +2414,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org2fd3350" class="outline-3">
-<h3 id="org2fd3350">Disk (Internal SSD)</h3>
-<div class="outline-text-3" id="text-org2fd3350">
+<div id="outline-container-orga393194" class="outline-3">
+<h3 id="orga393194">Disk (Internal SSD)</h3>
+<div class="outline-text-3" id="text-orga393194">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/"</span>,
@@ -2268,9 +2431,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orge3bb342" class="outline-3">
-<h3 id="orge3bb342">Privacy</h3>
-<div class="outline-text-3" id="text-orge3bb342">
+<div id="outline-container-org05449dd" class="outline-3">
+<h3 id="org05449dd">Privacy</h3>
+<div class="outline-text-3" id="text-org05449dd">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"privacy"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-spacing"</span>: <span style="color: #ffb454; font-weight: bold;">8</span>,
@@ -2298,9 +2461,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org68bbf4a" class="outline-3">
-<h3 id="org68bbf4a">Wireplumber</h3>
-<div class="outline-text-3" id="text-org68bbf4a">
+<div id="outline-container-org2c1200b" class="outline-3">
+<h3 id="org2c1200b">Wireplumber</h3>
+<div class="outline-text-3" id="text-org2c1200b">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"wireplumber"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
@@ -2318,9 +2481,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org554cf00" class="outline-3">
-<h3 id="org554cf00">Idle Inhibit</h3>
-<div class="outline-text-3" id="text-org554cf00">
+<div id="outline-container-orgd740224" class="outline-3">
+<h3 id="orgd740224">Idle Inhibit</h3>
+<div class="outline-text-3" id="text-orgd740224">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"idle_inhibitor"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon}"</span>,
@@ -2335,9 +2498,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org7adf88c" class="outline-3">
-<h3 id="org7adf88c">Temperature</h3>
-<div class="outline-text-3" id="text-org7adf88c">
+<div id="outline-container-org00c2d46" class="outline-3">
+<h3 id="org00c2d46">Temperature</h3>
+<div class="outline-text-3" id="text-org00c2d46">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"temperature"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"thermal-zone"</span>: <span style="color: #ffb454; font-weight: bold;">1</span>,
@@ -2349,9 +2512,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org9c559a6" class="outline-3">
-<h3 id="org9c559a6">Network</h3>
-<div class="outline-text-3" id="text-org9c559a6">
+<div id="outline-container-org7225eb1" class="outline-3">
+<h3 id="org7225eb1">Network</h3>
+<div class="outline-text-3" id="text-org7225eb1">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"network"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"interface"</span>: <span style="color: #7fd962;">"enp0s31f6"</span>,
@@ -2369,9 +2532,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgf659fe2" class="outline-3">
-<h3 id="orgf659fe2">Cava</h3>
-<div class="outline-text-3" id="text-orgf659fe2">
+<div id="outline-container-orgb3dd5bf" class="outline-3">
+<h3 id="orgb3dd5bf">Cava</h3>
+<div class="outline-text-3" id="text-orgb3dd5bf">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cava"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"framerate"</span>: <span style="color: #ffb454; font-weight: bold;">30</span>,
@@ -2395,9 +2558,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org1bc8b28" class="outline-3">
-<h3 id="org1bc8b28">Tray</h3>
-<div class="outline-text-3" id="text-org1bc8b28">
+<div id="outline-container-org02ebf17" class="outline-3">
+<h3 id="org02ebf17">Tray</h3>
+<div class="outline-text-3" id="text-org02ebf17">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"tray"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-size"</span>: <span style="color: #ffb454; font-weight: bold;">33</span>,
@@ -2409,13 +2572,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orga7e5d8f" class="outline-2">
-<h2 id="orga7e5d8f">Hyprland Right Monitor Bar</h2>
-<div class="outline-text-2" id="text-orga7e5d8f">
+<div id="outline-container-org7d612e2" class="outline-2">
+<h2 id="org7d612e2">Hyprland Right Monitor Bar</h2>
+<div class="outline-text-2" id="text-org7d612e2">
 </div>
-<div id="outline-container-org508297c" class="outline-3">
-<h3 id="org508297c">Appearance</h3>
-<div class="outline-text-3" id="text-org508297c">
+<div id="outline-container-org6157521" class="outline-3">
+<h3 id="org6157521">Appearance</h3>
+<div class="outline-text-3" id="text-org6157521">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -2454,9 +2617,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org421e10c" class="outline-3">
-<h3 id="org421e10c">Weather</h3>
-<div class="outline-text-3" id="text-org421e10c">
+<div id="outline-container-orge684fcc" class="outline-3">
+<h3 id="orge684fcc">Weather</h3>
+<div class="outline-text-3" id="text-orge684fcc">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/weather"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"ansiweather -a false -l Arvada -u imperial -H true -h false -p false -i false -s true"</span>,
@@ -2467,9 +2630,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgae9b31a" class="outline-3">
-<h3 id="orgae9b31a">Bluetooth</h3>
-<div class="outline-text-3" id="text-orgae9b31a">
+<div id="outline-container-orga314d6b" class="outline-3">
+<h3 id="orga314d6b">Bluetooth</h3>
+<div class="outline-text-3" id="text-orga314d6b">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -2488,9 +2651,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgf77ee91" class="outline-3">
-<h3 id="orgf77ee91">Memory</h3>
-<div class="outline-text-3" id="text-orgf77ee91">
+<div id="outline-container-orgecfd309" class="outline-3">
+<h3 id="orgecfd309">Memory</h3>
+<div class="outline-text-3" id="text-orgecfd309">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -2502,9 +2665,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orga368018" class="outline-3">
-<h3 id="orga368018">Disk</h3>
-<div class="outline-text-3" id="text-orga368018">
+<div id="outline-container-org7b85b63" class="outline-3">
+<h3 id="org7b85b63">Disk</h3>
+<div class="outline-text-3" id="text-org7b85b63">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/drive/"</span>,
@@ -2519,9 +2682,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org4b5c674" class="outline-3">
-<h3 id="org4b5c674">CPU</h3>
-<div class="outline-text-3" id="text-org4b5c674">
+<div id="outline-container-org54f7681" class="outline-3">
+<h3 id="org54f7681">CPU</h3>
+<div class="outline-text-3" id="text-org54f7681">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -2532,9 +2695,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orge2266b8" class="outline-3">
-<h3 id="orge2266b8">Clock</h3>
-<div class="outline-text-3" id="text-orge2266b8">
+<div id="outline-container-orgc90d225" class="outline-3">
+<h3 id="orgc90d225">Clock</h3>
+<div class="outline-text-3" id="text-orgc90d225">
 <div class="org-src-container">
 <pre class="src src-json">    <span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
         <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -2552,13 +2715,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org1bd8442" class="outline-2">
-<h2 id="org1bd8442">Niri Laptop Bar</h2>
-<div class="outline-text-2" id="text-org1bd8442">
+<div id="outline-container-orgdad6eda" class="outline-2">
+<h2 id="orgdad6eda">Niri Laptop Bar</h2>
+<div class="outline-text-2" id="text-orgdad6eda">
 </div>
-<div id="outline-container-org48f752c" class="outline-3">
-<h3 id="org48f752c">Appearance</h3>
-<div class="outline-text-3" id="text-org48f752c">
+<div id="outline-container-org4d774bf" class="outline-3">
+<h3 id="org4d774bf">Appearance</h3>
+<div class="outline-text-3" id="text-org4d774bf">
 <div class="org-src-container">
 <pre class="src src-json">[{
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -2592,9 +2755,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org1d1ed0b" class="outline-3">
-<h3 id="org1d1ed0b">MPD</h3>
-<div class="outline-text-3" id="text-org1d1ed0b">
+<div id="outline-container-orgc5b404e" class="outline-3">
+<h3 id="orgc5b404e">MPD</h3>
+<div class="outline-text-3" id="text-orgc5b404e">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"mpd"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"server"</span>: <span style="color: #7fd962;">"127.0.0.2"</span>,
@@ -2630,9 +2793,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgb6de94c" class="outline-3">
-<h3 id="orgb6de94c">Image</h3>
-<div class="outline-text-3" id="text-orgb6de94c">
+<div id="outline-container-org4fe5041" class="outline-3">
+<h3 id="org4fe5041">Image</h3>
+<div class="outline-text-3" id="text-org4fe5041">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"image#album-art"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/tmp/mpd_cover.jpg"</span>,
@@ -2645,9 +2808,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org2c75279" class="outline-3">
-<h3 id="org2c75279">Clock</h3>
-<div class="outline-text-3" id="text-org2c75279">
+<div id="outline-container-orgf78f594" class="outline-3">
+<h3 id="orgf78f594">Clock</h3>
+<div class="outline-text-3" id="text-orgf78f594">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -2660,9 +2823,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgc5d8973" class="outline-3">
-<h3 id="orgc5d8973">CPU</h3>
-<div class="outline-text-3" id="text-orgc5d8973">
+<div id="outline-container-org234f5b3" class="outline-3">
+<h3 id="org234f5b3">CPU</h3>
+<div class="outline-text-3" id="text-org234f5b3">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -2673,9 +2836,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgcfeddbf" class="outline-3">
-<h3 id="orgcfeddbf">Memory</h3>
-<div class="outline-text-3" id="text-orgcfeddbf">
+<div id="outline-container-org79ff415" class="outline-3">
+<h3 id="org79ff415">Memory</h3>
+<div class="outline-text-3" id="text-org79ff415">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -2687,9 +2850,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org673e423" class="outline-3">
-<h3 id="org673e423">Disk</h3>
-<div class="outline-text-3" id="text-org673e423">
+<div id="outline-container-orgfc3ca49" class="outline-3">
+<h3 id="orgfc3ca49">Disk</h3>
+<div class="outline-text-3" id="text-orgfc3ca49">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/mega/"</span>,
@@ -2704,9 +2867,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org408e144" class="outline-3">
-<h3 id="org408e144">Battery</h3>
-<div class="outline-text-3" id="text-org408e144">
+<div id="outline-container-orgdaee55e" class="outline-3">
+<h3 id="orgdaee55e">Battery</h3>
+<div class="outline-text-3" id="text-orgdaee55e">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"battery"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"states"</span>: {
@@ -2728,9 +2891,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org63290e3" class="outline-3">
-<h3 id="org63290e3">Backlight</h3>
-<div class="outline-text-3" id="text-org63290e3">
+<div id="outline-container-org28a20f0" class="outline-3">
+<h3 id="org28a20f0">Backlight</h3>
+<div class="outline-text-3" id="text-org28a20f0">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"backlight"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"device"</span>: <span style="color: #7fd962;">"intel_backlight"</span>,
@@ -2747,9 +2910,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org56a7d8e" class="outline-3">
-<h3 id="org56a7d8e">Pulseaudio</h3>
-<div class="outline-text-3" id="text-org56a7d8e">
+<div id="outline-container-orgddefaad" class="outline-3">
+<h3 id="orgddefaad">Pulseaudio</h3>
+<div class="outline-text-3" id="text-orgddefaad">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"pulseaudio"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt; {format_source}"</span>,
@@ -2779,13 +2942,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org07a6a8c" class="outline-2">
-<h2 id="org07a6a8c">Niri Left Monitor Bar</h2>
-<div class="outline-text-2" id="text-org07a6a8c">
+<div id="outline-container-orgcc6c0e1" class="outline-2">
+<h2 id="orgcc6c0e1">Niri Left Monitor Bar</h2>
+<div class="outline-text-2" id="text-orgcc6c0e1">
 </div>
-<div id="outline-container-org95e2e78" class="outline-3">
-<h3 id="org95e2e78">Appearance</h3>
-<div class="outline-text-3" id="text-org95e2e78">
+<div id="outline-container-org8a55926" class="outline-3">
+<h3 id="org8a55926">Appearance</h3>
+<div class="outline-text-3" id="text-org8a55926">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -2820,9 +2983,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org3e76ec7" class="outline-3">
-<h3 id="org3e76ec7">Window</h3>
-<div class="outline-text-3" id="text-org3e76ec7">
+<div id="outline-container-org695de57" class="outline-3">
+<h3 id="org695de57">Window</h3>
+<div class="outline-text-3" id="text-org695de57">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"niri/window"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{title}"</span>,
@@ -3049,9 +3212,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org56f433f" class="outline-3">
-<h3 id="org56f433f">Idle Inhibit</h3>
-<div class="outline-text-3" id="text-org56f433f">
+<div id="outline-container-org61f51c1" class="outline-3">
+<h3 id="org61f51c1">Idle Inhibit</h3>
+<div class="outline-text-3" id="text-org61f51c1">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"idle_inhibitor"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon}"</span>,
@@ -3066,9 +3229,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgd837d60" class="outline-3">
-<h3 id="orgd837d60">Network</h3>
-<div class="outline-text-3" id="text-orgd837d60">
+<div id="outline-container-org4f2d3b0" class="outline-3">
+<h3 id="org4f2d3b0">Network</h3>
+<div class="outline-text-3" id="text-org4f2d3b0">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"network"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"interface"</span>: <span style="color: #7fd962;">"enp0s31f6"</span>,
@@ -3086,9 +3249,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgd60f939" class="outline-3">
-<h3 id="orgd60f939">Wireplumber</h3>
-<div class="outline-text-3" id="text-orgd60f939">
+<div id="outline-container-org722b740" class="outline-3">
+<h3 id="org722b740">Wireplumber</h3>
+<div class="outline-text-3" id="text-org722b740">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"wireplumber"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"{icon} &lt;span style=\"italic\"&gt;{volume}%&lt;/span&gt;"</span>,
@@ -3106,9 +3269,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgb3d9742" class="outline-3">
-<h3 id="orgb3d9742">Privacy</h3>
-<div class="outline-text-3" id="text-orgb3d9742">
+<div id="outline-container-org9acfc13" class="outline-3">
+<h3 id="org9acfc13">Privacy</h3>
+<div class="outline-text-3" id="text-org9acfc13">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"privacy"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-spacing"</span>: <span style="color: #ffb454; font-weight: bold;">8</span>,
@@ -3136,9 +3299,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa00cea" class="outline-3">
-<h3 id="orgfa00cea">Temperature</h3>
-<div class="outline-text-3" id="text-orgfa00cea">
+<div id="outline-container-orge236c91" class="outline-3">
+<h3 id="orge236c91">Temperature</h3>
+<div class="outline-text-3" id="text-orge236c91">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"temperature"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"thermal-zone"</span>: <span style="color: #ffb454; font-weight: bold;">1</span>,
@@ -3150,9 +3313,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orga07077e" class="outline-3">
-<h3 id="orga07077e">Disk</h3>
-<div class="outline-text-3" id="text-orga07077e">
+<div id="outline-container-org5cd1aa8" class="outline-3">
+<h3 id="org5cd1aa8">Disk</h3>
+<div class="outline-text-3" id="text-org5cd1aa8">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/"</span>,
@@ -3167,9 +3330,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org5e5d429" class="outline-3">
-<h3 id="org5e5d429">Cava</h3>
-<div class="outline-text-3" id="text-org5e5d429">
+<div id="outline-container-org0da3e21" class="outline-3">
+<h3 id="org0da3e21">Cava</h3>
+<div class="outline-text-3" id="text-org0da3e21">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cava"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"framerate"</span>: <span style="color: #ffb454; font-weight: bold;">30</span>,
@@ -3193,9 +3356,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org94f538f" class="outline-3">
-<h3 id="org94f538f">Tray</h3>
-<div class="outline-text-3" id="text-org94f538f">
+<div id="outline-container-org44a527e" class="outline-3">
+<h3 id="org44a527e">Tray</h3>
+<div class="outline-text-3" id="text-org44a527e">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"tray"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"icon-size"</span>: <span style="color: #ffb454; font-weight: bold;">35</span>,
@@ -3207,13 +3370,13 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org5f743ea" class="outline-2">
-<h2 id="org5f743ea">Niri Right Monitor Bar</h2>
-<div class="outline-text-2" id="text-org5f743ea">
+<div id="outline-container-org1462c06" class="outline-2">
+<h2 id="org1462c06">Niri Right Monitor Bar</h2>
+<div class="outline-text-2" id="text-org1462c06">
 </div>
-<div id="outline-container-org0fcf83c" class="outline-3">
-<h3 id="org0fcf83c">Appearance</h3>
-<div class="outline-text-3" id="text-org0fcf83c">
+<div id="outline-container-org1733c7e" class="outline-3">
+<h3 id="org1733c7e">Appearance</h3>
+<div class="outline-text-3" id="text-org1733c7e">
 <div class="org-src-container">
 <pre class="src src-json">}, {
     <span style="color: #ff8f40; font-style: italic;">"position"</span>: <span style="color: #7fd962;">"bottom"</span>,
@@ -3247,9 +3410,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org7bd50b9" class="outline-3">
-<h3 id="org7bd50b9">Weather</h3>
-<div class="outline-text-3" id="text-org7bd50b9">
+<div id="outline-container-org27da80b" class="outline-3">
+<h3 id="org27da80b">Weather</h3>
+<div class="outline-text-3" id="text-org27da80b">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"custom/weather"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"ansiweather -a false -l Arvada -u imperial -H true -h false -p false -i false -s true"</span>,
@@ -3260,9 +3423,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orga4582ce" class="outline-3">
-<h3 id="orga4582ce">Bluetooth</h3>
-<div class="outline-text-3" id="text-orga4582ce">
+<div id="outline-container-org293f3d5" class="outline-3">
+<h3 id="org293f3d5">Bluetooth</h3>
+<div class="outline-text-3" id="text-org293f3d5">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"bluetooth"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format-on"</span>: <span style="color: #7fd962;">"&#62100; {controller_alias}"</span>,
@@ -3281,9 +3444,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org9a6d7e0" class="outline-3">
-<h3 id="org9a6d7e0">Memory</h3>
-<div class="outline-text-3" id="text-org9a6d7e0">
+<div id="outline-container-org89c09e1" class="outline-3">
+<h3 id="org89c09e1">Memory</h3>
+<div class="outline-text-3" id="text-org89c09e1">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"memory"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#62171; {}%"</span>,
@@ -3295,9 +3458,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgf16a868" class="outline-3">
-<h3 id="orgf16a868">Disk</h3>
-<div class="outline-text-3" id="text-orgf16a868">
+<div id="outline-container-orga8e6bc2" class="outline-3">
+<h3 id="orga8e6bc2">Disk</h3>
+<div class="outline-text-3" id="text-orga8e6bc2">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"disk"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"path"</span>: <span style="color: #7fd962;">"/mnt/drive/"</span>,
@@ -3312,9 +3475,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-org4ad3b5e" class="outline-3">
-<h3 id="org4ad3b5e">CPU</h3>
-<div class="outline-text-3" id="text-org4ad3b5e">
+<div id="outline-container-org98cc835" class="outline-3">
+<h3 id="org98cc835">CPU</h3>
+<div class="outline-text-3" id="text-org98cc835">
 <div class="org-src-container">
 <pre class="src src-json"><span style="color: #ff8f40; font-style: italic;">"cpu"</span>: {
     <span style="color: #ff8f40; font-style: italic;">"format"</span>: <span style="color: #7fd962;">"&#57912; {usage}%"</span>,
@@ -3325,9 +3488,9 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 </div>
 </div>
-<div id="outline-container-orgfc5deef" class="outline-3">
-<h3 id="orgfc5deef">Clock</h3>
-<div class="outline-text-3" id="text-orgfc5deef">
+<div id="outline-container-org604fd2b" class="outline-3">
+<h3 id="org604fd2b">Clock</h3>
+<div class="outline-text-3" id="text-org604fd2b">
 <div class="org-src-container">
 <pre class="src src-json">    <span style="color: #ff8f40; font-style: italic;">"custom/clock"</span>: {
         <span style="color: #ff8f40; font-style: italic;">"exec"</span>: <span style="color: #7fd962;">"date +'%I:%M:%S &#61555; %a, %b %d'"</span>,
@@ -3361,7 +3524,7 @@ And finally, the sixth status bar, this is the second status bar that LabWC uses
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Tanner Babcock</p>
-<p class="date">Created: 2025-06-25 Wed 19:49</p>
+<p class="date">Created: 2025-06-30 Mon 18:43</p>
 </div>
 </body>
 </html>
